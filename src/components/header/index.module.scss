@@ -1,0 +1,27 @@
+.wrapper {
+  height: 182px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(1, 1, 3, 0) 0%, #010103 69.27%);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  opacity: 0.8;
+  padding: 0 32px 0 32px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+  top: 0;
+  > img {
+    position: absolute;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    top: 27px;
+    top: 50%;
+    left: 39%;
+  }
+}
+
+.buttonsBlock {
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  margin-bottom: -70px;
+}
