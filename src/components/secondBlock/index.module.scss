@@ -18,7 +18,8 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 22px;
-    width: 670px;
+    width: 520px;
+    font-family: 'Syne';
     > span {
       font-style: normal;
       font-weight: bold;
@@ -41,4 +42,17 @@
     color: rgba(165, 161, 161, 0.7);
     font-family: '1617';
   }
+}
+.card {
+  width: 200px;
+  height: 200px;
+  background-color: #EFDAA9;
+  background-image: url(../../styles/img/bg_video.png);
+  background-position: center;
+  background-size: cover;
+  margin-right: 10px;
+}
+.sliderWrapper {
+  padding-bottom: 240px;
+  padding-top: 80px;
 }

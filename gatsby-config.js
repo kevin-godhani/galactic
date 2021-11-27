@@ -9,16 +9,16 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Syne`,
-          `400,500,700` // you can also specify font weights and styles
-        ],
-        display: 'swap'
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       `Syne`,
+    //       `400,500,700` // you can also specify font weights and styles
+    //     ],
+    //     display: 'swap'
+    //   }
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

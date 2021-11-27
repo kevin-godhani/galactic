@@ -1,14 +1,16 @@
 import React from "react";
-import { Link } from "gatsby";
 import logo from "../../styles/img/logo.png";
 import * as styles from "./index.module.scss";
-import { mainButton } from "../buttons";
+import { mainButton, socialButtons } from "../buttons";
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header className={styles.wrapper}>
     <img src={logo} alt="logo" />
     <div></div>
-    <div className={styles.buttonsBlock}>{mainButton("")}</div>
+    <div className={styles.buttonsBlock}>
+      {mainButton("", "Join Discord")}
+      {socialButtons("")}
+    </div>
   </header>
 );
 

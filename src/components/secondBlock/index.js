@@ -1,5 +1,4 @@
 import React from "react";
-import arrow from "../../styles/img/arrow_scroll.png";
 import * as styles from "./index.module.scss";
 
 const SecondBlock = () => (

@@ -2,7 +2,14 @@
   font-family: '1617';
   src: local('1617'), url(../styles/fonts/1\,617.ttf) format('truetype');
 }
-
+@font-face {
+  font-family: 'Syne';
+  src: local('syne'), url(../styles/fonts/syne.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Syne-B';
+  src: local('Syne-Bold'), url(../styles/fonts/Syne-Bold.ttf) format('truetype');
+}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -11,9 +18,7 @@ html {
   overflow-y: scroll;
   background-color: #000000;
 }
-* {
-  font-family: 'Syne', sans-serif;
-}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -59,14 +64,7 @@ progress {
 template {
   display: none;
 }
-a {
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
-a:active,
-a:hover {
-  outline-width: 0;
-}
+
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
@@ -597,6 +595,40 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: "";
+}
+
+.carousel-root {
+  width: 100%;
+}
+
+.slick-center{
+  opacity: 1 !important;
+}
+.slick-slide {
+  opacity: 0.3;
+}
+
+.container-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 120px;
+  line-height: 100px;
+  color: #EFDAA9;
+  font-family: 'Syne-B';
+}
+.description {
+  font-family: '1617';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.7);
 }
 @media only screen and (max-width: 480px) {
   html {

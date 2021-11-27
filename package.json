@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "galactic",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "galactic fight league",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "codeCraftsmen",
   "dependencies": {
     "gatsby": "^4.2.0",
     "gatsby-plugin-gatsby-cloud": "^4.2.0",
@@ -20,7 +20,9 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "sass": "^1.43.5"
+    "react-slick": "^0.23.2",
+    "sass": "^1.43.5",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "prettier": "^2.4.1"

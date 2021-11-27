@@ -1,0 +1,57 @@
+.main {
+  width: 100%;
+  height: 1180px;
+  .mainHeader {
+    display: flex;
+    position: relative;
+    > h2 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 120px;
+      line-height: 100px;
+      color: #EFDAA9;
+      font-family: 'Syne';
+    }
+    > img {
+      position: absolute;
+      right: 0;
+      top: -167px;
+    }
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 80px !important;
+  > div {
+    &:first-child {
+      margin-right: 63px;
+    }
+  }
+  .mainContent {
+    > span {
+      position: absolute;
+      left: 80px;
+      top: 61px;
+    }
+  }
+}
+
+.civilizations {
+  padding-top: 200px;
+  position: relative;
+  > span {
+    margin-top: 24px;
+  }
+  > div {
+    margin-top: 70px;
+    margin-left: 35px;
+  }
+  > img {
+    position: absolute;
+    right: -74px;
+    top: -14px;
+  }
+}

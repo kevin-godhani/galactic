@@ -3,15 +3,27 @@
   position: relative;
   display: flex;
   align-items: center;
+  .mainDoubleButtonStripe {
+    position: relative;
+    > img {
+      position: absolute;
+      top: -26px;
+      left: -3px;
+      &:first-child {
+        left: -41px;
+      }
+    }
+  }
   .mainButtonStripe {
     position: absolute;
+    left: -3px;
   }
   .mainButtonContent {
     margin-left: 4px;
     width: 260px;
     position: relative;
     > span {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Syne';
       font-style: normal;
       font-weight: bold;
       font-size: 16px;
@@ -19,8 +31,8 @@
       text-align: center;
       color: #EFEFEF;
       position: absolute;
-      right: 41px;
-      top: -12px;
+      right: 53px;
+      top: -13px;
     }
   }
   .rectangle {
@@ -32,5 +44,31 @@
   .rectangleHover {
     opacity: 0;
     position: absolute;
+  }
+}
+.social {
+  display: flex;
+  margin-left: 35px;
+  > a {
+    margin-right: 8px;
+  }
+  .socialWrapper {
+    > div {
+      width: 40px;
+      height: 40px;
+      background: rgba(45, 48, 61, 0.2);
+      box-shadow: inset 0px -2.29885px 5.51724px rgba(239, 221, 169, 0.6), inset 0px 0.91954px 1.83908px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(13.7931px);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      > div {
+        background: linear-gradient(79.28deg, #EFDDA9 24.27%, #F0A8A8 94.78%);
+      }
+    }
   }
 }
