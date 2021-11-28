@@ -17,10 +17,13 @@ const CivilizationsStory = () => {
         <img src={border} alt="border" />
       </section>
       <div className={styles.mainHeader}>
-        <span>The last guard</span>
+        <div>
+          <span>The last guard</span>
+          <span>The last guard</span>
+          <span>The last guard</span>
+        </div>
         <img src={border} alt="border" />
       </div>
-
     </div>
   );
 };

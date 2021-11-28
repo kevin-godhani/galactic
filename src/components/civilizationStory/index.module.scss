@@ -18,16 +18,23 @@
     background-position: center;
     background-size: cover;
     position: relative;
-    > span {
+    > div {
+      animation: marquee 10s infinite linear;
+      width: 300%;
+      height: 100%;
       position: absolute;
-      right: 30%;
-      font-family: 'Syne';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 96px;
-      line-height: 144px;
-      color: #EFDAA9;
-     }
+      > span {
+        // right: 30%;
+        width: 33%;
+        margin-right: 60px;
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 96px;
+        line-height: 144px;
+        color: #EFDAA9;
+       }
+    }
      > img {
       position: absolute;
       left: 20%;
@@ -104,6 +111,11 @@
     }
   }
 }
+
+  @keyframes marquee{
+  0%{transform: translate(0, 0);}
+  100%{transform: translate(-100%, 0)}
+  }
 
 @media only screen and (max-width: 1260px) {
   .contentDescription > span {

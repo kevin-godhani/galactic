@@ -55,6 +55,18 @@
       border-radius: 50%;
       cursor: pointer;
       position: relative;
+      &:hover {
+        > div {
+          > img {
+            transition: all 0.3s ease-in-out;
+            margin-top: 10px;
+          }
+        }
+        > img {
+          transition: all 0.3s ease-in-out;
+          top: -20px;
+        }
+      }
       > img {
         position: absolute;
         top: -12px;
@@ -62,6 +74,7 @@
       > div {
         width: 71.87px;
         height: 71.87px;
+        animation: custom 3s infinite linear;
         background: linear-gradient(216.64deg, rgba(163, 106, 188, 0.6) 12.61%, rgba(123, 100, 220, 0.6) 89.41%);
         backdrop-filter: blur(4.16637px);
         border-radius: 50%;
@@ -72,3 +85,18 @@
     }
   }
 }
+
+@keyframes custom {
+  0% {
+    width: 61.87px;
+    height: 61.87px;
+  }
+  50% {
+    width: 71.87px;
+    height: 71.87px;
+  }
+  100% {
+    width: 61.87px;
+    height: 61.87px;
+  }
+  }

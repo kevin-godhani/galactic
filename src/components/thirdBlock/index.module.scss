@@ -11,9 +11,19 @@
       line-height: 100px;
       color: #EFDAA9;
       font-family: 'Syne';
+      opacity: 0;
+      &:first-child {
+        margin-right: 20px;
+        animation-fill-mode: forwards;
+      }
+      &:nth-child(2)  {
+        animation-fill-mode: forwards;
+        animation-delay: 0.6s;
+      }
     }
     > img {
       position: absolute;
+      animation: bounceUp 5s ease-in-out infinite;
       right: 0;
       top: -167px;
     }
@@ -32,6 +42,7 @@
     }
   }
   .mainContent {
+    position: relative;
     > span {
       position: absolute;
       left: 80px;
@@ -43,6 +54,41 @@
 .civilizations {
   padding-top: 200px;
   position: relative;
+  .animatedTitle {
+    display: flex;
+    margin-left: 0;
+    > h3 {
+      &:first-child {
+        opacity: 0;
+        animation-fill-mode: forwards;
+      }
+      &:last-child {
+        opacity: 0;
+        animation-fill-mode: forwards;
+        animation-delay: 0.6s;
+      }
+    }
+  }
+  .animatedDescription {
+    margin: 0;
+    > span {
+      &:first-child {
+        opacity: 0;
+        animation-fill-mode: forwards;
+        animation-delay: 1.2s;
+      }
+      &:nth-child(2) {
+        opacity: 0;
+        animation-fill-mode: forwards;
+        animation-delay: 1.6s;
+      }
+      &:nth-child(3) {
+        opacity: 0;
+        animation-fill-mode: forwards;
+        animation-delay: 1.8s;
+      }
+    }
+  }
   > span {
     margin-top: 24px;
   }
@@ -57,11 +103,58 @@
   }
 }
 
+.arrowsP {
+  position: absolute;
+  bottom: 0;
+  left: 390px;
+}
+.arrowsG {
+  position: absolute;
+  top: 70px;
+  left: -2px;
+  > div {
+    flex-direction: column;
+  }
+}
 .tablet {
   display: none;
 }
 .desktop {
   display: block;
+}
+.animatedButton {
+  animation-fill-mode: forwards !important;
+  animation-delay: 1.9s !important;
+  opacity: 0;
+}
+.animationDescription {
+  animation: animateBottom .2s ease-in-out;
+}
+.animationTitleFirst {
+  animation: animateLeft .6s ease-in-out;
+}
+.animationTitleSecond {
+  animation: animateTop .5s ease-in-out;
+}
+.animationButtonActive {
+  animation: animateBottom .5s ease-in-out;
+}
+
+.animatedArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > img {
+    &:nth-child(1) {
+      animation: opacityArrowFirst 1s ease-in-out infinite;
+    }
+    &:nth-child(2) {
+      animation: opacityArrowSecond 1s ease-in-out infinite;
+    }
+    &:nth-child(3) {
+      animation: opacityArrowFirst 1s ease-in-out infinite;
+    }
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -105,8 +198,71 @@
       display: none;
     }
   }
+  .arrowsP {
+    bottom: 0;
+    left: 432px;
+  }
+  .arrowsG {
+    top: 83px;
+    left: 0px;
+  }
 }
 
+@keyframes opacityArrowFirst {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityArrowSecond {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes animateLeft {
+  0% {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes animateTop {
+  0% {
+    transform: translate(0, -100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes animateBottom {
+  0% {
+    transform: translateY(110px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes bounceUp {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
 
 @media only screen and (max-width: 980px) {
 }
