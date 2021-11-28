@@ -37,13 +37,16 @@ const settings = {
     },
   ],
 };
-const SlickSlider = () => (
+const SlickSlider = ({ changeStep }) => (
   <div className={styles.sliderWrapper}>
     <Slider {...settings}>
-      <div className={styles.card}>1</div>
-      <div className={styles.card}>1</div>
-      <div className={styles.card}>1</div>
-      <div className={styles.card}>1</div>
+      <div onClick={() => changeStep(1)} className={styles.card}>1</div>
+      <div onClick={() => changeStep(2)} className={styles.card}>2</div>
+      <div onClick={() => changeStep(3)} className={styles.card}>3</div>
+      <div onClick={() => changeStep(4)} className={styles.card}>4</div>
+      <div onClick={() => changeStep(5)} className={styles.card}>5</div>
+      <div onClick={() => changeStep(6)} className={styles.card}>6</div>
+      <div onClick={() => changeStep(7)} className={styles.card}>7</div>
     </Slider>
   </div>
 );

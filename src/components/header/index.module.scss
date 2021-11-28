@@ -12,6 +12,12 @@
   left: 0;
   right: 0;
   top: 0;
+  z-index: 10000;
+  .menu {
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    margin-bottom: -70px;
+    cursor: pointer;
+  }
   > img {
     position: absolute;
     transform: matrix(1, 0, 0, -1, 0, 0);
@@ -20,6 +26,9 @@
     left: 39%;
   }
 }
+.tabletLogo {
+  display: none;
+}
 
 .buttonsBlock {
   transform: matrix(1, 0, 0, -1, 0, 0);
@@ -27,4 +36,83 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.menuWrapper {
+    z-index: 999;
+    visibility: hidden;
+    transition: all .25s ease-in-out;
+    transform: translateX(150%);
+    background: url(../../styles/img/menu_backgroung.png);
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    .decoration {
+      width: 100%;
+      position: relative;
+      > img {
+        position: absolute;
+        right: 0;
+        top: -328px;
+      }
+    }
+    > a {
+      z-index: 9999;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin-left: 40px;
+      text-decoration: none;
+      transition: all .4s ease-in-out;
+      color: #FFFFFF;
+      &:hover {
+        text-decoration: underline;
+      }
+      > span {
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 46px;
+        line-height: 46px;
+        color: #FFFFFF;
+        margin-right: 10px;
+        margin-top: 16px;
+      }
+      > p {
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 108px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+  .tabletLogo {
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    > img {
+      margin-right: 20px;
+    }
+  }
 }

@@ -630,8 +630,13 @@ pre tt:after {
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.7);
 }
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
+.menu-open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+@media only screen and (max-width: 1200px) {
+  .title {
+    font-size: 48px;
   }
 }

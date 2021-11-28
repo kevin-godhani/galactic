@@ -51,6 +51,9 @@
       animation-name: bounceUp;
       animation-duration: 4s;
     }
+    // &:nth-child(6) {
+    //   right: -32px;
+    // }
     }
   }
   .card {
@@ -86,6 +89,7 @@
           position: absolute;
           top: 83px;
           right: 49px;
+          // left: 745px;
         }
         > span {
           position: absolute;
@@ -140,4 +144,39 @@
   0%   { transform: translateY(-70px); }
   50%  { transform: translateY(0); }
   100% { transform: translateY(-70px); }
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    margin-bottom: 30px !important;
+    > img {
+      max-width: 100%;
+    }
+    > span {
+      font-size: 24px !important;
+    }
+    > p {
+      left: 26% !important;
+      bottom: 27px !important;
+      font-size: 12px !important;
+    }
+  }
+  .decorLine {
+    display: none;
+  }
+  .decorNumber {
+    max-width: 100%;
+  }
+  .leftDecor, .rightDecor {
+    > div {
+      > span {
+        font-size: 24px !important;
+      }
+    }
+  }
+  .main {
+   > section > img {
+      display: none;
+    }
+  }
 }

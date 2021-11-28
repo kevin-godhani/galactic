@@ -3,6 +3,7 @@ import fist from "../../styles/img/fist_right.png";
 import border from "../../styles/img/border1.svg";
 import videoBlock from "../../styles/img/video_block.png";
 import decoration from "../../styles/img/back_decoration.png";
+import borderTablet from "../../styles/img/border_tablet.png";
 import { doubleStripeButton } from "../buttons";
 import * as styles from "./index.module.scss";
 
@@ -14,14 +15,24 @@ const ThirdBlock = () => (
     </div>
     <div className={`${styles.contentWrapper} container-width`}>
       <div className={`${styles.mainContent}`}>
-        <img src={border} alt="border" />
-        <span className="description">
+        <img className={styles.desktop} src={border} alt="border" />
+        <img className={styles.tablet} src={borderTablet} alt="border" />
+        <span className={`${styles.desktop} description`}>
           The Galactic Fight League <br /> brings together the best <br />
           fighters from earth and <br />
           beyond. Where Humans, <br />
           Cyborgs, Aliens and Zombies
           <br /> battle to become the best <br />
           mixed martial art fighter in <br />
+          the metaverse.
+        </span>
+        <span className={`${styles.tablet} description`}>
+          The Galactic Fight League brings together<br /> the best
+          fighters from earth and 
+          beyond. <br /> Where Humans, 
+          Cyborgs, Aliens and  <br /> Zombies
+          battle to become the best
+          mixed <br /> martial art fighter in
           the metaverse.
         </span>
       </div>

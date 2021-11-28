@@ -56,3 +56,9 @@
   padding-bottom: 240px;
   padding-top: 80px;
 }
+
+@media only screen and (max-width: 1200px) {
+  .sliderWrapper {
+    padding-bottom: 80px;
+  }
+}
