@@ -51,9 +51,9 @@ const ThirdBlock = () => {
     scrollPosition >= 1900 ? `${styles.animationTitleSecond} title` : "title";
 
   const titleClass3 =
-    scrollPosition > 966 ? `${styles.animationTitleFirst} title` : "title";
+    scrollPosition > 1380 ? `${styles.animationTitleFirst} title` : "title";
   const titleClass4 =
-    scrollPosition > 966 ? `${styles.animationTitleSecond} title` : "title";
+    scrollPosition > 1380 ? `${styles.animationTitleSecond} title` : "title";
 
   return (
     <div className={styles.main}>
