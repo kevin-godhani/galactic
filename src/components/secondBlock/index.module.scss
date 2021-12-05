@@ -44,13 +44,11 @@
   }
 }
 .card {
-  width: 200px;
-  height: 200px;
-  background-color: #EFDAA9;
-  background-image: url(../../styles/img/bg_video.png);
-  background-position: center;
-  background-size: cover;
-  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: url(../../styles/img/cursors/cursor.png) 25 15, auto;
 }
 .sliderWrapper {
   padding-bottom: 240px;

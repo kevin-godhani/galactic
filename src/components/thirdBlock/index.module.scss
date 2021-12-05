@@ -93,8 +93,8 @@
     margin-top: 24px;
   }
   > div {
-    margin-top: 70px;
-    margin-left: 35px;
+    margin-top: 60px;
+    // margin-left: 35px;
   }
   > img {
     position: absolute;
@@ -157,7 +157,52 @@
   }
 }
 
+.soundIcon {
+  position: absolute;
+  z-index: 2;
+  bottom: 29px;
+  right: 54px;
+  cursor: pointer !important;
+}
+.videoWrapper {
+  position: relative;
+  max-width: 535px;
+  > img:first-child {
+    position: absolute;
+    top: -37px;
+    left: -19px;
+  }
+  > video {
+    width: 500px;
+    // width: 90%;
+    // height: 100%;
+    height: 274px;
+    object-fit: cover;
+  }
+}
+.civilizationSlides {
+  margin-bottom: 150px;
+  > div {
+    width: 100%;
+    > img {
+      max-width: 100%;
+    }
+  }
+}
+
 @media only screen and (max-width: 1200px) {
+  .videoWrapper {
+    margin: 0 auto;
+    max-width: 100%;
+    > img:first-child {
+      width: 106%;
+      height: 468px;
+    }
+    > video {
+      width: 100%;
+      height: 418px;
+    }
+  }
   .tablet {
     display: block;
   }

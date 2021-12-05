@@ -83,12 +83,12 @@ const Faq = () => {
             src={isOpen ? accordion_big : accordion_small}
             alt="back"
           />
-          <img src={accordion_angle} alt="angle" />
+          <img className={styles.angle} src={accordion_angle} alt="angle" />
+          <h6>{isOpen ? "-" : "+"}</h6>
         </div>
         <span>{data.title}</span>
         {isOpen && <img src={border} alt="border" />}
         {isOpen && data.description}
-        <h6>{isOpen ? "-" : "+"}</h6>
       </div>
     );
   };

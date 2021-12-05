@@ -6,20 +6,24 @@ import lineLeft from "../../styles/img/roadmap_line_left.png";
 import lineRight from "../../styles/img/roadmap_line_right.png";
 // import decor from "../../styles/img/decor.png";
 
-import fist1 from "../../styles/img/fist1.png";
-import fist2 from "../../styles/img/fist2.png";
-import fist3 from "../../styles/img/fist3.png";
-import fist4 from "../../styles/img/fist4.png";
-import fist5 from "../../styles/img/fist5.png";
+// import fist1 from "../../styles/img/fist1.png";
+// import fist2 from "../../styles/img/fist2.png";
+// import fist3 from "../../styles/img/fist3.png";
+// import fist4 from "../../styles/img/fist4.png";
+// import fist5 from "../../styles/img/fist5.png";
 import * as styles from "./index.module.scss";
 
 const leftComonent = (data) => {
   return (
-    <div key={data.number} className={styles.card}>
+    <div key={data.number} className={styles.card} data-aos="zoom-in">
       <img src={base} alt="base" />
       <div className={styles.leftDecor}>
         <div>
-          <img className={styles.decorNumber} src={leftNumber} alt="left-decor" />
+          <img
+            className={styles.decorNumber}
+            src={leftNumber}
+            alt="left-decor"
+          />
           <span>{"0" + data.number.toString()}</span>
           <img className={styles.decorLine} src={lineLeft} alt="lineLeft" />
         </div>
@@ -32,13 +36,19 @@ const leftComonent = (data) => {
 
 const rightComonent = (data) => {
   return (
-    <div key={data.number} className={styles.card}>
+    <div key={data.number} className={styles.card} data-aos="zoom-out">
       <img src={base} alt="base" />
       <div className={styles.rightDecor}>
         <div>
-          <img className={styles.decorNumber} src={rightNumber} alt="left-decor" />
+          <img
+            className={styles.decorNumber}
+            src={rightNumber}
+            alt="left-decor"
+          />
           <span>{"0" + data.number.toString()}</span>
-          {data.number !== 8 && <img className={styles.decorLine} src={lineRight} alt="lineLeft" />}
+          {data.number !== 8 && (
+            <img className={styles.decorLine} src={lineRight} alt="lineLeft" />
+          )}
         </div>
       </div>
       <span>{data.title}</span>
@@ -155,16 +165,23 @@ const mock = [
 
 const Roadmap = () => (
   <div className={`${styles.main} container-width`}>
-    <h3 className="title">Roadmap</h3>
-    <section>
+    <div className="flex-center">
+      <h3 data-aos="fade-right" className="title">
+        Road
+      </h3>
+      <h3 data-aos-delay="400" data-aos="fade-left" className="title">
+        map
+      </h3>
+    </div>
+    {/* <section>
       <img src={fist2} alt="fist" />
       <img src={fist1} alt="fist" />
       <img src={fist3} alt="fist" />
       <img src={fist4} alt="fist" />
       <img src={fist5} alt="fist" />
       <img src={fist4} alt="fist" />
-      {/* <img src={decor} alt="decor" /> */}
-    </section>
+      <img src={decor} alt="decor" />
+    </section> */}
     {mock.map((el) =>
       el.number % 2 === 1 ? leftComonent(el) : rightComonent(el)
     )}

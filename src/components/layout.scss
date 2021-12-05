@@ -635,6 +635,11 @@ pre tt:after {
   transform: translateX(0);
   visibility: visible;
 }
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media only screen and (max-width: 1200px) {
   .title {

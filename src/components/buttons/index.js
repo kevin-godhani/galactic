@@ -29,9 +29,9 @@ export const mainButton = (to, title, isDouble) => {
   );
 };
 
-export const doubleStripeButton = (to, title) => {
+export const doubleStripeButton = (to, title, callback) => {
   return (
-    <Link to={to} className={styles.mainButton}>
+    <Link to={to} onClick={() => callback && callback()} className={styles.mainButton}>
       <div className={styles.mainDoubleButtonStripe}>
         <img src={stripeImg} alt="stripeImg" />
         <img src={stripeImg} alt="stripeImg" />
@@ -50,6 +50,30 @@ export const doubleStripeButton = (to, title) => {
         <span>{title}</span>
       </div>
     </Link>
+  );
+};
+
+export const buttonWithoutLink = (title, callback) => {
+  return (
+    <div onClick={() => callback && callback()} className={styles.mainButton}>
+      <div className={styles.mainDoubleButtonStripe}>
+        <img src={stripeImg} alt="stripeImg" />
+        <img src={stripeImg} alt="stripeImg" />
+      </div>
+      <div className={styles.mainButtonContent}>
+        <img
+          className={styles.rectangle}
+          src={button_rectangle_icon}
+          alt="button_rectangle_icon"
+        />
+        <img
+          src={button_rectangle_hover_icon}
+          alt="button_rectangle_hover_icon"
+          className={styles.rectangleHover}
+        />
+        <span>{title}</span>
+      </div>
+    </div>
   );
 };
 

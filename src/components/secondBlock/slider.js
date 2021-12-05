@@ -11,6 +11,7 @@ const settings = {
   slidesToScroll: 1,
   centerPadding: "10px",
   centerMode: true,
+  arrows: false,
   // autoplay: true,
   speed: 1000,
   // autoplaySpeed: 1000,
@@ -18,11 +19,11 @@ const settings = {
   pauseOnHover: true,
   responsive: [
     {
-      breakpoint: 1324,
+      breakpoint: 1364,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
-        centerPadding: "10px",
+        centerPadding: "200px",
         centerMode: true,
       },
     },
@@ -37,16 +38,18 @@ const settings = {
     },
   ],
 };
-const SlickSlider = ({ changeStep }) => (
+const SlickSlider = ({ changeStep, data, isClicable = false }) => (
   <div className={styles.sliderWrapper}>
     <Slider {...settings}>
-      <div onClick={() => changeStep(1)} className={styles.card}>1</div>
-      <div onClick={() => changeStep(2)} className={styles.card}>2</div>
-      <div onClick={() => changeStep(3)} className={styles.card}>3</div>
-      <div onClick={() => changeStep(4)} className={styles.card}>4</div>
-      <div onClick={() => changeStep(5)} className={styles.card}>5</div>
-      <div onClick={() => changeStep(6)} className={styles.card}>6</div>
-      <div onClick={() => changeStep(7)} className={styles.card}>7</div>
+      {data.map((el) => (
+        <div
+          className={styles.card}
+          key={el.id}
+          onClick={() => isClicable && changeStep(el.id)}
+        >
+          <img src={el.url} alt="decoration" />
+        </div>
+      ))}
     </Slider>
   </div>
 );

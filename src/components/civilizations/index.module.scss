@@ -104,7 +104,11 @@
     }
   }
 }
-
+.contentTitle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 @media only screen and (max-width: 1260px) {
   .contentDescription > span {
     left: 52px !important;

@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
+import CivilizationSlides from "./slides";
+
 import arrowP from "../../styles/img/icons/arrow_purple.svg";
 import arrowG from "../../styles/img/icons/arrow_gold.svg";
-import fist from "../../styles/img/fist_right.png";
+import sound from "../../styles/img/icons/sound_icon.png";
 import border from "../../styles/img/border1.svg";
-import videoBlock from "../../styles/img/video_block.png";
+import videoBlock from "../../styles/img/border_video.png";
 import decoration from "../../styles/img/back_decoration.png";
 import borderTablet from "../../styles/img/border_tablet.png";
-import { doubleStripeButton } from "../buttons";
 import * as styles from "./index.module.scss";
+import cursorPlay from "../../styles/img/cursors/watch.png";
+import cursorStop from "../../styles/img/cursors/stop.png";
 
 export const animatedArrows = (color) => {
   return (
@@ -20,47 +23,35 @@ export const animatedArrows = (color) => {
 };
 
 const ThirdBlock = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const videoRef = useRef(null);
+  const [videoActive, setVideoActive] = useState(true);
 
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
+  const handleClickVideo = (e) => {
+    setVideoActive(!videoActive);
+    if (videoActive) {
+      e.target.pause();
+    } else {
+      e.target.play();
+      e.target.muted = false;
+    }
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const classes =
-    scrollPosition >= 1900
-      ? `${styles.animationDescription} description`
-      : "description";
-
-  const classButton =
-    scrollPosition >= 1900
-      ? `${styles.animationButtonActive} container-width`
-      : `container-width`;
-
-  const titleClass1 =
-    scrollPosition >= 1900 ? `${styles.animationTitleFirst} title` : "title";
-  const titleClass2 =
-    scrollPosition >= 1900 ? `${styles.animationTitleSecond} title` : "title";
-
-  const titleClass3 =
-    scrollPosition > 1380 ? `${styles.animationTitleFirst} title` : "title";
-  const titleClass4 =
-    scrollPosition > 1380 ? `${styles.animationTitleSecond} title` : "title";
-
+  const handleSound = (e) => {
+    e.stopPropagation();
+    if (videoRef) {
+      videoRef.current.muted = false;
+    } else {
+      videoRef.current.muted = true;
+    }
+  };
   return (
     <div className={styles.main}>
       <div className={`${styles.mainHeader} container-width`}>
-        <h2 className={titleClass3}>Origin </h2>
-        <h2 className={titleClass4}>Story</h2>
-        <img src={fist} alt="fist" />
+        <h2 data-aos="fade-left" className="title">
+          Origin{" "}
+        </h2>
+        <h2 data-aos-delay="400" data-aos="fade-down" className="title">
+          Story
+        </h2>
       </div>
       <div className={`${styles.contentWrapper} container-width`}>
         <div className={`${styles.mainContent}`}>
@@ -68,7 +59,7 @@ const ThirdBlock = () => {
           <div className={styles.arrowsG}>{animatedArrows("")}</div>
           <img className={styles.desktop} src={border} alt="border" />
           <img className={styles.tablet} src={borderTablet} alt="border" />
-          <span className={`${styles.desktop} description`}>
+          <span data-aos="zoom-in" className={`${styles.desktop} description`}>
             The Galactic Fight League <br /> brings together the best <br />
             fighters from earth and <br />
             beyond. Where Humans, <br />
@@ -77,41 +68,60 @@ const ThirdBlock = () => {
             mixed martial art fighter in <br />
             the metaverse.
           </span>
-          <span className={`${styles.tablet} description`}>
+          <span data-aos="zoom-in" className={`${styles.tablet} description`}>
             The Galactic Fight League brings together
             <br /> the best fighters from earth and beyond. <br /> Where Humans,
             Cyborgs, Aliens and <br /> Zombies battle to become the best mixed
             <br /> martial art fighter in the metaverse.
           </span>
         </div>
-        <div>
+        <div className={styles.videoWrapper}>
           <img src={videoBlock} alt="videoBlock" />
+          <video
+            style={
+              videoActive
+                ? { cursor: `url(${cursorStop}) 25 15, auto` }
+                : { cursor: `url(${cursorPlay}) 25 15, auto` }
+            }
+            onClick={handleClickVideo}
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            src="https://storage.googleapis.com/video_galactic/final.mp4"
+            poster={decoration}
+          ></video>
+          <div className={styles.soundIcon}>
+            <img onClick={handleSound} src={sound} alt="sound" />
+          </div>
         </div>
       </div>
       <div className={`${styles.civilizations} container-width`}>
         <img src={decoration} alt="decoration" />
         <div className={styles.animatedTitle}>
-          <h3 className={titleClass1}>Сivili</h3>
-          <h3 className={titleClass2}>sations</h3>
+          <h3 data-aos="fade-left" className="title">
+            Сivili
+          </h3>
+          <h3 data-aos-delay="400" data-aos="fade-down" className="title">
+            sations
+          </h3>
         </div>
-        <div className={styles.animatedDescription}>
-          <span className={classes}>
-            In the future, our galaxy is a very different place. Where humans
-            once believed
-            <br />
-          </span>
-          <span className={classes}>
-            they were the only form of intelligent life, new civilizations were
-            discovered, new
-            <br />
-          </span>
-          <span className={classes}>
-            lifeforms forged. Co-existence was never easy, battles raged.
-          </span>
-        </div>
-        <div className={`${classButton} ${styles.animatedButton}`}>
+        {/* <Test open={scrollPosition > 2580}/> */}
+        <span data-aos-delay="800" data-aos="fade-up" className="description">
+          In the future, our galaxy is a very different place. Where humans once
+          believed <br />
+        </span>
+        <span data-aos-delay="1000" data-aos="fade-up" className="description">
+          they were the only form of intelligent life, new civilizations were
+          discovered, new <br />
+        </span>
+        <span data-aos-delay="1200" data-aos="fade-up" className="description">
+          lifeforms forged. Co-existence was never easy, battles raged.
+        </span>
+        {/* <div className={`${classButton} ${styles.animatedButton}`}>
           {doubleStripeButton("", "Read More")}
-        </div>
+        </div> */}
+        <CivilizationSlides />
       </div>
     </div>
   );

@@ -3,6 +3,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  cursor: pointer;
   .mainDoubleButtonStripe {
     position: relative;
     > img {
@@ -40,10 +41,28 @@
     position: absolute;
     right: -16px;
     top: -26px;
+    transition: all .3s ease-in-out;
   }
   .rectangleHover {
     opacity: 0;
+    right: -16px;
+    top: -26px;
     position: absolute;
+    transition: all .3s ease-in-out;
+  }
+  &:hover {
+    .rectangleHover {
+      opacity: 1;
+    }
+    .rectangle {
+      opacity: 0;
+    }
+    .mainButtonContent {
+      > span {
+        transition: all .3s ease-in-out;
+        color: #131313;
+      }
+    }
   }
 }
 .social {
