@@ -1,0 +1,62 @@
+.main {
+  width: 100%;
+  padding-top: 128px;
+  padding-bottom: 50px;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  > h1 {
+    font-style: normal;
+    text-align: center;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 45px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    width: 520px;
+    font-family: 'Syne';
+    > span {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 45px;
+      line-height: 45px;
+      color: #EFDAA9;
+      margin-right: 13px;
+      margin-bottom: 54px;
+    }
+  }
+  > p {
+    width: 696px;
+    height: 105px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: rgba(165, 161, 161, 0.7);
+    font-family: '1617';
+  }
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  // cursor: url(../../styles/img/cursors/cursor.png) 25 15, auto;
+}
+.sliderWrapper {
+  padding-bottom: 240px;
+  padding-top: 80px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .sliderWrapper {
+    padding-bottom: 80px;
+  }
+}

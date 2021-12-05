@@ -9,7 +9,7 @@ import decor from "../../styles/img/back_decoration.png";
 import borderMobile from "../../styles/img/civilizations/border_tablet.png";
 import borderTablet from "../../styles/img/civilizations/border_mobile.png";
 import * as styles from "./index.module.scss";
-import SlickSlider from "../secondBlock/slider";
+import SlickSlider from "../mainPage/secondBlock/slider";
 
 const CivilizationStoryContent = ({ data }) => {
   const videoRef = useRef(null);
@@ -62,6 +62,7 @@ const CivilizationStoryContent = ({ data }) => {
             ref={videoRef}
             loop
             src={`https://storage.googleapis.com/video_galactic/${data.id}.mp4`}
+            poster={data.previewImg}
           />
           <img className={styles.label} src={label} alt="label" />
         </div>

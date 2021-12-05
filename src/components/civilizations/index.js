@@ -1,15 +1,23 @@
 import React, { useState } from "react";
+import { navigate } from "gatsby";
 // import Ticker, { FinancialTicker, NewsTicker } from "nice-react-ticker";
 import { pageData, carousel } from "./dataMocks";
 import border from "../../styles/img/border_line.png";
 import * as styles from "./index.module.scss";
-import SlickSlider from "../secondBlock/slider";
+import SlickSlider from "../mainPage/secondBlock/slider";
 import CivilizationsContent from "./content";
+import { civilizationsStoryData } from "./dataMocks";
+
 const CivilizationsMain = () => {
-  const [selectedStep, setselectedStep] = useState(1);
+  const [selectedStep, setselectedStep] = useState(0);
 
   const handlechangeStep = (step) => {
     setselectedStep(step);
+  };
+  const handleredirect = (id) => {
+    if (id - 1 === selectedStep) {
+      navigate(civilizationsStoryData[selectedStep].link);
+    }
   };
 
   return (
@@ -24,15 +32,20 @@ const CivilizationsMain = () => {
       <div
         className={styles.mainInfo}
         style={{
-          backgroundImage: `url(${pageData[selectedStep - 1].backgroung})`,
+          backgroundImage: `url(${pageData[selectedStep].backgroung})`,
         }}
       >
         <section className={styles.decorLine} />
-        <img src={pageData[selectedStep - 1].decor} alt="decor" />
+        <img src={pageData[selectedStep].decor} alt="decor" />
         <span>SELECT CIVILISATION</span>
       </div>
-      <SlickSlider data={carousel} changeStep={handlechangeStep} isClicable />
-      <CivilizationsContent data={pageData[selectedStep - 1]} />
+      <SlickSlider
+        redirect={handleredirect}
+        data={carousel}
+        afterChange={handlechangeStep}
+        isClicable
+      />
+      <CivilizationsContent data={pageData[selectedStep]} />
     </div>
   );
 };

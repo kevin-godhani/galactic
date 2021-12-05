@@ -604,9 +604,12 @@ pre tt:after {
 
 .slick-center{
   opacity: 1 !important;
+  cursor: url(../styles/img/cursors/more.png) 2 2, auto !important;
+
 }
 .slick-slide {
   opacity: 0.3;
+  cursor: url(../styles/img/cursors/cursor.png) 25 15, auto;
 }
 
 .container-width {

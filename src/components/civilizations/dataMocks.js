@@ -37,6 +37,14 @@ import civilization_logo5 from "../../styles/img/civilizations/logo5.png";
 import civilization_logo6 from "../../styles/img/civilizations/logo6.png";
 import civilization_logo7 from "../../styles/img/civilizations/logo7.png";
 
+import preview_img1 from '../../styles/img/civilizations/thumb_1.png';
+import preview_img2 from '../../styles/img/civilizations/thumb_2.png';
+import preview_img3 from '../../styles/img/civilizations/thumb_3.png';
+import preview_img4 from '../../styles/img/civilizations/thumb_4.png';
+import preview_img5 from '../../styles/img/civilizations/thumb_5.png';
+import preview_img6 from '../../styles/img/civilizations/thumb_6.png';
+import preview_img7 from '../../styles/img/civilizations/thumb_7.png';
+
 export const pageData = [
   {
     id: 1,
@@ -184,6 +192,8 @@ export const civilizationsStoryData = [
     male: decor1,
     female: female1,
     nextLink: "/civilization-immortals",
+    link: "/civilization-last-guard",
+    previewImg: preview_img1,
   },
   {
     id: 2,
@@ -193,6 +203,8 @@ export const civilizationsStoryData = [
     male: decor2,
     female: female2,
     nextLink: "/civilization-jupiter-knights",
+    link: "/civilization-immortals",
+    previewImg: preview_img2,
   },
   {
     id: 3,
@@ -202,6 +214,8 @@ export const civilizationsStoryData = [
     male: decor3,
     female: female3,
     nextLink: "/civilization-biohazard-brawlers",
+    link: "/civilization-jupiter-knights",
+    previewImg: preview_img3,
   },
   {
     id: 4,
@@ -211,6 +225,8 @@ export const civilizationsStoryData = [
     male: decor4,
     female: female4,
     nextLink: "/civilization-bone-collectors",
+    link: "/civilization-biohazard-brawlers",
+    previewImg: preview_img4,
 
   },
   {
@@ -221,6 +237,8 @@ export const civilizationsStoryData = [
     male: decor5,
     female: female5,
     nextLink: "/civilization-iron-empire",
+    link: "/civilization-bone-collectors",
+    previewImg: preview_img5,
   },
   {
     id: 6,
@@ -230,6 +248,8 @@ export const civilizationsStoryData = [
     male: decor6,
     female: female6,
     nextLink: "/civilization-unbroken",
+    link: "/civilization-iron-empire",
+    previewImg: preview_img6,
   },
   {
     id: 7,
@@ -239,5 +259,7 @@ export const civilizationsStoryData = [
     male: decor7,
     female: female7,
     nextLink: "/civilization-last-guard",
+    link: "/civilization-unbroken",
+    previewImg: preview_img7,
   },
 ];

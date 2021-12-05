@@ -59,7 +59,13 @@ const CivilizationsStory = ({ data }) => {
             src={border_animation}
             alt="border"
           />
-          <video autoPlay muted loop src={`https://storage.googleapis.com/video_galactic/${data.id}.mp4`} />
+          <video
+            autoPlay
+            muted
+            loop
+            src={`https://storage.googleapis.com/video_galactic/${data.id}.mp4`}
+            poster={data.previewImg}
+          />
           <img
             data-aos="zoom-out"
             data-aos-delay="600"
@@ -77,7 +83,10 @@ const CivilizationsStory = ({ data }) => {
         </div>
       </div>
       <CivilizationStoryContent data={data} />
-      <div style={{marginBottom: '100px'}} className="container-width flex-center">
+      <div
+        style={{ marginBottom: "100px" }}
+        className="container-width flex-center"
+      >
         {doubleStripeButton(data.nextLink, "Next")}
       </div>
     </div>

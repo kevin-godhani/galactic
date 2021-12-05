@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import border from "../../styles/img/civilizations/borders_civilization.png";
 import borderMobile from "../../styles/img/civilizations/border_tablet.png";
 import borderTablet from "../../styles/img/civilizations/border_mobile.png";

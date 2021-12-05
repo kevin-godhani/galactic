@@ -1,0 +1,182 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  > h3 {
+    margin-bottom: 80px;
+  }
+  > section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  > img {
+    position: absolute;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    &:nth-child(1) {
+      right: -79px;
+      top: 67px;
+      animation-name: bounceUp;
+      animation-duration: 6s;
+    }
+    &:nth-child(2) {
+      right: -32px;
+      top: 689px;
+      animation-name: bounceDown;
+      animation-duration: 8s;
+    }
+    &:nth-child(3) {
+      left: -30px;
+      bottom: -1453px;
+      animation-name: bounceUp;
+      animation-duration: 6s;
+    }
+    &:nth-child(4) {
+      right: -32px;
+      bottom: -1742px;
+      animation-name: bounceUp;
+      animation-duration: 5s;
+    }
+    &:nth-child(5) {
+      bottom: -2246px;
+      left: -30px;
+      animation-name: bounceDown;
+      animation-duration: 8s;
+    }
+    &:nth-child(6) {
+      right: -32px;
+      bottom: -2600px;
+      animation-name: bounceUp;
+      animation-duration: 4s;
+    }
+    // &:nth-child(6) {
+    //   right: -32px;
+    // }
+    }
+  }
+  .card {
+    position: relative;
+    margin-bottom: 114px;
+    .leftDecor {
+      > div {
+        position: relative;
+        > img:last-child {
+          position: absolute;
+          top: 65px;
+          left: -105px;
+        }
+        > span {
+          position: absolute;
+          font-family: Syne;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 34.1538px;
+          line-height: 32px;
+          color: #010103;
+          left: 32px;
+          top: 21px;
+        }
+      }
+      position: absolute;
+      top: 46px;
+    }
+    .rightDecor {
+      > div {
+        position: relative;
+        > img:last-child {
+          position: absolute;
+          top: 83px;
+          right: 49px;
+          // left: 745px;
+        }
+        > span {
+          position: absolute;
+          font-family: Syne;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 34.1538px;
+          line-height: 32px;
+          color: #010103;
+          left: 52px;
+          top: 21px;
+        }
+      }
+      position: absolute;
+      right: -66px;
+      top: 131px;
+    }
+    > span {
+      position: absolute;
+      font-family: 'Syne';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 36px;
+      color: #EFDAA9;
+      left: 284px;
+      top: 40px;
+    }
+    > p {
+      max-width: 428px;
+      position: absolute;
+      font-family: '1617';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.7);
+      left: 200px;
+      bottom: 40px;
+    }
+  }
+}
+
+@keyframes bounceUp {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-70px); }
+  100% { transform: translateY(0); }
+}
+@keyframes bounceDown {
+  0%   { transform: translateY(-70px); }
+  50%  { transform: translateY(0); }
+  100% { transform: translateY(-70px); }
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    margin-bottom: 30px !important;
+    > img {
+      max-width: 100%;
+    }
+    > span {
+      font-size: 24px !important;
+    }
+    > p {
+      left: 26% !important;
+      bottom: 27px !important;
+      font-size: 12px !important;
+    }
+  }
+  .decorLine {
+    display: none;
+  }
+  .decorNumber {
+    max-width: 100%;
+  }
+  .leftDecor, .rightDecor {
+    > div {
+      > span {
+        font-size: 24px !important;
+      }
+    }
+  }
+  .main {
+   > section > img {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.main {
+  height: auto;
+  > h3 {
+    margin-top: 200px;
+  }
+  .gragientLine {
+    margin-top: 80px;
+    margin-bottom: 200px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .main {
+    > h3 {
+      margin-top: 40px !important;
+    }
+  }
+  .gragientLine {
+   margin-bottom: 40px !important;
+   > img {
+    max-width: 100%;
+   }
+  }
+}
