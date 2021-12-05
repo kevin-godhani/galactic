@@ -611,7 +611,17 @@ pre tt:after {
   opacity: 0.3;
   cursor: url(../styles/img/cursors/cursor.png) 25 15, auto;
 }
-
+.ticker__element {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 144px;
+  color: #EFDAA9;
+  > span {
+    margin-right: 64px;
+  }
+}
 .container-width {
   width: 90%;
   margin: 0 auto;

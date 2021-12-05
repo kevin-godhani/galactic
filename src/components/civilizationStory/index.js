@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Ticker from "react-ticker";
 import * as styles from "./index.module.scss";
 import { doubleStripeButton } from "../buttons/index";
 import CivilizationStoryContent from "./content";
@@ -43,11 +44,13 @@ const CivilizationsStory = ({ data }) => {
         <img src={border} alt="border" />
       </section>
       <div className={styles.mainHeader}>
-        <div>
-          <span>{data.title}</span>
-          <span>{data.title}</span>
-          <span>{data.title}</span>
-        </div>
+        <Ticker direction="toLeft">
+          {({ index }) => (
+            <>
+              <span key={index}>{data.title}</span>
+            </>
+          )}
+        </Ticker>
         <img src={border} alt="border" />
       </div>
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { navigate } from "gatsby";
-// import Ticker, { FinancialTicker, NewsTicker } from "nice-react-ticker";
+import Ticker from "react-ticker";
 import { pageData, carousel } from "./dataMocks";
 import border from "../../styles/img/border_line.png";
 import * as styles from "./index.module.scss";
@@ -25,8 +25,15 @@ const CivilizationsMain = () => {
       <section>
         <img src={border} alt="border" />
       </section>
+
       <div className={styles.mainHeader}>
-        <span>Civilisations</span>
+        <Ticker direction="toLeft">
+          {({ index }) => (
+            <>
+              <span key={index}>Civilisations</span>
+            </>
+          )}
+        </Ticker>
         <img src={border} alt="border" />
       </div>
       <div
