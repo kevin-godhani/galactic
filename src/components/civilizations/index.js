@@ -4,6 +4,8 @@ import Ticker from "react-ticker";
 import { pageData, carousel } from "./dataMocks";
 import border from "../../styles/img/border_line.png";
 import * as styles from "./index.module.scss";
+import * as style from "../civilizationStory/index.module.scss";
+
 import SlickSlider from "../mainPage/secondBlock/slider";
 import CivilizationsContent from "./content";
 import { civilizationsStoryData } from "./dataMocks";
@@ -26,11 +28,11 @@ const CivilizationsMain = () => {
         <img src={border} alt="border" />
       </section>
 
-      <div className={styles.mainHeader}>
+      <div className={style.mainHeader}>
         <Ticker direction="toLeft">
           {({ index }) => (
             <>
-              <span key={index}>Civilisations</span>
+              <span className={style.tickerText} key={index}>Civilisations</span>
             </>
           )}
         </Ticker>

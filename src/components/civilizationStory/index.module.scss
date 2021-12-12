@@ -11,48 +11,66 @@
       bottom: 0;
     }
   }
-  .mainHeader {
-    width: 100%;
-    height: 154px;
-    background-image: url(../../styles/img/civilizations/main_header_back.png);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    > div {
-      animation: marquee 10s infinite linear;
-      width: 300%;
-      height: 100%;
-      position: absolute;
-      > span {
-        // right: 30%;
-        width: 33%;
-        margin-right: 60px;
-        font-family: "Syne";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 96px;
-        line-height: 144px;
-        color: #efdaa9;
-      }
-    }
-    > img {
-      position: absolute;
-      left: 20%;
-      bottom: 0;
+}
+.mainHeader {
+  width: 100%;
+  height: 154px;
+  background-image: url(../../styles/img/civilizations/main_header_back.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  > div {
+    animation: marquee 10s infinite linear;
+    width: 300%;
+    height: 100%;
+    position: absolute;
+    > span {
+      // right: 30%;
+      width: 33%;
+      margin-right: 60px;
+      font-family: "Syne";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 96px;
+      line-height: 144px;
+      color: #efdaa9;
     }
   }
-  .tablet {
-    display: none;
-    width: 100%;
+  > img {
+    position: absolute;
+    left: 20%;
+    bottom: 0;
   }
-  .mobile {
-    display: none;
-    width: 100%;
+}
+.content {
+  > h1 {
+    margin-bottom: 50px;
   }
-  .desktop {
-    display: block;
-    width: 100%;
+  > h6 {
+    font-family: "Syne";
+    font-style: normal;
+    font-weight: bold;
+    margin: 0 auto;
+    font-size: 46px;
+    line-height: 60px;
+    text-align: center;
+    color: #a36abc;
+    margin-top: 70px;
+    margin-bottom: 120px;
+    max-width: 610px;
   }
+}
+.tablet {
+  display: none;
+  width: 100%;
+}
+.mobile {
+  display: none;
+  width: 100%;
+}
+.desktop {
+  display: block;
+  width: 100%;
 }
 .buttonBlock {
   position: absolute;

@@ -23,12 +23,21 @@ const settings = {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
-        centerPadding: "200px",
+        centerPadding: "10px",
         centerMode: true,
       },
     },
     {
       breakpoint: 924,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: "20px",
+      },
+    },
+    {
+      breakpoint: 880,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -40,7 +49,7 @@ const settings = {
 };
 const SlickSlider = ({ redirect, data, isClicable = false, afterChange }) => (
   <div className={styles.sliderWrapper}>
-    <Slider {...settings} afterChange={afterChange} >
+    <Slider {...settings} afterChange={afterChange}>
       {data.map((el) => (
         <div
           className={styles.card}
