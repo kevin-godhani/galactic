@@ -27,15 +27,15 @@
         // right: 30%;
         width: 33%;
         margin-right: 60px;
-        font-family: 'Syne';
+        font-family: "Syne";
         font-style: normal;
         font-weight: 600;
         font-size: 96px;
         line-height: 144px;
-        color: #EFDAA9;
-       }
+        color: #efdaa9;
+      }
     }
-     > img {
+    > img {
       position: absolute;
       left: 20%;
       bottom: 0;
@@ -43,30 +43,29 @@
   }
   .tablet {
     display: none;
-    max-width: 100%;
+    width: 100%;
   }
   .mobile {
     display: none;
-    // max-width: 100%;
+    width: 100%;
   }
   .desktop {
     display: block;
-    max-width: 100%;
+    width: 100%;
   }
 }
 .buttonBlock {
   position: absolute;
-  top: 6px;
-  left: 20px;
-  width: 36%;
+  top: 3%;
+  left: 4%;
+  width: 32%;
   z-index: 1;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
   > div {
-      max-width: 277px;
-      position: relative;
-      cursor: pointer;
+    max-width: 277px;
+    position: relative;
+    cursor: pointer;
     > img {
       z-index: 2;
       max-width: 100%;
@@ -74,9 +73,9 @@
     > span {
       z-index: 3;
       position: absolute;
-      left: 77px;
-      top: 20px;
-      font-family: 'Syne';
+      left: 35%;
+      top: 30%;
+      font-family: "Syne";
       font-style: normal;
       font-weight: bold;
       font-size: 22px;
@@ -89,33 +88,56 @@
   }
 }
 .animationWrapper {
-  position: relative;
   margin-top: 50px;
-  min-height: 750px;
-  .logo {
-    position: absolute;
-    left: 62px;
-    top: 25%;
-  }
-  .decor {
-    position: absolute;
-    left: 44%;
-    bottom: 105px;
-  }
-  .animationBorder {
-    position: absolute;
+  > div {
     width: 100%;
-  }
-  > video {
-    max-width: 100%;
-  }
-  > span {
-    position: absolute;
-    bottom: -36px;
-    left: 0;
-    background-color: #000000;
-    height: 150px;
-    width: 100%;
+    max-height: 810px;
+    position: relative;
+    overflow: hidden;
+    .animationBorder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .decor {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      > span {
+        position: absolute;
+        bottom: -13px;
+        left: 0;
+        background-color: #000000;
+        height: 20px;
+        width: 100%;
+      }
+      > div {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        > img:first-child {
+          position: absolute;
+          left: 10%;
+          top: 29%;
+          width: 31%;
+        }
+        > img:last-child {
+          position: absolute;
+          bottom: -6px;
+          right: 10%;
+          width: 48%;
+        }
+      }
+    }
+    > video {
+      width: 100%;
+    }
   }
 }
 .CivilizationStoryContent {
@@ -123,12 +145,6 @@
   .mainTitle {
     display: flex;
     align-items: flex-start;
-    > h2:first-child {
-      margin-right: 40px;
-    }
-    >:last-child {
-      margin-left: 40px;
-    }
   }
 }
 .contentDescription {
@@ -136,17 +152,43 @@
   max-width: 100%;
   margin-top: 50px;
   margin-bottom: 50px;
+  > section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
   > div {
     position: absolute;
-    max-width: 1000px;
-    left: 100px;
-    top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     > h3 {
       font-size: 36px;
       line-height: 36px;
     }
   }
 }
+.arrowsP {
+  position: absolute;
+  bottom: 0;
+  left: 32%;
+}
+.arrowsG {
+  position: absolute;
+  position: absolute;
+  top: 20%;
+  left: 0px;
+  > div {
+    flex-direction: column;
+  }
+}
+
 .videoBlock {
   position: relative;
   display: flex;
@@ -156,21 +198,23 @@
   height: 506px;
   > div:first-child {
     width: 60%;
-    min-width: 870px;
+    position: relative;
     > video {
-      max-width: 112%;
-      max-height: 488px;
+      width: 99%;
+      height: 100%;
     }
     .label {
       position: absolute;
-      left: 100px;
+      left: 12%;
+      width: 76%;
       bottom: -36px;
     }
     .borderVideo {
       position: absolute;
-      max-width: 100%;
-      left: -25px;
-      top: -43px;
+      width: 100%;
+      height: 105%;
+      left: 0;
+      top: 0;
     }
   }
   > div:last-child {
@@ -191,22 +235,212 @@
     margin-bottom: 40px;
   }
 }
+.raceInfo {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > div {
+    display: flex;
+    position: relative;
+    width: 25%;
+    height: 126px;
+    margin-right: 20px;
+    &:first-child {
+      > div {
+        > span {
+          color: #f0b9a9;
+        }
+      }
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      margin-top: 22px;
+      > span {
+        font-family: "Syne-B";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      > p {
+        font-size: 14px;
+      }
+    }
+    .borderImg {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+.groupButtons {
+  max-width: 624px;
+  margin-top: 3rem;
+  margin-left: 70px;
+  > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    > span {
+      position: absolute;
+      right: 14%;
+      top: 89px;
+      text-align: center;
+      width: 434px;
+    }
+    > div {
+      position: relative;
+      > button {
+        position: absolute;
+        top: 2px;
+        transition: all 0.4 ease-in-out;
+        width: 244.5px;
+        height: 46px;
+        border-radius: 6px;
+        font-family: "Syne-B";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+    .groupButtonLeft {
+      > button {
+        left: 57px;
+      }
+    }
+    .groupButtonRight {
+      > button {
+        right: 55px;
+      }
+    }
+  }
+}
+.buttonActive {
+  background: linear-gradient(360deg, #efdda9 0%, #f0b9a9 100%);
+  color: #010103;
+  &:hover {
+    background: linear-gradient(360deg, #f0b9a9 0%, #efdda9 100%);
+  }
+  &:active {
+    background: linear-gradient(360deg, #efdda9 0%, #f0b9a9 100%);
+  }
+}
+.buttonNonActive {
+  background: linear-gradient(360deg, #000000 0%, #1e135c 100%),
+    linear-gradient(180deg, rgba(26, 12, 54, 0) 0%, #1a0c36 100%);
+  color: #99986c;
+  &:hover {
+    background: linear-gradient(360deg, #000000 0%, #1e135c 100%),
+      linear-gradient(180deg, rgba(26, 12, 54, 0) 0%, #1a0c36 100%);
+    color: #99986c;
+  }
+  // &:active {
+  //   background: linear-gradient(360deg, #efdda9 0%, #f0b9a9 100%);
+  // }
+}
 @media only screen and (max-width: 1260px) {
-  .contentDescription > span {
-    left: 52px !important;
-    top: 51px !important;
+  .CivilizationStoryContent {
+    margin-top: 80px;
+  }
+  .contentDescription {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .buttonBlock {
+    > div {
+      > span {
+        font-size: 18px;
+        left: 27%;
+        top: 23%;
+      }
+    }
+  }
+  .tickerText {
+    font-size: 59px;
+  }
+  .mainTitle {
+    > h2 {
+      margin-bottom: 0 !important;
+    }
   }
 }
 
 @media only screen and (max-width: 1080px) {
-  .contentDescription {
-    max-width: 700px !important;
-    margin: 0 auto;
-    > span {
-      max-width: 550px !important;
-      left: 67px !important;
-      top: 56px !important;
+  .raceInfo {
+    overflow: scroll;
+    > div {
+      width: 290px;
     }
+  }
+  .buttonBlock {
+    > div {
+      > span {
+        font-size: 18px;
+        top: 18%;
+        left: 29%;
+      }
+    }
+  }
+  .videoBlock {
+    > div {
+      &:first-child {
+        width: 100%;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .animationWrapper {
+    margin-top: 50px;
+    > div {
+      width: 100%;
+      height: 650px;
+      .decor {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        > div {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          > img:first-child {
+            left: 64%;
+            top: 7%;
+          }
+          > img:last-child {
+            bottom: -6px;
+            right: 25%;
+            width: 64%;
+          }
+        }
+      }
+      > video {
+        width: 200%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+  .videoBlock {
+    height: 430px;
+    margin-bottom: 41px;
   }
   .tablet {
     display: block !important;
@@ -215,25 +449,61 @@
   .desktop {
     display: none !important;
   }
+  .tickerText {
+    font-size: 40px;
+  }
+  .mainHeader {
+    height: 90px !important;
+  }
+  .groupButtons {
+    margin-left: 0;
+    width: 100%;
+  }
+  .buttonBlock {
+    top: 0%;
+    left: 7%;
+    width: 42%;
+    > div {
+      > span {
+        font-size: 16px;
+        top: 24%;
+        left: 35%;
+      }
+    }
+  }
+  .arrowsP {
+    bottom: 4px;
+    left: 54.5%;
+  }
+  .arrowsG {
+    top: 15%;
+  }
 }
 
 @media only screen and (max-width: 770px) {
-  .contentDescription > span {
-    line-height: 20px;
-    top: 43px !important;
+  .buttonBlock {
+    > div {
+      > span {
+        left: 31%;
+        top: 16%;
+        font-size: 14px;
+      }
+    }
   }
 }
 
 @media only screen and (max-width: 680px) {
+  .animationWrapper {
+    > div {
+      height: 445px;
+    }
+  }
   .contentDescription {
-    max-width: 320px !important;
-    margin: 0 auto;
-    > span {
-      max-width: 600px !important;
-      left: 67px !important;
-      top: 56px !important;
-      font-size: 12px !important;
-      line-height: 17px;
+    > div {
+      > span {
+        font-size: 1rem;
+        line-height: 1.4rem;
+      }
     }
   }
   .tablet {
@@ -245,6 +515,24 @@
   }
   .mobile {
     display: block !important;
-    margin: 0 auto;
+  }
+  .arrowsP {
+    bottom: 8px;
+    left: 59.5%;
+  }
+  .arrowsG {
+    top: 14%;
+    left: 6px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .buttonBlock {
+    > div {
+      > span {
+        top: 6%;
+        font-size: 12px;
+      }
+    }
   }
 }

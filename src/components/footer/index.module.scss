@@ -27,7 +27,7 @@
       align-items: center;
       justify-content: center;
       > span {
-        font-family: '1617';
+        font-family: "1617";
         font-style: normal;
         font-weight: normal;
         font-size: 10px;
@@ -45,13 +45,13 @@
         &:last-child {
           margin-top: 56px;
           > a {
-            font-family: 'Syne';
+            font-family: "Syne";
             font-style: normal;
             font-weight: bold;
             font-size: 16px;
             line-height: 19px;
             text-align: center;
-            color: #FFFFFF;
+            color: #ffffff;
             text-decoration: none;
             &:first-child {
               margin-right: 22px;
@@ -60,5 +60,11 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .footer {
+    display: none;
   }
 }

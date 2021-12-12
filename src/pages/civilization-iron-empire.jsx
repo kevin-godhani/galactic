@@ -15,7 +15,7 @@ const Civilizations = () => {
   return (
     <Layout>
       <Seo title="Home" />
-      <CivilizationsStory data={civilizationsStoryData[5]} />
+      <CivilizationsStory data={civilizationsStoryData[5]} nextTitle={civilizationsStoryData[6].title}/>
     </Layout>
   )
 }

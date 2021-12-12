@@ -3,14 +3,18 @@ import Ticker from "react-ticker";
 import * as styles from "./index.module.scss";
 import { doubleStripeButton } from "../buttons/index";
 import CivilizationStoryContent from "./content";
-
 import border from "../../styles/img/border_line.png";
 import angle from "../../styles/img/animation_angle.png";
 import angle_active from "../../styles/img/animation_angle_active.png";
+import next_back from "../../styles/img/next_back.png";
+import gemstone from "../../styles/img/gemstone.png";
+import border1 from "../../styles/img/icons/border1.png";
+import border2 from "../../styles/img/icons/border2.png";
 
+import border_animationTablet from "../../styles/img/tablet_civilizations_boder.png";
 import border_animation from "../../styles/img/border_amination.png";
 
-const CivilizationsStory = ({ data }) => {
+const CivilizationsStory = ({ data, nextTitle }) => {
   const [isMale, setIsMale] = useState(true);
   const renderButtons = () => {
     return (
@@ -47,7 +51,9 @@ const CivilizationsStory = ({ data }) => {
         <Ticker direction="toLeft">
           {({ index }) => (
             <>
-              <span key={index}>{data.title}</span>
+              <span className={styles.tickerText} key={index}>
+                {data.title}
+              </span>
             </>
           )}
         </Ticker>
@@ -56,36 +62,95 @@ const CivilizationsStory = ({ data }) => {
 
       <div className={`${styles.content} container-width`}>
         <div className={styles.animationWrapper}>
-          {renderButtons()}
-          <img
-            className={styles.animationBorder}
-            src={border_animation}
-            alt="border"
-          />
-          <video
-            autoPlay
-            muted
-            loop
-            src={`https://storage.googleapis.com/video_galactic/${data.id}.mp4`}
-            poster={data.previewImg}
-          />
-          <img
-            data-aos="zoom-out"
-            data-aos-delay="600"
-            className={styles.logo}
-            src={data.logo}
-            alt="logo"
-          />
-          <img
-            className={styles.decor}
-            style={!isMale ? { left: "41%" } : {}}
-            src={isMale ? data.male : data.female}
-            alt="decor"
-          />
-          <span />
+          <div>
+            {renderButtons()}
+            <video
+              autoPlay
+              muted
+              loop
+              src={`https://storage.googleapis.com/galactic_assets/animated-backgroungs/${data.id}.mp4`}
+              poster={data.previewImg}
+            />
+            <img
+              className={`${styles.animationBorder} ${styles.desktop}`}
+              src={border_animation}
+              alt="border"
+            />
+            <img
+              className={`${styles.animationBorder} ${styles.tablet} ${styles.mobile}`}
+              src={border_animationTablet}
+              alt="border"
+            />
+            <div className={styles.decor}>
+              <div>
+                <img
+                  data-aos="zoom-out"
+                  data-aos-delay="600"
+                  className={styles.logo}
+                  src={data.logo}
+                  alt="logo"
+                />
+                <img
+                  // style={!isMale ? { left: "41%" } : {}}
+                  src={isMale ? data.male : data.female}
+                  alt="decor"
+                />
+              </div>
+              <span />
+            </div>
+          </div>
         </div>
+        <section className={styles.raceInfo}>
+        <div>
+          <img src={gemstone} alt="gemstone" />
+          <div>
+            <span>Team</span>
+            <p className="description">{data.title}</p>
+          </div>
+          <img className={styles.borderImg} src={border1} alt="border" />
+        </div>
+        <div>
+          <img src={gemstone} alt="gemstone" />
+          <div>
+            <span>Planet</span>
+            <p className="description">{data.planet}</p>
+          </div>
+          <img className={styles.borderImg} src={border2} alt="border" />
+        </div>
+        <div>
+          <img src={gemstone} alt="gemstone" />
+          <div>
+            <span>Race</span>
+            <p className="description">{data.race}</p>
+          </div>
+          <img className={styles.borderImg} src={border2} alt="border" />
+        </div>
+        <div>
+          <img src={gemstone} alt="gemstone" />
+          <div>
+            <span>Genders</span>
+            <p className="description">{data.genders}</p>
+          </div>
+          <img className={styles.borderImg} src={border2} alt="border" />
+        </div>
+      </section>
       </div>
       <CivilizationStoryContent data={data} />
+      <div
+        className={styles.mainHeader}
+        style={{ marginBottom: "60px", background: `url(${next_back})` }}
+      >
+        <Ticker direction="toLeft">
+          {({ index }) => (
+            <>
+              <span className={styles.tickerText} key={index}>
+                {nextTitle}
+              </span>
+            </>
+          )}
+        </Ticker>
+        <img src={border} alt="border" />
+      </div>
       <div
         style={{ marginBottom: "100px" }}
         className="container-width flex-center"
