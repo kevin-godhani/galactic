@@ -1,6 +1,7 @@
 .main {
   width: 100%;
   min-height: 1180px;
+  overflow: hidden;
   .mainHeader {
     display: flex;
     position: relative;
@@ -34,9 +35,9 @@
   display: flex;
   align-items: center;
   position: relative;
-  margin-top: 80px !important;
+  width: 85%;
+  margin-top: 40px !important;
   > div {
-    width: 50%;
     &:first-child {
       margin-right: 63px;
     }
@@ -52,8 +53,12 @@
 }
 
 .civilizations {
-  padding-top: 200px;
+  padding-top: 128px;
   position: relative;
+  width: 85%;
+  .civilizationsTitle {
+    margin-bottom: 64px;
+  }
   .animatedTitle {
     display: flex;
     margin-left: 0;
@@ -93,13 +98,14 @@
     margin-top: 24px;
   }
   > div {
-    margin-top: 60px;
+    margin-top: 54px;
     // margin-left: 35px;
   }
   > img {
     position: absolute;
     right: -74px;
     top: -14px;
+    z-index: -1;
   }
 }
 
@@ -181,13 +187,19 @@
   }
 }
 .civilizationSlides {
-  margin-bottom: 150px;
+  height: 632px;
   > div {
     width: 100%;
     > img {
       max-width: 100%;
     }
   }
+}
+
+.slide {
+  position: absolute;
+  width: 1215px;
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -222,6 +234,7 @@
   .contentWrapper {
     display: flex;
     flex-direction: column;
+    align-content: space-between;
     max-width: 800px;
     margin-top: 0 !important;
     > div {

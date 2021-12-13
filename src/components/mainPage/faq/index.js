@@ -4,7 +4,7 @@ import accordion_big from "../../../styles/img/accordion_big.png";
 import accordion_angle from "../../../styles/img/accordion_angle.png";
 import border from "../../../styles/img/border_line.png";
 import * as styles from "./index.module.scss";
-import { doubleStripeButton } from "../../buttons";
+import { mainButton } from "../../buttons";
 
 const faqData = [
   {
@@ -94,15 +94,17 @@ const Faq = () => {
   };
 
   return (
-    <div className={`${styles.main} container-width`}>
-      <h3 className="title">FAQ</h3>
-      <div className="container-width">
-        {faqData.map((el, idx) => accordionComponent(el, idx))}
+    <section className={`${styles.faqSection}`}>
+      <div className={`container-width ${styles.faqSectionContainer}`}>
+        <h2 className={`title ${styles.faqSectionTitle}`}>FAQ</h2>
+        <div className={`${styles.faqSectionQuestions}`}>
+          {faqData.map((el, idx) => accordionComponent(el, idx))}
+        </div>
+        <div className={styles.button}>
+          {mainButton("", "Join Our Community", true)}
+        </div>
       </div>
-      <div className={styles.button}>
-        {doubleStripeButton("", "Join Our Community")}
-      </div>
-    </div>
+    </section>
   );
 };
 

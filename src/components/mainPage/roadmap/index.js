@@ -7,7 +7,7 @@ import lineRight from "../../../styles/img/roadmap_line_right.png";
 
 import * as styles from "./index.module.scss";
 
-const leftComonent = (data) => {
+const leftComponent = (data) => {
   return (
     <div key={data.number} className={styles.card} data-aos="zoom-in">
       <img src={base} alt="base" />
@@ -28,7 +28,7 @@ const leftComonent = (data) => {
   );
 };
 
-const rightComonent = (data) => {
+const rightComponent = (data) => {
   return (
     <div key={data.number} className={styles.card} data-aos="zoom-out">
       <img src={base} alt="base" />
@@ -158,14 +158,11 @@ const mock = [
 ];
 
 const Roadmap = () => (
-  <div className={`${styles.main} container-width`}>
+  <section className={`${styles.main} container-width`}>
     <div className="flex-center">
-      <h3 data-aos="fade-right" className="title">
-        Road
-      </h3>
-      <h3 data-aos-delay="400" data-aos="fade-left" className="title">
-        map
-      </h3>
+      <h2 data-aos="fade-up" className={`title ${styles.roadmapTitle}`}>
+        Roadmap
+      </h2>
     </div>
     {/* <section>
       <img src={fist2} alt="fist" />
@@ -177,9 +174,9 @@ const Roadmap = () => (
       <img src={decor} alt="decor" />
     </section> */}
     {mock.map((el) =>
-      el.number % 2 === 1 ? leftComonent(el) : rightComonent(el)
+      el.number % 2 === 1 ? leftComponent(el) : rightComponent(el)
     )}
-  </div>
+  </section>
 );
 
 export default Roadmap;

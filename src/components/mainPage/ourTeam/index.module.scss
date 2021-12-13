@@ -1,13 +1,12 @@
-.main {
+.teamSection {
   width: 100%;
-  margin-bottom: 150px;
-  .mainHeader {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    > h1:first-child {
-      margin-right: 20px;
-    }
+  padding-top: 113px;
+  padding-bottom: 199px;
+  .teamSectionContainer {
+    width: 85%;
+  }
+  .teamSectionTitle {
+    margin-bottom: 64px;
   }
 }
 .cardHeader {
@@ -20,6 +19,9 @@
   position: absolute;
   top: 30px;
   left: 190px;
+}
+.cardText {
+  max-width: 520px;
 }
 .description {
   display: flex;

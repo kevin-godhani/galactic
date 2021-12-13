@@ -33,6 +33,9 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  &.scroll-lock {
+    overflow: hidden;
+  }
 }
 article,
 aside,
@@ -608,8 +611,16 @@ pre tt:after {
 
 }
 .slick-slide {
+  // max-width: 375px;
+  // margin-left: 11px;
+  // margin-right: 11px;
   opacity: 0.3;
   cursor: url(../styles/img/cursors/cursor.png) 25 15, auto;
+  img {
+    width: 474px;
+    padding: 0 11px;
+    // height: auto;
+  }
 }
 .ticker__element {
   font-family: 'Syne';

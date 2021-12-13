@@ -38,28 +38,27 @@ const ThirdBlock = () => {
   const handleSound = (e) => {
     e.stopPropagation();
     if (videoRef) {
-      videoRef.current.muted = false;
-    } else {
-      videoRef.current.muted = true;
+      if (videoRef.current.muted) {
+        videoRef.current.muted = false;
+      } else {
+        videoRef.current.muted = true;
+      }
     }
   };
   return (
-    <div className={styles.main}>
+    <section className={styles.main}>
       <div className={`${styles.mainHeader} container-width`}>
-        <h2 data-aos="fade-left" className="title">
-          Origin{" "}
-        </h2>
-        <h2 data-aos-delay="400" data-aos="fade-down" className="title">
-          Story
+        <h2 data-aos="fade-up" className="title">
+          Origin Story
         </h2>
       </div>
       <div className={`${styles.contentWrapper} container-width`}>
-        <div className={`${styles.mainContent}`}>
+        <div data-aos-delay="66" data-aos="fade-up" className={`${styles.mainContent}`}>
           <div className={styles.arrowsP}>{animatedArrows("purple")}</div>
           <div className={styles.arrowsG}>{animatedArrows("")}</div>
           <img className={styles.desktop} src={border} alt="border" />
           <img className={styles.tablet} src={borderTablet} alt="border" />
-          <span data-aos="zoom-in" className={`${styles.desktop} description`}>
+          <span className={`${styles.desktop} description`}>
             The Galactic Fight League <br /> brings together the best <br />
             fighters from earth and <br />
             beyond. Where Humans, <br />
@@ -75,7 +74,7 @@ const ThirdBlock = () => {
             <br /> martial art fighter in the metaverse.
           </span>
         </div>
-        <div className={styles.videoWrapper}>
+        <div data-aos="fade-up" data-aos-delay="133" className={styles.videoWrapper}>
           <img src={videoBlock} alt="videoBlock" />
           <video
             style={
@@ -99,12 +98,9 @@ const ThirdBlock = () => {
       <div className={`${styles.civilizations} container-width`}>
         <img src={decoration} alt="decoration" />
         <div className={styles.animatedTitle}>
-          <h3 data-aos="fade-left" className="title">
-            Сivili
-          </h3>
-          <h3 data-aos-delay="400" data-aos="fade-down" className="title">
-            sations
-          </h3>
+          <h2 data-aos="fade-up" className={`title ${styles.civilizationsTitle}`}>
+            Civilizations
+          </h2>
         </div>
         {/* <Test open={scrollPosition > 2580}/> */}
         <span data-aos-delay="800" data-aos="fade-up" className="description">
@@ -123,7 +119,7 @@ const ThirdBlock = () => {
         </div> */}
         <CivilizationSlides />
       </div>
-    </div>
+    </section>
   );
 };
 
