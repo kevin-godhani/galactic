@@ -8,6 +8,8 @@
     margin-bottom: 76px;
   }
   .sponsorsWrap {
+    display: flex;
+    align-items: center;
     position: relative;
     height: 220px;
     .gragientLine {
@@ -21,7 +23,16 @@
       }
     }
   }
+  .tickerWrap {
+    width: 100%;
+  }
+  .sponsorImage {
+    width: 142px;
+    height: auto;
+    margin: 0 64px;
+  }
 }
+
 @media only screen and (max-width: 1200px) {
   .sponsors {
     .sponsorsTitle {

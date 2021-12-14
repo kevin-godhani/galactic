@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
-// import * as styles from "./index.module.scss";
 import stripeImg from "../../styles/img/stripe.png";
-// import stripeImgPurple from "../../styles/img/stripe-purple.png";
 import button_rectangle_icon from "../../styles/img/button_rectangle.png";
-// import button_rectangle_icon_purple from "../../styles/img/button_rectangle-purple.png";
 import button_rectangle_hover_icon from "../../styles/img/button_rectangle_hover.png";
 import ButtonBg from "../../styles/img/button-bg.inline.svg";
 import "./index.scss";

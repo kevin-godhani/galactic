@@ -622,17 +622,16 @@ pre tt:after {
   img {
     width: 474px;
     padding: 0 11px;
-    // height: auto;
   }
 }
 .ticker__element {
-  font-family: 'Syne';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 96px;
-  line-height: 144px;
-  color: #EFDAA9;
   > span {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 144px;
+    color: #EFDAA9;
     margin-right: 64px;
   }
 }

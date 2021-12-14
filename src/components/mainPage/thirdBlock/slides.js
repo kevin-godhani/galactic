@@ -73,7 +73,7 @@ const CivilizationSlides = () => {
       slides.current = [slideRef2.current, slideRef3.current, slideRef4.current, slideRef5.current, slideRef6.current, slideRef7.current];
     }
     scrollSlide(e, slides.current);
-    console.log('scrollSlideCount', activeSlideIndex.current, 'scrollThough', scrollThough.current);
+    // console.log('scrollSlideCount', activeSlideIndex.current, 'scrollThough', scrollThough.current);
   }
 
   const scrollSlide = (e, slides) => {
