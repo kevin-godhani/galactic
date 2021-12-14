@@ -1,21 +1,20 @@
 import React from "react";
-import borders from "../../../styles/img/borders.png";
+import gradientLines from "../../../styles/img/sponsors-gradient-lines.svg";
 import * as styles from "./index.module.scss";
 
 const OurSponsors = () => (
-  <div className={`${styles.main} container-width`}>
-    <div className="flex-center">
-      <h3 data-aos="fade-right" className="title">
-        Our
-      </h3>
-      <h3 data-aos-delay="400" data-aos="fade-down" className="title">
-        Sponsors
+  <section className={`${styles.sponsors}`}>
+    <div className={ `container-width ${styles.sponsorsContainer}`}>
+      <h3 data-aos="fade-up" className={`title ${styles.sponsorsTitle}`}>
+        Our Sponsors
       </h3>
     </div>
-    <div className={styles.gragientLine}>
-      <img src={borders} alt="" />
+    <div data-aos="fade-up" className={styles.sponsorsWrap}>
+      <div className={styles.gragientLine}>
+        <img src={gradientLines} alt="" />
+      </div>
     </div>
-  </div>
+  </section>
 );
 
 export default OurSponsors;

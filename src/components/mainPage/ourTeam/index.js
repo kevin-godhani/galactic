@@ -18,12 +18,12 @@ const leftBlock = (title, left) => {
         {socialButtons("")}
       </div>
       <div>
-        <span data-aos="fade-up" className="description">
+        <p data-aos="fade-up" className={`description ${styles.cardText}`}>
           In the future, our galaxy is a very different place. Where humans once
           believed they were the only form of intelligent life, new
           civilizations were discovered, new lifeforms forged. Co-existence was
           never easy, battles raged.
-        </span>
+        </p>
       </div>
     </div>
   );
@@ -35,12 +35,12 @@ const rightBlock = (title) => {
       data-aos="flip-left"
       className={`${styles.rightContainer} ${styles.container} flex-center`}
     >
-      <span data-aos="fade-up" className="description">
+      <p data-aos="fade-up" className={`description ${styles.cardText}`}>
         In the future, our galaxy is a very different place. Where humans once
         believed they were the only form of intelligent life, new civilizations
         were discovered, new lifeforms forged. Co-existence was never easy,
         battles raged.
-      </span>
+      </p>
       <div>
         <span className={styles.cardHeader}>{title}</span>
         <img src={rightBack} alt="back" />
@@ -52,18 +52,11 @@ const rightBlock = (title) => {
 const Team = () => {
 
   return (
-    <div className={styles.main}>
-      <section className="container-width">
-        <div
-          className={`${styles.mainHeader} ${styles.container} container-width`}
-        >
-          <h2 data-aos="fade-left" className="title">
-            Our
-          </h2>
-          <h2 data-aos-delay="400" data-aos="fade-down" className="title">
-            Team
-          </h2>
-        </div>
+    <section className={styles.teamSection}>
+      <div className={`container-width ${styles.teamSectionContainer}`}>
+        <h2 data-aos="fade-up" className={`title ${styles.teamSectionTitle}`}>
+          Our Team
+        </h2>
         <div className={styles.description}>
           <span data-aos-delay="800" data-aos="fade-up" className="description">
             In the future, our galaxy is a very different place. Where humans
@@ -88,8 +81,8 @@ const Team = () => {
         {leftBlock("TH3M")}
         {rightBlock("1500v")}
         {leftBlock("ARGENTICS", '138px')}
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
