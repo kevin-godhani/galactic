@@ -15,6 +15,17 @@
       padding-left: 65px;
     }
   }
+  &.small {
+    height: 33px;
+    min-width: 198px;
+    .mainButtonStripe {
+      width: 18px;
+      left: 24px;
+    }
+    .mainButtonContent {
+      min-width: 176px;
+    }
+  }
   .mainButtonStripe {
     position: relative;
     left: 29px;
@@ -53,9 +64,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding-right: 54px;
-    padding-left: 79px;
-    flex: 1;
+    min-width: 243px;
     > span {
       font-family: 'Syne';
       font-style: normal;
@@ -100,6 +109,7 @@
     right: 0;
     left: 0;
     bottom: 0;
+    height: 100%;
     object-fit: contain;
     .button-bg-path.purple {
       display: none;

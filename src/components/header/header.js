@@ -4,9 +4,11 @@ import tabletLogo from "../../styles/img/tablet_logo.png";
 import menu from "../../styles/img/menu_icon.png";
 import * as styles from "./index.module.scss";
 import { mainButton, socialButtons } from "../buttons";
+import useWindowSize from "../../utils/useWindowSize";
 
 const Header = () => {
   const [isHederFixed, setIsHederFixed] = useState(false);
+  const ws = useWindowSize();
 
   const handleCloseMenu = () => {
     document.getElementById("mobile-menu").classList.remove("menu-open");
@@ -17,6 +19,10 @@ const Header = () => {
     document.getElementById("mobile-menu").className += " menu-open";
     setIsHederFixed(true);
   };
+
+  const showSmallButton = ws.width <= 480;
+
+  console.log(ws.width, showSmallButton);
 
   return (
     <header
@@ -33,7 +39,7 @@ const Header = () => {
         )}
       </div>
       <div className={styles.buttonsBlock}>
-        {mainButton("", "Join Discord")}
+        {mainButton("", "Join Discord", false, false, showSmallButton)}
         {socialButtons("")}
       </div>
     </header>

@@ -56,7 +56,41 @@
 }
 
 @media only screen and (max-width: 1200px) {
+  .main {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    > p {
+      margin-bottom: 0;
+    }
+  }
   .sliderWrapper {
-    padding-bottom: 80px;
+    padding-bottom: 60px;
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .main {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    > h1 {
+      font-size: 24px;
+      line-height: 26px;
+      width: 276px;
+      margin-bottom: 18px;
+      > span {
+        font-size: 24px;
+        line-height: 26px;
+        margin-right: 8px;
+        margin-bottom: 32px;
+      }
+    }
+    > p {
+      width: 100%;
+      padding: 0 32px;
+      height: auto;
+    }
+  }
+  .sliderWrapper {
+    padding-bottom: 50px;
   }
 }

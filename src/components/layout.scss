@@ -621,10 +621,14 @@ pre tt:after {
   justify-content: center;
   img {
     width: 474px;
+    max-width: 79.5%;
     padding: 0 11px;
   }
 }
 .ticker__element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   > span {
     font-family: 'Syne';
     font-style: normal;
@@ -667,6 +671,29 @@ pre tt:after {
   justify-content: center;
 }
 
+.sm-icon {
+  &-bg,
+  &-path {
+    transition: all 375ms ease;
+  }
+  &-bg {
+    &.hover {
+      opacity: 0;
+    }
+  }
+  &:hover {
+    .sm-icon-bg {
+      opacity: 0;
+      &.hover {
+        opacity: 1;
+      }
+    }
+    .sm-icon-path {
+      fill: #010103;
+    }
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .title {
     font-size: 59px;
@@ -693,9 +720,17 @@ pre tt:after {
   }
 }
 
-@media only screen and (max-width: 476px) {
+@media only screen and (max-width: 480px) {
   .description {
     font-size: 0.6rem !important;
     line-height: 1.1rem !important;
+  }
+
+  .slick-slide {
+    img {
+      // width: 474px;
+      max-width: 88%;
+      padding: 0;
+    }
   }
 }

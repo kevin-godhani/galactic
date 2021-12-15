@@ -8,6 +8,7 @@ import border from "../../../styles/img/border1.svg";
 import videoBlock from "../../../styles/img/border_video.png";
 import decoration from "../../../styles/img/back_decoration.png";
 import borderTablet from "../../../styles/img/border_tablet.png";
+import borderMobile from "../../../styles/img/border-mobile.png";
 import * as styles from "./index.module.scss";
 import cursorPlay from "../../../styles/img/cursors/watch.png";
 import cursorStop from "../../../styles/img/cursors/stop.png";
@@ -58,21 +59,10 @@ const ThirdBlock = () => {
           <div className={styles.arrowsG}>{animatedArrows("")}</div>
           <img className={styles.desktop} src={border} alt="border" />
           <img className={styles.tablet} src={borderTablet} alt="border" />
-          <span className={`${styles.desktop} description`}>
-            The Galactic Fight League <br /> brings together the best <br />
-            fighters from earth and <br />
-            beyond. Where Humans, <br />
-            Cyborgs, Aliens and Zombies
-            <br /> battle to become the best <br />
-            mixed martial art fighter in <br />
-            the metaverse.
-          </span>
-          <span data-aos="zoom-in" className={`${styles.tablet} description`}>
-            The Galactic Fight League brings together
-            <br /> the best fighters from earth and beyond. <br /> Where Humans,
-            Cyborgs, Aliens and <br /> Zombies battle to become the best mixed
-            <br /> martial art fighter in the metaverse.
-          </span>
+          <img className={styles.mobile} src={borderMobile} alt="border" />
+          <p data-aos="zoom-in" className={`description ${styles.contentText}`}>
+            The Galactic Fight League brings together the best fighters from earth and beyond. Where Humans, Cyborgs, Aliens and Zombies battle to become the best mixed martial art fighter in the metaverse.
+          </p>
         </div>
         <div data-aos="fade-up" data-aos-delay="133" className={styles.videoWrapper}>
           <img src={videoBlock} alt="videoBlock" />
@@ -97,26 +87,14 @@ const ThirdBlock = () => {
       </div>
       <div className={`${styles.civilizations} container-width`}>
         <img src={decoration} alt="decoration" />
-        <div className={styles.animatedTitle}>
-          <h2 data-aos="fade-up" className={`title ${styles.civilizationsTitle}`}>
-            Civilizations
-          </h2>
-        </div>
-        {/* <Test open={scrollPosition > 2580}/> */}
-        <span data-aos-delay="800" data-aos="fade-up" className="description">
+        <h2 data-aos="fade-up" className={`title ${styles.civilizationsTitle}`}>
+          Civilizations
+        </h2>
+        <p data-aos-delay="66" data-aos="fade-up" className={`description ${styles.civilizationsSubtitle}`}>
           In the future, our galaxy is a very different place. Where humans once
-          believed <br />
-        </span>
-        <span data-aos-delay="1000" data-aos="fade-up" className="description">
-          they were the only form of intelligent life, new civilizations were
-          discovered, new <br />
-        </span>
-        <span data-aos-delay="1200" data-aos="fade-up" className="description">
-          lifeforms forged. Co-existence was never easy, battles raged.
-        </span>
-        {/* <div className={`${classButton} ${styles.animatedButton}`}>
-          {doubleStripeButton("", "Read More")}
-        </div> */}
+          believed they were the only form of intelligent life, new civilizations were
+          discovered, new lifeforms forged. Co-existence was never easy, battles raged.
+        </p>
         <CivilizationSlides />
       </div>
     </section>

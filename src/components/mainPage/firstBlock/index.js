@@ -26,8 +26,10 @@ const FirstBlock = () => {
     if (videoRef) {
       if (videoRef.current.paused) {
         videoRef.current.play();
+        videoRef.current.muted = false;
       } else {
         videoRef.current.pause();
+        videoRef.current.muted = true;
       }
     }
   }
@@ -38,7 +40,7 @@ const FirstBlock = () => {
         ref={videoRef}
         muted
         loop
-        src="https://storage.googleapis.com/galactic_assets/GFLFinal.mp4"
+        src="https://storage.googleapis.com/galactic_assets/gfl-hero.mp4"
         poster={preview}
         className={styles.heroSectionVideo}
       ></video>

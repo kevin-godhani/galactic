@@ -26,16 +26,20 @@
     color: #FFFFFF;
     left: 70px;
     top: 60px;
+    max-width: 85%;
   }
   > img {
     position: absolute;
     top: 132px;
     left: 70px;
+    max-width: 83%;
   }
   > p {
+    line-height: 1.7em;
     position: absolute;
     left: 70px;
     top: 160px;
+    max-width: 87%;
   }
   > div {
     position: relative;
@@ -58,6 +62,11 @@
       font-size: 35px;
     }
   }
+  &:nth-of-type(11) {
+    > span {
+      font-size: 30px;
+    }
+  }
 }
 .angle {
   position: absolute;
@@ -75,5 +84,96 @@
     > span {
       right: 26px !important;
     }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .faqSection {
+    .faqSectionContainer {
+      width: 100%;
+      padding: 0 32px;
+    }
+    .faqSectionTitle {
+      margin-bottom: 60px;
+    }
+  }
+  .accordionSection {
+    > span {
+      font-size: 24px;
+      left: 52px;
+      top: 30px;
+      max-width: 85%;
+    }
+    &:nth-of-type(11) {
+      > span {
+        font-size: 24px;
+      }
+    }
+    > img {
+      top: 92px;
+      left: 52px;
+    }
+    > p {
+      left: 52px;
+      top: 114px;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .accordionSection {
+    > span {
+      max-width: 77%;
+      line-height: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .faqSection {
+    .faqSectionContainer {
+      padding: 0 30px;
+    }
+    .faqSectionTitle {
+      margin-bottom: 50px;
+    }
+  }
+  .accordionSection {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    &:nth-of-type(11) {
+      > span {
+        font-size: 16px;
+      }
+    }
+    > span {
+      font-size: 16px;
+      line-height: 24px;
+      left: 32px;
+      top: 30px;
+      max-width: 75%;
+    }
+    > img {
+      top: 85px;
+      left: 32px;
+    }
+    > p {
+      left: 32px;
+      top: 104px;
+      width: 83%;
+      font-size: 12px !important;
+      line-height: 18px !important;
+    }
+    > div {
+      > h6 {
+        right: 25px;
+        top: 7px;
+      }
+    }
+  }
+
+  .button {
+    margin-top: 50px;
+    margin-bottom: 120px;
   }
 }

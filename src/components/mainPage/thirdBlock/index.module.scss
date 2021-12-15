@@ -13,14 +13,7 @@
       color: #EFDAA9;
       font-family: 'Syne';
       opacity: 0;
-      &:first-child {
-        margin-right: 20px;
-        animation-fill-mode: forwards;
-      }
-      &:nth-child(2)  {
-        animation-fill-mode: forwards;
-        animation-delay: 0.6s;
-      }
+      margin-bottom: 45px;
     }
     > img {
       position: absolute;
@@ -44,11 +37,11 @@
   }
   .mainContent {
     position: relative;
-    > span {
-      position: absolute;
-      left: 60px;
-      top: 61px;
-    }
+  }
+  .contentText {
+    position: absolute;
+    left: 60px;
+    top: 61px;
   }
 }
 
@@ -59,47 +52,12 @@
   .civilizationsTitle {
     margin-bottom: 64px;
   }
-  .animatedTitle {
-    display: flex;
-    margin-left: 0;
-    > h3 {
-      &:first-child {
-        opacity: 0;
-        animation-fill-mode: forwards;
-      }
-      &:last-child {
-        opacity: 0;
-        animation-fill-mode: forwards;
-        animation-delay: 0.6s;
-      }
-    }
-  }
-  .animatedDescription {
-    margin: 0;
-    > span {
-      &:first-child {
-        opacity: 0;
-        animation-fill-mode: forwards;
-        animation-delay: 1.2s;
-      }
-      &:nth-child(2) {
-        opacity: 0;
-        animation-fill-mode: forwards;
-        animation-delay: 1.6s;
-      }
-      &:nth-child(3) {
-        opacity: 0;
-        animation-fill-mode: forwards;
-        animation-delay: 1.8s;
-      }
-    }
+  .civilizationsSubtitle {
+    max-width: 1130px;
+    margin-bottom: 54px;
   }
   > span {
     margin-top: 24px;
-  }
-  > div {
-    margin-top: 54px;
-    // margin-left: 35px;
   }
   > img {
     position: absolute;
@@ -122,7 +80,8 @@
     flex-direction: column;
   }
 }
-.tablet {
+.tablet,
+.mobile {
   display: none;
 }
 .desktop {
@@ -187,19 +146,54 @@
   }
 }
 .civilizationSlides {
-  height: 632px;
-  > div {
-    width: 100%;
-    > img {
-      max-width: 100%;
-    }
+  height: 633px;
+  max-width: 100%;
+  img {
+    max-width: 100%;
   }
+  // > div {
+  //   // width: 100%;
+  //   > img {
+  //     max-width: 100%;
+  //   }
+  // }
 }
 
 .slide {
   position: absolute;
   width: 1215px;
   max-width: 100%;
+  z-index: 1;
+  &:not(:first-child) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &-content {
+    position: absolute;
+    width: 35.4%;
+    top: 32.64%;
+    left: 7.65%;
+  }
+  &-border {
+    position: absolute;
+    top: -35px;
+    left: -31px;
+  }
+  &-title {
+    font-family: 'Syne-B', sans-serif;
+    font-size: 36px;
+    line-height: 36px;
+    color: #EFDAA9;
+    margin-bottom: 20px;
+  }
+  &-text {
+    font-family: '1617', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(255,255,255,0.7);
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -221,21 +215,26 @@
   .desktop {
     display: none;
   }
-  .mainHeader {
-    display: flex;
-    position: relative;
-    > h2 {
-      font-size: 48px !important;
-    }
-    > img {
-      display: none;
+  .main {
+    .mainHeader {
+      display: flex;
+      position: relative;
+      > h2 {
+        font-size: 48px;
+        line-height: 72px;
+        margin-bottom: 40px;
+      }
+      > img {
+        display: none;
+      }
     }
   }
   .contentWrapper {
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    max-width: 800px;
+    width: 100%;
+    padding: 0 32px 40px;
     margin-top: 0 !important;
     > div {
       width: 100%;
@@ -248,21 +247,76 @@
         margin-right: 0;
       }
     }
+    .contentText {
+      left: 63px;
+      top: 50px;
+      width: 86%;
+      margin-bottom: 0;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      letter-spacing: 0.1em;
+    }
   }
+
   .civilizations {
     padding-top: 40px;
     margin-bottom: 40px !important;
+    .civilizationsTitle {
+      line-height: 72px;
+      margin-bottom: 18px;
+    }
+    .civilizationsSubtitle {
+      max-width: 85%;
+      margin-bottom: 60px;
+    }
     > img {
       display: none;
     }
   }
   .arrowsP {
-    bottom: 0;
-    left: 432px;
+    bottom: 6px;
+    left: 586px;
   }
   .arrowsG {
-    top: 83px;
-    left: 0px;
+    top: 121px;
+    left: 3px;
+  }
+
+  .civilizationSlides {
+    height: auto;
+    margin-top: 0;
+  }
+
+  .slide {
+    position: relative;
+    width: 704px;
+    max-width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+    &:not(:first-child) {
+      transform: none !important;
+      opacity: 1;
+      visibility: unset;
+    }
+    &-content {
+      position: absolute;
+      width: 68.2%;
+      height: 74.3%;
+      top: 16.54%;
+      left: 22.72%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-title {
+      margin-left: 0;
+      margin-right: auto;
+    }
+    &-btn-wrap {
+      margin-top: auto;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -322,5 +376,112 @@
   100% { transform: translateY(0); }
 }
 
+@media only screen and (max-width: 1080px) {
+  .contentWrapper {
+    .contentText {
+      left: 63px;
+      top: 50px;
+      width: 86%;
+      margin-bottom: 0;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      letter-spacing: 0.1em;
+    }
+  }
+  .arrowsP {
+    bottom: 4px;
+    left: 520px;
+  }
+  .arrowsG {
+    top: 100px;
+    left: 3px;
+  }
+}
 @media only screen and (max-width: 980px) {
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .contentWrapper {
+    .contentText {
+      width: 80%;
+      font-size: 0.9rem;
+      line-height: 1.35rem;
+    }
+  }
+  .arrowsP {
+    bottom: 0;
+    left: 375px;
+  }
+  .arrowsG {
+    top: 68px;
+    left: -1px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .tablet {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+
+  .videoWrapper {
+    margin: 0 auto;
+    max-width: 100%;
+    > img:first-child {
+      width: 108%;
+      height: 468px;
+    }
+    > video {
+      width: 100%;
+      height: 418px;
+    }
+  }
+
+  .contentWrapper {
+    .contentText {
+      left: 40px;
+      top: 25px;
+      width: 77%;
+    }
+  }
+
+  .slide {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    &-content {
+      width: 75%;
+      height: 79.58%;
+      top: 13%;
+      left: 18%;
+    }
+    &-border {
+      width: 60px;
+      top: -20px;
+      left: -18px;
+    }
+    &-title {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 10px;
+      white-space: nowrap;
+    }
+    &-text {
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 0;
+    }
+  }
+
+  .arrowsP {
+    bottom: -1px;
+    left: 197px;
+  }
+  .arrowsG {
+    top: 67px;
+    left: -3px;
+  }
 }

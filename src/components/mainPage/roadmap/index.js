@@ -4,6 +4,7 @@ import leftNumber from "../../../styles/img/road_left.png";
 import base from "../../../styles/img/base_roadmap.png";
 import lineLeft from "../../../styles/img/roadmap_line_left.png";
 import lineRight from "../../../styles/img/roadmap_line_right.png";
+import decoration from "../../../styles/img/decor.png";
 
 import * as styles from "./index.module.scss";
 
@@ -159,6 +160,7 @@ const mock = [
 
 const Roadmap = () => (
   <section className={`${styles.main} container-width`}>
+    <img src={decoration} className={styles.decoration} alt="decoration" />
     <div className="flex-center">
       <h2 data-aos="fade-up" className={`title ${styles.roadmapTitle}`}>
         Roadmap
