@@ -3,7 +3,7 @@ import leftBack from "../../../styles/img/leftCard.png";
 import * as styles from "./index.module.scss";
 import { socialButton } from "../../buttons";
 import useWindowSize from '../../../utils/useWindowSize';
-import { team } from "./data";
+import { advisors } from "./data";
 
 const ItemBlock = ({title, description, image, links, isEven}) => {
   const isMobileWidth = window.innerWidth <= 480;
@@ -35,24 +35,19 @@ const ItemBlock = ({title, description, image, links, isEven}) => {
   );
 };
 
-const Team = () => {
+const Advisors = () => {
   const ws = useWindowSize();
   const isDesktopWidth = ws.width > 1200;
   return (
-    <section className={styles.teamSection}>
-      <div className={`container-width ${styles.teamSectionContainer}`}>
-        <h2 data-aos="fade-up" className={`title ${styles.teamSectionTitle}`}>
-          Our Team
+    <section className={styles.advisorsSection}>
+      <div className={`container-width ${styles.advisorsSectionContainer}`}>
+        <h2 data-aos="fade-up" className={`title ${styles.advisorsSectionTitle}`}>
+            Our Advisors
         </h2>
-        <p data-aos-delay="66" data-aos="fade-up" className={`description ${styles.teamSectionSubtitle}`}>
-          The Galactic Fight League is formed of some of the most creative and experienced minds in the crypto-sphere. The multiple agencies with prior, proven work history togher have united with the GFL to produce a project like no other. 
-          <br/><br/>
-          Their rap sheet of Web 2.0 &amp; 3.0 projects would impress any creative agency and their joint love for MMA has brought them together to make one of the most exciting NFT projects, to be released this year. 
-        </p>
-        {team.map((t, i) => {
+        {advisors.map((item, i) => {
           const isEven = i % 2 > 0 && isDesktopWidth;
           return (
-            <ItemBlock key={i} title={t.name} description={t.text} image={t.image} links={t.links} isEven={isEven} />
+            <ItemBlock key={i} title={item.name} description={item.text} image={item.image} links={item.links} isEven={isEven} />
           );
         })}
       </div>
@@ -60,4 +55,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default Advisors;

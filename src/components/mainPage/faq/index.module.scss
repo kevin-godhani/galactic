@@ -1,5 +1,6 @@
 .faqSection {
   width: 100%;
+  padding-top: 100px;
   .faqSectionContainer {
     width: 85%;
   }
@@ -89,6 +90,7 @@
 
 @media only screen and (max-width: 1200px) {
   .faqSection {
+    padding-top: 60px;
     .faqSectionContainer {
       width: 100%;
       padding: 0 32px;
@@ -130,6 +132,7 @@
 
 @media only screen and (max-width: 480px) {
   .faqSection {
+    padding-top: 50px;
     .faqSectionContainer {
       padding: 0 30px;
     }

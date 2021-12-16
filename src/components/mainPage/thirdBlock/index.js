@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import CivilizationSlides from "./slides";
-import preview from '../../../styles/img/thumb_main.png';
+import preview from '../../../styles/img/origin-story-placeholder.png';
 import arrowP from "../../../styles/img/icons/arrow_purple.svg";
 import arrowG from "../../../styles/img/icons/arrow_gold.svg";
 import sound from "../../../styles/img/icons/sound_icon.png";
@@ -25,7 +25,7 @@ export const animatedArrows = (color) => {
 
 const ThirdBlock = () => {
   const videoRef = useRef(null);
-  const [videoActive, setVideoActive] = useState(true);
+  const [videoActive, setVideoActive] = useState(false);
 
   const handleClickVideo = (e) => {
     setVideoActive(!videoActive);
@@ -74,10 +74,10 @@ const ThirdBlock = () => {
             }
             onClick={handleClickVideo}
             ref={videoRef}
-            autoPlay
+            // autoPlay
             muted
             loop
-            src="https://storage.googleapis.com/video_galactic/final.mp4"
+            src="https://storage.googleapis.com/galactic_assets/GFLFinal.mp4"
             poster={preview}
           ></video>
           <div className={styles.soundIcon}>
@@ -91,9 +91,7 @@ const ThirdBlock = () => {
           Civilizations
         </h2>
         <p data-aos-delay="66" data-aos="fade-up" className={`description ${styles.civilizationsSubtitle}`}>
-          In the future, our galaxy is a very different place. Where humans once
-          believed they were the only form of intelligent life, new civilizations were
-          discovered, new lifeforms forged. Co-existence was never easy, battles raged.
+          In the future, our galaxy is a very different place. Where humans once believed they were the only form of intelligent life, new civilizations were discovered, new lifeforms forged. Co-existence was never easy, battles raged.
         </p>
         <CivilizationSlides />
       </div>

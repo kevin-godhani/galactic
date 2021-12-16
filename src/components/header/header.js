@@ -22,8 +22,6 @@ const Header = () => {
 
   const showSmallButton = ws.width <= 480;
 
-  console.log(ws.width, showSmallButton);
-
   return (
     <header
       className={styles.wrapper}

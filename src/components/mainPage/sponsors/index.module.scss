@@ -1,5 +1,5 @@
 .partners {
-  padding-top: 70px;
+  padding-top: 100px;
   padding-bottom: 90px;
   .partnersContainer {
     width: 85%;
@@ -61,6 +61,7 @@
 
 @media only screen and (max-width: 480px) {
   .partners {
+    padding-top: 50px;
     padding-bottom: 50px;
     .partnersContainer {
       padding: 0 30px;

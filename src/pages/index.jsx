@@ -12,6 +12,7 @@ import ThirdBlock from "../components/mainPage/thirdBlock/index"
 import Roadmap from "../components/mainPage/roadmap/index"
 import OurSponsors from "../components/mainPage/sponsors/index"
 import Team from "../components/mainPage/ourTeam/index"
+import Advisors from "../components/mainPage/advisors/index"
 import Faq from "../components/mainPage/faq/index"
 
 const IndexPage = () => {
@@ -30,6 +31,7 @@ const IndexPage = () => {
       <Roadmap />
       <OurSponsors />
       <Team />
+      <Advisors />
       <Faq />
     </Layout>
   )

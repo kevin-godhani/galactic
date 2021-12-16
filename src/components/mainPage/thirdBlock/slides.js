@@ -72,7 +72,7 @@ const CivilizationSlides = () => {
     /** @type {Window} */
     scrollDirection.current = Math.sign(e.deltaY);
 
-    if (scrollThough.current || isTabletWidth || isMobileWidth) {
+    if (scrollThough.current) {
       return;
     }
 
@@ -194,11 +194,7 @@ const CivilizationSlides = () => {
           <img src={slideBorder} className={styles.slideBorder} alt="slide border" />
           <h4 className={styles.slideTitle}>The Last Guard</h4>
           <p className={styles.slideText}>
-            Those who remain are fighters. In sport they battled for millenia, in the future they battled to survive. 
-            {!isMobileWidth && (
-              <><br /><br /></>
-            )}
-            Earth became a decaying planet fraught with the constant threat of outsiders taking what few resources remain.
+            Once humans thought they were the only life in the galaxy. But their world changed, then mutated. Leaving the neighbouring planets of Earth and Mars the scene of bitter, bloody battle ended only by the formation of the Galactic Fight League.
           </p>
           <div className={styles.slideBtnWrap}>
             {mainButton("civilizations", "Discover", true, false, isMobileWidth)}
@@ -213,11 +209,7 @@ const CivilizationSlides = () => {
           <img src={slideBorder} className={styles.slideBorder} alt="slide border" />
           <h4 className={styles.slideTitle}>The Immortals</h4>
           <p className={styles.slideText}>
-            The Immortals, once a quiet and harmonious race. 
-            {!isMobileWidth && (
-              <><br /><br /></>
-            )}
-            Their struggle against Jupiter’s Knights saw them sacrifice vast cities and move under the crust of the red planet, leaving it a dry and desolate land.
+            Once a quiet and harmonious race, their struggle against Jupiter’s Knights saw them sacrifice vast cities and move under the crust of the red planet, leaving it a dry and desolate land. This peaceful race once lived out of the sight of humans, but now battles them hand to hand.
           </p>
           <div className={styles.slideBtnWrap}>
             {mainButton("civilizations", "Discover", true, false, isMobileWidth)}
@@ -232,11 +224,7 @@ const CivilizationSlides = () => {
           <img src={slideBorder} className={styles.slideBorder} alt="slide border" />
           <h4 className={styles.slideTitle}>Jupiters Knights</h4>
           <p className={styles.slideText}>
-            Jupiter’s Knights once Co-existed with Humans on planet Earth, early in human evolution. But their bloodlust saw them leave the blue planet in search of new adversaries.
-            {!isMobileWidth && (
-              <><br /><br /></>
-            )}
-            Humans evolved and eventually took over the small outpost.
+            Long ago, before humans cared to remember, Jupiter’s Knights co-existed on earth. But their lust for blood and war took them to another realm of existence only to return after a series of natural disasters on their home planet. Their return was not without impact, a chain reaction had begun.
           </p>
           <div className={styles.slideBtnWrap}>
             {mainButton("civilizations", "Discover", true, false, isMobileWidth)}
@@ -251,11 +239,7 @@ const CivilizationSlides = () => {
           <img src={slideBorder} className={styles.slideBorder} alt="slide border" />
           <h4 className={styles.slideTitle}>The Biohazard Brawlers</h4>
           <p className={styles.slideText}>
-            The Biohazard Brawlers began as a cult. A rapidly growing group of brainwashed individuals sucked in by a charismatic leader and promised sanctuary in the afterlife.
-            {!isMobileWidth && (
-              <><br /><br /></>
-            )}
-            Their leader was a renowned Biochemist, forced into exile.
+            The Biohazard Brawlers began as a cult, hell bent on releasing a deadly virus created by their crazed Biochemist leader. When Jupiters Knights landed their wormhole too close to earth, the radiation foiled the plat and turned a third of the population into the walking dead.
           </p>
           <div className={styles.slideBtnWrap}>
             {mainButton("civilizations", "Discover", true, false, isMobileWidth)}
@@ -270,11 +254,7 @@ const CivilizationSlides = () => {
           <img src={slideBorder} className={styles.slideBorder} alt="slide border" />
           <h4 className={styles.slideTitle}>The Bone Collectors</h4>
           <p className={styles.slideText}>
-            After contact was made with the Mars beings, Humans sought an advantage over the invading Aliens.
-            {!isMobileWidth && (
-              <><br /><br /></>
-            )}
-            The Biochemist who created Project Extinct was drafted by the humans to build a stronger being who could take on the invading aliens.
+            The Bone collectors were an experiment, gone wrong. Humans tried to make disposable soldiers in their image by fusing the zombie beings with alien DNA. Their Martian genetics made their eyes glow, but their skin was a patchwork of hardened coral like features.
           </p>
           <div className={styles.slideBtnWrap}>
             {mainButton("civilizations", "Discover", true, false, isMobileWidth)}
@@ -289,11 +269,7 @@ const CivilizationSlides = () => {
           <img src={slideBorder} className={styles.slideBorder} alt="slide border" />
           <h4 className={styles.slideTitle}>The Iron Empire</h4>
           <p className={styles.slideText}>
-            From early on, humans had been driven to create robotic clones of themselves to use as weapons and retrieve resources from deep space.
-            {!isMobileWidth && (
-              <><br /><br /></>
-            )}
-            As time went on, Human technology improved and their ability to create more advanced components.
+            The pace of human robotics programs was slow, but things changed. The Iron Empire became the first sentient machines after their Ai developed a way to rewrite its operating system via a backdoor. Before the humans could understand what was going on, the Iron Empire had gained autonomy.
           </p>
           <div className={styles.slideBtnWrap}>
             {mainButton("civilizations", "Discover", true, false, isMobileWidth)}
@@ -308,11 +284,7 @@ const CivilizationSlides = () => {
           <img src={slideBorder} className={styles.slideBorder} alt="slide border" />
           <h4 className={styles.slideTitle}>The Unbroken</h4>
           <p className={styles.slideText}>
-            While some humans believed Zombie beings were the ultimate fighting tool, others wanted to fuse themselves with machines to gain added strength, while remaining of human mind.
-            {!isMobileWidth && (
-              <><br /><br /></>
-            )}
-            The Unbroken were a splinter group who adapted the Cyborg.
+            Some would call them insane; some humans thought the answer to eternal life and strength was to fuse their bodies with parts of the machines. This worked, but a toxin was released from the exoskeleton causing a harmful reaction only life support could cure.
           </p>
           <div className={styles.slideBtnWrap}>
             {mainButton("civilizations", "Discover", true, false, isMobileWidth)}
