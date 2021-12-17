@@ -374,6 +374,7 @@
   cursor: pointer;
   &-bg {
     margin-bottom: 15px;
+    // padding: 0 !important;
   }
   &-title {
     font-family: 'Syne';
@@ -388,12 +389,16 @@
     position: absolute;
     top: -5px;
     filter: grayscale(1);
+    // padding: 0 !important;
     &-active {
       filter: grayscale(0);
     }
   }
   &-locked {
     cursor: default;
+  }
+  &-margin {
+    margin-right: 22px;
   }
 }
 

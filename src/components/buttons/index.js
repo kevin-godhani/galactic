@@ -19,6 +19,19 @@ export const mainButton = (to, title, isDouble, isPurple, small) => {
   );
 };
 
+export const MainButtonExternal = ({url, title, isDouble, isPurple, small}) => {
+  return (
+    <a href={url} target='_blank' className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''}`} rel="nofollow noreferrer noopener">
+      {isDouble && <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>}
+      <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>
+      <div className={'mainButtonContent'}>
+        <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />
+        <span>{title}</span>
+      </div>
+    </a>
+  );
+};
+
 export const doubleStripeButton = (to, title, callback) => {
   return (
     <Link to={to} onClick={() => callback && callback()} className={'mainButton'}>
@@ -56,32 +69,10 @@ export const buttonWithoutLink = (title, callback, isDouble, isPurple) => {
   );
 };
 
-export const socialButton = (to, Icon) => {
+export const SocialButton = ({url, Icon}) => {
   return (
-    <Link to={to} className={'social-button'}>
+    <a href={url} target='_blank' rel="nofollow noreferrer noopener" className={'social-button'}>
       <Icon/>
-    </Link>
-  );
-};
-export const socialButtons = (to) => {
-  return (
-    <div className={'social'}>
-      <Link to={to} className={'socialWrapper'}>
-        <div>
-          <img
-            src="https://www.galacticfightleague.com/images/dist/twitter_hover.svg"
-            alt="twitter"
-          />
-        </div>
-      </Link>
-      <Link to={to} className={'socialWrapper'}>
-        <div>
-          <img
-            src="https://www.galacticfightleague.com/images/dist/instagram_hover.svg"
-            alt="instagram"
-          />
-        </div>
-      </Link>
-    </div>
+    </a>
   );
 };

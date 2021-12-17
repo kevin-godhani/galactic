@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "gfl-dev-89839"
+  },
+  "targets": {
+    "gfl-dev-89839": {
+      "hosting": {
+        "web-stage": [
+          "gfl-dev-89839"
+        ],
+        "web-prod": [
+          "gfl-dev-89839"
+        ]
+      }
+    }
+  }
+}

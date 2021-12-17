@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as styles from "./index.module.scss";
-import { mainButton } from "../../buttons";
+import { MainButtonExternal } from "../../buttons";
 import useWindowSize from "../../../utils/useWindowSize";
 import accordion_small from "../../../styles/img/accordion_small.png";
 import accordion_big from "../../../styles/img/accordion_big.png";
@@ -10,85 +10,11 @@ import borderMobile from "../../../styles/img/border-line-mobile.png";
 import accordionClosedMobile from "../../../styles/img/accordion-closed-mobile.png";
 import accordionOpenedMobile from "../../../styles/img/accordion-opened-mobile.png";
 import accordionAngleMobile from "../../../styles/img/accordion-angle-mobile.png";
-
-const faqData = [
-  {
-    id: 1,
-    title: "What is the total supply?",
-    description: "9,999 randomly generated fighters will be available to mint.",
-  },
-  {
-    id: 2,
-    title: "How much will each cost per mint?",
-    description: "Mint price is to be confirmed, depending on the current price of Solana at launch.",
-  },
-  {
-    id: 3,
-    title: "Where can I mint a GFL fighter?",
-    description: "You can find the mint access on our website on the day of our minting.",
-  },
-  {
-    id: 4,
-    title: "Will there be a pre-sale?",
-    description: "We will have a whitelist system in place for a very select few, but other than that the mint will go live for everybody at the same time.",
-  },
-  {
-    id: 5,
-    title: "Is there a limit to how many I can mint?",
-    description: "There will be no mint limit.",
-  },
-  {
-    id: 6,
-    title: "Do you have a rarity system?",
-    description: "Yes. A rarity chart will be released shortly after mint.",
-  },
-  {
-    id: 7,
-    title: "Will there be a secondary market?",
-    description: "Yes, secondary markets are actively being confirmed. Initially we have confirmations with Magic Eden and Solsea.",
-  },
-  {
-    id: 8,
-    title: "When does the project’s mint open?",
-    description: "13th January 2022.",
-  },
-  {
-    id: 9,
-    title: "What chain is GFL on?",
-    description: "We will be releasing on the Solana blockchain.",
-  },
-  {
-    id: 10,
-    title: "What inspired you to make the GFL?",
-    description: "We love MMA, we love NFTs. Go figure.",
-  },
-  {
-    id: 11,
-    title: "Who is the artist of the project and what have you done in the past?",
-    description: "The artists are members of the artistic collective known as TH3M who have worked with many major Web 3.0 companies.",
-  },
-  {
-    id: 12,
-    title: "Are GFL characters generated or hand drawn?",
-    description: "All GFL characters are randomly, algorithmically generated but all the traits have been handcrafted by our 3D artists.",
-  },
-];
+import { faqData, discordLink } from "../../../constants";
 
 const Faq = () => {
-  const [accordionState, setAccordionState] = useState([
-    { open: false },
-    { open: false },
-    { open: false },
-    { open: false },
-    { open: false },
-    { open: false },
-    { open: false },
-    { open: false },
-    { open: false },
-    { open: false },
-    { open: false },
-    { open: false },
-  ]);
+  const accordionInitialState = Array.from(faqData, _d => { return { open: false } });
+  const [accordionState, setAccordionState] = useState(accordionInitialState);
 
   const ws = useWindowSize();
   const isMobileWidth = ws.width <= 480;
@@ -134,7 +60,7 @@ const Faq = () => {
           {faqData.map((el, idx) => accordionComponent(el, idx))}
         </div>
         <div className={styles.button}>
-          {mainButton("", "Join Our Community", true)}
+          <MainButtonExternal url={discordLink} title={'Join Our Community'} isDouble />
         </div>
       </div>
     </section>

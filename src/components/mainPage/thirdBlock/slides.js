@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useLayoutEffect } from "react";
+import React, { useEffect, useRef, useLayoutEffect, useMemo } from "react";
 import * as styles from "./index.module.scss";
 import gsap from 'gsap';
 import useScrollBlock from '../../../utils/useScrollBlock';
@@ -50,11 +50,16 @@ const CivilizationSlides = () => {
 
   const isTabletWidth = ws.width <= 1200 && ws.width >= 481;
   const isMobileWidth = ws.width <= 480;
+  console.log(ws.width, isTabletWidth, isMobileWidth);
 
   useEffect(() => {
+    if (!ws.width) {
+      return;
+    }
+
     window.addEventListener('wheel', handleScroll);
     return () => window.removeEventListener('wheel', handleScroll);
-  }, []);
+  }, [ws.width]);
 
   useLayoutEffect(() => {
     if (!isTabletWidth || !isMobileWidth) {
@@ -80,7 +85,7 @@ const CivilizationSlides = () => {
     const containerRect = containerRef.current.getBoundingClientRect();
     const containerBottom = containerRect.bottom - ws.height;
     lockScroll.current = containerBottom <= 0 && containerBottom > -offset;
-    // console.log('containerRef.current.getBoundingClientRect()', containerRef.current.getBoundingClientRect(), scrollY);
+    // console.log('containerRect', containerRect.bottom, ws.height);
     // console.log('lockScroll?', lockScroll.current);
     // console.log('wh', wh, 'scrollY', scrollY, 'scrollDirection', scrollDirection.current);
 
@@ -197,7 +202,7 @@ const CivilizationSlides = () => {
             Once humans thought they were the only life in the galaxy. But their world changed, then mutated. Leaving the neighbouring planets of Earth and Mars the scene of bitter, bloody battle ended only by the formation of the Galactic Fight League.
           </p>
           <div className={styles.slideBtnWrap}>
-            {mainButton("civilizations", "Discover", true, false, isMobileWidth)}
+            {mainButton("civilization-last-guard", "Discover", true, false, isMobileWidth)}
           </div>
         </div>
       </div>
@@ -212,7 +217,7 @@ const CivilizationSlides = () => {
             Once a quiet and harmonious race, their struggle against Jupiter’s Knights saw them sacrifice vast cities and move under the crust of the red planet, leaving it a dry and desolate land. This peaceful race once lived out of the sight of humans, but now battles them hand to hand.
           </p>
           <div className={styles.slideBtnWrap}>
-            {mainButton("civilizations", "Discover", true, false, isMobileWidth)}
+            {mainButton("civilization-immortals", "Discover", true, false, isMobileWidth)}
           </div>
         </div>
       </div>
@@ -227,7 +232,7 @@ const CivilizationSlides = () => {
             Long ago, before humans cared to remember, Jupiter’s Knights co-existed on earth. But their lust for blood and war took them to another realm of existence only to return after a series of natural disasters on their home planet. Their return was not without impact, a chain reaction had begun.
           </p>
           <div className={styles.slideBtnWrap}>
-            {mainButton("civilizations", "Discover", true, false, isMobileWidth)}
+            {mainButton("civilization-jupiter-knights", "Discover", true, false, isMobileWidth)}
           </div>
         </div>
       </div>
@@ -242,7 +247,7 @@ const CivilizationSlides = () => {
             The Biohazard Brawlers began as a cult, hell bent on releasing a deadly virus created by their crazed Biochemist leader. When Jupiters Knights landed their wormhole too close to earth, the radiation foiled the plat and turned a third of the population into the walking dead.
           </p>
           <div className={styles.slideBtnWrap}>
-            {mainButton("civilizations", "Discover", true, false, isMobileWidth)}
+            {mainButton("civilization-biohazard-brawlers", "Discover", true, false, isMobileWidth)}
           </div>
         </div>
       </div>
@@ -257,7 +262,7 @@ const CivilizationSlides = () => {
             The Bone collectors were an experiment, gone wrong. Humans tried to make disposable soldiers in their image by fusing the zombie beings with alien DNA. Their Martian genetics made their eyes glow, but their skin was a patchwork of hardened coral like features.
           </p>
           <div className={styles.slideBtnWrap}>
-            {mainButton("civilizations", "Discover", true, false, isMobileWidth)}
+            {mainButton("civilization-bone-collectors", "Discover", true, false, isMobileWidth)}
           </div>
         </div>
       </div>
@@ -272,7 +277,7 @@ const CivilizationSlides = () => {
             The pace of human robotics programs was slow, but things changed. The Iron Empire became the first sentient machines after their Ai developed a way to rewrite its operating system via a backdoor. Before the humans could understand what was going on, the Iron Empire had gained autonomy.
           </p>
           <div className={styles.slideBtnWrap}>
-            {mainButton("civilizations", "Discover", true, false, isMobileWidth)}
+            {mainButton("civilization-iron-empire", "Discover", true, false, isMobileWidth)}
           </div>
         </div>
       </div>
@@ -287,7 +292,7 @@ const CivilizationSlides = () => {
             Some would call them insane; some humans thought the answer to eternal life and strength was to fuse their bodies with parts of the machines. This worked, but a toxin was released from the exoskeleton causing a harmful reaction only life support could cure.
           </p>
           <div className={styles.slideBtnWrap}>
-            {mainButton("civilizations", "Discover", true, false, isMobileWidth)}
+            {mainButton("civilization-unbroken", "Discover", true, false, isMobileWidth)}
           </div>
         </div>
       </div>

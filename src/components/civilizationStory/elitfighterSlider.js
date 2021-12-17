@@ -80,7 +80,11 @@ const EliteFighters = ({ fighters }) => {
           const bgIndex = i % 2 > 0;
 
           return (
-            <div key={fighter.id} className={`${styles.card} ${!fighter.active ? styles.cardLocked : ''}`} onClick={(_e) => fighter.active && onClickHandle(_e, fighter)}>
+            <div
+              key={fighter.id}
+              className={`${styles.card} ${!fighter.active ? styles.cardLocked : ''}`}
+              onClick={(_e) => fighter.active && onClickHandle(_e, fighter)}
+            >
               {fighter.active ?
                 <img src={backgrounds[+bgIndex]} className={`${styles.cardBg}`} alt={fighter.name} />
                 :

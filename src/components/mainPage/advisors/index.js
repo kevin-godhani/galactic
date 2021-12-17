@@ -1,12 +1,14 @@
 import React from "react";
 import leftBack from "../../../styles/img/leftCard.png";
 import * as styles from "./index.module.scss";
-import { socialButton } from "../../buttons";
+import { SocialButton } from "../../buttons";
 import useWindowSize from '../../../utils/useWindowSize';
-import { advisors } from "./data";
+import { advisors } from "../../../constants";
 
 const ItemBlock = ({title, description, image, links, isEven}) => {
-  const isMobileWidth = window.innerWidth <= 480;
+  const ws = useWindowSize();
+  const isTabletWidth = ws.width <= 1200 && ws.width >= 481;
+  const isMobileWidth = ws.width <= 480;
 
   return (
     <div
@@ -23,9 +25,9 @@ const ItemBlock = ({title, description, image, links, isEven}) => {
           <img src={image} className={styles.cardImage} alt={title} />
         </div>
         <div className={styles.socialButtonsWrap}>
-          {links.length > 0 && links.map(link => {
+          {links.length > 0 && links.map((link, i) => {
             return (
-              socialButton(link.url, link.icon)
+              <SocialButton key={i} url={link.url} Icon={link.icon} />
             );
           })}
         </div>

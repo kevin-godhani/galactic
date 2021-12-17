@@ -17,6 +17,9 @@ html {
   box-sizing: border-box;
   overflow-y: scroll;
   background-color: #000000;
+  &.scroll-lock {
+    overflow: hidden;
+  }
 }
 
 body {
@@ -686,7 +689,20 @@ pre tt:after {
   justify-content: center;
 }
 
+.sm-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 88px;
+  margin-left: 16px;
+  &.mobile-only {
+    display: none;
+  }
+}
+
 .sm-icon {
+  width: 40px;
+  height: 40px;
   &-bg,
   &-path {
     transition: all 375ms ease;
@@ -746,6 +762,16 @@ pre tt:after {
       // width: 474px;
       max-width: 88%;
       padding: 0;
+    }
+  }
+
+  .sm-buttons {
+    &.menu {
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+    &.mobile-only {
+      display: flex;
     }
   }
 }

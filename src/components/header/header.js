@@ -3,8 +3,9 @@ import logo from "../../styles/img/logo.png";
 import tabletLogo from "../../styles/img/tablet_logo.png";
 import menu from "../../styles/img/menu_icon.png";
 import * as styles from "./index.module.scss";
-import { mainButton, socialButtons } from "../buttons";
+import { MainButtonExternal, SocialButton } from "../buttons";
 import useWindowSize from "../../utils/useWindowSize";
+import { instagram, twitter, twitterLink, instagramLink, discordLink } from '../../constants';
 
 const Header = () => {
   const [isHederFixed, setIsHederFixed] = useState(false);
@@ -17,6 +18,8 @@ const Header = () => {
 
   const handleOpenMenu = () => {
     document.getElementById("mobile-menu").className += " menu-open";
+    document.body.classList.add("scroll-lock");
+    document.documentElement.classList.add("scroll-lock");
     setIsHederFixed(true);
   };
 
@@ -37,8 +40,11 @@ const Header = () => {
         )}
       </div>
       <div className={styles.buttonsBlock}>
-        {mainButton("", "Join Discord", false, false, showSmallButton)}
-        {socialButtons("")}
+        <MainButtonExternal url={discordLink} title={'Join Discord'} isDouble={false} isPurple={false} small={showSmallButton} />
+        <div className="sm-buttons">
+          <SocialButton url={twitterLink} Icon={twitter} />
+          <SocialButton url={instagramLink} Icon={instagram} />
+        </div>
       </div>
     </header>
   );

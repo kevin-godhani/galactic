@@ -10,16 +10,20 @@
   }
   .faqSectionQuestions {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 .accordionSection {
   position: relative;
   cursor: url(https://images.ctfassets.net/erglja63hoxc/2R9cVs55Aco4cQS8XL8ds8/e1789e9819062a19c1a6d88a7d964c03/Logo_Stickys-Finger-Joint.svg) 2 2, pointer;
-
+  width: 100%;
+  max-width: 1200px;
   > span {
     position: absolute;
-    font-family: Syne;
+    font-family: 'Syne';
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -44,7 +48,7 @@
   }
   > div {
     position: relative;
-    max-width: 1200px;
+    max-width: 100%;
     cursor: pointer;
     width: 100%;
     height: 100%;
