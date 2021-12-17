@@ -57,7 +57,7 @@
     color: #a36abc;
     margin-top: 70px;
     margin-bottom: 120px;
-    max-width: 610px;
+    max-width: 560px;
   }
 }
 .tablet {
@@ -366,6 +366,37 @@
   //   background: linear-gradient(360deg, #efdda9 0%, #f0b9a9 100%);
   // }
 }
+
+.card {
+  position: relative;
+  display: flex;
+  outline: none;
+  cursor: pointer;
+  &-bg {
+    margin-bottom: 15px;
+  }
+  &-title {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 45px;
+    color: #EFDAA9;
+    text-align: center;
+  }
+  &-fighterImage {
+    position: absolute;
+    top: -5px;
+    filter: grayscale(1);
+    &-active {
+      filter: grayscale(0);
+    }
+  }
+  &-locked {
+    cursor: default;
+  }
+}
+
 @media only screen and (max-width: 1260px) {
   .CivilizationStoryContent {
     margin-top: 80px;

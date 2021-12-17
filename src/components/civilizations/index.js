@@ -41,11 +41,11 @@ const CivilizationsMain = () => {
       <div
         className={styles.mainInfo}
         style={{
-          backgroundImage: `url(${pageData[selectedStep].backgroung})`,
+          backgroundImage: `url(${pageData[selectedStep]?.background})`,
         }}
       >
         <section className={styles.decorLine} />
-        <img src={pageData[selectedStep].decor} alt="decor" />
+        <img src={pageData[selectedStep]?.decor} alt="decor" />
         <span>SELECT CIVILISATION</span>
       </div>
       <SlickSlider

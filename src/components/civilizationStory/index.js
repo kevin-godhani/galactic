@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import Ticker from "react-ticker";
 import * as styles from "./index.module.scss";
-import { doubleStripeButton } from "../buttons/index";
+import { doubleStripeButton, mainButton } from "../buttons/index";
 import CivilizationStoryContent from "./content";
 import border from "../../styles/img/border_line.png";
 import angle from "../../styles/img/animation_angle.png";
 import angle_active from "../../styles/img/animation_angle_active.png";
 import next_back from "../../styles/img/next_back.png";
-import gemstone from "../../styles/img/gemstone.png";
 import border1 from "../../styles/img/icons/border1.png";
 import border2 from "../../styles/img/icons/border2.png";
 
@@ -102,7 +101,6 @@ const CivilizationsStory = ({ data, nextTitle }) => {
         </div>
         <section className={styles.raceInfo}>
         <div>
-          <img src={gemstone} alt="gemstone" />
           <div>
             <span>Team</span>
             <p className="description">{data.title}</p>
@@ -110,7 +108,6 @@ const CivilizationsStory = ({ data, nextTitle }) => {
           <img className={styles.borderImg} src={border1} alt="border" />
         </div>
         <div>
-          <img src={gemstone} alt="gemstone" />
           <div>
             <span>Planet</span>
             <p className="description">{data.planet}</p>
@@ -118,7 +115,6 @@ const CivilizationsStory = ({ data, nextTitle }) => {
           <img className={styles.borderImg} src={border2} alt="border" />
         </div>
         <div>
-          <img src={gemstone} alt="gemstone" />
           <div>
             <span>Race</span>
             <p className="description">{data.race}</p>
@@ -126,7 +122,6 @@ const CivilizationsStory = ({ data, nextTitle }) => {
           <img className={styles.borderImg} src={border2} alt="border" />
         </div>
         <div>
-          <img src={gemstone} alt="gemstone" />
           <div>
             <span>Genders</span>
             <p className="description">{data.genders}</p>
@@ -155,7 +150,7 @@ const CivilizationsStory = ({ data, nextTitle }) => {
         style={{ marginBottom: "100px" }}
         className="container-width flex-center"
       >
-        {doubleStripeButton(data.nextLink, "Next")}
+        {mainButton(data.nextLink, "Next", true)}
       </div>
     </div>
   );

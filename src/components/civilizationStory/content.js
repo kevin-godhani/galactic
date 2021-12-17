@@ -137,32 +137,7 @@ const CivilizationStoryContent = ({ data }) => {
           competitions and other cool things that we can really milk for PR.
         </span>
       </div>
-      <EliteFighters />
-      <div
-        data-aos="flip-left"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="2000"
-        className={styles.contentDescription}
-        style={{ marginBottom: "60px" }}
-      >
-        <section>
-          <div className={styles.arrowsP}>{animatedArrows("purple")}</div>
-          <div className={styles.arrowsG}>{animatedArrows("")}</div>
-        </section>
-        <img className={styles.desktop} src={border} alt="border" />
-        <img className={styles.tablet} src={borderTablet} alt="border" />
-        <img className={styles.mobile} src={borderMobile} alt="border" />
-        <div>
-          <h3 className="title">Elite Fighter Backstory</h3>
-          <span className="description">
-            The Galactic Fight League will be immortalized as a series of 10,000
-            randomly generated NFT collectables and will soon be available for
-            you to mint. Each fighter will adorn a unique set of
-            characteristics, some rarer than others and wear their own style of
-            fightwear. The Galactic Fight League will be
-          </span>
-        </div>
-      </div>
+      <EliteFighters fighters={data.eliteFighters} />
     </div>
   );
 };

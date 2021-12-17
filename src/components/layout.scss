@@ -625,6 +625,21 @@ pre tt:after {
     padding: 0 11px;
   }
 }
+
+.slick-slider {
+  &.elite-fighters {
+    .slick-slide {
+      opacity: 1;
+      cursor: default;
+      img {
+        max-width: 100%;
+      }
+    }
+    .slick-center {
+      cursor: default !important;
+    }
+  }
+}
 .ticker__element {
   display: flex;
   align-items: center;

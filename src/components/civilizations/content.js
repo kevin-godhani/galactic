@@ -5,19 +5,18 @@ import borderTablet from "../../styles/img/civilizations/border_mobile.png";
 // import * as styles from "./index.module.scss";
 import * as styles from "../civilizationStory/index.module.scss";
 import { animatedArrows } from "../mainPage/thirdBlock";
+
 const CivilizationsContent = ({ data }) => {
   return (
     <div className={`${styles.content} container-width`}>
       <div className={styles.contentTitle}>
-        <h3 data-aos="fade-down" className="title">
+        <h3 data-aos="fade-up" className="title">
           The Story
         </h3>
       </div>
       <div
-        data-aos="flip-left"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="2000"
         className={styles.contentDescription}
+        data-aos="fade-up"
       >
         <section>
           <div className={styles.arrowsP}>{animatedArrows("purple")}</div>
@@ -30,7 +29,7 @@ const CivilizationsContent = ({ data }) => {
           <span className="description">{data.description}</span>
         </div>
       </div>
-      <h6>The Galactic Fight League was born.</h6>
+      <h6>Which side will you choose?</h6>
     </div>
   );
 };

@@ -25,7 +25,7 @@ export const animatedArrows = (color) => {
 
 const ThirdBlock = () => {
   const videoRef = useRef(null);
-  const [videoActive, setVideoActive] = useState(false);
+  const [videoActive, setVideoActive] = useState(true);
 
   const handleClickVideo = (e) => {
     setVideoActive(!videoActive);
@@ -74,7 +74,7 @@ const ThirdBlock = () => {
             }
             onClick={handleClickVideo}
             ref={videoRef}
-            // autoPlay
+            autoPlay
             muted
             loop
             src="https://storage.googleapis.com/galactic_assets/GFLFinal.mp4"

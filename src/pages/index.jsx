@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { carousel } from "../components/civilizations/dataMocks"
+import { carousel } from "../components/mainPage/secondBlock/data"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
