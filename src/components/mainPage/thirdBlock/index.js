@@ -12,6 +12,7 @@ import borderMobile from "../../../styles/img/border-mobile.png";
 import * as styles from "./index.module.scss";
 import cursorPlay from "../../../styles/img/cursors/watch.png";
 import cursorStop from "../../../styles/img/cursors/stop.png";
+import SoundIcon from "../../../styles/img/sound-icon.inline.svg";
 
 export const animatedArrows = (color) => {
   return (
@@ -26,6 +27,7 @@ export const animatedArrows = (color) => {
 const ThirdBlock = () => {
   const videoRef = useRef(null);
   const [videoActive, setVideoActive] = useState(true);
+  const [muted, setMuted] = useState(true);
 
   const handleClickVideo = (e) => {
     setVideoActive(!videoActive);
@@ -34,18 +36,18 @@ const ThirdBlock = () => {
     } else {
       e.target.play();
       e.target.muted = false;
+      setMuted(false);
     }
   };
+
   const handleSound = (e) => {
     e.stopPropagation();
     if (videoRef) {
-      if (videoRef.current.muted) {
-        videoRef.current.muted = false;
-      } else {
-        videoRef.current.muted = true;
-      }
+      videoRef.current.muted = !videoRef.current.muted;
+      setMuted(!muted);
     }
   };
+
   return (
     <section className={styles.main}>
       <div className={`${styles.mainHeader} container-width`}>
@@ -80,8 +82,8 @@ const ThirdBlock = () => {
             src="https://storage.googleapis.com/galactic_assets/GFLFinal.mp4"
             poster={preview}
           ></video>
-          <div className={styles.soundIcon}>
-            <img onClick={handleSound} src={sound} alt="sound" />
+          <div onClick={handleSound} className={styles.soundIcon}>
+            <SoundIcon className={`sound-icon ${muted ? 'muted' : ''}`} />
           </div>
         </div>
       </div>

@@ -1,24 +1,22 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 import ScrollButton from "../../../styles/img/scroll-button.inline.svg";
 import { buttonWithoutLink } from "../../buttons";
 import preview from '../../../styles/img/thumb_main.png';
-import sound from "../../../styles/img/icons/sound_icon.png";
+import SoundIcon from "../../../styles/img/sound-icon.inline.svg";
 import * as styles from "./index.module.scss";
 
 const FirstBlock = () => {
   const sectionRef = useRef(null);
   /** @type {React.MutableRefObject<HTMLVideoElement>} */
   const videoRef = useRef(null);
+  const [muted, setMuted] = useState(true);
 
   const handleSound = (e) => {
     e.stopPropagation();
     if (videoRef) {
-      if (videoRef.current.muted) {
-        videoRef.current.muted = false;
-      } else {
-        videoRef.current.muted = true;
-      }
+      videoRef.current.muted = !videoRef.current.muted;
+      setMuted(!muted);
     }
   };
 
@@ -27,18 +25,22 @@ const FirstBlock = () => {
       if (videoRef.current.paused) {
         videoRef.current.play();
         videoRef.current.muted = false;
+        setMuted(false);
       } else {
         videoRef.current.pause();
-        videoRef.current.muted = true;
+        // videoRef.current.muted = true;
+        // setMuted(true);
       }
     }
   }
+
+  console.log(videoRef.current?.muted);
 
   return (
     <section ref={sectionRef} className={styles.heroSection}>
       <video
         ref={videoRef}
-        muted
+        muted={true}
         loop
         src="https://storage.googleapis.com/galactic_assets/gfl-hero.mp4"
         poster={preview}
@@ -57,8 +59,8 @@ const FirstBlock = () => {
         >
           <ScrollButton className={styles.scrollButton} />
         </Link>
-        <div className={styles.soundIcon}>
-          <img onClick={handleSound} src={sound} alt="sound" />
+        <div onClick={handleSound} className={styles.soundIcon}>
+          <SoundIcon className={`sound-icon ${muted ? 'muted' : ''}`} />
         </div>
       </div>
     </section>

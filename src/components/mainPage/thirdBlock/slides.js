@@ -50,7 +50,7 @@ const CivilizationSlides = () => {
 
   const isTabletWidth = ws.width <= 1200 && ws.width >= 481;
   const isMobileWidth = ws.width <= 480;
-  console.log(ws.width, isTabletWidth, isMobileWidth);
+  // console.log(ws.width, isTabletWidth, isMobileWidth);
 
   useEffect(() => {
     if (!ws.width) {

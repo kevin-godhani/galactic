@@ -725,6 +725,25 @@ pre tt:after {
   }
 }
 
+.sound-icon {
+  width: 59px;
+  height: auto;
+  &.muted {
+    .sound-icon-path {
+      opacity: 0;
+      &.muted {
+        opacity: 1;
+      }
+    }
+  }
+  &-path {
+    transition: all 375ms ease;
+    &.muted {
+      opacity: 0;
+    }
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .title {
     font-size: 59px;

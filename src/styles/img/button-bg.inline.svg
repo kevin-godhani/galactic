@@ -1,7 +1,7 @@
-<svg class="button-bg" viewBox="0 0 243 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path class="button-bg-path default" d="M242.5 21.7483L213.835 43H1.48966L57.6678 0.5H242.5V21.7483Z" stroke="url(#paint0_linear_905_620)"/>
-    <path class="button-bg-path purple" d="M242.5 21.7483L213.835 43H1.48966L57.6678 0.5H242.5V21.7483Z" fill="url(#paint0_linear_601_11950)"/>
-    <path class="button-bg-path hover" d="M0 43.5H214L243 22V0H57.5L0 43.5Z" fill="url(#paint1_linear_905_620)"/>
+<svg class="button-bg" width="243" height="44" viewBox="0 0 243 44" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path class="button-bg-path default" d="M242.5 21.7483L213.835 43H1.48966L57.6678 0.5H242.5V21.7483Z" stroke="url(#paint0_linear_905_620)" />
+    <path class="button-bg-path purple" d="M242.5 21.7483L213.835 43H1.48966L57.6678 0.5H242.5V21.7483Z" fill="url(#paint0_linear_601_11950)" />
+    <path class="button-bg-path hover" d="M0 43.5H214L243 22V0H57.5L0 43.5Z" fill="url(#paint1_linear_905_620)" />
     <defs>
         <linearGradient id="paint0_linear_905_620" x1="194.5" y1="-20" x2="-44.9999" y2="43.5" gradientUnits="userSpaceOnUse">
             <stop stop-color="#EFDDA9"/>
