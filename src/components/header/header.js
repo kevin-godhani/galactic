@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import logo from "../../styles/img/logo.png";
-import tabletLogo from "../../styles/img/tablet_logo.png";
+import logo from "../../styles/img/logo.svg";
+import tabletLogo from "../../styles/img/tablet-logo.svg";
 import menu from "../../styles/img/menu_icon.png";
 import * as styles from "./index.module.scss";
 import { MainButtonExternal, SocialButton } from "../buttons";
@@ -30,7 +30,6 @@ const Header = () => {
       className={styles.wrapper}
       style={isHederFixed ? { position: "fixed" } : { position: "absolute" }}
     >
-      <img className={styles.logo} src={logo} alt="logo" />
       <div className={styles.menu}>
         <img className={styles.tabletLogo} src={tabletLogo} alt="tabletLogo" />
         {isHederFixed ? (
@@ -39,6 +38,7 @@ const Header = () => {
           <img onClick={handleOpenMenu} src={menu} alt="menu" />
         )}
       </div>
+      <img className={styles.logo} src={logo} alt="logo" />
       <div className={styles.buttonsBlock}>
         <MainButtonExternal url={discordLink} title={'Join Discord'} isDouble={false} isPurple={false} small={showSmallButton} />
         <div className="sm-buttons">

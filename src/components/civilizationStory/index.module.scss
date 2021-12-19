@@ -1,17 +1,22 @@
 .main {
-  width: 100%;
-  > section {
-    position: relative;
-    background-color: #000000;
+  position: relative;
+  padding-top: 189px;
+  > img {
+    position: absolute;
     width: 100%;
-    height: 134px;
-    > img {
-      position: absolute;
-      left: 20%;
-      bottom: 0;
-    }
+    top: 188px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
+
+.decor {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  z-index: -1;
+}
+
 .mainHeader {
   width: 100%;
   height: 154px;
@@ -19,6 +24,8 @@
   background-position: center;
   background-size: cover;
   position: relative;
+  display: flex;
+  align-items: center;
   > div {
     animation: marquee 10s infinite linear;
     width: 300%;
@@ -38,8 +45,9 @@
   }
   > img {
     position: absolute;
-    left: 20%;
+    left: 50%;
     bottom: 0;
+    transform: translateX(-50%);
   }
 }
 .content {
@@ -127,6 +135,7 @@
       position: absolute;
       left: 0;
       top: 0;
+      z-index: 0;
       > span {
         position: absolute;
         bottom: -13px;
@@ -155,6 +164,7 @@
     }
     > video {
       width: 100%;
+      z-index: -1;
     }
   }
 }
@@ -209,39 +219,35 @@
 
 .videoBlock {
   position: relative;
-  display: flex;
-  align-items: flex-start;
+  width: 889px;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 80px;
   margin-bottom: 200px;
-  height: 506px;
-  > div:first-child {
-    width: 60%;
-    position: relative;
-    > video {
-      width: 99%;
-      height: 100%;
-    }
-    .label {
-      position: absolute;
-      left: 12%;
-      width: 76%;
-      bottom: -36px;
-    }
-    .borderVideo {
-      position: absolute;
-      width: 100%;
-      height: 105%;
-      left: 0;
-      top: 0;
-    }
+  > img:first-child {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    margin-bottom: 1px;
   }
-  > div:last-child {
-    width: 40%;
-    position: relative;
-    > img {
-      position: absolute;
-      left: 56%;
-    }
+  > video {
+    width: 107%;
+    height: auto;
+    object-fit: cover;
+    mask-image: url('../../styles/img/video-mask2.svg');
+    mask-repeat: no-repeat;
+    mask-size: 93.5%;
+    mask-position: center;
+  }
+  .label {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    width: 76%;
+    z-index: 1;
   }
 }
 .description {
@@ -420,7 +426,8 @@
     }
   }
   .tickerText {
-    font-size: 59px;
+    font-size: 59px !important;
+    line-height: 59px !important;
   }
   .mainTitle {
     > h2 {
@@ -442,16 +449,6 @@
         font-size: 18px;
         top: 18%;
         left: 29%;
-      }
-    }
-  }
-  .videoBlock {
-    > div {
-      &:first-child {
-        width: 100%;
-      }
-      &:last-child {
-        display: none;
       }
     }
   }
@@ -493,7 +490,6 @@
     }
   }
   .videoBlock {
-    height: 430px;
     margin-bottom: 41px;
   }
   .tablet {
@@ -504,10 +500,11 @@
     display: none !important;
   }
   .tickerText {
-    font-size: 40px;
+    font-size: 40px !important;
+    line-height: 40px !important;
   }
   .mainHeader {
-    height: 90px !important;
+    height: 90px;
   }
   .groupButtons {
     margin-left: 0;
@@ -588,5 +585,12 @@
         font-size: 12px;
       }
     }
+  }
+}
+
+
+@media only screen and (min-width: 1920px) {
+  .CivilizationStoryContent {
+    margin-top: 200px;
   }
 }

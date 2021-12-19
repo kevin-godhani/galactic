@@ -34,8 +34,6 @@ const FirstBlock = () => {
     }
   }
 
-  console.log(videoRef.current?.muted);
-
   return (
     <section ref={sectionRef} className={styles.heroSection}>
       <video

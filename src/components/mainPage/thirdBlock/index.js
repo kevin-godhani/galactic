@@ -3,9 +3,8 @@ import CivilizationSlides from "./slides";
 import preview from '../../../styles/img/origin-story-placeholder.png';
 import arrowP from "../../../styles/img/icons/arrow_purple.svg";
 import arrowG from "../../../styles/img/icons/arrow_gold.svg";
-import sound from "../../../styles/img/icons/sound_icon.png";
 import border from "../../../styles/img/border1.svg";
-import videoBlock from "../../../styles/img/border_video.png";
+import videoBorder from "../../../styles/img/video-gradient-border.svg";
 import decoration from "../../../styles/img/back_decoration.png";
 import borderTablet from "../../../styles/img/border_tablet.png";
 import borderMobile from "../../../styles/img/border-mobile.png";
@@ -50,6 +49,7 @@ const ThirdBlock = () => {
 
   return (
     <section className={styles.main}>
+      <img src={decoration} className={styles.decoration} alt="decoration" />
       <div className={`${styles.mainHeader} container-width`}>
         <h2 data-aos="fade-up" className="title">
           Origin Story
@@ -67,7 +67,7 @@ const ThirdBlock = () => {
           </p>
         </div>
         <div data-aos="fade-up" data-aos-delay="133" className={styles.videoWrapper}>
-          <img src={videoBlock} alt="videoBlock" />
+          <img src={videoBorder} alt="videoBorder" />
           <video
             style={
               videoActive
@@ -88,7 +88,6 @@ const ThirdBlock = () => {
         </div>
       </div>
       <div className={`${styles.civilizations} container-width`}>
-        <img src={decoration} alt="decoration" />
         <h2 data-aos="fade-up" className={`title ${styles.civilizationsTitle}`}>
           Civilizations
         </h2>

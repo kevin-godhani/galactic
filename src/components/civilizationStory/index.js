@@ -42,10 +42,8 @@ const CivilizationsStory = ({ data, nextTitle }) => {
     );
   };
   return (
-    <div className={styles.main}>
-      <section>
-        <img src={border} alt="border" />
-      </section>
+    <section className={styles.main}>
+      <img src={border} alt="border" />
       <div className={styles.mainHeader}>
         <Ticker direction="toLeft">
           {({ index }) => (
@@ -99,36 +97,36 @@ const CivilizationsStory = ({ data, nextTitle }) => {
             </div>
           </div>
         </div>
-        <section className={styles.raceInfo}>
-        <div>
+        <div className={styles.raceInfo}>
           <div>
-            <span>Team</span>
-            <p className="description">{data.title}</p>
+            <div>
+              <span>Team</span>
+              <p className="description">{data.title}</p>
+            </div>
+            <img className={styles.borderImg} src={border1} alt="border" />
           </div>
-          <img className={styles.borderImg} src={border1} alt="border" />
-        </div>
-        <div>
           <div>
-            <span>Planet</span>
-            <p className="description">{data.planet}</p>
+            <div>
+              <span>Planet</span>
+              <p className="description">{data.planet}</p>
+            </div>
+            <img className={styles.borderImg} src={border2} alt="border" />
           </div>
-          <img className={styles.borderImg} src={border2} alt="border" />
-        </div>
-        <div>
           <div>
-            <span>Race</span>
-            <p className="description">{data.race}</p>
+            <div>
+              <span>Race</span>
+              <p className="description">{data.race}</p>
+            </div>
+            <img className={styles.borderImg} src={border2} alt="border" />
           </div>
-          <img className={styles.borderImg} src={border2} alt="border" />
-        </div>
-        <div>
           <div>
-            <span>Genders</span>
-            <p className="description">{data.genders}</p>
+            <div>
+              <span>Genders</span>
+              <p className="description">{data.genders}</p>
+            </div>
+            <img className={styles.borderImg} src={border2} alt="border" />
           </div>
-          <img className={styles.borderImg} src={border2} alt="border" />
         </div>
-      </section>
       </div>
       <CivilizationStoryContent data={data} />
       <div
@@ -152,7 +150,7 @@ const CivilizationsStory = ({ data, nextTitle }) => {
       >
         {mainButton(data.nextLink, "Next", true)}
       </div>
-    </div>
+    </section>
   );
 };
 

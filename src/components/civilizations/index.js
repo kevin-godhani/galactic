@@ -23,11 +23,8 @@ const CivilizationsMain = () => {
   };
 
   return (
-    <div className={styles.main}>
-      <section>
-        <img src={border} alt="border" />
-      </section>
-
+    <section className={styles.main}>
+      <img src={border} alt="border" />
       <div className={style.mainHeader}>
         <Ticker direction="toLeft">
           {({ index }) => (
@@ -55,7 +52,7 @@ const CivilizationsMain = () => {
         isClicable
       />
       <CivilizationsContent data={pageData[selectedStep]} />
-    </div>
+    </section>
   );
 };
 

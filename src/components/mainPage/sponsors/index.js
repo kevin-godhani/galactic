@@ -1,7 +1,7 @@
 import React from "react";
 import * as styles from "./index.module.scss";
 import Ticker from "react-ticker";
-import gradientLines from "../../../styles/img/sponsors-gradient-lines.svg";
+import gradientLine from "../../../styles/img/gradient-line.svg";
 import partner1 from "../../../styles/img/partner1.png";
 import partner2 from "../../../styles/img/partner2.png";
 import partner3 from "../../../styles/img/partner3.png";
@@ -30,8 +30,9 @@ const OurSponsors = () => {
         </h3>
       </div>
       <div data-aos="fade-up" className={styles.partnersWrap}>
-        <div className={styles.gragientLine}>
-          <img src={gradientLines} alt="" />
+        <div className={styles.gradientLine}>
+          <img src={gradientLine} alt="Gradient Line" />
+          <img src={gradientLine} alt="Gradient Line" />
         </div>
         <div className={styles.tickerWrap}>
           <Ticker direction="toLeft">

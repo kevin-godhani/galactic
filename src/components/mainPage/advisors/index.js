@@ -14,7 +14,7 @@ const ItemBlock = ({title, description, image, links, isEven}) => {
     <div
       key={title}
       data-aos={isEven ? "flip-left" : "flip-right"}
-      className={`${isEven ? styles.rightContainer : styles.leftContainer} flex-center`}
+      className={`${isEven ? styles.rightContainer : styles.leftContainer}`}
     >
       <div className={styles.cardContainer}>
         <img src={leftBack} className={`${styles.cardContainerBg} ${isEven ? styles.flipped : ''}`} alt="back" />

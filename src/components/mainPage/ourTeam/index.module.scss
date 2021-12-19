@@ -49,6 +49,9 @@
   }
 }
 .leftContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   > div {
     &:first-child {
       position: relative;
@@ -84,6 +87,9 @@
 }
 
 .rightContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row-reverse;
   .cardText {
     margin-right: 50px;
@@ -195,5 +201,21 @@
   }
   .socialButtonsWrap {
     bottom: 19px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .teamSection {
+    padding-top: 200px;
+    padding-bottom: 140px;
+    .teamSectionSubtitle {
+      margin-bottom: 150px;
+    }
+  }
+
+  .leftContainer,
+  .rightContainer {
+    justify-content: flex-start;
+    margin-bottom: 60px;
   }
 }

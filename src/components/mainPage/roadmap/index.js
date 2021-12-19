@@ -38,16 +38,18 @@ const RoadMapItem = ({ data, isEven }) => {
 };
 
 const Roadmap = () => (
-  <section className={`${styles.roadmapSection} container-width`}>
+  <section className={`${styles.roadmapSection}`}>
     <img src={decoration} className={styles.decoration} alt="decoration" />
-    <h2 data-aos="fade-up" className={`title ${styles.roadmapTitle}`}>
-      Roadmap
-    </h2>
-    {roadMap.map((el, i) => {
-      const isEven = i % 2 > 0;
-      return <RoadMapItem key={i} data={el} isEven={isEven} />
-    }
-    )}
+    <div className={`container-width ${styles.roadmapSectionContainer}`}>
+      <h2 data-aos="fade-up" className={`title ${styles.roadmapTitle}`}>
+        Roadmap
+      </h2>
+      {roadMap.map((el, i) => {
+        const isEven = i % 2 > 0;
+        return <RoadMapItem key={i} data={el} isEven={isEven} />
+      }
+      )}
+    </div>
   </section>
 );
 

@@ -7,44 +7,49 @@ import * as styles from "./index.module.scss";
 const settings = {
   dots: false,
   infinite: true,
-  slidesToShow: 3,
+  slidesToShow: 7,
   slidesToScroll: 1,
   centerPadding: "10px",
   centerMode: true,
   arrows: false,
-  // autoplay: true,
-  speed: 1000,
-  // autoplaySpeed: 1000,
+  speed: 750,
   cssEase: "linear",
   pauseOnHover: true,
   responsive: [
     {
-      breakpoint: 1364,
+      breakpoint: 2561,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 5,
         slidesToScroll: 1,
-        centerPadding: "10px",
-        centerMode: true,
       },
     },
+    {
+      breakpoint: 1921,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    // {
+    //   breakpoint: 1364,
+    //   settings: {
+    //     slidesToShow: 2,
+    //     centerPadding: "10px",
+    //   },
+    // },
     {
       breakpoint: 924,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: "20px",
-      },
-    },
-    {
-      breakpoint: 880,
-      settings: {
         slidesToShow: 1,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: "20px",
       },
     },
+    // {
+    //   breakpoint: 880,
+    //   settings: {
+    //     slidesToShow: 1,
+    //     centerPadding: "20px",
+    //   },
+    // },
   ],
 };
 const SlickSlider = ({ redirect, data, isClicable = false, afterChange }) => (
@@ -56,7 +61,7 @@ const SlickSlider = ({ redirect, data, isClicable = false, afterChange }) => (
           key={el.id}
           onClick={() => isClicable && redirect(el.id)}
         >
-          <img src={el.url} alt="decoration" />
+          <img draggable="false" src={el.url} alt="decoration" />
         </div>
       ))}
     </Slider>

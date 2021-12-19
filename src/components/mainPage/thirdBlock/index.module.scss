@@ -1,4 +1,5 @@
 .main {
+  position: relative;
   width: 100%;
   min-height: 1180px;
   overflow: hidden;
@@ -21,6 +22,12 @@
       right: 0;
       top: -167px;
     }
+  }
+  .decoration {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 29%;
   }
 }
 
@@ -46,7 +53,7 @@
 }
 
 .civilizations {
-  padding-top: 128px;
+  padding-top: 200px;
   position: relative;
   width: 85%;
   .civilizationsTitle {
@@ -58,12 +65,6 @@
   }
   > span {
     margin-top: 24px;
-  }
-  > img {
-    position: absolute;
-    right: -104px;
-    top: -14px;
-    z-index: -1;
   }
 }
 
@@ -125,24 +126,30 @@
 .soundIcon {
   position: absolute;
   z-index: 2;
-  bottom: 29px;
-  right: 54px;
+  bottom: 8px;
+  right: 17px;
   cursor: pointer !important;
 }
 .videoWrapper {
   position: relative;
   max-width: 535px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   > img:first-child {
     position: absolute;
-    top: -37px;
-    left: -19px;
+    z-index: 1;
+    pointer-events: none;
+    margin-bottom: 3px;
   }
   > video {
-    width: 500px;
-    // width: 90%;
-    // height: 100%;
-    height: 274px;
+    width: 134%;
+    height: auto;
     object-fit: cover;
+    mask-image: url('../../../styles/img/video-mask.svg');
+    mask-repeat: no-repeat;
+    mask-size: 74.3%;
+    mask-position: center;
   }
 }
 .civilizationSlides {
@@ -151,12 +158,6 @@
   img {
     max-width: 100%;
   }
-  // > div {
-  //   // width: 100%;
-  //   > img {
-  //     max-width: 100%;
-  //   }
-  // }
 }
 
 .slide {
@@ -198,16 +199,7 @@
 
 @media only screen and (max-width: 1200px) {
   .videoWrapper {
-    margin: 0 auto;
     max-width: 100%;
-    > img:first-child {
-      width: 106%;
-      height: 468px;
-    }
-    > video {
-      width: 100%;
-      height: 418px;
-    }
   }
   .tablet {
     display: block;
@@ -397,9 +389,6 @@
     left: 3px;
   }
 }
-@media only screen and (max-width: 980px) {
-  
-}
 
 @media only screen and (max-width: 768px) {
   .contentWrapper {
@@ -425,19 +414,6 @@
   }
   .mobile {
     display: block;
-  }
-
-  .videoWrapper {
-    margin: 0 auto;
-    max-width: 100%;
-    > img:first-child {
-      width: 108%;
-      height: 468px;
-    }
-    > video {
-      width: 100%;
-      height: 418px;
-    }
   }
 
   .contentWrapper {
@@ -483,5 +459,68 @@
   .arrowsG {
     top: 67px;
     left: -3px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .main {
+    .decoration {
+      top: 39%;
+    }
+  }
+  .contentWrapper {
+    margin-top: 80px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .mainContent {
+      position: relative;
+      margin-right: unset;
+      width: 700px;
+      .desktop {
+        width: 100%;
+      }
+    }
+    .contentText {
+      margin-bottom: 0;
+      max-width: 600px;
+      left: 60px;
+      top: 50px;
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
+  }
+
+  .arrowsP {
+    left: 540px;
+  }
+  .arrowsG {
+    top: 110px;
+    left: 0;
+  }
+
+  .videoWrapper {
+    max-width: 666px;
+  }
+  
+  .civilizations {
+    padding-top: 300px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .civilizations {
+    padding-top: 300px;
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  .civilizations {
+    padding-top: 300px;
+  }
+  .main {
+    .decoration {
+      display: none;
+    }
   }
 }

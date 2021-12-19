@@ -10,14 +10,11 @@ const CivilizationsContent = ({ data }) => {
   return (
     <div className={`${styles.content} container-width`}>
       <div className={styles.contentTitle}>
-        <h3 data-aos="fade-up" className="title">
+        <h3 className="title">
           The Story
         </h3>
       </div>
-      <div
-        className={styles.contentDescription}
-        data-aos="fade-up"
-      >
+      <div className={styles.contentDescription}>
         <section>
           <div className={styles.arrowsP}>{animatedArrows("purple")}</div>
           <div className={styles.arrowsG}>{animatedArrows("")}</div>

@@ -1,15 +1,16 @@
 .roadmap-section {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  align-items: center;
-  justify-content: center;
   padding-top: 192px;
   padding-bottom: 100px;
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .decoration {
     position: absolute;
-    right: -70px;
+    right: 0;
     top: -30px;
     mix-blend-mode: hard-light;
     pointer-events: none;
@@ -243,6 +244,29 @@
           line-height: 25px;
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .roadmap-section {
+    padding-top: 292px;
+    padding-bottom: 200px;
+    .roadmapTitle {
+      margin-bottom: 120px;
+    }
+    .card {
+      &:not(:last-child) {
+        margin-bottom: 120px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  .roadmap-section {
+    .decoration {
+      display: none;
     }
   }
 }
