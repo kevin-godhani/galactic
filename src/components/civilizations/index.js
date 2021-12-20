@@ -41,7 +41,7 @@ const CivilizationsMain = () => {
           backgroundImage: `url(${pageData[selectedStep]?.background})`,
         }}
       >
-        <section className={styles.decorLine} />
+        <div className={styles.decorLine} />
         <img src={pageData[selectedStep]?.decor} alt="decor" />
         <span>SELECT CIVILISATION</span>
       </div>
@@ -49,7 +49,9 @@ const CivilizationsMain = () => {
         redirect={handleredirect}
         data={carousel}
         afterChange={handlechangeStep}
-        isClicable
+        containerClassName={'civilizations-slider-wrap'}
+        className={'civilizations-slider'}
+        isClickable
       />
       <CivilizationsContent data={pageData[selectedStep]} />
     </section>

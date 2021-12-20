@@ -10,7 +10,7 @@
   }
 }
 
-.decor {
+.decoration {
   position: absolute;
   top: 45%;
   right: 0;
@@ -51,6 +51,7 @@
   }
 }
 .content {
+  width: 85%;
   > h1 {
     margin-bottom: 50px;
   }
@@ -92,6 +93,9 @@
     max-width: 277px;
     position: relative;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     > img {
       z-index: 2;
       max-width: 100%;
@@ -99,8 +103,6 @@
     > span {
       z-index: 3;
       position: absolute;
-      left: 35%;
-      top: 30%;
       font-family: "Syne";
       font-style: normal;
       font-weight: bold;
@@ -114,7 +116,7 @@
   }
 }
 .animationWrapper {
-  margin-top: 50px;
+  margin-top: 100px;
   > div {
     width: 100%;
     max-height: 810px;
@@ -169,17 +171,24 @@
   }
 }
 .CivilizationStoryContent {
-  margin-top: 150px;
+  margin-top: 142px;
   .mainTitle {
     display: flex;
     align-items: flex-start;
+    margin-bottom: 58px;
   }
+  .fightersTitle {
+    margin-bottom: 65px;
+  }
+}
+.CivilizationStoryContentContainer {
+  width: 85%;
 }
 .contentDescription {
   position: relative;
   max-width: 100%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 22px;
+  margin-bottom: 110px;
   > section {
     position: absolute;
     width: 100%;
@@ -193,7 +202,7 @@
     height: 100%;
     padding: 60px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     > h3 {
@@ -224,8 +233,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 80px;
-  margin-bottom: 200px;
+  margin-top: 56px;
+  margin-bottom: 265px;
   > img:first-child {
     position: absolute;
     z-index: 1;
@@ -252,7 +261,7 @@
 }
 .description {
   margin-top: 40px;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   > span {
@@ -260,17 +269,15 @@
   }
 }
 .raceInfo {
-  width: 100%;
-  height: 200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  margin-top: 91px;
   > div {
     display: flex;
     position: relative;
     width: 25%;
-    height: 126px;
-    margin-right: 20px;
     &:first-child {
       > div {
         > span {
@@ -281,7 +288,7 @@
     > div {
       display: flex;
       flex-direction: column;
-      margin-top: 22px;
+      margin-top: 36px;
       > span {
         font-family: "Syne-B";
         font-style: normal;
@@ -412,6 +419,9 @@
   .CivilizationStoryContent {
     margin-top: 80px;
   }
+  .decoration {
+    display: none;
+  }
   .contentDescription {
     margin-bottom: 20px;
     margin-top: 20px;
@@ -420,14 +430,10 @@
     > div {
       > span {
         font-size: 18px;
-        left: 27%;
-        top: 23%;
+        // left: 27%;
+        // top: 23%;
       }
     }
-  }
-  .tickerText {
-    font-size: 59px !important;
-    line-height: 59px !important;
   }
   .mainTitle {
     > h2 {
@@ -447,8 +453,8 @@
     > div {
       > span {
         font-size: 18px;
-        top: 18%;
-        left: 29%;
+        // top: 18%;
+        // left: 29%;
       }
     }
   }
@@ -499,10 +505,6 @@
   .desktop {
     display: none !important;
   }
-  .tickerText {
-    font-size: 40px !important;
-    line-height: 40px !important;
-  }
   .mainHeader {
     height: 90px;
   }
@@ -517,8 +519,8 @@
     > div {
       > span {
         font-size: 16px;
-        top: 24%;
-        left: 35%;
+        // top: 24%;
+        // left: 35%;
       }
     }
   }
@@ -535,8 +537,8 @@
   .buttonBlock {
     > div {
       > span {
-        left: 31%;
-        top: 16%;
+        // left: 31%;
+        // top: 16%;
         font-size: 14px;
       }
     }
@@ -581,9 +583,24 @@
   .buttonBlock {
     > div {
       > span {
-        top: 6%;
+        // top: 6%;
         font-size: 12px;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mainHeader {
+    height: 50px;
+  }
+
+  .content {
+    > h6 {
+      margin-top: 80px;
+      font-size: 24px;
+      line-height: 36px;
+      max-width: 80%;
     }
   }
 }

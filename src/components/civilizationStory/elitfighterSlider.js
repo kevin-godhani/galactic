@@ -98,11 +98,8 @@ const EliteFighters = ({ fighters }) => {
       </Slider>
 
       <div
-        data-aos="flip-left"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="2000"
+        data-aos="fade-up"
         className={styles.contentDescription}
-        style={{ marginBottom: "60px" }}
       >
         <section>
           <div className={styles.arrowsP}>{animatedArrows("purple")}</div>

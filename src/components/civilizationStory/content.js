@@ -29,20 +29,13 @@ const CivilizationStoryContent = ({ data }) => {
     }
   };
   return (
-    <section className={`${styles.CivilizationStoryContent}`}>
-      <img src={decor} className={styles.decor} alt="decor" />
+    <div className={`${styles.CivilizationStoryContent}`}>
+      <img src={decor} className={styles.decoration} alt="decor" />
       <div className={`${styles.CivilizationStoryContentContainer} container-width`}>
-        <div className={`${styles.mainTitle}`}>
-          <h2 data-aos-delay="200" data-aos="fade-up" className="title">
+          <h2 data-aos="fade-up" className={`title ${styles.mainTitle}`}>
             Civilization Story
           </h2>
-        </div>
-        <div
-          data-aos="flip-left"
-          data-aos-easing="ease-out-cubic"
-          data-aos-duration="2000"
-          className={styles.contentDescription}
-        >
+        <div data-aos="fade-up" className={styles.contentDescription}>
           <section>
             <div className={styles.arrowsP}>{animatedArrows("purple")}</div>
             <div className={styles.arrowsG}>{animatedArrows("")}</div>
@@ -54,7 +47,7 @@ const CivilizationStoryContent = ({ data }) => {
             <span className="description">{data.description}</span>
           </div>
         </div>
-        <div className={styles.groupButtons}>
+        <div data-aos="fade-up" className={styles.groupButtons}>
           <div>
             <div
               style={fightSkills === 2 ? { opacity: 0.5 } : { opacity: 1 }}
@@ -110,34 +103,24 @@ const CivilizationStoryContent = ({ data }) => {
           <img className={styles.label} src={label} alt="label" />
         </div>
 
-        <div className={`${styles.mainTitle}`}>
-          <h2 data-aos-delay="200" data-aos="fade-up" className="title">
-            Elite Class Fighter
-          </h2>
-        </div>
+        <h2 data-aos="fade-up" className={`title ${styles.fightersTitle}`}>
+          Elite Class Fighter
+        </h2>
         <div className={styles.description}>
           <span data-aos-delay="600" data-aos="fade-up" className="description">
-            The Gladiator Class is not like our regular fighters. It will not be
-            created via <br /> algorithm, instead these fighters will be hand
-            crafted and will represent the best
-            <br /> that each clan has to offer (their chosen Champion/best
-            fighters)
+            The Gladiator Class is not like our regular fighters. It will not be created via algorithm, instead these fighters will be hand crafted and will represent the best that each clan has to offer (their chosen Champion/bestfighters)
           </span>
           <span
             data-aos-delay="1200"
             data-aos="fade-up"
             className="description"
           >
-            Initially we will start with 1 for each race (1 male and 1 female) we
-            will later look to <br />
-            airdrop new Gladiator class fighters into the league. These can be via
-            collabs, <br />
-            competitions and other cool things that we can really milk for PR.
+            Initially we will start with 1 for each race (1 male and 1 female) we will later look to airdrop new Gladiator class fighters into the league. These can be via collabs, competitions and other cool things that we can really milk for PR.
           </span>
         </div>
         <EliteFighters fighters={data.eliteFighters} />
       </div>
-    </section>
+    </div>
   );
 };
 

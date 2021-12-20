@@ -13,6 +13,8 @@ const Header = () => {
 
   const handleCloseMenu = () => {
     document.getElementById("mobile-menu").classList.remove("menu-open");
+    document.body.classList.remove("scroll-lock");
+    document.documentElement.classList.remove("scroll-lock");
     setIsHederFixed(false);
   };
 
@@ -32,11 +34,7 @@ const Header = () => {
     >
       <div className={styles.menu}>
         <img className={styles.tabletLogo} src={tabletLogo} alt="tabletLogo" />
-        {isHederFixed ? (
-          <img onClick={handleCloseMenu} src={menu} alt="menu" />
-        ) : (
-          <img onClick={handleOpenMenu} src={menu} alt="menu" />
-        )}
+        <img onClick={isHederFixed ? handleCloseMenu : handleOpenMenu} className={styles.menuIcon} src={menu} alt="menu" />
       </div>
       <img className={styles.logo} src={logo} alt="logo" />
       <div className={styles.buttonsBlock}>

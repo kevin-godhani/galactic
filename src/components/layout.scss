@@ -614,9 +614,6 @@ pre tt:after {
 
 }
 .slick-slide {
-  // max-width: 375px;
-  // margin-left: 11px;
-  // margin-right: 11px;
   opacity: 0.3;
   cursor: url(../styles/img/cursors/cursor.png) 25 15, auto;
   display: flex !important;
@@ -642,19 +639,32 @@ pre tt:after {
       cursor: default !important;
     }
   }
+  &.civilizations-slider {
+    .slick-slide {
+      img {
+        max-width: 100%;
+        padding: 0;
+        width: 420px;
+      }
+    }
+  }
+}
+.civilizations-slider-wrap {
+  padding-top: 0 !important;
+  padding-bottom: 94px !important;
 }
 .ticker__element {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 32px;
   > span {
     font-family: 'Syne';
     font-style: normal;
     font-weight: 600;
     font-size: 96px;
     line-height: 144px;
-    color: #EFDAA9;
-    margin-right: 64px;
+    color: #D4D4D4;
   }
 }
 .container-width {
@@ -746,19 +756,25 @@ pre tt:after {
 
 @media only screen and (max-width: 1200px) {
   .title {
-    font-size: 59px;
+    font-size: 48px;
+    line-height: 72px;
   }
   .description {
     font-size: .8rem;
+  }
+
+  .ticker__element {
+    > span {
+      font-size: 48px;
+      line-height: 72px;
+    }
   }
 }
 
 @media only screen and (max-width: 960px) {
   .title {
-    font-size: 40px;
-  }
-  .ticker__element {
-    line-height: 50px;
+    font-size: 36px;
+    line-height: 54px;
   }
 }
 
@@ -776,12 +792,34 @@ pre tt:after {
     line-height: 1.1rem !important;
   }
 
+  .ticker__element {
+    padding: 0 16px;
+    > span {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
   .slick-slide {
     img {
       // width: 474px;
       max-width: 88%;
       padding: 0;
     }
+  }
+
+  .slick-slider {
+    &.civilizations-slider {
+      .slick-slide {
+        img {
+          width: 330px;
+        }
+      }
+    }
+  }
+
+  .civilizations-slider-wrap {
+    padding-bottom: 92px !important;
   }
 
   .sm-buttons {
@@ -792,5 +830,11 @@ pre tt:after {
     &.mobile-only {
       display: flex;
     }
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .civilizations-slider-wrap {
+    padding-bottom: 300px !important;
   }
 }

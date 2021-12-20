@@ -52,20 +52,24 @@ const settings = {
     // },
   ],
 };
-const SlickSlider = ({ redirect, data, isClicable = false, afterChange }) => (
-  <div className={styles.sliderWrapper}>
-    <Slider {...settings} afterChange={afterChange}>
-      {data.map((el) => (
-        <div
-          className={styles.card}
-          key={el.id}
-          onClick={() => isClicable && redirect(el.id)}
-        >
-          <img draggable="false" src={el.url} alt="decoration" />
-        </div>
-      ))}
-    </Slider>
-  </div>
-);
+const SlickSlider = ({ redirect, containerClassName, className, data, isClickable = false, afterChange }) => {
+  const props = {...settings, className: className, afterChange: afterChange};
+
+  return (
+    <div className={`${styles.sliderWrapper} ${containerClassName}`}>
+      <Slider {...props}>
+        {data.map((el) => (
+          <div
+            className={styles.card}
+            key={el.id}
+            onClick={() => isClickable && redirect(el.id)}
+          >
+            <img draggable="false" src={el.url} alt="decoration" />
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+};
 
 export default SlickSlider;

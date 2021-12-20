@@ -53,6 +53,10 @@
             text-align: center;
             color: #ffffff;
             text-decoration: none;
+            transition: color 375ms ease;
+            &:hover {
+              color: #EFDAA9;
+            }
             &:first-child {
               margin-right: 22px;
             }
