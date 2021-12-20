@@ -14,7 +14,7 @@ import lockedBg2 from "../../styles/img/civilizations/elite-fighters/locked-bg2.
 
 const settings = {
   dots: false,
-  infinite: true,
+  infinite: false,
   slidesToShow: 3,
   slidesToScroll: 1,
   centerPadding: "10px",
@@ -99,7 +99,7 @@ const EliteFighters = ({ fighters }) => {
 
       <div
         data-aos="fade-up"
-        className={styles.contentDescription}
+        className={`${styles.contentDescription} ${styles.fighterDescription}`}
       >
         <section>
           <div className={styles.arrowsP}>{animatedArrows("purple")}</div>
