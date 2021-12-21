@@ -795,8 +795,8 @@ pre tt:after {
 
 @media only screen and (max-width: 590px) {
   .description {
-    font-size: .7rem !important;
-    line-height: 1.2rem !important;
+    font-size: .7rem;
+    line-height: 1.2rem;
   }
 }
 
@@ -807,8 +807,8 @@ pre tt:after {
   }
 
   .description {
-    font-size: 0.6rem !important;
-    line-height: 1.1rem !important;
+    font-size: 0.6rem;
+    line-height: 1.1rem;
   }
 
   .ticker__element {
