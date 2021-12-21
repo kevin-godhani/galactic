@@ -26,7 +26,7 @@ const IndexPage = () => {
       <Seo title="Home" />
       <FirstBlock />
       <SecondBlock />
-      <SlickSlider data={carousel} />
+      <SlickSlider data={carousel} className={'fighters-slider'} />
       <ThirdBlock />
       <Roadmap />
       <OurSponsors />

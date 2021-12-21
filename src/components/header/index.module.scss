@@ -180,3 +180,12 @@
     }
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .menuWrapper {
+    .decoration {
+      width: 40vw;
+      right: 100px;
+    }
+  }
+}

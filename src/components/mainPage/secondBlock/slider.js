@@ -6,10 +6,10 @@ import * as styles from "./index.module.scss";
 
 const settings = {
   dots: false,
-  infinite: true,
-  slidesToShow: 7,
+  // infinite: true,
+  slidesToShow: 4,
   slidesToScroll: 1,
-  centerPadding: "10px",
+  centerPadding: 0,
   centerMode: true,
   arrows: false,
   speed: 750,
@@ -17,16 +17,9 @@ const settings = {
   pauseOnHover: true,
   responsive: [
     {
-      breakpoint: 2561,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 1,
-      },
-    },
-    {
       breakpoint: 1921,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
       },
     },
@@ -37,12 +30,12 @@ const settings = {
     //     centerPadding: "10px",
     //   },
     // },
-    {
-      breakpoint: 924,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
+    // {
+    //   breakpoint: 1200,
+    //   settings: {
+    //     slidesToShow: 1,
+    //   },
+    // },
     // {
     //   breakpoint: 880,
     //   settings: {
