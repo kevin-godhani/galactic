@@ -655,18 +655,21 @@ pre tt:after {
   }
   &.civilizations-slider {
     .slick-slide {
+      cursor: default;
       img {
         max-width: 100%;
         padding: 0;
-        width: 420px;
+        width: 31vw;
+        min-width: 31vw;
       }
     }
   }
 }
 .civilizations-slider-wrap {
   padding-top: 0 !important;
-  padding-bottom: 94px !important;
+  padding-bottom: 0 !important;
 }
+
 .ticker__element {
   display: flex;
   align-items: center;
@@ -846,6 +849,17 @@ pre tt:after {
         }
       }
     }
+    &.civilizations-slider {
+      .slick-track {
+        left: -25vw;
+      }
+      .slick-slide {
+        img {
+          width: 50vw;
+          min-width: 50vw;
+        }
+      }
+    }
   }
 }
 
@@ -901,9 +915,9 @@ pre tt:after {
     }
   }
 
-  .civilizations-slider-wrap {
-    padding-bottom: 92px !important;
-  }
+  // .civilizations-slider-wrap {
+  //   padding-bottom: 92px !important;
+  // }
 
   .sm-buttons {
     &.menu {
@@ -948,9 +962,9 @@ pre tt:after {
 }
 
 @media only screen and (min-width: 2000px) {
-  .civilizations-slider-wrap {
-    padding-bottom: 300px !important;
-  }
+  // .civilizations-slider-wrap {
+  //   padding-bottom: 300px !important;
+  // }
 
   .slick-slide {
     img {

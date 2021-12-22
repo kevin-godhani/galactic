@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,7 +12,7 @@ const settings = {
   centerPadding: 0,
   centerMode: true,
   arrows: false,
-  speed: 750,
+  speed: 375,
   cssEase: "linear",
   pauseOnHover: true,
   responsive: [
@@ -45,12 +45,22 @@ const settings = {
     // },
   ],
 };
-const SlickSlider = ({ redirect, containerClassName, className, data, isClickable = false, afterChange }) => {
-  const props = {...settings, className: className, afterChange: afterChange};
+const SlickSlider = ({ redirect, containerClassName, className, data, isClickable = false, afterChange, sliderSettings, activeSlideIndex }) => {
+  const s = {...settings, ...sliderSettings};
+  const props = {...s, className: className, afterChange: afterChange};
+
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    if (activeSlideIndex === undefined || !sliderRef?.current) {
+      return;
+    }
+    sliderRef.current.slickGoTo(activeSlideIndex);
+  }, [activeSlideIndex]);
 
   return (
     <div className={`${styles.sliderWrapper} ${containerClassName}`}>
-      <Slider {...props}>
+      <Slider ref={sliderRef} {...props}>
         {data.map((el) => (
           <div
             className={styles.card}

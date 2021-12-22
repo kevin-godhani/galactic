@@ -3,9 +3,8 @@ import * as styles from "./index.module.scss";
 import useWindowSize from '../../../utils/useWindowSize';
 import { mainButton } from "../../buttons";
 import slideBorder from '../../../styles/img/slide-border.svg';
-import angle from "../../../styles/img/animation_angle.png";
-import angle_active from "../../../styles/img/animation_angle_active.png";
 import slidesCounter from "../../../styles/img/slides-counter.svg";
+import { sliderButtonBg, sliderButtonBgActive } from "../../../constants";
 
 const CivilizationSlides = ({ slides }) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
@@ -17,9 +16,6 @@ const CivilizationSlides = ({ slides }) => {
   const activeSlide = slides[activeSlideIndex];
   const isMinValue = activeSlideIndex === 0;
   const isMaxValue = activeSlideIndex === slides?.length - 1;
-
-  const bg = 'linear-gradient(360deg, #000000 0%, #1E135C 100%), linear-gradient(180deg, rgba(26, 12, 54, 0) 0%, #1A0C36 100%)';
-  const activeBg = 'linear-gradient(360deg, #EFDDA9 0%, #F0B9A9 100%)';
 
   const onPrev = () => {
     if (isMinValue) {
@@ -66,7 +62,7 @@ const CivilizationSlides = ({ slides }) => {
           onClick={onPrev}
           style={ !isMinValue ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, cursor: 'default' }}
         >
-          <div className={styles.civilizationSlidesButtonBg} style={{ background: !isMinValue ? activeBg : bg }}></div>
+          <div className={styles.civilizationSlidesButtonBg} style={{ background: !isMinValue ? sliderButtonBgActive : sliderButtonBg }}></div>
           <div className={styles.civilizationSlidesButtonBorder}></div>
           <span style={!isMinValue ? { color: "#010103" } : { color: "#EFDAA9" }}>
             Back
@@ -77,7 +73,7 @@ const CivilizationSlides = ({ slides }) => {
           onClick={onNext}
           style={ !isMaxValue ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, cursor: 'default' }}
         >
-          <div className={styles.civilizationSlidesButtonBg} style={{ background: !isMaxValue ? activeBg : bg }}></div>
+          <div className={styles.civilizationSlidesButtonBg} style={{ background: !isMaxValue ? sliderButtonBgActive : sliderButtonBg }}></div>
           <div className={styles.civilizationSlidesButtonBorder}></div>
           <span style={!isMaxValue ? { color: "#010103" } : { color: "#EFDAA9" }}>
             Next

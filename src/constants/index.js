@@ -83,6 +83,9 @@ export const instagramLink = 'https://www.instagram.com/galacticfightleague/';
 export const twitterLink = 'https://twitter.com/GalacticFL';
 export const discordLink = 'https://discord.gg/VggUGR7x';
 
+export const sliderButtonBg = 'linear-gradient(360deg, #000000 0%, #1E135C 100%), linear-gradient(180deg, rgba(26, 12, 54, 0) 0%, #1A0C36 100%)';
+export const sliderButtonBgActive = 'linear-gradient(360deg, #EFDDA9 0%, #F0B9A9 100%)';
+
 export {
     twitter,
     instagram,

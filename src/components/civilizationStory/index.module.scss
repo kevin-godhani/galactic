@@ -534,8 +534,8 @@
         margin-bottom: 20px;
       }
       > span {
-        font-size: 1.3rem;
-        line-height: 2.3rem;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
       }
     }
   }
@@ -625,8 +625,8 @@
   .contentDescription {
     > div {
       > span {
-        font-size: 1rem;
-        line-height: 1.4rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
       }
     }
   }
@@ -760,8 +760,8 @@
         line-height: 23px;
       }
       > span {
-        font-size: 0.7rem;
-        line-height: 1.1rem;
+        font-size: 0.8888rem;
+        line-height: 1.2rem;
       }
     }
   }
@@ -853,7 +853,9 @@
   }
 }
 
-@media only screen and (max-width: 390px) {
+
+
+@media only screen and (max-width: 400px) {
   .contentDescription {
     > div {
       padding: 60px 30px;
