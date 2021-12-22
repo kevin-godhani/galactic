@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import logo from "../../styles/img/logo.svg";
 import tabletLogo from "../../styles/img/tablet-logo.svg";
-import menu from "../../styles/img/menu_icon.png";
+import menu from "../../styles/img/menu-icon.png";
 import * as styles from "./index.module.scss";
 import { MainButtonExternal, SocialButton } from "../buttons";
 import useWindowSize from "../../utils/useWindowSize";
@@ -14,7 +14,7 @@ import {
 } from "../../constants";
 
 const Header = () => {
-  const [y, setY] = useState(window.scrollY);
+  const [y, setY] = useState(typeof window !== 'undefined' ? window.scrollY : 0);
   const [isHederFixed, setIsHederFixed] = useState(false);
   const [headerClassName, setHeaderClassName] = useState('');
   const ws = useWindowSize();
