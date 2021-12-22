@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import { Link } from "react-scroll";
 import ScrollButton from "../../../styles/img/scroll-button.inline.svg";
-import preview from '../../../styles/img/thumb_main.png';
+import preview from "../../../styles/img/thumb_main.png";
+import CustomTimer from "../timer";
 import * as styles from "./index.module.scss";
 
 const FirstBlock = () => {
@@ -30,6 +31,7 @@ const FirstBlock = () => {
       >
         <ScrollButton className={styles.scrollButton} />
       </Link>
+      <CustomTimer />
     </section>
   );
 };

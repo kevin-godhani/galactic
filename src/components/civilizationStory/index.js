@@ -103,7 +103,7 @@ const CivilizationsStory = ({ data, nextTitle }) => {
               <span>Team</span>
               <p className="description">{data.title}</p>
             </div>
-            <img className={styles.borderImg} src={border1} alt="border" />
+            <img className={styles.borderImg} src={border2} alt="border" />
           </div>
           <div>
             <div>

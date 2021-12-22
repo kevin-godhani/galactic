@@ -762,7 +762,17 @@ pre tt:after {
     }
   }
 }
+.active-header {
+  transition: opacity .3s ease;
+  position: fixed !important;
+  opacity: 1;
+}
 
+.disabled-header {
+  opacity: 0;
+  transition: opacity .3s ease;
+  position: fixed !important;
+}
 @media only screen and (max-width: 1200px) {
   .title {
     font-size: 48px;

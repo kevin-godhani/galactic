@@ -1,0 +1,25 @@
+.timerWrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 108px;
+  z-index: 4;
+  > h5 {
+    font-weight: bold;
+    font-size: 33.8143px;
+    line-height: 34px;
+    display: flex;
+    font-family: "Syne";
+    margin: 0;
+    > span {
+      color: #efdaa9;
+    }
+    > p {
+      color: #ffffff;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}
