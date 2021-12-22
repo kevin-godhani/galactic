@@ -11,6 +11,7 @@ import * as styles from "./index.module.scss";
 import cursorPlay from "../../../styles/img/icons/play_icon.svg";
 import playText from "../../../styles/img/icons/play_text.svg";
 import useWindowSize from "../../../utils/useWindowSize";
+import { slides } from "../../../constants";
 
 export const animatedArrows = (color) => {
   return (
@@ -117,7 +118,7 @@ const ThirdBlock = () => {
           civilizations were discovered, new lifeforms forged. Co-existence was
           never easy, battles raged.
         </p>
-        <CivilizationSlides />
+        <CivilizationSlides slides={slides} />
       </div>
     </section>
   );

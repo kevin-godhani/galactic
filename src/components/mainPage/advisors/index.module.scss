@@ -6,7 +6,7 @@
     width: 85%;
   }
   .advisorsSectionTitle {
-    margin-bottom: 64px;
+    margin-bottom: 42px;
   }
   .advisorsSectionSubtitle {
     margin-bottom: 100px;
@@ -14,12 +14,6 @@
   }
 }
 .cardHeader {
-  font-family: 'Syne';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 36px;
-  color: #EFDAA9;
   position: absolute;
   top: 30px;
   text-align: center;
@@ -51,7 +45,7 @@
 .leftContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   > div {
     &:first-child {
       position: relative;
@@ -89,7 +83,7 @@
 .rightContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: row-reverse;
   .cardText {
     margin-right: 50px;
@@ -171,11 +165,11 @@
       }
     }
     .advisorsSectionTitle {
-      margin-bottom: 16px;
+      margin-bottom: 49px;
     }
     .advisorsSectionSubtitle {
-      font-size: 14px !important;
-      line-height: 21px !important;
+      // font-size: 14px !important;
+      // line-height: 21px !important;
       margin-bottom: 50px;
     }
   }
@@ -186,10 +180,10 @@
   .rightContainer {
     max-width: 100%;
     margin-bottom: 50px;
-    .cardText {
-      font-size: 14px !important;
-      line-height: 21px !important;
-    }
+    // .cardText {
+    //   font-size: 14px !important;
+    //   line-height: 21px !important;
+    // }
   }
   .cardHeader {
     top: 19px;

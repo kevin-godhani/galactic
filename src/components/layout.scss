@@ -1,3 +1,6 @@
+@import './gem.scss';
+@import './rem.scss';
+
 @font-face {
   font-family: 'Syne';
   src: local('syne'), url(../styles/fonts/syne.ttf) format('truetype');
@@ -626,6 +629,7 @@ pre tt:after {
   justify-content: center;
   img {
     width: 50vw;
+    min-width: 50vw;
     max-width: 100%;
     padding: 0 11px;
   }
@@ -683,12 +687,38 @@ pre tt:after {
   max-width: 1440px;
 }
 .title {
+  font-family: 'Syne-B';
   font-style: normal;
   font-weight: 600;
-  font-size: 120px;
-  line-height: 100px;
+  font-size: 6.66rem;
+  line-height: 5.56rem;
+  letter-spacing: -0.024rem;
   color: #EFDAA9;
+}
+.title2 {
   font-family: 'Syne-B';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -0.2rem;
+  color: #FFFFFF;
+}
+.title3 {
+  font-family: 'Syne-B';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.78rem;
+  line-height: 2.67rem;
+  color: #EFDAA9;
+}
+.title4 {
+  font-family: 'Syne-B';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.666rem;
+  line-height: 2rem;
+  color: #EFDAA9;
 }
 .description {
   font-family: 'Satoshi';
@@ -696,6 +726,7 @@ pre tt:after {
   font-weight: normal;
   line-height: 1.666rem;
   font-size: 1.11rem;
+  letter-spacing: 0.015rem;
   color: rgba(255, 255, 255, 0.7);
 }
 .menu-open {
@@ -775,11 +806,22 @@ pre tt:after {
 }
 @media only screen and (max-width: 1200px) {
   .title {
-    font-size: 48px;
-    line-height: 72px;
+    font-size: 2.66rem;
+    line-height: 4rem;
+    letter-spacing: -0.08rem;
+  }
+  .title2 {
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: -0.15rem;
+  }
+  .title3 {
+    font-size: 1.33rem;
+    line-height: 2rem;
   }
   .description {
-    font-size: .8rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .ticker__element {
@@ -807,22 +849,30 @@ pre tt:after {
   }
 }
 
-@media only screen and (max-width: 590px) {
-  .description {
-    font-size: .7rem;
-    line-height: 1.2rem;
-  }
-}
+// @media only screen and (max-width: 590px) {
+//   .description {
+//     font-size: .7rem;
+//     line-height: 1.2rem;
+//   }
+// }
 
 @media only screen and (max-width: 480px) {
   .title {
-    font-size: 36px;
-    line-height: 54px;
+    font-size: 2rem;
+    line-height: 3rem;
   }
-
-  .description {
-    font-size: 0.6rem;
-    line-height: 1.1rem;
+  .title2 {
+    font-size: 1.333rem;
+    line-height: 1;
+    letter-spacing: -0.11rem;
+  }
+  .title3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .title4 {
+    font-size: 1.222rem;
+    line-height: 2rem;
   }
 
   .ticker__element {
@@ -830,14 +880,6 @@ pre tt:after {
     > span {
       font-size: 24px;
       line-height: 36px;
-    }
-  }
-
-  .slick-slide {
-    img {
-      // width: 474px;
-      max-width: 88%;
-      padding: 0;
     }
   }
 
@@ -908,5 +950,12 @@ pre tt:after {
 @media only screen and (min-width: 2000px) {
   .civilizations-slider-wrap {
     padding-bottom: 300px !important;
+  }
+
+  .slick-slide {
+    img {
+      min-width: 25vw;
+      width: 25vw;
+    }
   }
 }

@@ -1,6 +1,6 @@
 .main {
   width: 100%;
-  padding-top: 128px;
+  padding-top: 98px;
   padding-bottom: 50px;
   background-color: #000000;
   display: flex;
@@ -8,38 +8,25 @@
   justify-content: center;
   align-items: center;
   > h1 {
-    font-style: normal;
-    text-align: center;
-    font-weight: 600;
-    font-size: 45px;
-    line-height: 45px;
-    color: #FFFFFF;
     margin-bottom: 22px;
     max-width: 90%;
-    width: 520px;
-    font-family: 'Syne';
+    width: 710px;
+    text-align: center;
     > span {
       position: relative;
       top: -6px;
-      display: inline;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 45px;
-      line-height: 45px;
+      // display: inline;
+      // font-style: normal;
+      // font-weight: bold;
+      // font-size: 45px;
+      // line-height: 45px;
       color: #EFDAA9;
     }
   }
   > p {
-    width: 696px;
+    width: 840px;
     max-width: 90%;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 21px;
     text-align: center;
-    letter-spacing: 0.1em;
-    color: rgba(165, 161, 161, 0.7);
-    font-family: 'Satoshi';
   }
 }
 .card {
@@ -58,6 +45,9 @@
   .main {
     padding-top: 120px;
     padding-bottom: 60px;
+    > h1 {
+      max-width: 600px;
+    }
     > p {
       margin-bottom: 0;
     }
@@ -72,15 +62,15 @@
     padding-top: 100px;
     padding-bottom: 50px;
     > h1 {
-      font-size: 24px;
-      line-height: 26px;
+      // font-size: 24px;
+      // line-height: 26px;
       width: 100%;
       margin-bottom: 18px;
       max-width: 100%;
       padding: 0 32px;
       > span {
-        font-size: 24px;
-        line-height: 26px;
+        // font-size: 24px;
+        // line-height: 26px;
         top: -3px;
       }
     }
@@ -106,17 +96,17 @@
   .main {
     padding-top: 200px;
     > h1 {
-      display: flex;
-      align-items: center;
+      // display: flex;
+      // align-items: center;
       font-size: 45px;
       line-height: 45px;
       margin-bottom: 30px;
-      width: 910px;
+      // width: 910px;
       > span {
         font-size: 45px;
         line-height: 54px;
-        margin-right: 13px;
-        margin-bottom: 12px;
+        // margin-right: 13px;
+        // margin-bottom: 12px;
       }
     }
     > p {

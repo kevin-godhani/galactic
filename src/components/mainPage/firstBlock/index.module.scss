@@ -19,3 +19,28 @@
     cursor: pointer;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .hero-section {
+    min-height: 93vh;
+    &-video {
+      min-height: 93vh;
+    }
+  }
+
+  .scroll-button {
+    &-link {
+      bottom: -10px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero-section {
+    min-height: 80vh;
+    &-video {
+      min-height: 80vh;
+    }
+  }
+}
