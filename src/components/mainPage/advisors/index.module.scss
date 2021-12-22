@@ -138,16 +138,18 @@
     margin-bottom: 60px;
   }
   .cardHeader {
-    top: 60px;
+    top: 7.7%;
   }
   .cardText {
     max-width: 100%;
     margin-bottom: 0;
   }
   .cardImageWrap {
-    top: 219px;
-    width: 341px;
-    height: 401px;
+    top: 25%;
+    width: 41.28vw;
+    height: 48.55vw;
+    max-height: 401px;
+    max-width: 341px;
   }
   .socialButtonsWrap {
     bottom: 48px;
@@ -168,8 +170,6 @@
       margin-bottom: 49px;
     }
     .advisorsSectionSubtitle {
-      // font-size: 14px !important;
-      // line-height: 21px !important;
       margin-bottom: 50px;
     }
   }
@@ -180,21 +180,18 @@
   .rightContainer {
     max-width: 100%;
     margin-bottom: 50px;
-    // .cardText {
-    //   font-size: 14px !important;
-    //   line-height: 21px !important;
-    // }
   }
   .cardHeader {
-    top: 19px;
+    top: 7.7%;
   }
   .cardImageWrap {
-    top: 100px;
-    width: 184px;
-    height: 216px;
+    width: 44.44vw;
+    height: 52.17vw;
+    max-height: 216px;
+    max-width: 184px;
   }
   .socialButtonsWrap {
-    bottom: 19px;
+    bottom: 19px !important;
   }
 }
 

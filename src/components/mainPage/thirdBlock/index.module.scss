@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   min-height: 1180px;
-  overflow: hidden;
   .mainHeader {
     display: flex;
     position: relative;
@@ -71,7 +70,7 @@
 .civilizations {
   padding-top: 200px;
   position: relative;
-  width: 85%;
+  width: 84.3vw;
   .civilizationsTitle {
     margin-bottom: 42px;
   }
@@ -169,10 +168,73 @@
   }
 }
 .civilizationSlides {
+  position: relative;
   height: 633px;
+  width: 1215px;
   max-width: 100%;
   img {
     max-width: 100%;
+  }
+  &-buttons {
+    position: absolute;
+    top: 1%;
+    left: 6%;
+    display: inline-flex;
+    align-items: center;
+    width: 30.4vw;
+    max-width: 24.444rem;
+    z-index: 2;
+  }
+  &-button {
+    position: relative;
+    flex-shrink: 1;
+    border-radius: 6px;
+    flex-basis: 39.5%;
+    height: 5vw;
+    max-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: all 375ms ease;
+    &:first-child {
+      margin-right: 16px;
+    }
+    &-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: inherit;
+      background: linear-gradient(360deg, #000000 0%, #1E135C 100%), linear-gradient(180deg, rgba(26, 12, 54, 0) 0%, #1A0C36 100%);
+      background-clip: padding-box;
+      transform: skewX(-45deg);
+    }
+    &-border {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -2;
+      margin: -1px;
+      border-radius: inherit;
+      background: linear-gradient(0deg, rgba(255,255,255,1), rgba(255,255,255,0));
+      transform: skewX(-45deg);
+    }
+    > span {
+      position: absolute;
+      outline: none;
+      font-family: 'Syne-B', serif;
+      font-weight: bold;
+      font-size: 1.222rem;
+      line-height: 1.444rem;
+      transition: all 375ms ease;
+    }
   }
 }
 
@@ -181,10 +243,6 @@
   width: 1215px;
   max-width: 100%;
   z-index: 1;
-  &:not(:first-child) {
-    opacity: 0;
-    visibility: hidden;
-  }
   &-content {
     position: absolute;
     width: 40%;
@@ -204,6 +262,51 @@
   &-text {
     max-width: 100%;
     margin-bottom: 40px;
+  }
+}
+
+.slides-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 11.53vw;
+  max-width: 166px;
+  &-image {
+    width: 100%;
+    z-index: -1;
+  }
+  &-text {
+    position: absolute;
+    top: 20%;
+    right: 7%;
+  }
+  &-active {
+    font-family: 'Syne-B';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.888rem;
+    line-height: 1.777rem;
+    color: #010103;
+    margin-right: 2px;
+  }
+  &-slash {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1.777rem;
+    color: #010103;
+    margin-right: -3px;
+    opacity: 0.5;
+  }
+  &-length {
+    font-family: 'Syne-B';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9444rem;
+    line-height: 1.777rem;
+    color: #010103;
+    opacity: 0.5;
   }
 }
 
@@ -265,6 +368,7 @@
     }
     .civilizationsSubtitle {
       max-width: 85%;
+      width: 704px;
       margin-bottom: 60px;
     }
     > img {
@@ -281,22 +385,32 @@
   }
 
   .civilizationSlides {
+    width: 704px;
     height: auto;
     margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-buttons {
+      position: static;
+      top: auto;
+      left: auto;
+      justify-content: space-between;
+      width: 90%;
+      max-width: 90%;
+      z-index: 2;
+      margin-top: 36px;
+    }
+    &-button {
+      flex-basis: 50%;
+      height: 4rem;
+    }
   }
 
   .slide {
     position: relative;
-    width: 704px;
+    width: 100%;
     max-width: 100%;
-    &:not(:last-child) {
-      margin-bottom: 32px;
-    }
-    &:not(:first-child) {
-      transform: none !important;
-      opacity: 1;
-      visibility: unset;
-    }
     &-content {
       position: absolute;
       width: 68.2%;
@@ -315,6 +429,9 @@
       margin-top: auto;
       margin-bottom: 0;
     }
+  }
+  .slides-counter {
+    display: none;
   }
 }
 
@@ -404,6 +521,26 @@
   }
 }
 
+@media only screen and (max-width: 680px) {
+  .slide {
+    &-title {
+      font-size: 1.4rem;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    &-text {
+      font-size: 0.8rem;
+      line-height: 1.1rem;
+    }
+    &-content {
+      width: 68.2%;
+      height: 79%;
+      top: 12.54%;
+      left: 21.72%;
+    }
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .contentWrapper {
     .contentText {
@@ -416,6 +553,7 @@
 @media only screen and (max-width: 480px) {
   .main {
     padding-top: 46px;
+    padding-bottom: 50px;
   }
   .tablet {
     display: none;
@@ -439,6 +577,22 @@
     }
     .civilizationsSubtitle {
       max-width: 100%;
+    }
+  }
+
+  .civilizationSlides {
+    width: 354px;
+    &-buttons {
+      margin-top: 16px;
+      width: 84%;
+      max-width: 84%;
+    }
+    &-button {
+      height: 3.333rem;
+      > span {
+        font-size: 1rem;
+        line-height: 1;
+      }
     }
   }
 
