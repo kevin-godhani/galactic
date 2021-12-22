@@ -13,6 +13,14 @@ import decor6 from "../../styles/img/civilizations/decor_6.png";
 import background7 from "../../styles/img/civilizations/background_7.png";
 import decor7 from "../../styles/img/civilizations/decor_7.png";
 
+import mobile_background1 from "../../styles/img/civilizations/mobile_backgrounds/background_mobile1.png";
+import mobile_background2 from "../../styles/img/civilizations/mobile_backgrounds/background_mobile2.png";
+import mobile_background3 from "../../styles/img/civilizations/mobile_backgrounds/background_mobile3.png";
+import mobile_background4 from "../../styles/img/civilizations/mobile_backgrounds/background_mobile4.png";
+import mobile_background5 from "../../styles/img/civilizations/mobile_backgrounds/background_mobile5.png";
+import mobile_background6 from "../../styles/img/civilizations/mobile_backgrounds/background_mobile6.png";
+import mobile_background7 from "../../styles/img/civilizations/mobile_backgrounds/background_mobile7.png";
+
 import female1 from "../../styles/img/civilizations/female1.png";
 import female2 from "../../styles/img/civilizations/female2.png";
 import female3 from "../../styles/img/civilizations/female3.png";
@@ -75,10 +83,11 @@ export const pageData = [
     war was over. In its place, the greatest tournament of hand to hand
     combat ever known.`,
     background: background1,
+    mobileBackground: mobile_background1,
     decor: decor1,
   },
   {
-    id: 3,
+    id: 2,
     description: `In the future, our galaxy is a very different place. Where humans once
     believed they were the only form of intelligent life, new
     civilizations were discovered, new lifeforms forged. Co-existence was
@@ -90,6 +99,7 @@ export const pageData = [
     war was over. In its place, the greatest tournament of hand to hand
     combat ever known.`,
     background: background2,
+    mobileBackground: mobile_background2,
     decor: decor2,
   },
   {
@@ -105,6 +115,7 @@ export const pageData = [
     war was over. In its place, the greatest tournament of hand to hand
     combat ever known.`,
     background: background3,
+    mobileBackground: mobile_background3,
     decor: decor3,
   },
   {
@@ -120,6 +131,7 @@ export const pageData = [
     war was over. In its place, the greatest tournament of hand to hand
     combat ever known.`,
     background: background4,
+    mobileBackground: mobile_background4,
     decor: decor4,
   },
   {
@@ -135,6 +147,7 @@ export const pageData = [
     war was over. In its place, the greatest tournament of hand to hand
     combat ever known.`,
     background: background5,
+    mobileBackground: mobile_background5,
     decor: decor5,
   },
   {
@@ -150,6 +163,7 @@ export const pageData = [
     war was over. In its place, the greatest tournament of hand to hand
     combat ever known.`,
     background: background6,
+    mobileBackground: mobile_background6,
     decor: decor6,
   },
   {
@@ -165,6 +179,7 @@ export const pageData = [
     war was over. In its place, the greatest tournament of hand to hand
     combat ever known.`,
     background: background7,
+    mobileBackground: mobile_background7,
     decor: decor7,
   },
 ];
