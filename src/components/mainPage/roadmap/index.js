@@ -13,8 +13,8 @@ const RoadMapItem = ({ data, isEven }) => {
   const { title, description, label, labelBig } = data;
 
   const ws = useWindowSize();
-  const isTabletWidth = ws.width <= 1200 && ws.width >= 481;
-  const isMobileWidth = ws.width <= 480;
+  const isTabletWidth = ws.width <= 1200 && ws.width >= 701;
+  const isMobileWidth = ws.width <= 700;
 
   return (
     <div className={styles.card} data-aos="zoom-in">
@@ -31,8 +31,8 @@ const RoadMapItem = ({ data, isEven }) => {
           <span className={styles.cardLabelText}>{data.label}</span>
         </div>
       )}
-      <h5 className={styles.cardTitle}>{title}</h5>
-      <p className={styles.cardDescription}>{description}</p>
+      <h5 className={`title3 ${styles.cardTitle}`}>{title}</h5>
+      <p className={`description ${styles.cardDescription}`}>{description}</p>
     </div>
   );
 };

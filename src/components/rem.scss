@@ -1,0 +1,29 @@
+@import './gem.scss';
+
+@mixin remBase($widthDesign, $heightDesign) {
+    html {
+        font-size: calc(#{$gem-coeff * 100}vw / #{$widthDesign});
+    }
+
+    @if $heightDesign != 0 {
+        @media all and (min-aspect-ratio: #{$widthDesign} / #{$heightDesign}) {
+            html {
+                font-size: calc(100vh / #{$heightDesign});
+            }
+        }
+    }
+}
+
+@mixin remBreakpoint($widthDesign, $heightDesign, $query: 'max-width') {
+    @media all and (#{$query}: #{$widthDesign}px) {
+        @include remBase($widthDesign, $heightDesign);
+    }
+}
+
+@include remBase(1440, 0);
+@media all and (max-width: 1200px) {
+    @include remBase(768, 0);
+}
+@media all and (max-width: 480px) {
+    @include remBase(320, 0);
+}

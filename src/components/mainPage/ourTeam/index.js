@@ -18,7 +18,7 @@ const ItemBlock = ({title, description, image, links, isEven}) => {
     >
       <div className={styles.cardContainer}>
         <img src={leftBack} className={`${styles.cardContainerBg} ${isEven ? styles.flipped : ''}`} alt="back" />
-        <h5 className={styles.cardHeader} style={{ paddingLeft: isEven ? (isMobileWidth ? 30 : 45) : 0, paddingRight: isEven ? 0 : (isMobileWidth ? 30 : 45) }}>
+        <h5 className={`title4 ${styles.cardHeader}`} style={{ paddingLeft: isEven ? (isMobileWidth ? 30 : 45) : 0, paddingRight: isEven ? 0 : (isMobileWidth ? 30 : 45) }}>
           {title}
         </h5>
         <div className={styles.cardImageWrap}>

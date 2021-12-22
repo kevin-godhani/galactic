@@ -41,25 +41,12 @@
       z-index: -1;
     }
     &-title {
-      font-family: 'Syne';
-      font-style: normal;
-      font-weight: bold;
-      font-size: 32px;
-      line-height: 48px;
-      color: #EFDAA9;
       margin-bottom: 12px;
       text-align: center;
     }
     &-description {
       max-width: 555px;
-      font-family: 'Satoshi';
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 21px;
       text-align: center;
-      letter-spacing: 0.1em;
-      color: rgba(255, 255, 255, 0.7);
       margin-bottom: 0;
     }
     &-label {
@@ -123,15 +110,14 @@
   .roadmap-section {
     .card {
       width: 704px;
+      height: 288px;
       &:not(:last-child) {
         margin-bottom: 50px;
       }
-      &-title {
-        font-size: 24px;
-        line-height: 36px;
-      }
       &-description {
         max-width: 467px;
+        font-size: 0.888rem;
+        line-height: 1.333rem;
       }
       &-label {
         left: 43px;
@@ -176,18 +162,8 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
-  .decoration {
-    display: none;
-  }
-  .roadmapTitle {
-    margin-bottom: 50px;
-    font-size: 36px;
-    line-height: 54px;
-  }
+@media only screen and (max-width: 700px) {
   .roadmap-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
     .card {
       width: 354px;
       height: 336px;
@@ -195,14 +171,12 @@
         margin-bottom: 16px;
       }
       &-title {
-        font-size: 18px;
-        line-height: 27px;
         margin-bottom: 8px;
       }
       &-description {
         max-width: 257px;
-        font-size: 12px;
-        line-height: 18px;
+        font-size: 0.7rem;
+        line-height: 1rem;
       }
       &-label {
         left: 11px;
@@ -244,6 +218,19 @@
           line-height: 25px;
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .decoration {
+    display: none;
+  }
+  .roadmap-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .roadmapTitle {
+      margin-bottom: 50px;
     }
   }
 }

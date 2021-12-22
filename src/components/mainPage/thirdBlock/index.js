@@ -12,6 +12,7 @@ import * as styles from "./index.module.scss";
 import cursorPlay from "../../../styles/img/cursors/watch.png";
 import cursorStop from "../../../styles/img/cursors/stop.png";
 import SoundIcon from "../../../styles/img/sound-icon.inline.svg";
+import { slides } from "../../../constants";
 
 export const animatedArrows = (color) => {
   return (
@@ -94,7 +95,7 @@ const ThirdBlock = () => {
         <p data-aos-delay="66" data-aos="fade-up" className={`description ${styles.civilizationsSubtitle}`}>
           In the future, our galaxy is a very different place. Where humans once believed they were the only form of intelligent life, new civilizations were discovered, new lifeforms forged. Co-existence was never easy, battles raged.
         </p>
-        <CivilizationSlides />
+        <CivilizationSlides slides={slides} />
       </div>
     </section>
   );

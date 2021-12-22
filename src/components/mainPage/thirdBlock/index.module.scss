@@ -7,12 +7,6 @@
     display: flex;
     position: relative;
     > h2 {
-      font-style: normal;
-      font-weight: 600;
-      font-size: 120px;
-      line-height: 100px;
-      color: #EFDAA9;
-      font-family: 'Syne';
       opacity: 0;
       margin-bottom: 45px;
     }
@@ -44,11 +38,14 @@
   }
   .mainContent {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .contentText {
     position: absolute;
-    left: 60px;
-    top: 61px;
+    max-width: 87%;
+    margin-bottom: 0;
   }
 }
 
@@ -57,11 +54,11 @@
   position: relative;
   width: 85%;
   .civilizationsTitle {
-    margin-bottom: 64px;
+    margin-bottom: 42px;
   }
   .civilizationsSubtitle {
-    max-width: 1130px;
-    margin-bottom: 54px;
+    max-width: 1070px;
+    margin-bottom: 120px;
   }
   > span {
     margin-top: 24px;
@@ -171,9 +168,9 @@
   }
   &-content {
     position: absolute;
-    width: 35.4%;
+    width: 40%;
     top: 32.64%;
-    left: 7.65%;
+    left: 5.65%;
   }
   &-border {
     position: absolute;
@@ -181,17 +178,11 @@
     left: -31px;
   }
   &-title {
-    font-family: 'Syne-B', sans-serif;
-    font-size: 36px;
-    line-height: 36px;
-    color: #EFDAA9;
+    font-size: 2rem;
+    line-height: 1;
     margin-bottom: 20px;
   }
   &-text {
-    font-family: 'Satoshi', sans-serif;
-    font-size: 14px;
-    line-height: 21px;
-    color: rgba(255,255,255,0.7);
     max-width: 100%;
     margin-bottom: 40px;
   }
@@ -200,6 +191,7 @@
 @media only screen and (max-width: 1200px) {
   .videoWrapper {
     max-width: 100%;
+    margin-bottom: 0 !important;
   }
   .tablet {
     display: block;
@@ -207,14 +199,15 @@
   .desktop {
     display: none;
   }
+  .decoration {
+    display: none;
+  }
   .main {
     .mainHeader {
       display: flex;
       position: relative;
       > h2 {
-        font-size: 48px;
-        line-height: 72px;
-        margin-bottom: 40px;
+        margin-bottom: 52px;
       }
       > img {
         display: none;
@@ -240,13 +233,8 @@
       }
     }
     .contentText {
-      left: 63px;
-      top: 50px;
-      width: 86%;
-      margin-bottom: 0;
-      font-size: 1.4rem;
-      line-height: 2.1rem;
-      letter-spacing: 0.1em;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
     }
   }
 
@@ -254,7 +242,6 @@
     padding-top: 40px;
     margin-bottom: 40px !important;
     .civilizationsTitle {
-      line-height: 72px;
       margin-bottom: 18px;
     }
     .civilizationsSubtitle {
@@ -369,46 +356,48 @@
 }
 
 @media only screen and (max-width: 1080px) {
-  .contentWrapper {
-    .contentText {
-      left: 63px;
-      top: 50px;
-      width: 86%;
-      margin-bottom: 0;
-      font-size: 1.2rem;
-      line-height: 1.8rem;
-      letter-spacing: 0.1em;
-    }
-  }
   .arrowsP {
-    bottom: 4px;
-    left: 520px;
+    bottom: 1%;
+    left: 54%;
   }
   .arrowsG {
-    top: 100px;
-    left: 3px;
+    top: 32%;
+    left: 0.2%;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .contentWrapper {
+    .contentText {
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
+  }
+}
+
 
 @media only screen and (max-width: 768px) {
   .contentWrapper {
     .contentText {
-      width: 80%;
-      font-size: 0.9rem;
-      line-height: 1.35rem;
+      font-size: 1.1rem;
+      line-height: 1.4rem;
     }
   }
-  .arrowsP {
-    bottom: 0;
-    left: 375px;
-  }
-  .arrowsG {
-    top: 68px;
-    left: -1px;
+}
+
+@media only screen and (max-width: 600px) {
+  .contentWrapper {
+    .contentText {
+      font-size: 0.85rem;
+      line-height: 1.2rem;
+    }
   }
 }
 
 @media only screen and (max-width: 480px) {
+  .main {
+    padding-top: 46px;
+  }
   .tablet {
     display: none;
   }
@@ -417,10 +406,20 @@
   }
 
   .contentWrapper {
+    padding: 0 32px 51px;
     .contentText {
-      left: 40px;
-      top: 25px;
-      width: 77%;
+      width: 80%;
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
+  }
+
+  .civilizations {
+    .civilizationsTitle {
+      margin-bottom: 11px;
+    }
+    .civilizationsSubtitle {
+      max-width: 100%;
     }
   }
 
@@ -430,8 +429,8 @@
     }
     &-content {
       width: 75%;
-      height: 79.58%;
-      top: 13%;
+      height: 82%;
+      top: 10%;
       left: 18%;
     }
     &-border {
@@ -440,25 +439,37 @@
       left: -18px;
     }
     &-title {
-      font-size: 20px;
-      line-height: 20px;
+      font-size: 1rem;
+      line-height: 1rem;
+      letter-spacing: 0;
       margin-bottom: 10px;
       white-space: nowrap;
     }
     &-text {
-      font-size: 12px;
-      line-height: 18px;
+      font-size: 0.8rem;
+      line-height: 1.222rem;
+      letter-spacing: 0.056rem;
       margin-bottom: 0;
     }
   }
 
   .arrowsP {
-    bottom: -1px;
-    left: 197px;
+    bottom: 0;
+    left: 57%;
   }
   .arrowsG {
-    top: 67px;
-    left: -3px;
+    top: 30%;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contentWrapper {
+    .contentText {
+      width: 75%;
+      font-size: 0.68rem;
+      line-height: 1rem;
+    }
   }
 }
 
@@ -484,10 +495,8 @@
     .contentText {
       margin-bottom: 0;
       max-width: 600px;
-      left: 60px;
-      top: 50px;
-      font-size: 1.3rem;
-      line-height: 2rem;
+      font-size: 1.8rem;
+      line-height: 2.7rem;
     }
   }
 

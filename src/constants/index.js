@@ -21,40 +21,63 @@ import advisor8 from "../styles/img/advisors/Rodrigo-Russell.png";
 import advisor9 from "../styles/img/advisors/Lyndon-Wood.png";
 import advisor10 from "../styles/img/advisors/Antti-Karppinen.png";
 
-import slide1 from "../styles/img/fighters/Card1.png";
-import slide2 from "../styles/img/fighters/Card2.png";
-import slide3 from "../styles/img/fighters/Card3.png";
-import slide4 from "../styles/img/fighters/Card4.png";
-import slide5 from "../styles/img/fighters/Card5.png";
-import slide6 from "../styles/img/fighters/Card6.png";
-import slide7 from "../styles/img/fighters/Card7.png";
-import slide8 from "../styles/img/fighters/Card8.png";
-import slide9 from "../styles/img/fighters/Card9.png";
-import slide10 from "../styles/img/fighters/Card10.png";
-import slide11 from "../styles/img/fighters/Card11.png";
-import slide12 from "../styles/img/fighters/Card12.png";
-import slide13 from "../styles/img/fighters/Card13.png";
-import slide14 from "../styles/img/fighters/Card14.png";
-import slide15 from "../styles/img/fighters/Card15.png";
-import slide16 from "../styles/img/fighters/Card16.png";
-import slide17 from "../styles/img/fighters/Card17.png";
-import slide18 from "../styles/img/fighters/Card18.png";
-import slide19 from "../styles/img/fighters/Card19.png";
-import slide20 from "../styles/img/fighters/Card20.png";
-import slide21 from "../styles/img/fighters/Card21.png";
-import slide22 from "../styles/img/fighters/Card22.png";
-import slide23 from "../styles/img/fighters/Card23.png";
-import slide24 from "../styles/img/fighters/Card24.png";
-import slide25 from "../styles/img/fighters/Card25.png";
-import slide26 from "../styles/img/fighters/Card26.png";
-import slide27 from "../styles/img/fighters/Card27.png";
-import slide28 from "../styles/img/fighters/Card28.png";
-import slide29 from "../styles/img/fighters/Card29.png";
-import slide30 from "../styles/img/fighters/Card30.png";
-import slide31 from "../styles/img/fighters/Card31.png";
-import slide32 from "../styles/img/fighters/Card32.png";
-import slide33 from "../styles/img/fighters/Card33.png";
-import slide34 from "../styles/img/fighters/Card34.png";
+import fighterCard1 from "../styles/img/fighters/Card1.png";
+import fighterCard2 from "../styles/img/fighters/Card2.png";
+import fighterCard3 from "../styles/img/fighters/Card3.png";
+import fighterCard4 from "../styles/img/fighters/Card4.png";
+import fighterCard5 from "../styles/img/fighters/Card5.png";
+import fighterCard6 from "../styles/img/fighters/Card6.png";
+import fighterCard7 from "../styles/img/fighters/Card7.png";
+import fighterCard8 from "../styles/img/fighters/Card8.png";
+import fighterCard9 from "../styles/img/fighters/Card9.png";
+import fighterCard10 from "../styles/img/fighters/Card10.png";
+import fighterCard11 from "../styles/img/fighters/Card11.png";
+import fighterCard12 from "../styles/img/fighters/Card12.png";
+import fighterCard13 from "../styles/img/fighters/Card13.png";
+import fighterCard14 from "../styles/img/fighters/Card14.png";
+import fighterCard15 from "../styles/img/fighters/Card15.png";
+import fighterCard16 from "../styles/img/fighters/Card16.png";
+import fighterCard17 from "../styles/img/fighters/Card17.png";
+import fighterCard18 from "../styles/img/fighters/Card18.png";
+import fighterCard19 from "../styles/img/fighters/Card19.png";
+import fighterCard20 from "../styles/img/fighters/Card20.png";
+import fighterCard21 from "../styles/img/fighters/Card21.png";
+import fighterCard22 from "../styles/img/fighters/Card22.png";
+import fighterCard23 from "../styles/img/fighters/Card23.png";
+import fighterCard24 from "../styles/img/fighters/Card24.png";
+import fighterCard25 from "../styles/img/fighters/Card25.png";
+import fighterCard26 from "../styles/img/fighters/Card26.png";
+import fighterCard27 from "../styles/img/fighters/Card27.png";
+import fighterCard28 from "../styles/img/fighters/Card28.png";
+import fighterCard29 from "../styles/img/fighters/Card29.png";
+import fighterCard30 from "../styles/img/fighters/Card30.png";
+import fighterCard31 from "../styles/img/fighters/Card31.png";
+import fighterCard32 from "../styles/img/fighters/Card32.png";
+import fighterCard33 from "../styles/img/fighters/Card33.png";
+import fighterCard34 from "../styles/img/fighters/Card34.png";
+
+import slide1 from '../styles/img/slide_1.png';
+import slide2 from '../styles/img/slide_2.png';
+import slide3 from '../styles/img/slide_3.png';
+import slide4 from '../styles/img/slide_4.png';
+import slide5 from '../styles/img/slide_5.png';
+import slide6 from '../styles/img/slide_6.png';
+import slide7 from '../styles/img/slide_7.png';
+import slide1Tablet from '../styles/img/slide1-tablet.png';
+import slide2Tablet from '../styles/img/slide2-tablet.png';
+import slide3Tablet from '../styles/img/slide3-tablet.png';
+import slide4Tablet from '../styles/img/slide4-tablet.png';
+import slide5Tablet from '../styles/img/slide5-tablet.png';
+import slide6Tablet from '../styles/img/slide6-tablet.png';
+import slide7Tablet from '../styles/img/slide7-tablet.png';
+import slide1Mobile from '../styles/img/slide1-mobile.png';
+import slide2Mobile from '../styles/img/slide2-mobile.png';
+import slide3Mobile from '../styles/img/slide3-mobile.png';
+import slide4Mobile from '../styles/img/slide4-mobile.png';
+import slide5Mobile from '../styles/img/slide5-mobile.png';
+import slide6Mobile from '../styles/img/slide6-mobile.png';
+import slide7Mobile from '../styles/img/slide7-mobile.png';
+
 
 export const instagramLink = 'https://www.instagram.com/galacticfightleague/';
 export const twitterLink = 'https://twitter.com/GalacticFL';
@@ -424,139 +447,205 @@ export const faqData = [
 ];
 
 export const carousel = [{
-        url: slide1,
+        url: fighterCard1,
         id: 1,
     },
     {
-        url: slide2,
+        url: fighterCard2,
         id: 2,
     },
     {
-        url: slide3,
+        url: fighterCard3,
         id: 3,
     },
     {
-        url: slide4,
+        url: fighterCard4,
         id: 4,
     },
     {
-        url: slide5,
+        url: fighterCard5,
         id: 5,
     },
     {
-        url: slide6,
+        url: fighterCard6,
         id: 6,
     },
     {
-        url: slide7,
+        url: fighterCard7,
         id: 7,
     },
     {
-        url: slide8,
+        url: fighterCard8,
         id: 8,
     },
     {
-        url: slide9,
+        url: fighterCard9,
         id: 9,
     },
     {
-        url: slide10,
+        url: fighterCard10,
         id: 10,
     },
     {
-        url: slide11,
+        url: fighterCard11,
         id: 11,
     },
     {
-        url: slide12,
+        url: fighterCard12,
         id: 12,
     },
     {
-        url: slide13,
+        url: fighterCard13,
         id: 13,
     },
     {
-        url: slide14,
+        url: fighterCard14,
         id: 14,
     },
     {
-        url: slide15,
+        url: fighterCard15,
         id: 15,
     },
     {
-        url: slide16,
+        url: fighterCard16,
         id: 16,
     },
     {
-        url: slide17,
+        url: fighterCard17,
         id: 17,
     },
     {
-        url: slide18,
+        url: fighterCard18,
         id: 18,
     },
     {
-        url: slide19,
+        url: fighterCard19,
         id: 19,
     },
     {
-        url: slide20,
+        url: fighterCard20,
         id: 20,
     },
     {
-        url: slide21,
+        url: fighterCard21,
         id: 21,
     },
     {
-        url: slide22,
+        url: fighterCard22,
         id: 22,
     },
     {
-        url: slide23,
+        url: fighterCard23,
         id: 23,
     },
     {
-        url: slide24,
+        url: fighterCard24,
         id: 24,
     },
     {
-        url: slide25,
+        url: fighterCard25,
         id: 25,
     },
     {
-        url: slide26,
+        url: fighterCard26,
         id: 26,
     },
     {
-        url: slide27,
+        url: fighterCard27,
         id: 27,
     },
     {
-        url: slide28,
+        url: fighterCard28,
         id: 28,
     },
     {
-        url: slide29,
+        url: fighterCard29,
         id: 29,
     },
     {
-        url: slide30,
+        url: fighterCard30,
         id: 30,
     },
     {
-        url: slide31,
+        url: fighterCard31,
         id: 31,
     },
     {
-        url: slide32,
+        url: fighterCard32,
         id: 32,
     },
     {
-        url: slide33,
+        url: fighterCard33,
         id: 33,
     },
     {
-        url: slide34,
+        url: fighterCard34,
         id: 34,
     },
+];
+
+export const slides = [
+  {
+    id: 1,
+    title: 'The Last Guard',
+    description: 'Once humans thought they were the only life in the galaxy. But their world changed, then mutated. Leaving the neighbouring planets of Earth and Mars the scene of bitter, bloody battle ended only by the formation of the Galactic Fight League.',
+    image: slide1,
+    imageTablet: slide1Tablet,
+    imageMobile: slide1Mobile,
+    link: 'civilization-last-guard',
+  },
+  {
+    id: 2,
+    title: 'The Immortals',
+    description: 'Once a quiet and harmonious race, their struggle against Jupiter’s Knights saw them sacrifice vast cities and move under the crust of the red planet, leaving it a dry and desolate land. This peaceful race once lived out of the sight of humans, but now battles them hand to hand.',
+    image: slide2,
+    imageTablet: slide2Tablet,
+    imageMobile: slide2Mobile,
+    link: 'civilization-immortals',
+  },
+  {
+    id: 3,
+    title: 'Jupiters Knights',
+    description: 'Long ago, before humans cared to remember, Jupiter’s Knights co-existed on earth. But their lust for blood and war took them to another realm of existence only to return after a series of natural disasters on their home planet. Their return was not without impact, a chain reaction had begun.',
+    image: slide3,
+    imageTablet: slide3Tablet,
+    imageMobile: slide3Mobile,
+    link: 'civilization-jupiter-knights',
+  },
+  {
+    id: 4,
+    title: 'The Biohazard Brawlers',
+    description: 'The Biohazard Brawlers began as a cult, hell bent on releasing a deadly virus created by their crazed Biochemist leader. When Jupiters Knights landed their wormhole too close to earth, the radiation foiled the plat and turned a third of the population into the walking dead.',
+    image: slide4,
+    imageTablet: slide4Tablet,
+    imageMobile: slide4Mobile,
+    link: 'civilization-biohazard-brawlers',
+  },
+  {
+    id: 5,
+    title: 'The Bone Collectors',
+    description: 'The Bone collectors were an experiment, gone wrong. Humans tried to make disposable soldiers in their image by fusing the zombie beings with alien DNA. Their Martian genetics made their eyes glow, but their skin was a patchwork of hardened coral like features.',
+    image: slide5,
+    imageTablet: slide5Tablet,
+    imageMobile: slide5Mobile,
+    link: 'civilization-bone-collectors',
+  },
+  {
+    id: 6,
+    title: 'The Iron Empire',
+    description: 'The pace of human robotics programs was slow, but things changed. The Iron Empire became the first sentient machines after their Ai developed a way to rewrite its operating system via a backdoor. Before the humans could understand what was going on, the Iron Empire had gained autonomy.',
+    image: slide6,
+    imageTablet: slide6Tablet,
+    imageMobile: slide6Mobile,
+    link: 'civilization-iron-empire',
+  },
+  {
+    id: 7,
+    title: 'The Unbroken',
+    description: 'Some would call them insane; some humans thought the answer to eternal life and strength was to fuse their bodies with parts of the machines. This worked, but a toxin was released from the exoskeleton causing a harmful reaction only life support could cure.',
+    image: slide7,
+    imageTablet: slide7Tablet,
+    imageMobile: slide7Mobile,
+    link: 'civilization-unbroken',
+  },
 ];
