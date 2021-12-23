@@ -28,30 +28,9 @@ const settings = {
   initialSlide: 1,
   responsive: [
     {
-      breakpoint: 1364,
+      breakpoint: 769,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 1,
-        centerPadding: "10px",
-        centerMode: true,
-      },
-    },
-    {
-      breakpoint: 924,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: "20px",
-      },
-    },
-    {
-      breakpoint: 880,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: "20px",
       },
     },
   ],
@@ -67,17 +46,17 @@ const EliteFighters = ({ fighters }) => {
   const sliderRef = useRef(null);
 
   const ws = useWindowSize();
+  const isTabletWidth = ws.width <= 1200 && ws.width > 480;
   const isMobileWidth = ws.width <= 480;
 
   const onClickHandle = useCallback((_e, fighter) => {
-    if (isMobileWidth) {
+    if (isTabletWidth || isMobileWidth) {
       return;
     }
 
     setActiveFighter(fighter);
     const id = fighter.id;
-    console.log(id);
-    const index = fighters.findIndex((f) => f.id === id);
+    const index = fighters.findIndex(f => f.id === id);
     sliderRef.current?.slickGoTo(index);
   }, []);
 
