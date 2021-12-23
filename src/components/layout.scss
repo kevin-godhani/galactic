@@ -641,17 +641,17 @@ pre tt:after {
     }
   }
   &.elite-fighters {
-    .slick-track {
-      // left: -33vw;
-    }
+    // .slick-track {
+    //   // left: -33vw;
+    // }
     .slick-slide {
       opacity: 1;
       cursor: default;
       img {
         max-width: 100%;
-        padding: 0;
-        width: 31vw;
-        min-width: 31vw;
+        // padding: 0;
+        width: 32vw;
+        min-width: 32vw;
       }
     }
     .slick-center {
@@ -845,17 +845,6 @@ pre tt:after {
   .slick-slider {
     &.elite-fighters {
       margin-bottom: 52px;
-      .slick-slide {
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        opacity: 1;
-        cursor: default;
-        img {
-          max-width: 100%;
-          width: 400px;
-        }
-      }
     }
     &.civilizations-slider {
       .slick-track {
@@ -871,12 +860,22 @@ pre tt:after {
   }
 }
 
-// @media only screen and (max-width: 590px) {
-//   .description {
-//     font-size: .7rem;
-//     line-height: 1.2rem;
-//   }
-// }
+@media only screen and (max-width: 768px) {
+  .slick-slider {
+    &.elite-fighters {
+      .slick-track {
+        left: -25vw;
+      }
+      .slick-slide {
+        img {
+          max-width: 100%;
+          width: 50vw;
+          min-width: 50vw;
+        }
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 480px) {
   .button-main-text {
@@ -928,10 +927,6 @@ pre tt:after {
     }
   }
 
-  // .civilizations-slider-wrap {
-  //   padding-bottom: 92px !important;
-  // }
-
   .sm-buttons {
     &.menu {
       margin-left: 30px;
@@ -950,35 +945,10 @@ pre tt:after {
         left: -12.5vw;
       }
     }
-    // &.elite-fighters {
-    //   .slick-slide {
-    //     opacity: 1;
-    //     cursor: default;
-    //     img {
-    //       max-width: 100%;
-    //     }
-    //   }
-    //   .slick-center {
-    //     cursor: default !important;
-    //   }
-    // }
-    // &.civilizations-slider {
-    //   .slick-slide {
-    //     img {
-    //       max-width: 100%;
-    //       padding: 0;
-    //       width: 420px;
-    //     }
-    //   }
-    // }
   }
 }
 
 @media only screen and (min-width: 2000px) {
-  // .civilizations-slider-wrap {
-  //   padding-bottom: 300px !important;
-  // }
-
   .slick-slide {
     img {
       min-width: 25vw;

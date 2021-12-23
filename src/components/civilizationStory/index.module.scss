@@ -356,13 +356,15 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     > span {
       position: absolute;
-      right: 14%;
-      top: 79px;
-      text-align: center;
       width: 434px;
+      padding-top: 1.1vw;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-align: center;
     }
     > div {
       position: relative;
@@ -432,7 +434,7 @@
   cursor: pointer;
   &-bg {
     margin-bottom: 15px;
-    width: 400px !important;
+    // width: 400px !important;
     // padding: 0 !important;
   }
   &-title {
@@ -446,9 +448,9 @@
   }
   &-fighterImage {
     position: absolute;
-    top: -5px;
+    top: -0.43vw;
     filter: grayscale(1);
-    width: 400px !important;
+    // width: 400px !important;
     // padding: 0 !important;
     &-active {
       filter: grayscale(0);
@@ -517,6 +519,26 @@
     }
   }
 
+  .slides {
+    &-buttons {
+      left: 6.8vw;
+      top: 1vw;
+      width: 38vw;
+      max-width: 470px;
+    }
+    &-button {
+      flex-basis: 50%;
+      height: 6vw;
+      max-height: 72px;
+      &:first-child {
+        margin-right: 1.5vw;
+      }
+      > span {
+        font-size: 2.3vw;
+      }
+    }
+  }
+
   .raceInfo {
     position: relative;
     justify-content: flex-start;
@@ -561,6 +583,9 @@
     &.fighter-description {
       width: 100%;
       padding: 0 32px;
+      > div {
+        padding: 60px 90px;
+      }
     }
     > div {
       > h3 {
@@ -651,7 +676,7 @@
   .contentDescription {
     > div {
       > span {
-        font-size: 0.9rem;
+        font-size: 1.111rem;
         line-height: 1.5rem;
       }
     }
@@ -663,6 +688,49 @@
   .slides {
     &-buttons {
       left: 15.2vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slides {
+    &-buttons {
+      width: 36vw;
+    }
+  }
+
+  .groupButtons {
+    max-width: 100%;
+    > div {
+      > div {
+        &:last-of-type {
+          text-align: right;
+        }
+      }
+      .groupButtonRight {
+        > button {
+          right: 57px;
+        }
+      }
+    }
+  }
+
+  .contentDescription {
+    &.fighter-description {
+      > div {
+        padding: 60px 80px;
+      }
+    }
+  }
+
+  .videoBlock {
+    margin-top: 32px;
+    margin-bottom: 170px;
+  }
+
+  .card {
+    &-fighterImage {
+      top: -0.6vw;
     }
   }
 }
@@ -773,8 +841,10 @@
   .slides {
     &-buttons {
       left: 4.2vw;
+      width: 34vw;
     }
   }
+
   .raceInfo {
     margin-top: 45px;
     padding-left: 10px;
@@ -903,15 +973,6 @@
       &:last-child {
         margin-bottom: 0;
       }
-    }
-  }
-
-  .card {
-    &-fighterImage {
-      // top: 18px;
-      // width: 303px !important;
-      top: -5px;
-      width: 452px !important;
     }
   }
 

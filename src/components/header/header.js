@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import logo from "../../styles/img/logo.svg";
 import tabletLogo from "../../styles/img/tablet-logo.svg";
 import menu from "../../styles/img/menu-icon.png";
+import menuOpened from "../../styles/img/menu-icon-opened.png";
 import * as styles from "./index.module.scss";
 import { MainButtonExternal, SocialButton } from "../buttons";
 import useWindowSize from "../../utils/useWindowSize";
@@ -66,7 +67,7 @@ const Header = () => {
         <img
           onClick={isHederFixed ? handleCloseMenu : handleOpenMenu}
           className={styles.menuIcon}
-          src={menu}
+          src={isHederFixed ? menuOpened : menu}
           alt="menu"
         />
       </div>
