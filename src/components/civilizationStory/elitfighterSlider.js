@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useRef } from "react";
+import React, { useCallback, useState, useRef, useMemo } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,6 +11,7 @@ import bg1 from "../../styles/img/civilizations/elite-fighters/ef-bg1.png";
 import bg2 from "../../styles/img/civilizations/elite-fighters/ef-bg2.png";
 import lockedBg1 from "../../styles/img/civilizations/elite-fighters/locked-bg1.png";
 import lockedBg2 from "../../styles/img/civilizations/elite-fighters/locked-bg2.png";
+import useWindowSize from "../../utils/useWindowSize";
 
 const settings = {
   dots: false,
@@ -20,10 +21,11 @@ const settings = {
   centerPadding: "10px",
   centerMode: true,
   arrows: false,
-  speed: 750,
+  speed: 500,
   cssEase: "linear",
   pauseOnHover: true,
   className: 'elite-fighters',
+  initialSlide: 1,
   responsive: [
     {
       breakpoint: 1364,
@@ -59,14 +61,30 @@ const backgrounds = [bg1, bg2];
 const lockedBackgrounds = [lockedBg1, lockedBg2];
 
 const EliteFighters = ({ fighters }) => {
-  const [activeFighter, setActiveFighter] = useState(fighters?.length > 0 && fighters[0]);
+  const [activeFighter, setActiveFighter] = useState(fighters?.length > 0 && fighters[1]);
   const sliderRef = useRef(null);
 
+  const ws = useWindowSize();
+  const isMobileWidth = ws.width <= 480;
+
   const onClickHandle = useCallback((_e, fighter) => {
+    if (isMobileWidth) {
+      return;
+    }
+
     setActiveFighter(fighter);
     const id = fighter.id;
+    console.log(id);
     const index = fighters.findIndex(f => f.id === id);
     sliderRef.current?.slickGoTo(index);
+  }, []);
+
+  const onChange = (index) => {
+    setActiveFighter(fighters[index]);
+  };
+
+  const sliderSettings = useMemo(() => {
+    return {...settings, afterChange: onChange};
   }, []);
 
   if (!fighters) {
@@ -75,7 +93,7 @@ const EliteFighters = ({ fighters }) => {
 
   return (
     <div className={styles.sliderWrapper}>
-      <Slider ref={sliderRef} {...settings}>
+      <Slider ref={sliderRef} {...sliderSettings}>
         {fighters.map((fighter, i) => {
           const bgIndex = i % 2 > 0;
 
@@ -96,7 +114,6 @@ const EliteFighters = ({ fighters }) => {
           );
         })}
       </Slider>
-
       <div
         data-aos="fade-up"
         className={`${styles.contentDescription} ${styles.fighterDescription}`}
@@ -109,10 +126,17 @@ const EliteFighters = ({ fighters }) => {
         <img className={styles.tablet} src={borderTablet} alt="border" />
         <img className={styles.mobile} src={borderMobile} alt="border" />
         <div>
-          <h3 className="title">{`${activeFighter.name} Backstory`}</h3>
-          <span className="description">
-            {activeFighter.backStory}
-          </span>
+          {activeFighter.active ? (
+            <>
+              <h3 className="title">{`${activeFighter.name} Backstory`}</h3>
+              <span className="description">
+                {activeFighter.backStory}
+              </span>
+            </>
+          ) : (
+            <h3 className="title">In Training</h3>
+          )}
+          
         </div>
       </div>
     </div>

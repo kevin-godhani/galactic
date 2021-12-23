@@ -642,11 +642,17 @@ pre tt:after {
     }
   }
   &.elite-fighters {
+    .slick-track {
+      // left: -33vw;
+    }
     .slick-slide {
       opacity: 1;
       cursor: default;
       img {
         max-width: 100%;
+        padding: 0;
+        width: 31vw;
+        min-width: 31vw;
       }
     }
     .slick-center {

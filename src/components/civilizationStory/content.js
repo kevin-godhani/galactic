@@ -115,8 +115,9 @@ const CivilizationStoryContent = ({ data }) => {
             </div>
             <span className="description">
               {fightSkills === 1
-                ? "Highly developed fighting skills"
-                : "Human emotions of greed and fear, bone that will break "}
+                ? data.strengths
+                : data.weaknesses
+              }
             </span>
           </div>
         </div>

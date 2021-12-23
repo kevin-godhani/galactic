@@ -229,7 +229,16 @@ export const civilizationsStoryData = [
     planet: "Earth",
     race: "Human",
     genders: "Male/Female",
+    strengths: 'Highly developed fighting skills',
+    weaknesses: 'Human emotions of greed and fear, bone that will break',
     eliteFighters: [
+      {
+        id: 103,
+        name: 'In Training',
+        backStory: 'In Training',
+        image: inTraining,
+        active: false,
+      },
       {
         id: 101,
         name: 'Major Kurt Duggan',
@@ -243,13 +252,6 @@ export const civilizationsStoryData = [
         backStory: 'Her tribe came from a long line of warriors. Her lands wiped out in the Purge during the Jupiter Knights war. Major Lara Adebayo took her feelings of loss and turned them into fuel to drive her in the battles against her enemies. When the peace treaty was imposed, she took her warrior ways and adapted them for the GFL making her a force to be reckoned with.',
         image: laraAdebayo,
         active: true,
-      },
-      {
-        id: 103,
-        name: 'In Training',
-        backStory: 'In Training',
-        image: inTraining,
-        active: false,
       },
       {
         id: 104,
@@ -282,7 +284,16 @@ export const civilizationsStoryData = [
     planet: "Mars",
     race: "Alien",
     genders: "Male/Female",
+    strengths: 'Strong and of zen like character',
+    weaknesses: 'A lot less experienced in the ring',
     eliteFighters: [
+      {
+        id: 203,
+        name: 'In Training',
+        backStory: 'In Training',
+        image: inTraining,
+        active: false,
+      },
       {
         id: 201,
         name: 'Military Premiere Ran Katar',
@@ -296,13 +307,6 @@ export const civilizationsStoryData = [
         backStory: 'Force Commander Lera Ronen. A master of the ancient Immortal fighting style The Daj Morn. Trained in it’s mystic ways by the dawn Priests of Calaron. The code of this mystic martial art is to only use it when absolutely necessary. But when required, it should be used at its most deadly.',
         image: leraRonen,
         active: true,
-      },
-      {
-        id: 203,
-        name: 'In Training',
-        backStory: 'In Training',
-        image: inTraining,
-        active: false,
       },
       {
         id: 204,
@@ -334,7 +338,16 @@ export const civilizationsStoryData = [
     planet: "Jupiter",
     race: "Alien",
     genders: "Male/Female",
+    strengths: 'Blood lust, advanced beings',
+    weaknesses: 'Soft bodies and little hand to hand combat skill',
     eliteFighters: [
+      {
+        id: 303,
+        name: 'In Training',
+        backStory: 'In Training',
+        image: inTraining,
+        active: false,
+      },
       {
         id: 301,
         name: 'Sol Andar',
@@ -348,13 +361,6 @@ export const civilizationsStoryData = [
         backStory: 'Leader of the High Guard Fer Laren born and raised from a lineage of elite warriors revered by the Jupiter Knights. Her battles during the wars are the stories of legend among her warrior people. Post war, she now trains the next generation of warriors but will answer the call when asked to fight in the GFL.',
         image: ferLaren,
         active: true,
-      },
-      {
-        id: 303,
-        name: 'In Training',
-        backStory: 'In Training',
-        image: inTraining,
-        active: false,
       },
       {
         id: 304,
@@ -385,7 +391,16 @@ export const civilizationsStoryData = [
     planet: "Earth",
     race: "Zombie",
     genders: "Male/Female",
+    strengths: 'No feeling',
+    weaknesses: 'No sense or fight style',
     eliteFighters: [
+      {
+        id: 403,
+        name: 'In Training',
+        backStory: 'In Training',
+        image: inTraining,
+        active: false,
+      },
       {
         id: 401,
         name: 'Arin Golar',
@@ -399,13 +414,6 @@ export const civilizationsStoryData = [
         backStory: 'While many of their kind are lower level mutated creatures, some retained their intelligence and held their grip of power over the planet. Sister Bren Sitira leads ‘The Order’ which enslaves and controls the more animalistic of her kind to turn them into prize fighters. She herself is a master of hand to hand combat with training passed down from her ancient creed.',
         image: brenSitira,
         active: true,
-      },
-      {
-        id: 403,
-        name: 'In Training',
-        backStory: 'In Training',
-        image: inTraining,
-        active: false,
       },
       {
         id: 404,
@@ -438,7 +446,16 @@ export const civilizationsStoryData = [
     planet: "Earth / Mars",
     race: "Zombie",
     genders: "Male/Female",
+    strengths: 'Strong and fast with great vision',
+    weaknesses: 'Had random negative effects on physical body due to broken DNA structure',
     eliteFighters: [
+      {
+        id: 503,
+        name: 'In Training',
+        backStory: 'In Training',
+        image: inTraining,
+        active: false,
+      },
       {
         id: 501,
         name: 'Lo Argon',
@@ -452,13 +469,6 @@ export const civilizationsStoryData = [
         backStory: 'Having perfected the art of body manipulation through intense meditation and training, Fen Arek of House Arek stands as one of the Bone Collectors’ most deadly weapons. A hunter race steeped in tradition, her command on the battlefield led to her becoming one of the Bone Collectors’ prized fighters in the GFL.',
         image: fenArek,
         active: true,
-      },
-      {
-        id: 503,
-        name: 'In Training',
-        backStory: 'In Training',
-        image: inTraining,
-        active: false,
       },
       {
         id: 504,
@@ -489,7 +499,16 @@ export const civilizationsStoryData = [
     planet: "Earth",
     race: "Cyborg",
     genders: "Male/Female",
+    strengths: 'Advanced Ai learning',
+    weaknesses: 'Limited strength and inability to repair without parts ',
     eliteFighters: [
+      {
+        id: 603,
+        name: 'In Training',
+        backStory: 'In Training',
+        image: inTraining,
+        active: false,
+      },
       {
         id: 601,
         name: 'Prime402',
@@ -503,13 +522,6 @@ export const civilizationsStoryData = [
         backStory: 'Leader of the Scavenger fleet, Sigma259 destroyed countless ships with her armies to salvage their parts from the wreckage. Her skill at hand to hand combat makes her one of The Iron Empire\'s most deadly weapons in the GFL.',
         image: sigma259,
         active: true,
-      },
-      {
-        id: 603,
-        name: 'In Training',
-        backStory: 'In Training',
-        image: inTraining,
-        active: false,
       },
       {
         id: 604,
@@ -540,7 +552,16 @@ export const civilizationsStoryData = [
     planet: "Earth",
     race: "Cyborg",
     genders: "Male/Female",
+    strengths: 'Superhuman strength',
+    weaknesses: 'Can’t endure long fight due to toxic released from incompatibility between human biological body and mechanical components',
     eliteFighters: [
+      {
+        id: 703,
+        name: 'In Training',
+        backStory: 'In Training',
+        image: inTraining,
+        active: false,
+      },
       {
         id: 701,
         name: 'Centurion01',
@@ -554,13 +575,6 @@ export const civilizationsStoryData = [
         backStory: 'Her intelligence levels are unmatched. During the wars, she coordinated the entire fleet single handedly. Imperion04 strives for perfection in every form with constant upgrades to herself and her drones.',
         image: imperion04,
         active: true,
-      },
-      {
-        id: 703,
-        name: 'In Training',
-        backStory: 'In Training',
-        image: inTraining,
-        active: false,
       },
       {
         id: 704,

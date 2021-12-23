@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import Ticker from "react-ticker";
 import * as styles from "./index.module.scss";
-import { doubleStripeButton, mainButton } from "../buttons/index";
+import { mainButton } from "../buttons/index";
 import CivilizationStoryContent from "./content";
+import { sliderButtonBg, sliderButtonBgActive } from "../../constants";
 import border from "../../styles/img/border_line.png";
-import angle from "../../styles/img/animation_angle.png";
-import angle_active from "../../styles/img/animation_angle_active.png";
 import next_back from "../../styles/img/next_back.png";
-import border1 from "../../styles/img/icons/border1.png";
 import border2 from "../../styles/img/icons/border2.png";
 
 import border_animationTablet from "../../styles/img/tablet_civilizations_boder.png";
@@ -17,24 +15,26 @@ const CivilizationsStory = ({ data, nextTitle }) => {
   const [isMale, setIsMale] = useState(true);
   const renderButtons = () => {
     return (
-      <div className={styles.buttonBlock}>
+      <div className={styles.slidesButtons}>
         <div
-          data-aos-delay="400"
-          data-aos="fade-down"
+          className={styles.slidesButton}
           onClick={() => setIsMale(true)}
+          style={{ opacity: isMale ? 1 : 0.6 }}
         >
-          <img src={isMale ? angle_active : angle} alt="border" />
-          <span style={isMale ? { color: "#010103" } : { color: "#99986C" }}>
+          <div className={styles.slidesButtonBg} style={{ background: isMale ? sliderButtonBgActive : sliderButtonBg }}></div>
+          <div className={styles.slidesButtonBorder}></div>
+          <span style={isMale ? { color: "#010103" } : { color: "#EFDAA9" }}>
             Male
           </span>
         </div>
         <div
-          data-aos="fade-down"
-          data-aos-delay="800"
+          className={styles.slidesButton}
           onClick={() => setIsMale(false)}
+          style={ { opacity: !isMale ? 1 : 0.6 }}
         >
-          <img src={!isMale ? angle_active : angle} alt="border" />
-          <span style={!isMale ? { color: "#010103" } : { color: "#99986C" }}>
+          <div className={styles.slidesButtonBg} style={{ background: !isMale ? sliderButtonBgActive : sliderButtonBg }}></div>
+          <div className={styles.slidesButtonBorder}></div>
+          <span style={!isMale ? { color: "#010103" } : { color: "#EFDAA9" }}>
             Female
           </span>
         </div>
@@ -88,12 +88,10 @@ const CivilizationsStory = ({ data, nextTitle }) => {
                   alt="logo"
                 />
                 <img
-                  // style={!isMale ? { left: "41%" } : {}}
                   src={isMale ? data.male : data.female}
                   alt="decor"
                 />
               </div>
-              <span />
             </div>
           </div>
         </div>
