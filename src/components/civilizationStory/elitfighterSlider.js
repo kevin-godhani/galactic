@@ -56,7 +56,7 @@ const EliteFighters = ({ fighters }) => {
 
     setActiveFighter(fighter);
     const id = fighter.id;
-    const index = fighters.findIndex(f => f.id === id);
+    const index = fighters.findIndex((f) => f.id === id);
     sliderRef.current?.slickGoTo(index);
   }, []);
 
@@ -113,26 +113,32 @@ const EliteFighters = ({ fighters }) => {
           );
         })}
       </Slider>
-      <div
-        data-aos="fade-up"
-        className={`${styles.contentDescription} ${styles.fighterDescription}`}
-      >
-        <section>
-          <div className={styles.arrowsP}>{animatedArrows("purple")}</div>
-          <div className={styles.arrowsG}>{animatedArrows("")}</div>
-        </section>
-        <img className={styles.desktop} src={border} alt="border" />
-        <img className={styles.tablet} src={borderTablet} alt="border" />
-        <img className={styles.mobile} src={borderMobile} alt="border" />
-        <div>
+      <div className="container-width">
+        <div
+          data-aos="fade-up"
+          className={`${styles.contentDescription} ${styles.fighterDescription}`}
+        >
+          <section>
+            <div className={styles.arrowsP}>{animatedArrows("purple")}</div>
+            <div className={styles.arrowsG}>{animatedArrows("")}</div>
+          </section>
+          <img className={styles.desktop} src={border} alt="border" />
+          <img className={styles.tablet} src={borderTablet} alt="border" />
+          <img className={styles.mobile} src={borderMobile} alt="border" />
+          <div>
             {activeFighter.active ? (
               <>
-                <h3 className={`${styles.paddingText} title`}>{`${activeFighter.name} Backstory`}</h3>
-                <span className={`${styles.paddingText} description`}>{activeFighter.backStory}</span>
+                <h3
+                  className={`${styles.paddingText} title`}
+                >{`${activeFighter.name} Backstory`}</h3>
+                <span className={`${styles.paddingText} description`}>
+                  {activeFighter.backStory}
+                </span>
               </>
             ) : (
               <h3 className="title">In Training</h3>
             )}
+          </div>
         </div>
       </div>
     </div>

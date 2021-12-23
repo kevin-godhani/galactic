@@ -745,21 +745,22 @@
     top: 14%;
     left: 6px;
   }
-  .groupButtonRight {
-    > button {
-      right: 46px !important;
-    }
-  }
-  .groupButtonLeft {
-    > button {
-      left: 46px !important;
-    }
-  }
+
   .groupButtons {
     > div {
       > span {
         left: 8%;
         top: 44%;
+      }
+      .groupButtonRight {
+        > button {
+          right: 46px;
+        }
+      }
+      .groupButtonLeft {
+        > button {
+          left: 46px;
+        }
       }
     }
   }
@@ -889,7 +890,7 @@
       .groupButtonLeft {
         margin-right: 15px;
         > button {
-          left: 28px !important;
+          left: 28px;
         }
         > img {
           margin-left: -8px;
@@ -897,7 +898,7 @@
       }
       .groupButtonRight {
         > button {
-          right: 28px !important;
+          right: 28px;
         }
         > img {
           margin-left: 8px;
@@ -959,6 +960,10 @@
   .CivilizationStoryContent {
     margin-bottom: 48px;
   }
+  .paddingText {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -969,6 +974,23 @@
         font-size: 0.6rem;
         line-height: 1rem;
       }
+    }
+  }
+  .groupButtonLeft {
+    margin-right: 15px;
+    > button {
+      left: 18px !important;
+    }
+    > img {
+      margin-left: -16px;
+    }
+  }
+  .groupButtonRight {
+    > button {
+      right: 18px !important;
+    }
+    > img {
+      margin-left: 16px;
     }
   }
 }
