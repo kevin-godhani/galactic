@@ -814,6 +814,7 @@
   .slides {
     &-buttons {
       width: 46vw;
+      left: 4.2vw;
     }
     &-button {
       height: 6.8vw;
@@ -836,12 +837,6 @@
       > video {
         width: 200%;
       }
-    }
-  }
-  .slides {
-    &-buttons {
-      left: 4.2vw;
-      width: 34vw;
     }
   }
 
