@@ -155,49 +155,10 @@
     bottom: 48px;
   }
 }
-
-@media only screen and (max-width: 480px) {
-  .teamSection {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    .teamSectionContainer {
-      padding: 0 30px;
-      div:last-child {
-        margin-bottom: 0;
-      }
-    }
-    .teamSectionTitle {
-      margin-bottom: 13px;
-    }
-    .teamSectionSubtitle {
-      // font-size: 14px !important;
-      // line-height: 21px !important;
-      margin-bottom: 50px;
-    }
-  }
-  .cardContainer {
-    margin-bottom: 25px;
-  }
+@media only screen and (max-width: 900px) {
   .leftContainer,
   .rightContainer {
     max-width: 100%;
-    margin-bottom: 50px;
-    // .cardText {
-    //   font-size: 14px !important;
-    //   line-height: 21px !important;
-    // }
-  }
-  .cardHeader {
-    top: 7.7%;
-  }
-  .cardImageWrap {
-    width: 44.44vw;
-    height: 52.17vw;
-    max-height: 216px;
-    max-width: 184px;
-  }
-  .socialButtonsWrap {
-    bottom: 19px !important;
   }
 }
 

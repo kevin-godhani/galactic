@@ -155,6 +155,12 @@
     bottom: 48px;
   }
 }
+@media only screen and (max-width: 900px) {
+  .leftContainer,
+  .rightContainer {
+    max-width: 100%;
+  }
+}
 
 @media only screen and (max-width: 480px) {
   .advisorsSection {

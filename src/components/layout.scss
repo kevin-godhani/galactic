@@ -740,6 +740,10 @@ pre tt:after {
 .description_padding {
   padding: 30px;
 }
+.text_padding {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .menu-open {
   transform: translateX(0);
   visibility: visible;
@@ -908,6 +912,10 @@ pre tt:after {
   }
   .description_padding {
     padding: 20px;
+  }
+  .text_padding {
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .slick-slider {
     &.civilizations-slider {

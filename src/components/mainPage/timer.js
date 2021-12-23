@@ -7,7 +7,7 @@ const CustomTimer = () => {
   const [day, setDays] = useState(0);
 
   const timer = () => {
-    const time = Date.parse("January, 13, 2022") - Date.parse(new Date());
+    const time = Date.parse("January, 13, 2022, 19:00") - Date.parse(new Date());
     if (time < 0) {
       setMinutes(0);
       setDays(0);

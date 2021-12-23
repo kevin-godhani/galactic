@@ -108,7 +108,7 @@ const EliteFighters = ({ fighters }) => {
                 }`}
                 alt={fighter.name}
               />
-              <h5 className={styles.cardTitle}>{fighter.name}</h5>
+              <h5 className={`${styles.cardTitle} ${styles.cardTitleText}`}>{fighter.name}</h5>
             </div>
           );
         })}
@@ -116,7 +116,7 @@ const EliteFighters = ({ fighters }) => {
       <div className="container-width">
         <div
           data-aos="fade-up"
-          className={`${styles.contentDescription} ${styles.fighterDescription}`}
+          className={`${styles.contentDescription}`}
         >
           <section>
             <div className={styles.arrowsP}>{animatedArrows("purple")}</div>

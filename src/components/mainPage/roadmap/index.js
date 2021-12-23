@@ -9,7 +9,7 @@ import decoration from "../../../styles/img/decor.png";
 import { roadMap } from '../../../constants';
 import * as styles from "./index.module.scss";
 
-const RoadMapItem = ({ data, isEven }) => {
+const RoadMapItem = ({ data, isEven, idx }) => {
   const { title, description, label, labelBig } = data;
 
   const ws = useWindowSize();
@@ -28,11 +28,11 @@ const RoadMapItem = ({ data, isEven }) => {
             src={labelBig ? cardLabelBgBig : cardLabelBg}
             alt="decor"
           />
-          <span className={styles.cardLabelText}>{data.label}</span>
+          <span style={idx === 1 && isMobileWidth ? {right: 9} : {}} className={styles.cardLabelText}>{data.label}</span>
         </div>
       )}
-      <h5 className={`title3 ${styles.cardTitle}`}>{title}</h5>
-      <p className={`description ${styles.cardDescription}`}>{description}</p>
+      <h5 className={`title3 ${styles.cardTitle} text_padding`}>{title}</h5>
+      <p className={`description ${styles.cardDescription} text_padding`}>{description}</p>
     </div>
   );
 };
@@ -46,7 +46,7 @@ const Roadmap = () => (
       </h2>
       {roadMap.map((el, i) => {
         const isEven = i % 2 > 0;
-        return <RoadMapItem key={i} data={el} isEven={isEven} />
+        return <RoadMapItem key={i} data={el} idx={i} isEven={isEven} />
       }
       )}
     </div>
