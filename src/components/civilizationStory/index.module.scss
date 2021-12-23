@@ -519,25 +519,25 @@
     }
   }
 
-  // .slides {
-  //   &-buttons {
-  //     left: 6.8vw;
-  //     top: 1vw;
-  //     width: 38vw;
-  //     max-width: 470px;
-  //   }
-  //   &-button {
-  //     flex-basis: 50%;
-  //     height: 6vw;
-  //     max-height: 72px;
-  //     &:first-child {
-  //       margin-right: 1.5vw;
-  //     }
-  //     > span {
-  //       font-size: 2.3vw;
-  //     }
-  //   }
-  // }
+  .slides {
+    &-buttons {
+      left: 6.8vw;
+      top: 1vw;
+      width: 38vw;
+      max-width: 470px;
+    }
+    &-button {
+      flex-basis: 50%;
+      height: 6vw;
+      max-height: 72px;
+      &:first-child {
+        margin-right: 1.5vw;
+      }
+      > span {
+        font-size: 2.3vw;
+      }
+    }
+  }
 
   .raceInfo {
     position: relative;
@@ -642,15 +642,6 @@
   .arrowsG {
     top: 15%;
   }
-  .slides {
-    &-buttons {
-      left: 19.2vw;
-      width: 36vw;
-    }
-    &-button {
-      height: 6.8vw;
-    }
-  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -664,11 +655,6 @@
   }
   .slidesButtonText {
     font-size: 1rem !important;
-  }
-  .slides {
-    &-buttons {
-      left: 17.2vw;
-    }
   }
 }
 
@@ -684,11 +670,6 @@
   .arrowsP {
     bottom: 0px;
     left: 49.5%;
-  }
-  .slides {
-    &-buttons {
-      left: 15.2vw;
-    }
   }
 }
 
@@ -797,11 +778,6 @@
       padding: 0;
     }
   }
-  .slides {
-    &-buttons {
-      left: 12.2vw;
-    }
-  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -837,6 +813,15 @@
       > video {
         width: 200%;
       }
+    }
+  }
+  .slides {
+    &-buttons {
+      left: 4.2vw;
+      width: 35vw;
+    }
+    &-button {
+      border-radius: 4px;
     }
   }
 
