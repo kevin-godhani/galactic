@@ -617,6 +617,15 @@
   .arrowsG {
     top: 15%;
   }
+  .slides {
+    &-buttons {
+      left: 19.2vw;
+      width: 36vw;
+    }
+    &-button {
+      height: 6.8vw;
+    }
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -633,10 +642,7 @@
   }
   .slides {
     &-buttons {
-      width: 42vw;
-    }
-    &-button {
-      height: 5.8vw;
+      left: 17.2vw;
     }
   }
 }
@@ -653,6 +659,11 @@
   .arrowsP {
     bottom: 0px;
     left: 49.5%;
+  }
+  .slides {
+    &-buttons {
+      left: 15.2vw;
+    }
   }
 }
 
@@ -718,6 +729,11 @@
       padding: 0;
     }
   }
+  .slides {
+    &-buttons {
+      left: 12.2vw;
+    }
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -754,7 +770,11 @@
       }
     }
   }
-
+  .slides {
+    &-buttons {
+      left: 4.2vw;
+    }
+  }
   .raceInfo {
     margin-top: 45px;
     padding-left: 10px;
