@@ -44,7 +44,7 @@ const CivilizationSlides = ({ slides }) => {
             {activeSlide.description}
           </p>
           <div className={styles.slideBtnWrap}>
-            {mainButton(activeSlide.link, "Discover", true, false, isMobileWidth)}
+            {mainButton(activeSlide.link, "Discover", true, false, isMobileWidth, styles.buttonTextContainer)}
           </div>
         </div>
       </div>
