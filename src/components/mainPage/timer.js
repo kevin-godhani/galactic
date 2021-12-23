@@ -37,11 +37,11 @@ const CustomTimer = () => {
     <section className={styles.timerWrapper}>
       <h5>
         <span>{day}</span>
-        <p>D : </p>
+        <span>D : </span>
         <span>{hour}</span>
-        <p>H : </p>
+        <span>H : </span>
         <span>{minute}</span>
-        <p>M</p>
+        <span>M</span>
       </h5>
       <h5><p>Until Mint</p></h5>
     </section>

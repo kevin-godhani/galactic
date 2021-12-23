@@ -24,7 +24,7 @@ const settings = {
   speed: 500,
   cssEase: "linear",
   pauseOnHover: true,
-  className: 'elite-fighters',
+  className: "elite-fighters",
   initialSlide: 1,
   responsive: [
     {
@@ -61,7 +61,9 @@ const backgrounds = [bg1, bg2];
 const lockedBackgrounds = [lockedBg1, lockedBg2];
 
 const EliteFighters = ({ fighters }) => {
-  const [activeFighter, setActiveFighter] = useState(fighters?.length > 0 && fighters[1]);
+  const [activeFighter, setActiveFighter] = useState(
+    fighters?.length > 0 && fighters[1]
+  );
   const sliderRef = useRef(null);
 
   const ws = useWindowSize();
@@ -75,7 +77,7 @@ const EliteFighters = ({ fighters }) => {
     setActiveFighter(fighter);
     const id = fighter.id;
     console.log(id);
-    const index = fighters.findIndex(f => f.id === id);
+    const index = fighters.findIndex((f) => f.id === id);
     sliderRef.current?.slickGoTo(index);
   }, []);
 
@@ -84,7 +86,7 @@ const EliteFighters = ({ fighters }) => {
   };
 
   const sliderSettings = useMemo(() => {
-    return {...settings, afterChange: onChange};
+    return { ...settings, afterChange: onChange };
   }, []);
 
   if (!fighters) {
@@ -100,15 +102,33 @@ const EliteFighters = ({ fighters }) => {
           return (
             <div
               key={fighter.id}
-              className={`${styles.card} ${!fighter.active ? styles.cardLocked : ''}`}
+              className={`${styles.card} ${
+                !fighter.active ? styles.cardLocked : ""
+              }`}
               onClick={(_e) => fighter.active && onClickHandle(_e, fighter)}
             >
-              {fighter.active ?
-                <img src={backgrounds[+bgIndex]} className={`${styles.cardBg}`} alt={fighter.name} />
-                :
-                <img src={lockedBackgrounds[+bgIndex]} className={`${styles.cardBg}`} alt={fighter.name} />
-              }
-              <img src={fighter.image} className={`${styles.cardFighterImage} ${fighter.id === activeFighter.id ? styles.cardFighterImageActive : ''}`} alt={fighter.name} />
+              {fighter.active ? (
+                <img
+                  src={backgrounds[+bgIndex]}
+                  className={`${styles.cardBg}`}
+                  alt={fighter.name}
+                />
+              ) : (
+                <img
+                  src={lockedBackgrounds[+bgIndex]}
+                  className={`${styles.cardBg}`}
+                  alt={fighter.name}
+                />
+              )}
+              <img
+                src={fighter.image}
+                className={`${styles.cardFighterImage} ${
+                  fighter.id === activeFighter.id
+                    ? styles.cardFighterImageActive
+                    : ""
+                }`}
+                alt={fighter.name}
+              />
               <h5 className={styles.cardTitle}>{fighter.name}</h5>
             </div>
           );
@@ -126,21 +146,18 @@ const EliteFighters = ({ fighters }) => {
         <img className={styles.tablet} src={borderTablet} alt="border" />
         <img className={styles.mobile} src={borderMobile} alt="border" />
         <div>
-          {activeFighter.active ? (
-            <>
-              <h3 className="title">{`${activeFighter.name} Backstory`}</h3>
-              <span className="description">
-                {activeFighter.backStory}
-              </span>
-            </>
-          ) : (
-            <h3 className="title">In Training</h3>
-          )}
-          
+            {activeFighter.active ? (
+              <>
+                <h3 className={`${styles.paddingText} title`}>{`${activeFighter.name} Backstory`}</h3>
+                <span className={`${styles.paddingText} description`}>{activeFighter.backStory}</span>
+              </>
+            ) : (
+              <h3 className="title">In Training</h3>
+            )}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default EliteFighters;

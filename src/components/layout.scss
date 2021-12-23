@@ -1,18 +1,18 @@
-@import './gem.scss';
-@import './rem.scss';
+@import "./gem.scss";
+@import "./rem.scss";
 
 @font-face {
-  font-family: 'Syne';
-  src: local('syne'), url(../styles/fonts/syne.ttf) format('truetype');
+  font-family: "Syne";
+  src: local("syne"), url(../styles/fonts/syne.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'Syne-B';
-  src: local('Syne-Bold'), url(../styles/fonts/Syne-Bold.ttf) format('truetype');
+  font-family: "Syne-B";
+  src: local("Syne-Bold"), url(../styles/fonts/Syne-Bold.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'Satoshi';
-  src: url('../styles/fonts/Satoshi-Regular.woff2') format('woff2'),
-       url('../styles/fonts/Satoshi-Regular.woff') format('woff');
+  font-family: "Satoshi";
+  src: url("../styles/fonts/Satoshi-Regular.woff2") format("woff2"),
+    url("../styles/fonts/Satoshi-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -21,7 +21,7 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em 'Satoshi', serif, sans-serif;
+  font: 112.5%/1.45em "Satoshi", serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
   background-color: #000000;
@@ -103,8 +103,8 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -281,8 +281,8 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -298,8 +298,8 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -315,8 +315,8 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -332,8 +332,8 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -349,8 +349,8 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -588,8 +588,8 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier,
+    monospace;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -616,10 +616,9 @@ pre tt:after {
   width: 100%;
 }
 
-.slick-center{
+.slick-center {
   opacity: 1 !important;
   cursor: url(../styles/img/cursors/more.png) 2 2, auto !important;
-
 }
 .slick-slide {
   opacity: 0.3;
@@ -682,12 +681,12 @@ pre tt:after {
   justify-content: center;
   padding: 0 32px;
   > span {
-    font-family: 'Syne';
+    font-family: "Syne";
     font-style: normal;
     font-weight: 600;
     font-size: 96px;
     line-height: 144px;
-    color: #D4D4D4;
+    color: #d4d4d4;
   }
 }
 .container-width {
@@ -696,47 +695,50 @@ pre tt:after {
   max-width: 1440px;
 }
 .title {
-  font-family: 'Syne-B';
+  font-family: "Syne-B";
   font-style: normal;
   font-weight: 600;
   font-size: 6.66rem;
   line-height: 5.56rem;
   letter-spacing: -0.024rem;
-  color: #EFDAA9;
+  color: #efdaa9;
 }
 .title2 {
-  font-family: 'Syne-B';
+  font-family: "Syne-B";
   font-style: normal;
   font-weight: 600;
   font-size: 2.5rem;
   line-height: 1;
   letter-spacing: -0.2rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .title3 {
-  font-family: 'Syne-B';
+  font-family: "Syne-B";
   font-style: normal;
   font-weight: 600;
   font-size: 1.78rem;
   line-height: 2.67rem;
-  color: #EFDAA9;
+  color: #efdaa9;
 }
 .title4 {
-  font-family: 'Syne-B';
+  font-family: "Syne-B";
   font-style: normal;
   font-weight: 600;
   font-size: 1.666rem;
   line-height: 2rem;
-  color: #EFDAA9;
+  color: #efdaa9;
 }
 .description {
-  font-family: 'Satoshi';
+  font-family: "Satoshi";
   font-style: normal;
   font-weight: normal;
   line-height: 1.666rem;
   font-size: 1.11rem;
   letter-spacing: 0.015rem;
   color: rgba(255, 255, 255, 0.7);
+}
+.description_padding {
+  padding: 30px;
 }
 .menu-open {
   transform: translateX(0);
@@ -803,14 +805,14 @@ pre tt:after {
   }
 }
 .active-header {
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
   position: fixed !important;
   opacity: 1;
 }
 
 .disabled-header {
   opacity: 0;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
   position: fixed !important;
 }
 @media only screen and (max-width: 1200px) {
@@ -877,6 +879,9 @@ pre tt:after {
 // }
 
 @media only screen and (max-width: 480px) {
+  .button-main-text {
+    font-size: 13px !important;
+  }
   .title {
     font-size: 2rem;
     line-height: 3rem;
@@ -902,7 +907,9 @@ pre tt:after {
       line-height: 36px;
     }
   }
-
+  .description_padding {
+    padding: 20px;
+  }
   .slick-slider {
     &.civilizations-slider {
       .slick-slide {

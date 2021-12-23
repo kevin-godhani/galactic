@@ -66,8 +66,8 @@ const CivilizationStoryContent = ({ data }) => {
           <img className={styles.desktop} src={border} alt="border" />
           <img className={styles.tablet} src={borderTablet} alt="border" />
           <img className={styles.mobile} src={borderMobile} alt="border" />
-          <div>
-            <span className="description">{data.description}</span>
+          <div className={styles.descriptionText}>
+            <span className="description description_padding">{data.description}</span>
           </div>
         </div>
         <div data-aos="fade-up" className={styles.groupButtons}>

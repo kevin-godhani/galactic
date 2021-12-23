@@ -36,7 +36,7 @@ const Header = () => {
   const handleNavigation = useCallback(
     e => {
       const window = e.currentTarget;
-      if (y > window.scrollY) {
+      if (y > window.scrollY || window.scrollY <= 45) {
         setHeaderClassName(' active-header')
       } else if (y < window.scrollY) {
         setHeaderClassName(' disabled-header')

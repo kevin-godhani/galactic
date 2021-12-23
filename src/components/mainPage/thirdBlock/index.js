@@ -73,7 +73,7 @@ const ThirdBlock = () => {
           <img className={styles.desktop} src={border} alt="border" />
           <img className={styles.tablet} src={borderTablet} alt="border" />
           <img className={styles.mobile} src={borderMobile} alt="border" />
-          <p data-aos="zoom-in" className={`description ${styles.contentText}`}>
+          <p data-aos="zoom-in" className={`description description_padding ${styles.contentText}`}>
             The Galactic Fight League brings together the best fighters from
             earth and beyond. Where Humans, Cyborgs, Aliens and Zombies battle
             to become the best mixed martial art fighter in the metaverse.

@@ -125,12 +125,13 @@
       left: 0;
       z-index: -1;
       border-radius: inherit;
-      background: linear-gradient(360deg, #000000 0%, #1E135C 100%), linear-gradient(180deg, rgba(26, 12, 54, 0) 0%, #1A0C36 100%);
+      background: linear-gradient(360deg, #000000 0%, #1e135c 100%),
+        linear-gradient(180deg, rgba(26, 12, 54, 0) 0%, #1a0c36 100%);
       background-clip: padding-box;
       transform: skewX(-45deg);
     }
     &-border {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
@@ -139,13 +140,13 @@
       z-index: -2;
       margin: -1px;
       border-radius: inherit;
-      background: linear-gradient(0deg, rgba(255,255,255,1), rgba(255,255,255,0));
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
       transform: skewX(-45deg);
     }
     > span {
       position: absolute;
       outline: none;
-      font-family: 'Syne-B', serif;
+      font-family: "Syne-B", serif;
       font-weight: bold;
       font-size: 1.222rem;
       line-height: 1;
@@ -420,7 +421,10 @@
   //   background: linear-gradient(360deg, #efdda9 0%, #f0b9a9 100%);
   // }
 }
-
+.paddingText {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .card {
   position: relative;
   display: flex;
@@ -455,6 +459,15 @@
   }
   &-margin {
     margin-right: 22px;
+  }
+}
+
+@media only screen and (min-width: 1860px) {
+  .slides {
+    &-buttons {
+      left: 6%;
+      top: 2%;
+    }
   }
 }
 
@@ -615,6 +628,17 @@
       }
     }
   }
+  .slidesButtonText {
+    font-size: 1rem !important;
+  }
+  .slides {
+    &-buttons {
+      width: 42vw;
+    }
+    &-button {
+      height: 5.8vw;
+    }
+  }
 }
 
 @media only screen and (max-width: 830px) {
@@ -637,9 +661,11 @@
     > div {
       > span {
         font-size: 1.2rem;
-        line-height: 1.8rem;
       }
     }
+  }
+  .slidesButtonText {
+    font-size: 0.8rem !important;
   }
   .tablet {
     display: none !important;
@@ -687,6 +713,11 @@
       }
     }
   }
+  .descriptionText {
+    > span {
+      padding: 0;
+    }
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -696,7 +727,17 @@
   .mainHeader {
     height: 50px;
   }
-
+  .slides {
+    &-buttons {
+      width: 46vw;
+    }
+    &-button {
+      height: 6.8vw;
+    }
+  }
+  .slidesButtonText {
+    font-size: 0.7rem !important;
+  }
   .content {
     > h6 {
       margin-top: 80px;
@@ -705,7 +746,6 @@
       max-width: 80%;
     }
   }
-
   .animationWrapper {
     margin-top: 46px;
     > div {
@@ -743,6 +783,13 @@
     // }
   }
 
+  .descriptionText {
+    > span {
+      font-size: 0.7888rem !important;
+      line-height: 1.1rem !important;
+    }
+  }
+
   .contentDescription {
     margin-bottom: 0;
     &.fighter-description {
@@ -772,7 +819,7 @@
       .groupButtonLeft {
         margin-right: 15px;
         > button {
-          left: 28px;
+          left: 28px !important;
         }
         > img {
           margin-left: -8px;
@@ -780,7 +827,7 @@
       }
       .groupButtonRight {
         > button {
-          right: 28px;
+          right: 28px !important;
         }
         > img {
           margin-left: 8px;
@@ -841,8 +888,10 @@
 
   .card {
     &-fighterImage {
-      top: 18px;
-      width: 303px !important;
+      // top: 18px;
+      // width: 303px !important;
+      top: -5px;
+      width: 452px !important;
     }
   }
 
@@ -850,8 +899,6 @@
     margin-bottom: 48px;
   }
 }
-
-
 
 @media only screen and (max-width: 400px) {
   .contentDescription {

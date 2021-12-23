@@ -9,11 +9,8 @@ import { animatedArrows } from "../mainPage/thirdBlock";
 const CivilizationsContent = ({ data }) => {
   return (
     <div className={`${styles.content} container-width`}>
-      <h1 className="title">
-        The Story
-      </h1>
-      <div className={styles.contentTitle}>
-      </div>
+      <h1 className="title">The Story</h1>
+      <div className={styles.contentTitle}></div>
       <div className={styles.contentDescription}>
         <section>
           <div className={styles.arrowsP}>{animatedArrows("purple")}</div>
@@ -23,7 +20,11 @@ const CivilizationsContent = ({ data }) => {
         <img className={styles.tablet} src={borderTablet} alt="border" />
         <img className={styles.mobile} src={borderMobile} alt="border" />
         <div>
-          <span className={`description ${styles.storyText}`}>{data.description}</span>
+          <span
+            className={`description description_padding ${styles.storyText}`}
+          >
+            {data.description}
+          </span>
         </div>
       </div>
       <h6>Which side will you choose?</h6>

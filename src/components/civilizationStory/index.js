@@ -21,20 +21,36 @@ const CivilizationsStory = ({ data, nextTitle }) => {
           onClick={() => setIsMale(true)}
           style={{ opacity: isMale ? 1 : 0.6 }}
         >
-          <div className={styles.slidesButtonBg} style={{ background: isMale ? sliderButtonBgActive : sliderButtonBg }}></div>
+          <div
+            className={styles.slidesButtonBg}
+            style={{
+              background: isMale ? sliderButtonBgActive : sliderButtonBg,
+            }}
+          ></div>
           <div className={styles.slidesButtonBorder}></div>
-          <span style={isMale ? { color: "#010103" } : { color: "#EFDAA9" }}>
+          <span
+            className={styles.slidesButtonText}
+            style={isMale ? { color: "#010103" } : { color: "#EFDAA9" }}
+          >
             Male
           </span>
         </div>
         <div
           className={styles.slidesButton}
           onClick={() => setIsMale(false)}
-          style={ { opacity: !isMale ? 1 : 0.6 }}
+          style={{ opacity: !isMale ? 1 : 0.6 }}
         >
-          <div className={styles.slidesButtonBg} style={{ background: !isMale ? sliderButtonBgActive : sliderButtonBg }}></div>
+          <div
+            className={styles.slidesButtonBg}
+            style={{
+              background: !isMale ? sliderButtonBgActive : sliderButtonBg,
+            }}
+          ></div>
           <div className={styles.slidesButtonBorder}></div>
-          <span style={!isMale ? { color: "#010103" } : { color: "#EFDAA9" }}>
+          <span
+            className={styles.slidesButtonText}
+            style={!isMale ? { color: "#010103" } : { color: "#EFDAA9" }}
+          >
             Female
           </span>
         </div>
@@ -87,10 +103,7 @@ const CivilizationsStory = ({ data, nextTitle }) => {
                   src={data.logo}
                   alt="logo"
                 />
-                <img
-                  src={isMale ? data.male : data.female}
-                  alt="decor"
-                />
+                <img src={isMale ? data.male : data.female} alt="decor" />
               </div>
             </div>
           </div>

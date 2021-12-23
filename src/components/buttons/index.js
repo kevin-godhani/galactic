@@ -26,7 +26,7 @@ export const MainButtonExternal = ({url, title, isDouble, isPurple, small}) => {
       <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>
       <div className={'mainButtonContent'}>
         <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />
-        <span>{title}</span>
+        <span className="button-main-text">{title}</span>
       </div>
     </a>
   );
