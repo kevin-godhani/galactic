@@ -159,7 +159,7 @@ const CivilizationsStory = ({ data, nextTitle }) => {
         style={{ marginBottom: "100px" }}
         className="container-width flex-center"
       >
-        {mainButton(data.nextLink, "Next", true)}
+        {mainButton(data.nextLink, "Next", true, false, false, styles.buttonTextContainer)}
       </div>
     </section>
   );

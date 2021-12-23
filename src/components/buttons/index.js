@@ -6,12 +6,12 @@ import button_rectangle_hover_icon from "../../styles/img/button_rectangle_hover
 import ButtonBg from "../../styles/img/button-bg.inline.svg";
 import "./index.scss";
 
-export const mainButton = (to, title, isDouble, isPurple, small) => {
+export const mainButton = (to, title, isDouble, isPurple, small, textContainerClassName) => {
   return (
     <Link to={to} className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''}`}>
       {isDouble && <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>}
       <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>
-      <div className={'mainButtonContent'}>
+      <div className={`mainButtonContent ${textContainerClassName ? textContainerClassName : ''}`}>
         <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />
         <span>{title}</span>
       </div>
@@ -69,9 +69,9 @@ export const buttonWithoutLink = (title, callback, isDouble, isPurple) => {
   );
 };
 
-export const SocialButton = ({url, Icon}) => {
+export const SocialButton = ({url, Icon, size}) => {
   return (
-    <a href={url} target='_blank' rel="nofollow noreferrer noopener" className={'social-button'}>
+    <a href={url} target='_blank' rel="nofollow noreferrer noopener" className={'sm-button'} style={{ width: size }}>
       <Icon/>
     </a>
   );

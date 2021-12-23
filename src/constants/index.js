@@ -449,7 +449,8 @@ export const faqData = [
     },
 ];
 
-export const carousel = [{
+export const carousel = [
+    {
         url: fighterCard1,
         id: 1,
     },

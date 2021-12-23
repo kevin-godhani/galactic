@@ -148,7 +148,8 @@
       outline: none;
       font-family: "Syne-B", serif;
       font-weight: bold;
-      font-size: 1.222rem;
+      font-weight: normal;
+      font-size: 1.5vw;
       line-height: 1;
       transition: all 375ms ease;
     }
@@ -464,6 +465,11 @@
   }
 }
 
+.button-text-container {
+  padding-right: 0 !important;
+  padding-left: 112px !important;
+}
+
 @media only screen and (min-width: 1860px) {
   .slides {
     &-buttons {
@@ -534,7 +540,7 @@
         margin-right: 1.5vw;
       }
       > span {
-        font-size: 2.3vw;
+        font-size: 2vw;
       }
     }
   }
@@ -611,9 +617,6 @@
     &-title {
       margin-bottom: 0;
     }
-    // &-fighterImage {
-    //   top: 25px;
-    // }
   }
 
   .content {
@@ -652,9 +655,6 @@
         line-height: 1.8rem;
       }
     }
-  }
-  .slidesButtonText {
-    font-size: 1rem !important;
   }
 }
 
@@ -714,6 +714,14 @@
       top: -0.6vw;
     }
   }
+
+  .slides {
+    &-button {
+      > span {
+        font-size: 2.3vw;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 680px) {
@@ -723,9 +731,6 @@
         font-size: 1.2rem;
       }
     }
-  }
-  .slidesButtonText {
-    font-size: 0.8rem !important;
   }
   .tablet {
     display: none !important;
@@ -800,9 +805,6 @@
       height: 6.8vw;
     }
   }
-  .slidesButtonText {
-    font-size: 0.7rem !important;
-  }
   .content {
     > h6 {
       margin-top: 80px;
@@ -821,11 +823,14 @@
   }
   .slides {
     &-buttons {
-      left: 4.2vw;
+      left: 6.2vw;
       width: 35vw;
     }
     &-button {
       border-radius: 4px;
+      > span {
+        font-size: 1.8vw;
+      }
     }
   }
 
@@ -994,6 +999,12 @@
     }
     > img {
       margin-left: 16px;
+    }
+  }
+
+  .slides {
+    &-buttons {
+      width: 34vw;
     }
   }
 }

@@ -266,6 +266,11 @@
   }
 }
 
+.button-text-container {
+  padding-left: 95px !important;
+  padding-right: 0 !important;
+}
+
 .slides-counter {
   position: absolute;
   top: 0;
@@ -645,6 +650,10 @@
   .arrowsG {
     top: 30%;
     left: 0;
+  }
+
+  .button-text-container {
+    padding-left: 56px !important;
   }
 }
 

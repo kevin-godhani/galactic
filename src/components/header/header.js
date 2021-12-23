@@ -81,8 +81,8 @@ const Header = () => {
           small={showSmallButton}
         />
         <div className="sm-buttons">
-          <SocialButton url={twitterLink} Icon={twitter} />
-          <SocialButton url={instagramLink} Icon={instagram} />
+          <SocialButton url={twitterLink} Icon={twitter} size={40} />
+          <SocialButton url={instagramLink} Icon={instagram} size={40} />
         </div>
       </div>
     </header>

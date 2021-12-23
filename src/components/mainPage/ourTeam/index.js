@@ -7,8 +7,8 @@ import { team } from "../../../constants";
 
 const ItemBlock = ({ title, description, image, links, isEven, idx }) => {
   const ws = useWindowSize();
-  // const isTabletWidth = ws.width <= 1200 && ws.width >= 481;
-  // const isMobileWidth = ws.width <= 480;
+  const isTabletWidth = ws.width <= 1200 && ws.width >= 481;
+  const isMobileWidth = ws.width <= 480;
   const isDesktopWidth = ws.width > 1200;
 
   return (
@@ -30,10 +30,11 @@ const ItemBlock = ({ title, description, image, links, isEven, idx }) => {
           <img src={image} className={styles.cardImage} alt={title} />
         </div>
         <div className={styles.socialButtonsWrap}>
-          {links.length > 0 &&
-            links.map((link, i) => {
-              return <SocialButton key={i} url={link.url} Icon={link.icon} />;
-            })}
+          {links.length > 0 && links.map((link, i) => {
+            return (
+              <SocialButton key={i} url={link.url} Icon={link.icon} size={isTabletWidth  ? 58 : 40} />
+            );
+          })}
         </div>
       </div>
       <p

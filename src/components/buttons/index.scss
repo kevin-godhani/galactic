@@ -20,7 +20,7 @@
     min-width: 198px;
     .mainButtonStripe {
       width: 18px;
-      left: 24px;
+      left: 21px;
     }
     .mainButtonContent {
       min-width: 176px;
@@ -62,13 +62,14 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
+    padding-left: 79px;
     height: 100%;
     min-width: 243px;
     > span {
       font-family: 'Syne-B';
       font-style: normal;
-      font-weight: bold;
+      font-weight: normal;
       font-size: 16px;
       line-height: 19px;
       text-align: center;
@@ -153,6 +154,18 @@
     &:hover {
       > div {
         background: linear-gradient(79.28deg, #EFDDA9 24.27%, #F0A8A8 94.78%);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mainButton {
+    .mainButtonContent {
+      padding-left: 53px;
+      > span {
+        font-size: 12px;
+        line-height: 1;
       }
     }
   }
