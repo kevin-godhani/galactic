@@ -8,8 +8,8 @@ import decoration from "../../../styles/img/back_decoration.png";
 import borderTablet from "../../../styles/img/border_tablet.png";
 import borderMobile from "../../../styles/img/border-mobile.png";
 import * as styles from "./index.module.scss";
-import cursorPlay from "../../../styles/img/icons/play_icon.svg";
-import playText from "../../../styles/img/icons/play_text.svg";
+import cursorPlay from "../../../styles/img/icons/watch_icon.png";
+// import playText from "../../../styles/img/icons/play_text.svg";
 import useWindowSize from "../../../utils/useWindowSize";
 import { slides } from "../../../constants";
 
@@ -99,7 +99,7 @@ const ThirdBlock = () => {
           <div onClick={toggleFullScreen} className={styles.playVideo}>
             <div>
               <img src={cursorPlay} alt="cursorPlay" />
-              <img src={playText} alt="playText" />
+              {/* <img src={playText} alt="playText" /> */}
             </div>
           </div>
         </div>

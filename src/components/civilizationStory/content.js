@@ -11,7 +11,7 @@ import videoBorder from "../../styles/img/video-gradient-border2.svg";
 import * as styles from "./index.module.scss";
 import EliteFighters from "./elitfighterSlider";
 import { animatedArrows } from "../mainPage/thirdBlock";
-import cursorPlay from "../../styles/img/icons/play_civilization_icon.svg";
+import cursorPlay from "../../styles/img/icons/watch_civilization.png";
 import useWindowSize from "../../utils/useWindowSize";
 
 const CivilizationStoryContent = ({ data }) => {
