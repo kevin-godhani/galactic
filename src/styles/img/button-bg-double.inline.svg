@@ -1,0 +1,19 @@
+<svg class="button-bg double" width="287" height="44" viewBox="0 0 287 44" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path class="button-bg-path default" d="M286.5 22.2483L257.835 43.5H1.48966L57.6678 1H286.5V22.2483Z" stroke="url(#paint0_linear_1093_9140)"/>
+    <path class="button-bg-path purple" d="M0 44H258L287 22.5V0.5H57.5L0 44Z" fill="url(#paint0_linear_purple)"/>
+    <path class="button-bg-path hover" d="M0 44H258L287 22.5V0.5H57.5L0 44Z" fill="url(#paint0_linear_hover)"/>
+    <defs>
+        <linearGradient id="paint0_linear_1093_9140" x1="194.5" y1="-19.4999" x2="-44.9999" y2="44" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#EFDDA9"/>
+            <stop offset="1" stop-color="#F0AEA8"/>
+        </linearGradient>
+        <linearGradient id="paint0_linear_hover" x1="49.2" y1="22.25" x2="115.313" y2="-87.2704" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#EFDDA9"/>
+            <stop offset="1" stop-color="#F0A8A8"/>
+        </linearGradient>
+        <linearGradient id="paint0_linear_purple" x1="48.3708" y1="15" x2="146.03" y2="-104.289" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#7A4F93"/>
+            <stop offset="1" stop-color="#694DA0"/>
+        </linearGradient>
+    </defs>
+</svg>

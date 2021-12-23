@@ -4,6 +4,7 @@ import stripeImg from "../../styles/img/stripe.png";
 import button_rectangle_icon from "../../styles/img/button_rectangle.png";
 import button_rectangle_hover_icon from "../../styles/img/button_rectangle_hover.png";
 import ButtonBg from "../../styles/img/button-bg.inline.svg";
+import ButtonBgDouble from "../../styles/img/button-bg-double.inline.svg";
 import "./index.scss";
 
 export const mainButton = (to, title, isDouble, isPurple, small, textContainerClassName) => {
@@ -12,7 +13,11 @@ export const mainButton = (to, title, isDouble, isPurple, small, textContainerCl
       {isDouble && <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>}
       <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>
       <div className={`mainButtonContent ${textContainerClassName ? textContainerClassName : ''}`}>
-        <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />
+        {isDouble ? (
+          <ButtonBgDouble className={`button-bg ${isPurple ? 'purple' : ''}`} />
+        ) : (
+          <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />
+        )}
         <span>{title}</span>
       </div>
     </Link>
@@ -25,7 +30,11 @@ export const MainButtonExternal = ({url, title, isDouble, isPurple, small}) => {
       {isDouble && <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>}
       <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>
       <div className={'mainButtonContent'}>
-        <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />
+        {isDouble ? (
+          <ButtonBgDouble className={`button-bg ${isPurple ? 'purple' : ''}`} />
+        ) : (
+          <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />
+        )}
         <span className="button-main-text">{title}</span>
       </div>
     </a>
@@ -62,7 +71,11 @@ export const buttonWithoutLink = (title, callback, isDouble, isPurple) => {
       {isDouble && <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>}
       <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>
       <div className={'mainButtonContent'}>
-        <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />
+        {isDouble ? (
+          <ButtonBgDouble className={`button-bg ${isPurple ? 'purple' : ''}`} />
+        ) : (
+          <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />
+        )}
         <span>{title}</span>
       </div>
     </div>

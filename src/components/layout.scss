@@ -772,6 +772,21 @@ pre tt:after {
   outline: none;
   cursor: pointer;
   width: 40px;
+  &:hover {
+    .sm-icon {
+      &:hover {
+        .sm-icon-bg {
+          opacity: 0;
+          &.hover {
+            opacity: 1;
+          }
+        }
+        .sm-icon-path {
+          fill: #010103;
+        }
+      }
+    }
+  }
 }
 
 .sm-icon {
@@ -784,17 +799,6 @@ pre tt:after {
   &-bg {
     &.hover {
       opacity: 0;
-    }
-  }
-  &:hover {
-    .sm-icon-bg {
-      opacity: 0;
-      &.hover {
-        opacity: 1;
-      }
-    }
-    .sm-icon-path {
-      fill: #010103;
     }
   }
 }
@@ -890,6 +894,20 @@ pre tt:after {
   }
 }
 
+@media only screen and (max-width: 660px) {
+  .sm-buttons {
+    &.menu {
+      margin-left: 30px;
+      margin-top: 30px;
+      position: relative;
+      z-index: 1;
+    }
+    &.mobile-only {
+      display: flex;
+    }
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .button-main-text {
     font-size: 13px !important;
@@ -908,7 +926,7 @@ pre tt:after {
     line-height: 1.5rem;
   }
   .title4 {
-    font-size: 1.222rem;
+    font-size: 5.3vw;
     line-height: 2rem;
   }
 
@@ -941,16 +959,6 @@ pre tt:after {
           width: 325px;
         }
       }
-    }
-  }
-
-  .sm-buttons {
-    &.menu {
-      margin-left: 30px;
-      margin-top: 30px;
-    }
-    &.mobile-only {
-      display: flex;
     }
   }
 }

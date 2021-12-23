@@ -163,9 +163,9 @@
       position: absolute;
       outline: none;
       font-family: 'Syne-B', serif;
-      font-weight: bold;
-      font-size: 0.6111rem;
-      line-height: 1rem;
+      font-weight: normal;
+      font-size: 0.83vw;
+      line-height: 1;
       transition: all 375ms ease;
     }
   }
@@ -256,6 +256,11 @@
       max-width: 21vw;
       min-width: 130px;
     }
+    &-button {
+      > span {
+        font-size: 1.1vw;
+      }
+    }
   }
 
   .slides-counter {
@@ -286,10 +291,18 @@
   }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 768px) {
   .contentDescription > span {
     line-height: 20px;
     top: 43px !important;
+  }
+
+  .slides {
+    &-button {
+      > span {
+        font-size: 1.3vw;
+      }
+    }
   }
 }
 
@@ -335,6 +348,9 @@
     }
     &-button {
       flex-basis: 50%;
+      > span {
+        font-size: 12px;
+      }
     }
   }
 
@@ -377,6 +393,16 @@
   }
 }
 
+@media only screen and (min-width: 1650px) {
+  .slides {
+    &-button {
+      > span {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1920px) {
   .slider-container {
     margin-bottom: 300px;
@@ -405,7 +431,7 @@
         margin-right: 1vw;
       }
       > span {
-        font-size: 1vw;
+        font-size: 0.83vw;
         line-height: 1;
       }
     }

@@ -25,7 +25,13 @@ const ItemBlock = ({ title, description, image, links, isEven, idx }) => {
           }`}
           alt="back"
         />
-        <h5 className={`title4 ${styles.cardHeader}`}>{title}</h5>
+        <h5
+          className={`title4 ${styles.cardHeader}`}
+          style={{
+            paddingLeft: isEven ? (isMobileWidth ? 30 : 45) : 0,
+            paddingRight: isEven ? 0 : isMobileWidth ? 30 : 45,
+          }}
+        >{title}</h5>
         <div className={styles.cardImageWrap}>
           <img src={image} className={styles.cardImage} alt={title} />
         </div>

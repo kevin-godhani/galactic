@@ -67,10 +67,15 @@
           font-family: "Syne";
           font-size: 24px;
           line-height: 36px;
-          top: 63px;
-          left: 23px;
           transform: rotate(-58deg);
           white-space: nowrap;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 150px;
+          height: 150px;
+          top: 5px;
+          left: 8px;
         }
       }
       &-even {
@@ -97,7 +102,7 @@
         left: 27px;
         font-family: "Syne-B";
         font-style: normal;
-        font-weight: 600;
+        font-weight: normal;
         font-size: 34.1538px;
         line-height: 1;
         color: #010103;
@@ -134,8 +139,8 @@
           .card-label-text {
             font-size: 14px;
             line-height: 20px;
-            top: 38px;
-            left: 11px;
+            top: -27px;
+            left: -29px;
             transform: rotate(-61deg);
           }
         }
@@ -170,11 +175,15 @@
     .card {
       width: 354px;
       height: 336px;
+      // justify-content: flex-start;
+      // padding-top: 22px;
       &:not(:last-child) {
         margin-bottom: 16px;
       }
       &-title {
         margin-bottom: 8px;
+        font-size: 1rem;
+        line-height: 1.5rem;
       }
       &-description {
         max-width: 257px;
@@ -192,10 +201,10 @@
             width: 65px;
           }
           .card-label-text {
-            font-size: 8px;
+            font-size: 9px;
             line-height: 13px;
-            top: 25px;
-            left: 9px;
+            top: -43px;
+            left: -47px;
             transform: rotate(-79.5deg);
           }
         }
@@ -207,7 +216,7 @@
             transform: scaleX(-1) rotate(-24deg);
           }
           .card-label-text {
-            right: 6px;
+            right: 7px;
           }
         }
         &-image {
@@ -216,8 +225,8 @@
         }
         &-text {
           top: 3px;
-          left: 5px;
-          font-size: 16px;
+          left: 6px;
+          font-size: 14px;
           line-height: 25px;
         }
       }
