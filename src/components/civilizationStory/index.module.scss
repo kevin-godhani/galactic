@@ -642,15 +642,6 @@
   .arrowsG {
     top: 15%;
   }
-  .slides {
-    &-buttons {
-      left: 19.2vw;
-      width: 36vw;
-    }
-    &-button {
-      height: 6.8vw;
-    }
-  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -664,11 +655,6 @@
   }
   .slidesButtonText {
     font-size: 1rem !important;
-  }
-  .slides {
-    &-buttons {
-      left: 17.2vw;
-    }
   }
 }
 
@@ -684,11 +670,6 @@
   .arrowsP {
     bottom: 0px;
     left: 49.5%;
-  }
-  .slides {
-    &-buttons {
-      left: 15.2vw;
-    }
   }
 }
 
@@ -797,11 +778,6 @@
       padding: 0;
     }
   }
-  .slides {
-    &-buttons {
-      left: 12.2vw;
-    }
-  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -810,14 +786,6 @@
   }
   .mainHeader {
     height: 50px;
-  }
-  .slides {
-    &-buttons {
-      width: 46vw;
-    }
-    &-button {
-      height: 6.8vw;
-    }
   }
   .slidesButtonText {
     font-size: 0.7rem !important;
@@ -841,7 +809,10 @@
   .slides {
     &-buttons {
       left: 4.2vw;
-      width: 34vw;
+      width: 35vw;
+    }
+    &-button {
+      border-radius: 4px;
     }
   }
 
