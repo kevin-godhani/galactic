@@ -69,9 +69,9 @@ export const buttonWithoutLink = (title, callback, isDouble, isPurple) => {
   );
 };
 
-export const SocialButton = ({url, Icon}) => {
+export const SocialButton = ({url, Icon, size}) => {
   return (
-    <a href={url} target='_blank' rel="nofollow noreferrer noopener" className={'social-button'}>
+    <a href={url} target='_blank' rel="nofollow noreferrer noopener" className={'sm-button'} style={{ width: size }}>
       <Icon/>
     </a>
   );

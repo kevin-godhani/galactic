@@ -27,7 +27,7 @@ const ItemBlock = ({title, description, image, links, isEven}) => {
         <div className={styles.socialButtonsWrap}>
           {links.length > 0 && links.map((link, i) => {
             return (
-              <SocialButton key={i} url={link.url} Icon={link.icon} />
+              <SocialButton key={i} url={link.url} Icon={link.icon} size={isTabletWidth  ? 58 : 40} />
             );
           })}
         </div>

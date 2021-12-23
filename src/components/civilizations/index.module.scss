@@ -125,7 +125,6 @@
     border-radius: 6px;
     flex-basis: 39.5%;
     height: 39px;
-    // max-height: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -406,7 +405,7 @@
         margin-right: 1vw;
       }
       > span {
-        font-size: 1.8rem;
+        font-size: 1vw;
         line-height: 1;
       }
     }
@@ -428,6 +427,16 @@
     &-length {
       font-size: 2rem;
       line-height: 2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 2800px) {
+  .slides {
+    &-button {
+      > span {
+        font-size: 30px;
+      }
     }
   }
 }
