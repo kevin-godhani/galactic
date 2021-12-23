@@ -519,25 +519,25 @@
     }
   }
 
-  .slides {
-    &-buttons {
-      left: 6.8vw;
-      top: 1vw;
-      width: 38vw;
-      max-width: 470px;
-    }
-    &-button {
-      flex-basis: 50%;
-      height: 6vw;
-      max-height: 72px;
-      &:first-child {
-        margin-right: 1.5vw;
-      }
-      > span {
-        font-size: 2.3vw;
-      }
-    }
-  }
+  // .slides {
+  //   &-buttons {
+  //     left: 6.8vw;
+  //     top: 1vw;
+  //     width: 38vw;
+  //     max-width: 470px;
+  //   }
+  //   &-button {
+  //     flex-basis: 50%;
+  //     height: 6vw;
+  //     max-height: 72px;
+  //     &:first-child {
+  //       margin-right: 1.5vw;
+  //     }
+  //     > span {
+  //       font-size: 2.3vw;
+  //     }
+  //   }
+  // }
 
   .raceInfo {
     position: relative;
