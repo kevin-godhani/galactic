@@ -11,7 +11,7 @@ import useWindowSize from "../../utils/useWindowSize";
 import SlickSlider from "../mainPage/secondBlock/slider";
 import CivilizationsContent from "./content";
 import { civilizationsStoryData } from "./dataMocks";
-import { sliderButtonBg, sliderButtonBgActive } from "../../constants";
+import { ButtonsBlock } from '../buttons';
 
 const CivilizationsMain = () => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -60,6 +60,7 @@ const CivilizationsMain = () => {
   const settings = {
     slidesToShow: 3,
     draggable: false,
+    swipe: false,
     responsive: [
       {
         breakpoint: 1921,
@@ -122,30 +123,17 @@ const CivilizationsMain = () => {
               <span className={styles.slidesCounterLength}>{carousel?.length < 10 ? `0${carousel?.length}` : carousel?.length}</span>
             </span>
         </div>
-        <div className={styles.slidesButtons}>
-          <div
-            className={styles.slidesButton}
-            onClick={onPrev}
-            style={ !isMinValue ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, cursor: 'default' }}
-          >
-            <div className={styles.slidesButtonBg} style={{ background: !isMinValue ? sliderButtonBgActive : sliderButtonBg }}></div>
-            <div className={styles.slidesButtonBorder}></div>
-            <span style={!isMinValue ? { color: "#010103" } : { color: "#EFDAA9" }}>
-              Back
-            </span>
-          </div>
-          <div
-            className={styles.slidesButton}
-            onClick={onNext}
-            style={ !isMaxValue ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, cursor: 'default' }}
-          >
-            <div className={styles.slidesButtonBg} style={{ background: !isMaxValue ? sliderButtonBgActive : sliderButtonBg }}></div>
-            <div className={styles.slidesButtonBorder}></div>
-            <span style={!isMaxValue ? { color: "#010103" } : { color: "#EFDAA9" }}>
-              Next
-            </span>
-          </div>
-        </div>
+        <ButtonsBlock
+          leftButtonTitle='Back'
+          rightButtonTitle='Next'
+          onLeftButtonClick={onPrev}
+          onRightButtonClick={onNext}
+          containerStyle={styles.slidesButtons}
+          buttonStyle={styles.slidesButton}
+          textStyle={styles.slidesButtonText}
+          limitMin={isMinValue}
+          limitMax={isMaxValue}
+        />
       </div>
       <CivilizationsContent data={pageData[activeSlideIndex]} />
     </section>

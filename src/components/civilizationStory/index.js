@@ -3,7 +3,7 @@ import Ticker from "react-ticker";
 import * as styles from "./index.module.scss";
 import { MainButton } from "../buttons/index";
 import CivilizationStoryContent from "./content";
-import { sliderButtonBg, sliderButtonBgActive } from "../../constants";
+import { ButtonsBlock } from '../buttons';
 import border from "../../styles/img/border_line.png";
 import next_back from "../../styles/img/next_back.png";
 import border2 from "../../styles/img/icons/border2.png";
@@ -13,50 +13,6 @@ import border_animation from "../../styles/img/border_amination.png";
 
 const CivilizationsStory = ({ data, nextTitle }) => {
   const [isMale, setIsMale] = useState(true);
-  const renderButtons = () => {
-    return (
-      <div className={styles.slidesButtons}>
-        <div
-          className={styles.slidesButton}
-          onClick={() => setIsMale(true)}
-          style={{ opacity: isMale ? 1 : 0.6 }}
-        >
-          <div
-            className={styles.slidesButtonBg}
-            style={{
-              background: isMale ? sliderButtonBgActive : sliderButtonBg,
-            }}
-          ></div>
-          <div className={styles.slidesButtonBorder}></div>
-          <span
-            className={styles.slidesButtonText}
-            style={isMale ? { color: "#010103" } : { color: "#EFDAA9" }}
-          >
-            Male
-          </span>
-        </div>
-        <div
-          className={styles.slidesButton}
-          onClick={() => setIsMale(false)}
-          style={{ opacity: !isMale ? 1 : 0.6 }}
-        >
-          <div
-            className={styles.slidesButtonBg}
-            style={{
-              background: !isMale ? sliderButtonBgActive : sliderButtonBg,
-            }}
-          ></div>
-          <div className={styles.slidesButtonBorder}></div>
-          <span
-            className={styles.slidesButtonText}
-            style={!isMale ? { color: "#010103" } : { color: "#EFDAA9" }}
-          >
-            Female
-          </span>
-        </div>
-      </div>
-    );
-  };
   return (
     <section className={styles.main}>
       <img src={border} alt="border" />
@@ -76,7 +32,17 @@ const CivilizationsStory = ({ data, nextTitle }) => {
       <div className={`${styles.content} container-width`}>
         <div className={styles.animationWrapper}>
           <div>
-            {renderButtons()}
+            <ButtonsBlock
+              leftButtonTitle='Male'
+              rightButtonTitle='Female'
+              onLeftButtonClick={() => setIsMale(true)}
+              onRightButtonClick={() => setIsMale(false)}
+              containerStyle={styles.slidesButtons}
+              buttonStyle={styles.slidesButton}
+              textStyle={styles.slidesButtonText}
+              limitMin={isMale}
+              limitMax={!isMale}
+            />
             <video
               autoPlay
               muted

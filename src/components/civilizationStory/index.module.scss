@@ -95,63 +95,16 @@
     position: absolute;
     left: 5.2vw;
     top: 0.7vw;
-    display: inline-flex;
-    align-items: center;
     width: 33vw;
     max-width: 555px;
-    z-index: 2;
   }
   &-button {
-    position: relative;
-    flex-shrink: 1;
     border-radius: 8px;
     flex-basis: 36%;
     height: 4.8vw;
     max-height: 92px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    user-select: none;
-    transition: all 375ms ease;
-    &:first-child {
-      margin-right: 16px;
-    }
-    &-bg {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      border-radius: inherit;
-      background: linear-gradient(360deg, #000000 0%, #1e135c 100%),
-        linear-gradient(180deg, rgba(26, 12, 54, 0) 0%, #1a0c36 100%);
-      background-clip: padding-box;
-      transform: skewX(-45deg);
-    }
-    &-border {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -2;
-      margin: -1px;
-      border-radius: inherit;
-      background: linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-      transform: skewX(-45deg);
-    }
-    > span {
-      position: absolute;
-      outline: none;
-      font-family: "Syne-B", serif;
-      font-weight: bold;
-      font-weight: normal;
+    &-text {
       font-size: 1.5vw;
-      line-height: 1;
-      transition: all 375ms ease;
     }
   }
 }
@@ -539,7 +492,7 @@
       &:first-child {
         margin-right: 1.5vw;
       }
-      > span {
+      &-text {
         font-size: 2vw;
       }
     }
@@ -717,7 +670,7 @@
 
   .slides {
     &-button {
-      > span {
+      &-text {
         font-size: 2.3vw;
       }
     }
@@ -828,7 +781,7 @@
     }
     &-button {
       border-radius: 4px;
-      > span {
+      &-text {
         font-size: 1.8vw;
       }
     }
@@ -1026,7 +979,7 @@
   .slides {
     &-button {
       border-radius: 4px;
-      > span {
+      &-text {
         font-size: 26px;
       }
     }
