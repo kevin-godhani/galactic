@@ -14,6 +14,7 @@ const settings = {
   speed: 375,
   cssEase: "linear",
   // pauseOnHover: true,
+  slickGoTo: 3,
   responsive: [
     {
       breakpoint: 1921,
