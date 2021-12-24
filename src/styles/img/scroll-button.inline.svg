@@ -1,8 +1,8 @@
 <svg class="scroll-button" width="111" height="156" viewBox="0 0 111 156" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g>
+    <g class="scroll-button-bg-outer">
         <circle cx="55.4329" cy="55.4312" r="46.3508" transform="rotate(3.61711 55.4329 55.4312)" fill="url(#paint0_linear_313_7232)" fill-opacity="0.3"/>
     </g>
-    <g>
+    <g class="scroll-button-bg-inner">
         <circle cx="55.4332" cy="55.4312" r="35.9349" transform="rotate(3.61711 55.4332 55.4312)" fill="url(#paint1_linear_313_7232)" fill-opacity="0.6"/>
     </g>
     <path d="M1.0359 54.9465C1.1713 40.5133 7.03476 26.7249 17.3364 16.6148C27.638 6.50464 41.5339 0.900893 55.9672 1.0363C70.4005 1.1717 84.1889 7.03516 94.299 17.3368C104.409 27.6384 110.013 41.5343 109.877 55.9676" stroke="url(#paint2_linear_313_7232)" stroke-opacity="0.5" stroke-width="1.04159" stroke-linecap="round"/>
