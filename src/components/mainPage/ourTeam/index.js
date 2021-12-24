@@ -31,7 +31,9 @@ const ItemBlock = ({ title, description, image, links, isEven, idx }) => {
             paddingLeft: isEven ? (isMobileWidth ? 30 : 45) : 0,
             paddingRight: isEven ? 0 : isMobileWidth ? 30 : 45,
           }}
-        >{title}</h5>
+        >
+          {title}
+        </h5>
         <div className={styles.cardImageWrap}>
           <img src={image} className={styles.cardImage} alt={title} />
         </div>

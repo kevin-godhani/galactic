@@ -5,15 +5,16 @@ import button_rectangle_icon from "../../styles/img/button_rectangle.png";
 import button_rectangle_hover_icon from "../../styles/img/button_rectangle_hover.png";
 import ButtonBg from "../../styles/img/button-bg.inline.svg";
 import ButtonBgDouble from "../../styles/img/button-bg-double.inline.svg";
+import { sliderButtonBg, sliderButtonBgActive } from "../../constants";
 import "./index.scss";
 
-export const mainButton = (to, title, isDouble, isPurple, small, textContainerClassName) => {
+export const MainButton = ({to, title, isDouble, isPurple, small, textContainerClassName, longTitle}) => {
   return (
     <Link to={to} className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''}`}>
       {isDouble && <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>}
       <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>
       <div className={`mainButtonContent ${textContainerClassName ? textContainerClassName : ''}`}>
-        {isDouble ? (
+        {longTitle ? (
           <ButtonBgDouble className={`button-bg ${isPurple ? 'purple' : ''}`} />
         ) : (
           <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />
@@ -89,3 +90,47 @@ export const SocialButton = ({url, Icon, size}) => {
     </a>
   );
 };
+
+
+export const ButtonsBlock = ({
+  onLeftButtonClick,
+  onRightButtonClick,
+  leftButtonTitle,
+  rightButtonTitle,
+  limitMin,
+  limitMax,
+  containerStyle,
+  buttonStyle,
+  textStyle
+}) => {
+  return (
+    <div className={`slide-buttons-container ${containerStyle}`}>
+      <div
+        className={`slide-button ${buttonStyle}`}
+        onClick={onLeftButtonClick}
+        style={ !limitMin ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, pointerEvents: 'none' }}
+      >
+        <div className={'slide-button-bg-wrap'}>
+          <div className={'slide-button-bg'} style={{ background: !limitMin ? sliderButtonBgActive : sliderButtonBg }}></div>
+        </div>
+        <div className={'slide-button-border'}></div>
+        <span className={`slide-button-text ${textStyle}`} style={!limitMin ? { color: "#010103" } : { color: "#EFDAA9" }}>
+          {leftButtonTitle}
+        </span>
+      </div>
+      <div
+        className={`slide-button ${buttonStyle}`}
+        onClick={onRightButtonClick}
+        style={ !limitMax ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, pointerEvents: 'none' }}
+      >
+        <div className={'slide-button-bg-wrap'}>
+          <div className={'slide-button-bg'} style={{ background: !limitMax ? sliderButtonBgActive : sliderButtonBg }}></div>
+        </div>
+        <div className={'slide-button-border'}></div>
+        <span className={`slide-button-text ${textStyle}`} style={!limitMax ? { color: "#010103" } : { color: "#EFDAA9" }}>
+          {rightButtonTitle}
+        </span>
+      </div>
+    </div>
+  );
+}

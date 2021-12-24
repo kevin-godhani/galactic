@@ -60,7 +60,7 @@ const Faq = () => {
           {faqData.map((el, idx) => accordionComponent(el, idx))}
         </div>
         <div className={styles.button}>
-          <MainButtonExternal url={discordLink} title={'Join Our Community'} isDouble small={isMobileWidth} />
+          <MainButtonExternal url={discordLink} title={'Join Our Community'} isDouble small={isMobileWidth} longTitle={true} />
         </div>
       </div>
     </section>
