@@ -158,8 +158,8 @@
     pointer-events: none;
     margin-bottom: 3px;
   }
-  > video {
-    width: 134%;
+  > img {
+    width: 134% !important;
     height: auto;
     object-fit: cover;
     mask-image: url('../../../styles/img/video-mask.svg');
@@ -167,6 +167,9 @@
     mask-size: 74.3%;
     mask-position: center;
   }
+}
+.videoContainer {
+  position: relative;
 }
 .civilizationSlides {
   position: relative;

@@ -14,7 +14,7 @@ const settings = {
   arrows: false,
   speed: 375,
   cssEase: "linear",
-  pauseOnHover: true,
+  // pauseOnHover: true,
   responsive: [
     {
       breakpoint: 1921,

@@ -16,6 +16,7 @@ import useWindowSize from "../../utils/useWindowSize";
 
 const CivilizationStoryContent = ({ data }) => {
   const videoRef = useRef(null);
+  const animationRef = useRef(null);
   const [fightSkills, setFightSkills] = useState(1);
   const [isFullScreen, setIsFullScreen] = useState(false);
 
@@ -24,8 +25,12 @@ const CivilizationStoryContent = ({ data }) => {
 
   const toggleFullScreen = () => {
     const el = videoRef.current;
-    if (!el) return;
+    const background = animationRef.current;
+    if (!el || !background) return;
     el.muted = false;
+    el.style.display = "block";
+    el.style.WebkitMaskImage = "none"
+    background.style.display = "none";
     el.play();
     if (el.requestFullscreen) {
       el.requestFullscreen();
@@ -45,6 +50,9 @@ const CivilizationStoryContent = ({ data }) => {
       } else {
         setIsFullScreen(false);
         refEl.muted = true;
+        const background = animationRef.current;
+        if (!background) return;
+        background.style.display = "block";
       }
     }
   });
@@ -67,7 +75,9 @@ const CivilizationStoryContent = ({ data }) => {
           <img className={styles.tablet} src={borderTablet} alt="border" />
           <img className={styles.mobile} src={borderMobile} alt="border" />
           <div className={styles.descriptionText}>
-            <span className="description description_padding">{data.description}</span>
+            <span className="description description_padding">
+              {data.description}
+            </span>
           </div>
         </div>
         <div data-aos="fade-up" className={styles.groupButtons}>
@@ -114,10 +124,7 @@ const CivilizationStoryContent = ({ data }) => {
               ></img>
             </div>
             <span className="description">
-              {fightSkills === 1
-                ? data.strengths
-                : data.weaknesses
-              }
+              {fightSkills === 1 ? data.strengths : data.weaknesses}
             </span>
           </div>
         </div>
@@ -125,9 +132,19 @@ const CivilizationStoryContent = ({ data }) => {
           <img src={videoBorder} alt="videoBorder" />
           <video
             ref={videoRef}
-            style={isFullScreen ? { WebkitMaskImage: "none" } : {}}
+            style={
+              isFullScreen ? { WebkitMaskImage: "none" } : { display: "none" }
+            }
             loop
             src={`https://storage.googleapis.com/galactic_assets/Civilization%20Videos%20/${data.id}.mp4`}
+            poster={data.previewImg}
+          />
+          <video
+            ref={animationRef}
+            autoPlay
+            muted
+            loop
+            src={`https://storage.googleapis.com/galactic_assets/animated-backgroungs/${data.id}.mp4`}
             poster={data.previewImg}
           />
           <img className={styles.label} src={label} alt="label" />

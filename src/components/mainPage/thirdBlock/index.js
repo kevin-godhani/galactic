@@ -32,6 +32,7 @@ const ThirdBlock = () => {
     const el = videoRef.current;
     if (!el) return;
     el.muted = false;
+    el.style.display = 'block';
     if (el.requestFullscreen) {
       el.requestFullscreen();
     } else if (el.mozRequestFullScreen) {
@@ -85,7 +86,7 @@ const ThirdBlock = () => {
           className={styles.videoWrapper}
         >
           <video
-            style={isFullScreen ? { WebkitMaskImage: "none" } : {}}
+            style={isFullScreen ? { WebkitMaskImage: "none"} : {display: 'none'}}
             ref={videoRef}
             autoPlay
             muted
@@ -93,6 +94,7 @@ const ThirdBlock = () => {
             src="https://storage.googleapis.com/galactic_assets/GFLFinal.mp4"
             poster={preview}
           ></video>
+          <img src="https://storage.googleapis.com/galactic_assets/GFLFinal_DrewVDO.gif" alt="gif" />
           {/* <div onClick={handleSound} className={styles.soundIcon}>
             <SoundIcon className={`sound-icon ${muted ? 'muted' : ''}`} />
           </div> */}
