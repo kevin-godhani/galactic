@@ -113,60 +113,12 @@
     position: absolute;
     left: 8.94vw;
     bottom: 0;
-    display: inline-flex;
-    align-items: center;
     width: 12.82rem;
     max-width: 12.82rem;
-    z-index: 2;
   }
   &-button {
-    position: relative;
-    flex-shrink: 1;
-    border-radius: 6px;
-    flex-basis: 39.5%;
-    height: 39px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    user-select: none;
-    transition: all 375ms ease;
-    &:first-child {
-      margin-right: 16px;
-    }
-    &-bg {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      border-radius: inherit;
-      background: linear-gradient(360deg, #000000 0%, #1E135C 100%), linear-gradient(180deg, rgba(26, 12, 54, 0) 0%, #1A0C36 100%);
-      background-clip: padding-box;
-      transform: skewX(-45deg);
-    }
-    &-border {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -2;
-      margin: -1px;
-      border-radius: inherit;
-      background: linear-gradient(0deg, rgba(255,255,255,1), rgba(255,255,255,0));
-      transform: skewX(-45deg);
-    }
-    > span {
-      position: absolute;
-      outline: none;
-      font-family: 'Syne-B', serif;
-      font-weight: normal;
+    &-text {
       font-size: 0.83vw;
-      line-height: 1;
-      transition: all 375ms ease;
     }
   }
 }
@@ -257,7 +209,7 @@
       min-width: 130px;
     }
     &-button {
-      > span {
+      &-text {
         font-size: 1.1vw;
       }
     }
@@ -299,7 +251,7 @@
 
   .slides {
     &-button {
-      > span {
+      &-text {
         font-size: 1.3vw;
       }
     }
@@ -343,12 +295,10 @@
       max-width: 80%;
       display: flex;
       justify-content: space-between;
-      // margin: 0 auto;
-      // min-width: 130px;
     }
     &-button {
       flex-basis: 50%;
-      > span {
+      &-text {
         font-size: 12px;
       }
     }
@@ -396,7 +346,7 @@
 @media only screen and (min-width: 1650px) {
   .slides {
     &-button {
-      > span {
+      &-text {
         font-size: 14px;
       }
     }
@@ -426,11 +376,11 @@
     &-button {
       flex-basis: 50%;
       height: 2.5vw;
-      // max-height: 72px;
+      max-height: 72px;
       &:first-child {
         margin-right: 1vw;
       }
-      > span {
+      &-text {
         font-size: 0.83vw;
         line-height: 1;
       }
@@ -460,7 +410,7 @@
 @media only screen and (min-width: 2800px) {
   .slides {
     &-button {
-      > span {
+      &-text {
         font-size: 30px;
       }
     }

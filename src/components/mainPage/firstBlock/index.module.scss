@@ -13,14 +13,6 @@
   }
 }
 
-.scroll-button {
-  &-link {
-    position: absolute;
-    bottom: 32px;
-    cursor: pointer;
-  }
-}
-
 @media only screen and (max-width: 768px) {
   .hero-section {
     min-height: 93vh;
