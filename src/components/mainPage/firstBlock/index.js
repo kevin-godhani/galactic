@@ -27,9 +27,9 @@ const FirstBlock = () => {
         smooth={true}
         offset={0}
         duration={1000}
-        className={styles.scrollButtonLink}
+        className={'scroll-button-link'}
       >
-        <ScrollButton className={styles.scrollButton} />
+        <ScrollButton />
       </Link>
       <CustomTimer />
     </section>

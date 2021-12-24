@@ -821,6 +821,24 @@ pre tt:after {
     }
   }
 }
+
+.scroll-button {
+  &-link {
+    position: absolute;
+    bottom: 32px;
+    cursor: pointer;
+    &:hover {
+      .scroll-button-arrow {
+        stroke: #ffffff;
+        stroke-opacity: 1;
+      }
+    }
+  }
+  &-arrow {
+    transition: all 375ms ease;
+  }
+}
+
 .active-header {
   transition: opacity 0.3s ease;
   position: fixed !important;
