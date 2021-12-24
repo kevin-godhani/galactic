@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as styles from "./index.module.scss";
 import useWindowSize from '../../../utils/useWindowSize';
-import { mainButton } from "../../buttons";
+import { ButtonsBlock, MainButton } from "../../buttons";
 import slideBorder from '../../../styles/img/slide-border.svg';
 import slidesCounter from "../../../styles/img/slides-counter.svg";
 import { sliderButtonBg, sliderButtonBgActive } from "../../../constants";
@@ -44,7 +44,7 @@ const CivilizationSlides = ({ slides }) => {
             {activeSlide.description}
           </p>
           <div className={styles.slideBtnWrap}>
-            {mainButton(activeSlide.link, "Discover", true, false, isMobileWidth, styles.buttonTextContainer)}
+            <MainButton to={activeSlide.link} title={"Discover"} isDouble={true} small={isMobileWidth} textContainerClassName={styles.buttonTextContainer} />
           </div>
         </div>
       </div>
@@ -56,30 +56,17 @@ const CivilizationSlides = ({ slides }) => {
             <span className={styles.slidesCounterLength}>{slides.length < 10 ? `0${slides.length}` : slides.length}</span>
           </span>
       </div>
-      <div className={styles.civilizationSlidesButtons}>
-        <div
-          className={styles.civilizationSlidesButton}
-          onClick={onPrev}
-          style={ !isMinValue ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, cursor: 'default' }}
-        >
-          <div className={styles.civilizationSlidesButtonBg} style={{ background: !isMinValue ? sliderButtonBgActive : sliderButtonBg }}></div>
-          <div className={styles.civilizationSlidesButtonBorder}></div>
-          <span style={!isMinValue ? { color: "#010103" } : { color: "#EFDAA9" }}>
-            Back
-          </span>
-        </div>
-        <div
-          className={styles.civilizationSlidesButton}
-          onClick={onNext}
-          style={ !isMaxValue ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, cursor: 'default' }}
-        >
-          <div className={styles.civilizationSlidesButtonBg} style={{ background: !isMaxValue ? sliderButtonBgActive : sliderButtonBg }}></div>
-          <div className={styles.civilizationSlidesButtonBorder}></div>
-          <span style={!isMaxValue ? { color: "#010103" } : { color: "#EFDAA9" }}>
-            Next
-          </span>
-        </div>
-      </div>
+      <ButtonsBlock
+        leftButtonTitle='Back'
+        rightButtonTitle='Next'
+        onLeftButtonClick={onPrev}
+        onRightButtonClick={onNext}
+        containerStyle={styles.civilizationSlidesButtons}
+        buttonStyle={styles.civilizationSlidesButton}
+        textStyle={styles.civilizationSlidesButtonText}
+        limitMin={isMinValue}
+        limitMax={isMaxValue}
+      />
     </div>
   )
 };

@@ -28,7 +28,7 @@
   }
   .mainButtonStripe {
     position: relative;
-    left: 29px;
+    left: 28px;
     width: 30px;
     height: 100%;
     transform: skewX(-53deg);
@@ -155,6 +155,79 @@
       > div {
         background: linear-gradient(79.28deg, #EFDDA9 24.27%, #F0A8A8 94.78%);
       }
+    }
+  }
+}
+
+.slide {
+  &-buttons-container {
+    display: inline-flex;
+    align-items: center;
+    width: 240px;
+    max-width: 240px;
+    z-index: 2;
+  }
+  &-button {
+    position: relative;
+    flex-shrink: 1;
+    border-radius: 6px;
+    flex-basis: 39.5%;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: all 375ms ease;
+    &:hover {
+      .slide-button-bg {
+        transform: translateY(50%);
+      }
+    }
+    &:first-child {
+      margin-right: 16px;
+    }
+    &-bg-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: inherit;
+      overflow: hidden;
+      transform: skewX(-45deg);
+    }
+    &-bg {
+      position: absolute;
+      width: 100%;
+      height: 200%;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(0deg, #000000 0.09%, #1E135C 99.67%, #1E135C 199.36%), linear-gradient(180deg, rgba(26, 12, 54, 0) -99.36%, rgba(26, 12, 54, 0) 0.44%, #1A0C36 99.91%);
+      background-clip: padding-box;
+      border-radius: inherit;
+      transition: all 375ms ease;
+    }
+    &-border {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -2;
+      margin: -1px;
+      background: linear-gradient(0deg, rgba(255,255,255,1), rgba(255,255,255,0));
+      border-radius: inherit;
+      transform: skewX(-45deg);
+    }
+    &-text {
+      position: absolute;
+      outline: none;
+      font-family: 'Syne-B', serif;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 1;
+      transition: all 375ms ease;
     }
   }
 }

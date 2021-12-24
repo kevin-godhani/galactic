@@ -6,7 +6,6 @@ import * as styles from "./index.module.scss";
 
 const settings = {
   dots: false,
-  // infinite: true,
   slidesToShow: 4,
   slidesToScroll: 1,
   centerPadding: 0,
@@ -23,26 +22,6 @@ const settings = {
         slidesToScroll: 1,
       },
     },
-    // {
-    //   breakpoint: 1364,
-    //   settings: {
-    //     slidesToShow: 2,
-    //     centerPadding: "10px",
-    //   },
-    // },
-    // {
-    //   breakpoint: 1200,
-    //   settings: {
-    //     slidesToShow: 1,
-    //   },
-    // },
-    // {
-    //   breakpoint: 880,
-    //   settings: {
-    //     slidesToShow: 1,
-    //     centerPadding: "20px",
-    //   },
-    // },
   ],
 };
 const SlickSlider = ({ redirect, containerClassName, className, data, isClickable = false, afterChange, sliderSettings, activeSlideIndex }) => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Ticker from "react-ticker";
 import * as styles from "./index.module.scss";
-import { mainButton } from "../buttons/index";
+import { MainButton } from "../buttons/index";
 import CivilizationStoryContent from "./content";
 import { sliderButtonBg, sliderButtonBgActive } from "../../constants";
 import border from "../../styles/img/border_line.png";
@@ -159,7 +159,7 @@ const CivilizationsStory = ({ data, nextTitle }) => {
         style={{ marginBottom: "100px" }}
         className="container-width flex-center"
       >
-        {mainButton(data.nextLink, "Next", true, false, false, styles.buttonTextContainer)}
+        <MainButton to={data.nextLink} title={"Next"} isDouble={true} textContainerClassName={styles.buttonTextContainer} />
       </div>
     </section>
   );
