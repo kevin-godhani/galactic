@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,15 +6,16 @@ import * as styles from "./index.module.scss";
 
 const settings = {
   dots: false,
-  slidesToShow: 4,
+  slidesToShow: 2,
   slidesToScroll: 1,
   centerPadding: 0,
   centerMode: true,
   arrows: false,
   speed: 375,
   cssEase: "linear",
-  // pauseOnHover: true,
-  slickGoTo: 3,
+  lazyLoad: 'progressive',
+  // doesn't work 🤷🏿‍♂️
+  // initialSlide: 0,
   responsive: [
     {
       breakpoint: 1921,
@@ -36,10 +37,10 @@ const SlickSlider = ({ redirect, containerClassName, className, data, isClickabl
       return;
     }
     sliderRef.current.slickGoTo(activeSlideIndex);
-  }, [activeSlideIndex]);
+  }, [activeSlideIndex, sliderRef?.current]);
 
   return (
-    <div className={`${styles.sliderWrapper} ${containerClassName}`}>
+    <div data-aos="fade-up" className={`${styles.sliderWrapper} ${containerClassName}`}>
       <Slider ref={sliderRef} {...props}>
         {data.map((el) => (
           <div
