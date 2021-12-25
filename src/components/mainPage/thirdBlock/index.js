@@ -12,6 +12,7 @@ import cursorPlay from "../../../styles/img/icons/watch_icon.png";
 // import playText from "../../../styles/img/icons/play_text.svg";
 import useWindowSize from "../../../utils/useWindowSize";
 import { slides } from "../../../constants";
+import Modal from "../../modal";
 
 export const animatedArrows = (color) => {
   return (
@@ -24,36 +25,45 @@ export const animatedArrows = (color) => {
 };
 
 const ThirdBlock = () => {
+  // const [isFullScreen, setIsFullScreen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const videoRef = useRef(null);
-  const [isFullScreen, setIsFullScreen] = useState(false);
-  const ws = useWindowSize();
+  // const ws = useWindowSize();
 
-  const toggleFullScreen = () => {
+  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => {
+    setIsModalOpen(true);
     const el = videoRef.current;
     if (!el) return;
     el.muted = false;
-    el.style.display = 'block';
-    if (el.requestFullscreen) {
-      el.requestFullscreen();
-    } else if (el.mozRequestFullScreen) {
-      el.mozRequestFullScreen();
-    } else if (el.webkitRequestFullscreen) {
-      el.webkitRequestFullscreen();
-    }
   };
 
-  useLayoutEffect(() => {
-    const refEl = videoRef.current;
-    if (refEl) {
-      if (ws.width === refEl.clientWidth) {
-        setIsFullScreen(true);
-        refEl.currentTime = 0;
-      } else {
-        setIsFullScreen(false);
-        refEl.muted = true;
-      }
-    }
-  });
+  // const toggleFullScreen = () => {
+  //   const el = videoRef.current;
+  //   if (!el) return;
+  //   el.muted = false;
+  //   el.style.display = "block";
+  //   if (el.requestFullscreen) {
+  //     el.requestFullscreen();
+  //   } else if (el.mozRequestFullScreen) {
+  //     el.mozRequestFullScreen();
+  //   } else if (el.webkitRequestFullscreen) {
+  //     el.webkitRequestFullscreen();
+  //   }
+  // };
+
+  // useLayoutEffect(() => {
+  //   const refEl = videoRef.current;
+  //   if (refEl) {
+  //     if (ws.width === refEl.clientWidth) {
+  //       setIsFullScreen(true);
+  //       refEl.currentTime = 0;
+  //     } else {
+  //       setIsFullScreen(false);
+  //       refEl.muted = true;
+  //     }
+  //   }
+  // });
 
   return (
     <section className={styles.main}>
@@ -74,7 +84,10 @@ const ThirdBlock = () => {
           <img className={styles.desktop} src={border} alt="border" />
           <img className={styles.tablet} src={borderTablet} alt="border" />
           <img className={styles.mobile} src={borderMobile} alt="border" />
-          <p data-aos="zoom-in" className={`description description_padding ${styles.contentText}`}>
+          <p
+            data-aos="zoom-in"
+            className={`description description_padding ${styles.contentText}`}
+          >
             The Galactic Fight League brings together the best fighters from
             earth and beyond. Where Humans, Cyborgs, Aliens and Zombies battle
             to become the best mixed martial art fighter in the metaverse.
@@ -85,25 +98,43 @@ const ThirdBlock = () => {
           data-aos-delay="133"
           className={styles.videoWrapper}
         >
-          <video
-            style={isFullScreen ? { WebkitMaskImage: "none"} : {display: 'none'}}
-            ref={videoRef}
-            autoPlay
-            muted
-            loop
-            src="https://storage.googleapis.com/galactic_assets/GFLFinal.mp4"
-            poster={preview}
-          ></video>
-          <img src="https://storage.googleapis.com/galactic_assets/GFLFinal_DrewVDO.gif" alt="gif" />
+          <Modal
+            trigger={
+              <div className={styles.playVideo}>
+                <div>
+                  <img src={cursorPlay} alt="cursorPlay" />
+                </div>
+              </div>
+            }
+            children={
+              <div className={styles.videoContentWrapper}>
+                <video
+                  // style={
+                  //   isFullScreen
+                  //     ? { WebkitMaskImage: "none" }
+                  //     : { display: "none" }
+                  // }
+                  ref={videoRef}
+                  autoPlay
+                  controls
+                  loop
+                  src="https://storage.googleapis.com/galactic_assets/GFLFinal.mp4"
+                  poster={preview}
+                ></video>
+              </div>
+            }
+            isOpen={isModalOpen}
+            onClose={closeModal}
+            onOpen={openModal}
+          />
+
+          <img
+            src="https://storage.googleapis.com/galactic_assets/GFLFinal_DrewVDO.gif"
+            alt="gif"
+          />
           {/* <div onClick={handleSound} className={styles.soundIcon}>
             <SoundIcon className={`sound-icon ${muted ? 'muted' : ''}`} />
           </div> */}
-          <div onClick={toggleFullScreen} className={styles.playVideo}>
-            <div>
-              <img src={cursorPlay} alt="cursorPlay" />
-              {/* <img src={playText} alt="playText" /> */}
-            </div>
-          </div>
         </div>
       </div>
       <div className={`${styles.civilizations} container-width`}>

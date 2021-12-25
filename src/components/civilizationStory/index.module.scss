@@ -21,8 +21,17 @@
   max-width: 150px;
   max-height: 150px;
   cursor: pointer;
+  z-index: 20;
   > img {
     width: 100%;
+  }
+}
+.videoContentWrapper {
+  width: 100%;
+  height: 100%;
+  > video {
+    width: 100%;
+    height: 100%;
   }
 }
 .mainHeader {

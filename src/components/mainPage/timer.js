@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as styles from "./index.module.scss";
+import background from "../../styles/img/timer_background.svg";
 
 const CustomTimer = () => {
   const [minute, setMinutes] = useState(0);
@@ -7,7 +8,8 @@ const CustomTimer = () => {
   const [day, setDays] = useState(0);
 
   const timer = () => {
-    const time = Date.parse("January, 13, 2022, 19:00") - Date.parse(new Date());
+    const time =
+      Date.parse("January, 13, 2022, 19:00") - Date.parse(new Date());
     if (time < 0) {
       setMinutes(0);
       setDays(0);
@@ -35,15 +37,20 @@ const CustomTimer = () => {
 
   return (
     <section className={styles.timerWrapper}>
-      <h5>
-        <span>{day}</span>
-        <span>D : </span>
-        <span>{hour}</span>
-        <span>H : </span>
-        <span>{minute}</span>
-        <span>M</span>
-      </h5>
-      <h5><p>Until Mint</p></h5>
+      {/* <img src={background} alt="background" /> */}
+      <div>
+        <h5 className={styles.timer}>
+          <span>{day}</span>
+          <span>D : </span>
+          <span>{hour}</span>
+          <span>H : </span>
+          <span>{minute}</span>
+          <span>M</span>
+        </h5>
+        <h5>
+          <p>-Until Mint-</p>
+        </h5>
+      </div>
     </section>
   );
 };

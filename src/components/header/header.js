@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { navigate } from "gatsby";
 import logo from "../../styles/img/logo.svg";
 import tabletLogo from "../../styles/img/tablet-logo.svg";
 import menu from "../../styles/img/menu-icon.png";
@@ -15,9 +16,11 @@ import {
 } from "../../constants";
 
 const Header = () => {
-  const [y, setY] = useState(typeof window !== 'undefined' ? window.scrollY : 0);
+  const [y, setY] = useState(
+    typeof window !== "undefined" ? window.scrollY : 0
+  );
   const [isHederFixed, setIsHederFixed] = useState(false);
-  const [headerClassName, setHeaderClassName] = useState('');
+  const [headerClassName, setHeaderClassName] = useState("");
   const ws = useWindowSize();
 
   const handleCloseMenu = () => {
@@ -35,21 +38,22 @@ const Header = () => {
   };
 
   const handleNavigation = useCallback(
-    e => {
+    (e) => {
       const window = e.currentTarget;
       if (y > window.scrollY || window.scrollY <= 45) {
-        setHeaderClassName(' active-header')
+        setHeaderClassName(" active-header");
       } else if (y < window.scrollY) {
-        setHeaderClassName(' disabled-header')
+        setHeaderClassName(" disabled-header");
       }
       setY(window.scrollY);
-    }, [y]
+    },
+    [y]
   );
-  
+
   useEffect(() => {
     setY(window.scrollY);
     window.addEventListener("scroll", handleNavigation);
-  
+
     return () => {
       window.removeEventListener("scroll", handleNavigation);
     };
@@ -63,7 +67,12 @@ const Header = () => {
       style={isHederFixed ? { position: "fixed" } : { position: "absolute" }}
     >
       <div className={styles.menu}>
-        <img className={styles.tabletLogo} src={tabletLogo} alt="tabletLogo" />
+        <img
+          onClick={() => navigate("/")}
+          className={styles.tabletLogo}
+          src={tabletLogo}
+          alt="tabletLogo"
+        />
         <img
           onClick={isHederFixed ? handleCloseMenu : handleOpenMenu}
           className={styles.menuIcon}
@@ -71,7 +80,12 @@ const Header = () => {
           alt="menu"
         />
       </div>
-      <img className={styles.logo} src={logo} alt="logo" />
+      <img
+        onClick={() => navigate("/")}
+        className={styles.logo}
+        src={logo}
+        alt="logo"
+      />
       <div className={styles.buttonsBlock}>
         <MainButtonExternal
           url={discordLink}

@@ -1,10 +1,16 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import logo from "../../styles/img/logo.png";
 import border from "../../styles/img/border_line.png";
 import * as styles from "./index.module.scss";
 import { MainButtonExternal, SocialButton } from "../buttons";
-import { instagram, twitter, twitterLink, instagramLink, discordLink } from '../../constants';
+import {
+  instagram,
+  twitter,
+  twitterLink,
+  instagramLink,
+  discordLink,
+} from "../../constants";
 import useWindowSize from "../../utils/useWindowSize";
 
 const Footer = ({ siteTitle }) => {
@@ -16,7 +22,7 @@ const Footer = ({ siteTitle }) => {
       <img src={border} alt="border" />
       <section>
         <div className={styles.leftBlock}>
-          <img src={logo} alt="logo" />
+          <img onClick={() => navigate("/")} src={logo} alt="logo" />
           <span>
             Copyright © Galactic Fight League
             <br />
@@ -25,7 +31,13 @@ const Footer = ({ siteTitle }) => {
         </div>
         <div className={styles.rightBlock}>
           <div>
-            <MainButtonExternal url={discordLink} title={'Join Discord'} isDouble={false} isPurple={false} small={showSmallButton} />
+            <MainButtonExternal
+              url={discordLink}
+              title={"Join Discord"}
+              isDouble={false}
+              isPurple={false}
+              small={showSmallButton}
+            />
             <div className="sm-buttons">
               <SocialButton url={twitterLink} Icon={twitter} />
               <SocialButton url={instagramLink} Icon={instagram} />
@@ -39,6 +51,6 @@ const Footer = ({ siteTitle }) => {
       </section>
     </footer>
   );
-}
+};
 
 export default Footer;

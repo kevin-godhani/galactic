@@ -13,49 +13,59 @@ import EliteFighters from "./elitfighterSlider";
 import { animatedArrows } from "../mainPage/thirdBlock";
 import cursorPlay from "../../styles/img/icons/watch_civilization.png";
 import useWindowSize from "../../utils/useWindowSize";
+import Modal from "../modal";
 
 const CivilizationStoryContent = ({ data }) => {
   const videoRef = useRef(null);
   const animationRef = useRef(null);
   const [fightSkills, setFightSkills] = useState(1);
-  const [isFullScreen, setIsFullScreen] = useState(false);
+  // const [isFullScreen, setIsFullScreen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const ws = useWindowSize();
 
+  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+    const el = videoRef.current;
+    if (!el) return;
+    el.muted = false;
+  };
   const ws = useWindowSize();
   const isMobileWidth = ws.width <= 480;
 
-  const toggleFullScreen = () => {
-    const el = videoRef.current;
-    const background = animationRef.current;
-    if (!el || !background) return;
-    el.muted = false;
-    el.style.display = "block";
-    el.style.WebkitMaskImage = "none"
-    background.style.display = "none";
-    el.play();
-    if (el.requestFullscreen) {
-      el.requestFullscreen();
-    } else if (el.mozRequestFullScreen) {
-      el.mozRequestFullScreen();
-    } else if (el.webkitRequestFullscreen) {
-      el.webkitRequestFullscreen();
-    }
-  };
+  // const toggleFullScreen = () => {
+  //   const el = videoRef.current;
+  //   const background = animationRef.current;
+  //   if (!el || !background) return;
+  //   el.muted = false;
+  //   el.style.display = "block";
+  //   el.style.WebkitMaskImage = "none"
+  //   background.style.display = "none";
+  //   el.play();
+  //   if (el.requestFullscreen) {
+  //     el.requestFullscreen();
+  //   } else if (el.mozRequestFullScreen) {
+  //     el.mozRequestFullScreen();
+  //   } else if (el.webkitRequestFullscreen) {
+  //     el.webkitRequestFullscreen();
+  //   }
+  // };
 
-  useLayoutEffect(() => {
-    const refEl = videoRef.current;
-    if (refEl) {
-      if (ws.width === refEl.clientWidth) {
-        setIsFullScreen(true);
-        refEl.currentTime = 0;
-      } else {
-        setIsFullScreen(false);
-        refEl.muted = true;
-        const background = animationRef.current;
-        if (!background) return;
-        background.style.display = "block";
-      }
-    }
-  });
+  // useLayoutEffect(() => {
+  //   const refEl = videoRef.current;
+  //   if (refEl) {
+  //     if (ws.width === refEl.clientWidth) {
+  //       setIsFullScreen(true);
+  //       refEl.currentTime = 0;
+  //     } else {
+  //       setIsFullScreen(false);
+  //       refEl.muted = true;
+  //       const background = animationRef.current;
+  //       if (!background) return;
+  //       background.style.display = "block";
+  //     }
+  //   }
+  // });
 
   return (
     <div className={`${styles.CivilizationStoryContent}`}>
@@ -130,14 +140,34 @@ const CivilizationStoryContent = ({ data }) => {
         </div>
         <div className={styles.videoBlock}>
           <img src={videoBorder} alt="videoBorder" />
-          <video
-            ref={videoRef}
-            style={
-              isFullScreen ? { WebkitMaskImage: "none" } : { display: "none" }
+          <Modal
+            trigger={
+              <div className={styles.playVideo}>
+                <div>
+                  <img src={cursorPlay} alt="cursorPlay" />
+                </div>
+              </div>
             }
-            loop
-            src={`https://storage.googleapis.com/galactic_assets/Civilization%20Videos%20/${data.id}.mp4`}
-            poster={data.previewImg}
+            children={
+              <div className={styles.videoContentWrapper}>
+                <video
+                  ref={videoRef}
+                  // style={
+                  //   isFullScreen
+                  //     ? { WebkitMaskImage: "none" }
+                  //     : { display: "none" }
+                  // }
+                  loop
+                  controls
+                  autoPlay
+                  src={`https://storage.googleapis.com/galactic_assets/Civilization%20Videos%20/${data.id}.mp4`}
+                  poster={data.previewImg}
+                />
+              </div>
+            }
+            isOpen={isModalOpen}
+            onClose={closeModal}
+            onOpen={openModal}
           />
           <video
             ref={animationRef}
@@ -148,9 +178,9 @@ const CivilizationStoryContent = ({ data }) => {
             poster={data.previewImg}
           />
           <img className={styles.label} src={label} alt="label" />
-          <div onClick={toggleFullScreen} className={styles.playVideo}>
+          {/* <div onClick={toggleFullScreen} className={styles.playVideo}>
             <img src={cursorPlay} alt="cursorPlay" />
-          </div>
+          </div> */}
         </div>
 
         <h2 data-aos="fade-up" className={`title ${styles.fightersTitle}`}>
@@ -158,20 +188,12 @@ const CivilizationStoryContent = ({ data }) => {
         </h2>
         <div className={styles.description}>
           <span data-aos-delay="600" data-aos="fade-up" className="description">
-            The Gladiator Class is not like our regular fighters. It will not be
-            created via algorithm, instead these fighters will be hand crafted
-            and will represent the best that each clan has to offer (their
-            chosen Champion/bestfighters)
-          </span>
-          <span
-            data-aos-delay="1200"
-            data-aos="fade-up"
-            className="description"
-          >
-            Initially we will start with 1 for each race (1 male and 1 female)
-            we will later look to airdrop new Gladiator class fighters into the
-            league. These can be via collabs, competitions and other cool things
-            that we can really milk for PR.
+            Some are meant to fight, some to fall. They got where they are by
+            crushing the bodies and souls of their enemies, the reputation
+            spreading across the galaxy as the war ground on. When the guns fell
+            silent they turned their hand to the Galactic Fight League, the
+            founding members, the originals. Some are created equally, some are
+            born to dominate.
           </span>
         </div>
       </div>
