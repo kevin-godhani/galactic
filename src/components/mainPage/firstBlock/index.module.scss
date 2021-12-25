@@ -3,24 +3,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 560px;
-  max-height: 82.3vh;
+  min-height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
   &-video {
     min-width: 100%;
-    min-height: 560px;
+    min-height: 100vh;
     object-fit: cover;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .hero-section {
-    min-height: 93vh;
-    max-height: 93vh;
-    &-video {
-      min-height: 93vh;
-    }
-  }
+  // .hero-section {
+  //   min-height: 93vh;
+  //   max-height: 93vh;
+  //   &-video {
+  //     min-height: 93vh;
+  //   }
+  // }
 
   .scroll-button {
     &-link {
@@ -30,12 +30,12 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
-  .hero-section {
-    min-height: 80vh;
-    max-height: 80vh;
-    &-video {
-      min-height: 80vh;
-    }
-  }
-}
+// @media only screen and (max-width: 480px) {
+//   // .hero-section {
+//   //   min-height: 80vh;
+//   //   max-height: 80vh;
+//   //   &-video {
+//   //     min-height: 80vh;
+//   //   }
+//   // }
+// }
