@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useMemo } from "react";
 import Ticker from "react-ticker";
 import * as styles from "./index.module.scss";
 import { MainButton } from "../buttons/index";
 import CivilizationStoryContent from "./content";
 import { ButtonsBlock } from '../buttons';
+import gsap from 'gsap';
 import border from "../../styles/img/border_line.png";
 import next_back from "../../styles/img/next_back.png";
 import border2 from "../../styles/img/icons/border2.png";
@@ -13,8 +14,37 @@ import border_animation from "../../styles/img/border_amination.png";
 
 const CivilizationsStory = ({ data, nextTitle }) => {
   const [isMale, setIsMale] = useState(true);
+  const displacementMapRef = useRef(null);
+  const tl = useRef(
+    gsap.timeline({ immediateRender: false })
+      .to(displacementMapRef?.current, { duration: 0.18, attr: { scale: 100 } })
+      .to(displacementMapRef?.current, { duration: 0.18, attr: { scale: 0 } }
+  )) ;
+
+  const onButtonClick = (isMale) => {
+    tl?.current?.play();
+
+    setIsMale(isMale);
+  }
   return (
     <section className={styles.main}>
+      <svg>
+        <filter id="distortionFilter">
+          <feTurbulence
+              baseFrequency="0.015 0.1"
+              numOctaves="3"
+              type="fractalNoise"
+              result='wrap'/>
+          <feDisplacementMap
+            ref={displacementMapRef}
+            id='effect'
+            in="SourceGraphic"
+            in2="wrap"
+            scale="0"
+            xChannelSelector="R"
+            yChannelSelector="B" />
+        </filter>
+      </svg>
       <img src={border} alt="border" />
       <div className={styles.mainHeader}>
         <Ticker direction="toLeft">
@@ -35,8 +65,8 @@ const CivilizationsStory = ({ data, nextTitle }) => {
             <ButtonsBlock
               leftButtonTitle='Male'
               rightButtonTitle='Female'
-              onLeftButtonClick={() => setIsMale(true)}
-              onRightButtonClick={() => setIsMale(false)}
+              onLeftButtonClick={() => onButtonClick(true)}
+              onRightButtonClick={() => onButtonClick(false)}
               containerStyle={styles.slidesButtons}
               buttonStyle={styles.slidesButton}
               textStyle={styles.slidesButtonText}
@@ -69,7 +99,7 @@ const CivilizationsStory = ({ data, nextTitle }) => {
                   src={data.logo}
                   alt="logo"
                 />
-                <img src={isMale ? data.male : data.female} alt="decor" />
+                <img src={isMale ? data.male : data.female} style={{ filter: 'url(#distortionFilter)' }} alt="decor" />
               </div>
             </div>
           </div>

@@ -37,7 +37,7 @@ const SlickSlider = ({ redirect, containerClassName, className, data, isClickabl
       return;
     }
     sliderRef.current.slickGoTo(activeSlideIndex);
-  }, [activeSlideIndex, sliderRef?.current]);
+  }, [activeSlideIndex]);
 
   return (
     <div data-aos={fadeIn ? "fade-up" : null} className={`${styles.sliderWrapper} ${containerClassName}`}>
