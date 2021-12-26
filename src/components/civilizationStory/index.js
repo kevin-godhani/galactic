@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo } from "react";
+import React, { useState, useRef } from "react";
 import Ticker from "react-ticker";
 import * as styles from "./index.module.scss";
 import { MainButton } from "../buttons/index";
@@ -15,14 +15,17 @@ import border_animation from "../../styles/img/border_amination.png";
 const CivilizationsStory = ({ data, nextTitle }) => {
   const [isMale, setIsMale] = useState(true);
   const displacementMapRef = useRef(null);
-  const tl = useRef(
-    gsap.timeline({ immediateRender: false })
+  const tl = (() => {
+    if (!displacementMapRef?.current) {
+      return null;
+    }
+    return gsap.timeline({ immediateRender: false })
       .to(displacementMapRef?.current, { duration: 0.18, attr: { scale: 100 } })
-      .to(displacementMapRef?.current, { duration: 0.18, attr: { scale: 0 } }
-  )) ;
+      .to(displacementMapRef?.current, { duration: 0.18, attr: { scale: 0 } })
+  })();
 
   const onButtonClick = (isMale) => {
-    tl?.current?.play();
+    tl?.play();
 
     setIsMale(isMale);
   }

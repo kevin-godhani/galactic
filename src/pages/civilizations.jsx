@@ -3,10 +3,9 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import CivilizationsMain from "../components/civilizations"
 
-
 const Civilizations = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="Civilizations" />
     <CivilizationsMain />
   </Layout>
 )

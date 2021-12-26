@@ -234,14 +234,16 @@
 
 .slider-arrows-container {
   position: absolute;
+  pointer-events: none;
 }
 
 .slider-arrow {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 93px;
-  transform-origin: '50% 50%';
+  // transform-origin: '50% 50%';
   pointer-events: all;
   &.next {
     .slider-arrow-icon {

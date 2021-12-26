@@ -675,6 +675,16 @@ pre tt:after {
       }
     }
   }
+  &.civilizations-slides-slider {
+    .slick-slide {
+      img {
+        max-width: 100%;
+        padding: 0;
+        width: unset;
+        min-width: unset;
+      }
+    }
+  }
 }
 .civilizations-slider-wrap {
   padding-top: 0 !important;

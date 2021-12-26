@@ -143,18 +143,20 @@ export const SliderArrows = ({
   limitMax,
   containerStyle,
   arrowStyle,
+  leftArrowStyle,
+  rightArrowStyle,
 }) => {
   return (
     <div className={`slider-arrows-container ${containerStyle ? containerStyle : ''}`}>
       <div
-        className={`slider-arrow prev ${arrowStyle ? arrowStyle : ''}`}
+        className={`slider-arrow prev ${arrowStyle ? arrowStyle : ''} ${leftArrowStyle ? leftArrowStyle : ''}`}
         onClick={onPrev}
         style={ !limitMin ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, pointerEvents: 'none' }}
       >
         <SliderArrow />
       </div>
       <div
-        className={`slider-arrow next ${arrowStyle ? arrowStyle : ''}`}
+        className={`slider-arrow next ${arrowStyle ? arrowStyle : ''} ${rightArrowStyle ? rightArrowStyle : ''}`}
         onClick={onNext}
         style={ !limitMax ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, pointerEvents: 'none' }}
       >
