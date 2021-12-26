@@ -14,6 +14,7 @@ import { animatedArrows } from "../mainPage/thirdBlock";
 import cursorPlay from "../../styles/img/icons/watch_civilization.png";
 import useWindowSize from "../../utils/useWindowSize";
 import Modal from "../modal";
+import CloseIcon from "../mainPage/thirdBlock/closeIcon";
 
 const CivilizationStoryContent = ({ data }) => {
   const videoRef = useRef(null);
@@ -150,6 +151,7 @@ const CivilizationStoryContent = ({ data }) => {
             }
             children={
               <div className={styles.videoContentWrapper}>
+                <CloseIcon onClick={closeModal} />
                 <video
                   ref={videoRef}
                   // style={

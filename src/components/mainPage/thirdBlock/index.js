@@ -10,9 +10,10 @@ import borderMobile from "../../../styles/img/border-mobile.png";
 import * as styles from "./index.module.scss";
 import cursorPlay from "../../../styles/img/icons/watch_icon.png";
 // import playText from "../../../styles/img/icons/play_text.svg";
-import useWindowSize from "../../../utils/useWindowSize";
+// import useWindowSize from "../../../utils/useWindowSize";
 import { slides } from "../../../constants";
 import Modal from "../../modal";
+import CloseIcon from "./closeIcon";
 
 export const animatedArrows = (color) => {
   return (
@@ -108,6 +109,7 @@ const ThirdBlock = () => {
             }
             children={
               <div className={styles.videoContentWrapper}>
+                <CloseIcon onClick={closeModal} />
                 <video
                   // style={
                   //   isFullScreen
