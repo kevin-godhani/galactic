@@ -6,6 +6,7 @@ import button_rectangle_hover_icon from "../../styles/img/button_rectangle_hover
 import ButtonBg from "../../styles/img/button-bg.inline.svg";
 import ButtonBgDouble from "../../styles/img/button-bg-double.inline.svg";
 import { sliderButtonBg, sliderButtonBgActive } from "../../constants";
+import SliderArrow from "../icons/slider-arrow";
 import "./index.scss";
 
 export const MainButton = ({to, title, isDouble, isPurple, small, textContainerClassName, longTitle}) => {
@@ -133,4 +134,32 @@ export const ButtonsBlock = ({
       </div>
     </div>
   );
-}
+};
+
+export const SliderArrows = ({
+  onPrev,
+  onNext,
+  limitMin,
+  limitMax,
+  containerStyle,
+  arrowStyle,
+}) => {
+  return (
+    <div className={`slider-arrows-container ${containerStyle ? containerStyle : ''}`}>
+      <div
+        className={`slider-arrow prev ${arrowStyle ? arrowStyle : ''}`}
+        onClick={onPrev}
+        style={ !limitMin ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, pointerEvents: 'none' }}
+      >
+        <SliderArrow />
+      </div>
+      <div
+        className={`slider-arrow next ${arrowStyle ? arrowStyle : ''}`}
+        onClick={onNext}
+        style={ !limitMax ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, pointerEvents: 'none' }}
+      >
+        <SliderArrow />
+      </div>
+    </div>
+  );
+};

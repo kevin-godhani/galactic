@@ -7070,6 +7070,11 @@ kebab-hash@^0.1.2:
   dependencies:
     lodash.kebabcase "^4.1.1"
 
+keymaster@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/keymaster/-/keymaster-1.6.2.tgz#e1ae54d0ea9488f9f60b66b668f02e9a1946c6eb"
+  integrity sha1-4a5U0OqUiPn2C2a2aPAumhlGxus=
+
 keyv@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-3.1.0.tgz#ecc228486f69991e49e9476485a5be1e8fc5c4d9"
@@ -9133,6 +9138,13 @@ react-player@^2.9.0:
     prop-types "^15.7.2"
     react-fast-compare "^3.0.1"
 
+react-popup@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/react-popup/-/react-popup-0.10.0.tgz#8e8a7cd9a8b46d8f981c0216756e32ff2cacf2ac"
+  integrity sha512-NPO65MsAznv/JaP3MDz3DAqKJsA8fEcW5ttzTj6wGXtjPi0qDeB+f+hf4IbMcVrlJ2ZG4uHEdgL6B5QP/AGv3Q==
+  dependencies:
+    keymaster "^1.6.2"
+
 react-refresh@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.9.0.tgz#71863337adc3e5c2f8a6bfddd12ae3bfe32aafbf"
@@ -9187,6 +9199,11 @@ react@^17.0.1:
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
+
+reactjs-popup@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/reactjs-popup/-/reactjs-popup-2.0.5.tgz#588a74966bb126699429d739948e3448d7771eac"
+  integrity sha512-b5hv9a6aGsHEHXFAgPO5s1Jw1eSkopueyUVxQewGdLgqk2eW0IVXZrPRpHR629YcgIpC2oxtX8OOZ8a7bQJbxA==
 
 read@^1.0.7:
   version "1.0.7"

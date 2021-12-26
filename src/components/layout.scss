@@ -679,6 +679,8 @@ pre tt:after {
 .civilizations-slider-wrap {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+  position: relative;
+  z-index: 1;
 }
 
 .ticker__element {

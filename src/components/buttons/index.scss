@@ -231,6 +231,37 @@
   }
 }
 
+
+.slider-arrows-container {
+  position: absolute;
+}
+
+.slider-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 93px;
+  transform-origin: '50% 50%';
+  pointer-events: all;
+  &.next {
+    .slider-arrow-icon {
+      transform: rotate(180deg);
+    }
+  }
+  &:hover {
+    .slider-arrow-icon-path {
+      fill-opacity: 1;
+    }
+  }
+  &-icon {
+    width: 100%;
+    height: auto;
+    &-path {
+      transition: all 375ms ease;
+    }
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .mainButton {
     .mainButtonContent {
@@ -240,5 +271,9 @@
         line-height: 1;
       }
     }
+  }
+
+  .slider-arrow {
+    width: 49px;
   }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { navigate } from "gatsby";
 import Ticker from "react-ticker";
 import { pageData, carousel } from "./dataMocks";
@@ -11,7 +11,8 @@ import useWindowSize from "../../utils/useWindowSize";
 import SlickSlider from "../mainPage/secondBlock/slider";
 import CivilizationsContent from "./content";
 import { civilizationsStoryData } from "./dataMocks";
-import { ButtonsBlock } from '../buttons';
+import { SliderArrows } from '../buttons';
+import gsap from 'gsap';
 
 const CivilizationsMain = () => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -19,12 +20,15 @@ const CivilizationsMain = () => {
   const ws = useWindowSize();
   const isTabletWidth = ws.width <= 1200 && ws.width >= 481;
   const isMobileWidth = ws.width <= 480;
+  const displacementMapRef = useRef(null);
 
   const isMinValue = activeSlideIndex === 0;
   const isMaxValue = activeSlideIndex === carousel?.length - 1;
 
   const handleChangeStep = (step) => {
     setIsAnimating(false);
+
+    gsap.to(displacementMapRef.current, { duration: 0.18, attr: { scale: 0 } });
   };
 
   const handleRedirect = (id) => {
@@ -38,7 +42,6 @@ const CivilizationsMain = () => {
       ? pageData[activeSlideIndex]?.mobileBackground
       : pageData[activeSlideIndex]?.background;
 
-  
   const onPrev = () => {
     if (isMinValue || isAnimating) {
       return;
@@ -46,6 +49,8 @@ const CivilizationsMain = () => {
 
     setIsAnimating(true);
     setActiveSlideIndex(activeSlideIndex - 1);
+
+    gsap.to(displacementMapRef?.current, { duration: 0.18, attr: { scale: 100 } });
   }
 
   const onNext = () => {
@@ -55,12 +60,14 @@ const CivilizationsMain = () => {
 
     setIsAnimating(true);
     setActiveSlideIndex(activeSlideIndex + 1);
+
+    gsap.to(displacementMapRef?.current, { duration: 0.18, attr: { scale: 100 } });
   }
 
   const settings = {
     slidesToShow: 3,
-    draggable: false,
-    swipe: false,
+    // draggable: false,
+    // swipe: false,
     responsive: [
       {
         breakpoint: 1921,
@@ -79,6 +86,23 @@ const CivilizationsMain = () => {
 
   return (
     <section className={styles.main}>
+      <svg>
+        <filter id="distortionFilter">
+          <feTurbulence 
+              baseFrequency="0.015 0.1"
+              numOctaves="3"
+              type="fractalNoise"
+              result='wrap'/>
+          <feDisplacementMap
+            ref={displacementMapRef}
+            id='effect'
+            in="SourceGraphic"
+            in2="wrap"
+            scale="0"
+            xChannelSelector="R"
+            yChannelSelector="B" />
+        </filter>
+      </svg>
       <img src={border} alt="border" />
       <div className={style.mainHeader}>
         <Ticker direction="toLeft">
@@ -99,7 +123,7 @@ const CivilizationsMain = () => {
         }}
       >
         <div className={styles.decorLine} />
-        <img src={pageData[activeSlideIndex]?.decor} alt="decor" />
+        <img src={pageData[activeSlideIndex]?.decor} style={{ filter: 'url(#distortionFilter)' }} alt="decor" />
         <span>SELECT CIVILISATION</span>
       </div>
 
@@ -114,7 +138,6 @@ const CivilizationsMain = () => {
           activeSlideIndex={activeSlideIndex}
           isClickable
         />
-        <div className={styles.dimming}></div>
         <div className={styles.slidesCounter}>
           <img src={slidesCounter} className={styles.slidesCounterImage} alt="background" />
             <span className={styles.slidesCounterText}>
@@ -123,14 +146,10 @@ const CivilizationsMain = () => {
               <span className={styles.slidesCounterLength}>{carousel?.length < 10 ? `0${carousel?.length}` : carousel?.length}</span>
             </span>
         </div>
-        <ButtonsBlock
-          leftButtonTitle='Back'
-          rightButtonTitle='Next'
-          onLeftButtonClick={onPrev}
-          onRightButtonClick={onNext}
-          containerStyle={styles.slidesButtons}
-          buttonStyle={styles.slidesButton}
-          textStyle={styles.slidesButtonText}
+        <SliderArrows
+          onPrev={onPrev}
+          onNext={onNext}
+          containerStyle={styles.sliderArrows}
           limitMin={isMinValue}
           limitMax={isMaxValue}
         />

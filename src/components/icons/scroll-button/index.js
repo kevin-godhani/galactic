@@ -7,17 +7,18 @@ const ScrollButtonIcon = () => {
 
     useEffect(() => {
         if (scrollBtnBgOuterRef.current && scrollBtnBgInnerRef.current) {
-        gsap.set([scrollBtnBgOuterRef.current, scrollBtnBgInnerRef.current], { transformOrigin: '50% 50%' });
+            gsap.set([scrollBtnBgOuterRef.current, scrollBtnBgInnerRef.current], { transformOrigin: '50% 50%' });
 
-        gsap.to(scrollBtnBgOuterRef.current, { duration: 0.8, scale: 1.17, delay: 0.1333, yoyo: true, repeat: -1 });
-        gsap.to(scrollBtnBgInnerRef.current, { duration: 0.8, scale: 1.2, yoyo: true, repeat: -1 });
+            gsap.to(scrollBtnBgOuterRef.current, { duration: 0.8, scale: 1.17, delay: 0.1333, yoyo: true, repeat: -1 });
+            gsap.to(scrollBtnBgInnerRef.current, { duration: 0.8, scale: 1.2, yoyo: true, repeat: -1 });
         }
 
         return () => {
-        gsap.killTweensOf([scrollBtnBgOuterRef.current, scrollBtnBgInnerRef.current]);
-        gsap.set([scrollBtnBgOuterRef.current, scrollBtnBgInnerRef.current], { scale:1 });
+            if (scrollBtnBgOuterRef.current && scrollBtnBgInnerRef.current) {
+                gsap.killTweensOf([scrollBtnBgOuterRef?.current, scrollBtnBgInnerRef?.current]);
+                gsap.set([scrollBtnBgOuterRef?.current, scrollBtnBgInnerRef?.current], { scale:1 });
+            }
         }
-
     }, [scrollBtnBgOuterRef, scrollBtnBgInnerRef]);
 
     return (

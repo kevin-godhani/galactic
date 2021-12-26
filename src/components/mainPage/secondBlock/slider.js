@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -26,7 +26,7 @@ const settings = {
     },
   ],
 };
-const SlickSlider = ({ redirect, containerClassName, className, data, isClickable = false, afterChange, sliderSettings, activeSlideIndex }) => {
+const SlickSlider = ({ redirect, containerClassName, className, data, isClickable = false, afterChange, sliderSettings, activeSlideIndex, fadeIn }) => {
   const s = {...settings, ...sliderSettings};
   const props = {...s, className: className, afterChange: afterChange};
 
@@ -40,7 +40,7 @@ const SlickSlider = ({ redirect, containerClassName, className, data, isClickabl
   }, [activeSlideIndex, sliderRef?.current]);
 
   return (
-    <div data-aos="fade-up" className={`${styles.sliderWrapper} ${containerClassName}`}>
+    <div data-aos={fadeIn ? "fade-up" : null} className={`${styles.sliderWrapper} ${containerClassName}`}>
       <Slider ref={sliderRef} {...props}>
         {data.map((el) => (
           <div
