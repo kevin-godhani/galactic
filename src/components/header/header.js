@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useContext } from "react";
 import { navigate } from "gatsby";
 import logo from "../../styles/img/logo.svg";
 import tabletLogo from "../../styles/img/tablet-logo.svg";
@@ -7,6 +7,7 @@ import menuOpened from "../../styles/img/menu-icon-opened.png";
 import * as styles from "./index.module.scss";
 import { MainButtonExternal, SocialButton } from "../buttons";
 import useWindowSize from "../../utils/useWindowSize";
+import Context from "../../context";
 import {
   instagram,
   twitter,
@@ -22,6 +23,7 @@ const Header = () => {
   const [isHederFixed, setIsHederFixed] = useState(false);
   const [headerClassName, setHeaderClassName] = useState("");
   const ws = useWindowSize();
+  const { hideCurtain } = useContext(Context);
 
   const handleCloseMenu = () => {
     document.getElementById("mobile-menu").classList.remove("menu-open");
@@ -58,6 +60,8 @@ const Header = () => {
       window.removeEventListener("scroll", handleNavigation);
     };
   }, [handleNavigation]);
+
+  useEffect(() => hideCurtain(), []);
 
   const showSmallButton = ws.width <= 480;
 

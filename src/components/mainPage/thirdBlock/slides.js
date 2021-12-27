@@ -1,10 +1,12 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import * as styles from "./index.module.scss";
 import useWindowSize from '../../../utils/useWindowSize';
-import { SliderArrows, MainButton } from "../../buttons";
+import { SliderArrows, ButtonWithoutLink } from "../../buttons";
 import slideBorder from '../../../styles/img/slide-border.svg';
 import slidesCounter from "../../../styles/img/slides-counter.svg";
 import Slider from "react-slick";
+import { navigate } from "gatsby-link";
+import Context from "../../../context";
 
 const sliderSettings = {
   dots: false,
@@ -21,6 +23,7 @@ const CivilizationSlides = ({ slides }) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const ws = useWindowSize();
   const sliderRef = useRef(null);
+  const { showCurtain } = useContext(Context);
 
   const isTabletWidth = ws.width <= 1200 && ws.width >= 481;
   const isMobileWidth = ws.width <= 480;
@@ -31,6 +34,11 @@ const CivilizationSlides = ({ slides }) => {
 
   const onNext = () => {
     sliderRef.current?.slickNext();
+  };
+
+  const onSlideButtonClick = async (link) => {
+    await showCurtain();
+    navigate(link);
   };
 
   return (
@@ -53,7 +61,7 @@ const CivilizationSlides = ({ slides }) => {
                   {s.description}
                 </p>
                 <div className={styles.slideBtnWrap}>
-                  <MainButton to={s.link} title={"Discover"} isDouble={true} small={isMobileWidth} textContainerClassName={styles.buttonTextContainer} />
+                  <ButtonWithoutLink callback={() => onSlideButtonClick(s.link)} title={"Discover"} isDouble={true} small={isMobileWidth} textContainerClassName={styles.buttonTextContainer} />
                 </div>
               </div>
             </div>

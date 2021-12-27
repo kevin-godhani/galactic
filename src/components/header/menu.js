@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "gatsby";
 import * as styles from "./index.module.scss";
 import bg1 from "../../styles/img/menu-bg1.png";
@@ -7,17 +7,25 @@ import bgFighter1 from "../../styles/img/menu-fighter1.png";
 import bgFighter2 from "../../styles/img/menu-fighter2.png";
 import { twitter, instagram, twitterLink, instagramLink } from "../../constants";
 import { SocialButton } from '../buttons';
+import Context from "../../context";
+import { navigate } from "gatsby";
 
 const bgs = [bg1, bg2];
 const fighters = [bgFighter1, bgFighter2];
 
 const Menu = () => {
   const [activeMenuItemIndex, setActiveMenuItemIndex] = useState(0);
+  const { showCurtain } = useContext(Context);
 
-  const handleCloseMenu = () => {
+  const handleCloseMenu = async (route) => {
     document.getElementById("mobile-menu").classList.remove("menu-open");
     document.body.classList.remove("scroll-lock");
     document.documentElement.classList.remove("scroll-lock");
+
+    if (typeof window !== "undefined" && window.location.pathname !== route) {
+      await showCurtain();
+      navigate(route);
+    }
   };
 
   const handleMouseEnter = (e) => {
@@ -31,26 +39,26 @@ const Menu = () => {
   return (
     <div id="mobile-menu" className={styles.menuWrapper}>
       <img src={bgs[activeMenuItemIndex]} className={styles.menuBg} alt="decor" />
-      <Link
-        to="/"
+      <div
+        // to="/"
         data-index={0}
-        onClick={handleCloseMenu}
+        onClick={() => handleCloseMenu('/')}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         <span>01</span>
         <p>Main Page</p>
-      </Link>
-      <Link
-        to="/civilizations"
+      </div>
+      <div  
+        // to="/civilizations"
         data-index={1}
-        onClick={handleCloseMenu}
+        onClick={() => handleCloseMenu('/civilizations')}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         <span>02</span>
         <p>civilisations</p>
-      </Link>
+      </div>
       <img src={fighters[activeMenuItemIndex]} className={styles.decoration} alt="decor" />
 
       <div className="sm-buttons mobile-only menu">

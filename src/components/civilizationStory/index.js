@@ -1,20 +1,23 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import Ticker from "react-ticker";
 import * as styles from "./index.module.scss";
-import { MainButton } from "../buttons/index";
+import { ButtonWithoutLink } from "../buttons/index";
 import CivilizationStoryContent from "./content";
 import { ButtonsBlock } from '../buttons';
 import gsap from 'gsap';
+import { navigate } from "gatsby-link";
+import Context from "../../context";
 import border from "../../styles/img/border_line.png";
 import next_back from "../../styles/img/next_back.png";
 import border2 from "../../styles/img/icons/border2.png";
-
 import border_animationTablet from "../../styles/img/tablet_civilizations_boder.png";
 import border_animation from "../../styles/img/border_amination.png";
 
 const CivilizationsStory = ({ data, nextTitle }) => {
   const [isMale, setIsMale] = useState(true);
   const displacementMapRef = useRef(null);
+  const { showCurtain } = useContext(Context);
+
   const tl = (() => {
     if (!displacementMapRef?.current) {
       return null;
@@ -29,6 +32,12 @@ const CivilizationsStory = ({ data, nextTitle }) => {
 
     setIsMale(isMale);
   }
+
+  const onNextClick = async (route) => {
+    await showCurtain();
+    navigate(route);
+  };
+
   return (
     <section className={styles.main}>
       <svg>
@@ -158,7 +167,7 @@ const CivilizationsStory = ({ data, nextTitle }) => {
         style={{ marginBottom: "100px" }}
         className="container-width flex-center"
       >
-        <MainButton to={data.nextLink} title={"Next"} isDouble={true} textContainerClassName={styles.buttonTextContainer} />
+        <ButtonWithoutLink callback={() => onNextClick(data.nextLink)} title={"Next"} isDouble={true} textContainerClassName={styles.buttonTextContainer} />
       </div>
     </section>
   );

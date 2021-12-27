@@ -1,5 +1,5 @@
-import React from "react";
-import { Link, navigate } from "gatsby";
+import React, { useContext } from "react";
+import { navigate } from "gatsby";
 import logo from "../../styles/img/logo.png";
 import border from "../../styles/img/border_line.png";
 import * as styles from "./index.module.scss";
@@ -12,10 +12,19 @@ import {
   discordLink,
 } from "../../constants";
 import useWindowSize from "../../utils/useWindowSize";
+import Context from "../../context";
 
 const Footer = ({ siteTitle }) => {
   const ws = useWindowSize();
   const showSmallButton = ws.width <= 480;
+  const { showCurtain } = useContext(Context);
+
+  const onLinkClick = async (route) => {
+    if (typeof window !== "undefined" && window.location.pathname !== route) {
+      await showCurtain();
+      navigate(route);
+    }
+  };
 
   return (
     <footer className={styles.footer}>
@@ -44,8 +53,8 @@ const Footer = ({ siteTitle }) => {
             </div>
           </div>
           <div>
-            <Link to="/">Main Page</Link>
-            <Link to="/civilizations">Civilisations</Link>
+            <span onClick={() => onLinkClick('/')}>Main Page</span>
+            <span onClick={() => onLinkClick('/civilizations')}>Civilisations</span>
           </div>
         </div>
       </section>

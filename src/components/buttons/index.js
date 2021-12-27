@@ -67,13 +67,14 @@ export const doubleStripeButton = (to, title, callback) => {
   );
 };
 
-export const buttonWithoutLink = (title, callback, isDouble, isPurple) => {
+
+export const ButtonWithoutLink = ({callback, title, isDouble, isPurple, small, textContainerClassName, longTitle}) => {
   return (
-    <div onClick={() => callback && callback()} className={`mainButton ${isDouble ? 'doubleStripe' : ''}`}>
+    <div onClick={() => callback && callback()} className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''}`}>
       {isDouble && <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>}
       <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>
-      <div className={'mainButtonContent'}>
-        {isDouble ? (
+      <div className={`mainButtonContent ${textContainerClassName ? textContainerClassName : ''}`}>
+        {longTitle ? (
           <ButtonBgDouble className={`button-bg ${isPurple ? 'purple' : ''}`} />
         ) : (
           <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />

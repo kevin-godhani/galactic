@@ -65,13 +65,14 @@
     bottom: 0;
     right: 32px;
   }
-  > a {
+  > div {
     z-index: 9999;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     margin-left: 40px;
     text-decoration: none;
+    cursor: pointer;
     color: #ffffff;
     &:hover {
       > span,
@@ -170,7 +171,7 @@
       width: 100%;
       right: 0;
     }
-    > a {
+    > div {
       margin-left: 30px;
       > span {
         font-size: 26px;

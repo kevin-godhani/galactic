@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import { navigate } from "gatsby";
 import Ticker from "react-ticker";
 import { pageData, carousel } from "./dataMocks";
@@ -7,7 +7,7 @@ import slidesCounter from "../../styles/img/slider-counter-bg.svg";
 import * as styles from "./index.module.scss";
 import * as style from "../civilizationStory/index.module.scss";
 import useWindowSize from "../../utils/useWindowSize";
-
+import Context from "../../context";
 import SlickSlider from "../mainPage/secondBlock/slider";
 import CivilizationsContent from "./content";
 import { civilizationsStoryData } from "./dataMocks";
@@ -31,8 +31,11 @@ const CivilizationsMain = () => {
     gsap.to(displacementMapRef.current, { duration: 0.18, attr: { scale: 0 } });
   };
 
-  const handleRedirect = (id) => {
+  const { showCurtain } = useContext(Context);
+
+  const handleRedirect = async (id) => {
     if (id - 1 === activeSlideIndex) {
+      await showCurtain();
       navigate(civilizationsStoryData[activeSlideIndex].link);
     }
   };
