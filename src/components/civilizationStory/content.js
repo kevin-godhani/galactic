@@ -159,6 +159,7 @@ const CivilizationStoryContent = ({ data }) => {
                   //     ? { WebkitMaskImage: "none" }
                   //     : { display: "none" }
                   // }
+                  playsInline
                   loop
                   controls
                   autoPlay

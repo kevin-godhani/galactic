@@ -119,6 +119,7 @@ const ThirdBlock = () => {
                   ref={videoRef}
                   autoPlay
                   controls
+                  playsInline
                   loop
                   src="https://storage.googleapis.com/galactic_assets/GFLFinal.mp4"
                   poster={preview}
