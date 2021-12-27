@@ -1030,3 +1030,9 @@ pre tt:after {
     }
   }
 }
+
+@media only screen and (max-height: 820px) {
+  .popup-content  {
+    padding-top: 100px !important;
+  }
+}
