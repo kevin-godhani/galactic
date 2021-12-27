@@ -16,15 +16,15 @@ const settings = {
   lazyLoad: 'progressive',
   // doesn't work 🤷🏿‍♂️
   // initialSlide: 0,
-  responsive: [
-    {
-      breakpoint: 1921,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-  ],
+  // responsive: [
+  //   {
+  //     breakpoint: 1921,
+  //     settings: {
+  //       slidesToShow: 2,
+  //       slidesToScroll: 1,
+  //     },
+  //   },
+  // ],
 };
 const SlickSlider = ({ redirect, containerClassName, className, data, isClickable = false, afterChange, sliderSettings, activeSlideIndex, fadeIn }) => {
   const s = {...settings, ...sliderSettings};

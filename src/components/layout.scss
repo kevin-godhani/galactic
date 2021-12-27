@@ -1012,27 +1012,8 @@ pre tt:after {
   }
 }
 
-@media only screen and (min-width: 1921px) {
-  .slick-slider {
-    &.fighters-slider {
-      .slick-track {
-        left: -12.5vw;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 2000px) {
-  .slick-slide {
-    img {
-      min-width: 25vw;
-      width: 25vw;
-    }
-  }
-}
-
 @media only screen and (max-height: 820px) {
-  .popup-content  {
+  .popup-content {
     padding-top: 100px !important;
   }
 }

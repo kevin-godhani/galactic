@@ -61,7 +61,7 @@ const Header = () => {
     };
   }, [handleNavigation]);
 
-  useEffect(() => hideCurtain(), []);
+  useEffect(() => hideCurtain(), [hideCurtain]);
 
   const showSmallButton = ws.width <= 480;
 
