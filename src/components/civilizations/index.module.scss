@@ -3,7 +3,8 @@
   width: 100%;
   padding-top: 120px;
   > svg {
-    display: none;
+    position: absolute;
+    visibility: hidden;
   }
   > img {
     position: absolute;

@@ -9,7 +9,8 @@
     transform: translateX(-50%);
   }
   > svg {
-    display: none;
+    position: absolute;
+    visibility: hidden;
   }
 }
 

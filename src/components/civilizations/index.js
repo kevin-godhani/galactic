@@ -27,9 +27,14 @@ const CivilizationsMain = () => {
 
   const handleChangeStep = (step) => {
     setIsAnimating(false);
+    setActiveSlideIndex(step);
 
     gsap.to(displacementMapRef.current, { duration: 0.18, attr: { scale: 0 } });
   };
+
+  const onBeforeChange = () => {
+    gsap.to(displacementMapRef?.current, { duration: 0.18, attr: { scale: 100 } });
+  }
 
   const { showCurtain } = useContext(Context);
 
@@ -52,8 +57,6 @@ const CivilizationsMain = () => {
 
     setIsAnimating(true);
     setActiveSlideIndex(activeSlideIndex - 1);
-
-    gsap.to(displacementMapRef?.current, { duration: 0.18, attr: { scale: 100 } });
   }
 
   const onNext = () => {
@@ -63,14 +66,13 @@ const CivilizationsMain = () => {
 
     setIsAnimating(true);
     setActiveSlideIndex(activeSlideIndex + 1);
-
-    gsap.to(displacementMapRef?.current, { duration: 0.18, attr: { scale: 100 } });
   }
 
   const settings = {
     slidesToShow: 3,
     // draggable: false,
     // swipe: false,
+    beforeChange: onBeforeChange,
     responsive: [
       {
         breakpoint: 1921,
@@ -135,6 +137,7 @@ const CivilizationsMain = () => {
           redirect={handleRedirect}
           data={carousel}
           sliderSettings={settings}
+          beforeChange={onBeforeChange}
           afterChange={handleChangeStep}
           containerClassName={"civilizations-slider-wrap"}
           className={"civilizations-slider"}
