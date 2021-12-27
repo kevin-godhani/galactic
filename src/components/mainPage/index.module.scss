@@ -4,37 +4,38 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  top: 92px;
-  width: 257px;
-  height: 64px;
-  background-image: url(../../styles/img/timer_background.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  top: 83px;
+  width: 212px;
+  height: 62px;
   z-index: 4;
-  > div {
+  &:after {
+    content: '';
     position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0, 0.3);
+    transform: skewX(-33deg);
+  }
+  > h5 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.1;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    > h5 {
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 1.1;
-      display: flex;
-      font-family: "Satoshi";
-      letter-spacing: 0.25rem;
-      margin-bottom: 0;
-      color: #ffe478;
-    }
-    > p {
-      color: #ffffff;
-      font-family: "Syne";
-      font-weight: 600;
-      font-size: 13px;
-      line-height: 1.1;
-      letter-spacing: 0.27rem;
-      margin-bottom: 0;
-    }
+    font-family: "Satoshi";
+    letter-spacing: 0.25rem;
+    margin-bottom: 0;
+    color: #ffe478;
+  }
+  > p {
+    color: #ffffff;
+    font-family: "Syne";
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.1;
+    letter-spacing: 0.27rem;
+    margin-bottom: 0;
   }
 }
