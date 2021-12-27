@@ -4,8 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  top: 95px;
-  top: 95px;
+  top: 92px;
   width: 257px;
   height: 64px;
   background-image: url(../../styles/img/timer_background.svg);
@@ -18,28 +17,24 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    .timer {
-      margin-top: 24px;
-    }
     > h5 {
       font-weight: bold;
-      font-size: 20px;
+      font-size: 16px;
+      line-height: 1.1;
       display: flex;
       font-family: "Satoshi";
-      margin: 0;
-      margin-top: 8px;
-      > span {
-        color: #ffe478;
-        margin-left: 2px;
-        margin-right: 2px;
-      }
-      > p {
-        color: #ffffff;
-        font-family: "Syne";
-        font-weight: 600;
-        font-size: 17px;
-        // margin: 0;
-      }
+      letter-spacing: 0.25rem;
+      margin-bottom: 0;
+      color: #ffe478;
+    }
+    > p {
+      color: #ffffff;
+      font-family: "Syne";
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 1.1;
+      letter-spacing: 0.27rem;
+      margin-bottom: 0;
     }
   }
 }

@@ -41,15 +41,13 @@ const CustomTimer = () => {
       <div>
         <h5 className={styles.timer}>
           <span>{day}</span>
-          <span>D : </span>
+          <span>D:</span>
           <span>{hour}</span>
-          <span>H : </span>
+          <span>H:</span>
           <span>{minute}</span>
           <span>M</span>
         </h5>
-        <h5>
-          <p>-Until Mint-</p>
-        </h5>
+        <p>-Until Mint-</p>
       </div>
     </section>
   );

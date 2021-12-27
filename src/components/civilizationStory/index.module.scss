@@ -21,11 +21,10 @@
 }
 .playVideo {
   position: absolute;
-  max-width: 150px;
-  max-height: 150px;
+  width: 155px;
   cursor: pointer;
   z-index: 20;
-  > img {
+  > svg {
     width: 100%;
   }
 }
@@ -403,7 +402,7 @@
   position: relative;
   display: flex;
   outline: none;
-  cursor: pointer;
+  // cursor: pointer;
   &-bg {
     margin-bottom: 15px;
     // width: 400px !important;
@@ -429,7 +428,7 @@
     }
   }
   &-locked {
-    cursor: default;
+    // cursor: default;
   }
   &-margin {
     margin-right: 22px;
@@ -831,6 +830,10 @@
     // .fightersTitle {
 
     // }
+  }
+
+  .playVideo {
+    width: 107px;
   }
 
   .descriptionText {

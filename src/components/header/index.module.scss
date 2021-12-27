@@ -42,8 +42,8 @@
 .menuWrapper {
   z-index: 999;
   visibility: hidden;
-  transition: all 0.25s ease-in-out;
-  transform: translateX(150%);
+  transition: all 0.375s ease-in-out;
+  transform: translate(0, -100%);
   top: 0;
   right: 0;
   position: fixed;
@@ -135,6 +135,7 @@
   }
 
   .menuWrapper {
+    transform: translate(100%, 0);
     .decoration {
       width: 555px;
       right: 0;

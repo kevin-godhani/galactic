@@ -17,19 +17,11 @@ const CivilizationsStory = ({ data, nextTitle }) => {
   const [isMale, setIsMale] = useState(true);
   const displacementMapRef = useRef(null);
   const { showCurtain } = useContext(Context);
-
-  const tl = (() => {
-    if (!displacementMapRef?.current) {
-      return null;
-    }
-    return gsap.timeline({ immediateRender: false })
-      .to(displacementMapRef?.current, { duration: 0.18, attr: { scale: 100 } })
-      .to(displacementMapRef?.current, { duration: 0.18, attr: { scale: 0 } })
-  })();
+  const duration = 0.18;
 
   const onButtonClick = (isMale) => {
-    tl?.play();
-
+    gsap.to(displacementMapRef?.current, { duration: duration, attr: { scale: 100 } });
+    gsap.to(displacementMapRef?.current, { duration: duration, attr: { scale: 0 }, delay: duration });
     setIsMale(isMale);
   }
 
@@ -42,7 +34,7 @@ const CivilizationsStory = ({ data, nextTitle }) => {
     <section className={styles.main}>
       <svg>
         <filter id="distortionFilter">
-          <feTurbulence
+          <feTurbulence 
               baseFrequency="0.015 0.1"
               numOctaves="3"
               type="fractalNoise"

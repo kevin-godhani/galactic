@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import { Link } from "gatsby";
 import * as styles from "./index.module.scss";
 import bg1 from "../../styles/img/menu-bg1.png";
 import bg2 from "../../styles/img/menu-bg2.png";
@@ -40,7 +39,6 @@ const Menu = () => {
     <div id="mobile-menu" className={styles.menuWrapper}>
       <img src={bgs[activeMenuItemIndex]} className={styles.menuBg} alt="decor" />
       <div
-        // to="/"
         data-index={0}
         onClick={() => handleCloseMenu('/')}
         onMouseEnter={handleMouseEnter}
@@ -49,8 +47,7 @@ const Menu = () => {
         <span>01</span>
         <p>Main Page</p>
       </div>
-      <div  
-        // to="/civilizations"
+      <div
         data-index={1}
         onClick={() => handleCloseMenu('/civilizations')}
         onMouseEnter={handleMouseEnter}

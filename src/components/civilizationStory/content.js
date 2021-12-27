@@ -11,10 +11,10 @@ import videoBorder from "../../styles/img/video-gradient-border2.svg";
 import * as styles from "./index.module.scss";
 import EliteFighters from "./elitfighterSlider";
 import { animatedArrows } from "../mainPage/thirdBlock";
-import cursorPlay from "../../styles/img/icons/watch_civilization.png";
 import useWindowSize from "../../utils/useWindowSize";
 import Modal from "../modal";
 import CloseIcon from "../mainPage/thirdBlock/closeIcon";
+import WatchButtonIcon2 from '../../styles/img/watch-button2.inline.svg';
 
 const CivilizationStoryContent = ({ data }) => {
   const videoRef = useRef(null);
@@ -144,9 +144,7 @@ const CivilizationStoryContent = ({ data }) => {
           <Modal
             trigger={
               <div className={styles.playVideo}>
-                <div>
-                  <img src={cursorPlay} alt="cursorPlay" />
-                </div>
+                <WatchButtonIcon2 />
               </div>
             }
             children={

@@ -16,6 +16,7 @@ const sliderSettings = {
   arrows: false,
   lazyLoad: 'progressive',
   fade: true,
+  draggable: false,
   className: 'civilizations-slides-slider'
 };
 

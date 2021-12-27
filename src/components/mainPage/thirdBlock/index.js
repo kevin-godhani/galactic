@@ -1,4 +1,4 @@
-import React, { useRef, useState, useLayoutEffect } from "react";
+import React, { useRef, useState } from "react";
 import CivilizationSlides from "./slides";
 import preview from "../../../styles/img/origin-story-placeholder.png";
 import arrowP from "../../../styles/img/icons/arrow_purple.svg";
@@ -8,12 +8,13 @@ import decoration from "../../../styles/img/back_decoration.png";
 import borderTablet from "../../../styles/img/border_tablet.png";
 import borderMobile from "../../../styles/img/border-mobile.png";
 import * as styles from "./index.module.scss";
-import cursorPlay from "../../../styles/img/icons/watch_icon.png";
+// import cursorPlay from "../../../styles/img/icons/watch_icon.png";
 // import playText from "../../../styles/img/icons/play_text.svg";
 // import useWindowSize from "../../../utils/useWindowSize";
 import { slides } from "../../../constants";
 import Modal from "../../modal";
 import CloseIcon from "./closeIcon";
+import WatchButtonIcon from '../../../styles/img/watch-icon.inline.svg';
 
 export const animatedArrows = (color) => {
   return (
@@ -102,9 +103,7 @@ const ThirdBlock = () => {
           <Modal
             trigger={
               <div className={styles.playVideo}>
-                <div>
-                  <img src={cursorPlay} alt="cursorPlay" />
-                </div>
+                <WatchButtonIcon />
               </div>
             }
             children={
