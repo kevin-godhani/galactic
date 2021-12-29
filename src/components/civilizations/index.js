@@ -69,24 +69,7 @@ const CivilizationsMain = () => {
   }
 
   const settings = {
-    slidesToShow: 3,
-    // draggable: false,
-    // swipe: false,
     beforeChange: onBeforeChange,
-    responsive: [
-      {
-        breakpoint: 1921,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 1201,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-    ],
   };
 
   return (

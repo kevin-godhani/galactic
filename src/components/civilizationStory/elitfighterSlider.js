@@ -18,14 +18,14 @@ const settings = {
   infinite: false,
   slidesToShow: 3,
   slidesToScroll: 1,
-  centerPadding: "10px",
+  centerPadding: 0,
   centerMode: true,
   arrows: false,
   speed: 500,
   cssEase: "linear",
-  pauseOnHover: true,
   className: "elite-fighters",
   initialSlide: 1,
+  variableWidth: false,
   responsive: [
     {
       breakpoint: 769,

@@ -988,7 +988,7 @@
   .CivilizationStoryContent {
     margin-top: 200px;
   }
-
+  
   .contentDescription {
     > div {
       > span {
@@ -997,7 +997,7 @@
       }
     }
   }
-
+  
   .slides {
     &-button {
       border-radius: 4px;
@@ -1005,5 +1005,11 @@
         font-size: 26px;
       }
     }
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .decoration {
+    display: none;
   }
 }

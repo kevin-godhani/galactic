@@ -24,6 +24,11 @@
     }
     .mainButtonContent {
       min-width: 176px;
+      padding-left: 53px;
+      > span {
+        font-size: 12px;
+        line-height: 1;
+      }
     }
   }
   .mainButtonStripe {

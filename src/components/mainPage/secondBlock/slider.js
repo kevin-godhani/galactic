@@ -6,7 +6,7 @@ import * as styles from "./index.module.scss";
 
 const settings = {
   dots: false,
-  slidesToShow: 2,
+  slidesToShow: 3,
   slidesToScroll: 1,
   centerPadding: 0,
   centerMode: true,
@@ -14,17 +14,19 @@ const settings = {
   speed: 375,
   cssEase: "linear",
   lazyLoad: 'progressive',
+  variableWidth: true,
+  infinite: true,
   // doesn't work 🤷🏿‍♂️
   // initialSlide: 0,
-  // responsive: [
-  //   {
-  //     breakpoint: 1921,
-  //     settings: {
-  //       slidesToShow: 2,
-  //       slidesToScroll: 1,
-  //     },
-  //   },
-  // ],
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+        variableWidth: false,
+      },
+    },
+  ],
 };
 const SlickSlider = ({ redirect, containerClassName, className, data, isClickable = false, afterChange, sliderSettings, activeSlideIndex, fadeIn }) => {
   const s = {...settings, ...sliderSettings};

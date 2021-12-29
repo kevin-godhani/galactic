@@ -16,7 +16,7 @@ import Context from "../../context";
 
 const Footer = ({ siteTitle }) => {
   const ws = useWindowSize();
-  const showSmallButton = ws.width <= 480;
+  const showSmallButton = ws.width <= 1200;
   const { showCurtain } = useContext(Context);
 
   const onLinkClick = async (route) => {
@@ -29,35 +29,31 @@ const Footer = ({ siteTitle }) => {
   return (
     <footer className={styles.footer}>
       <img src={border} alt="border" />
-      <section>
-        <div className={styles.leftBlock}>
-          <img onClick={() => navigate("/")} src={logo} alt="logo" />
-          <span>
-            Copyright © Galactic Fight League
-            <br />
-            All rights reserved
-          </span>
-        </div>
-        <div className={styles.rightBlock}>
-          <div>
-            <MainButtonExternal
-              url={discordLink}
-              title={"Join Discord"}
-              isDouble={false}
-              isPurple={false}
-              small={showSmallButton}
-            />
-            <div className="sm-buttons">
-              <SocialButton url={twitterLink} Icon={twitter} />
-              <SocialButton url={instagramLink} Icon={instagram} />
-            </div>
-          </div>
-          <div>
-            <span onClick={() => onLinkClick('/')}>Main Page</span>
-            <span onClick={() => onLinkClick('/civilizations')}>Civilisations</span>
+      <div className={styles.footerContainer}>
+        <img onClick={() => navigate("/")} className={styles.footerLogo} src={logo} alt="logo" />
+        <div className={styles.footerSmBlock}>
+          <MainButtonExternal
+            url={discordLink}
+            title={"Join Discord"}
+            isDouble={false}
+            isPurple={false}
+            small={showSmallButton}
+          />
+          <div className="sm-buttons">
+            <SocialButton url={twitterLink} Icon={twitter} />
+            <SocialButton url={instagramLink} Icon={instagram} />
           </div>
         </div>
-      </section>
+        <span className={styles.footerCopyRights}>
+          Copyright © Galactic Fight League
+          <br />
+          All rights reserved
+        </span>
+        <div className={styles.footerLinks}>
+          <span onClick={() => onLinkClick('/')}>Main Page</span>
+          <span onClick={() => onLinkClick('/civilizations')}>Civilisations</span>
+        </div>
+      </div>
     </footer>
   );
 };
