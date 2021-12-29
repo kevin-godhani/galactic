@@ -927,13 +927,18 @@ pre tt:after {
 @media only screen and (max-width: 768px) {
   .slick-slider {
     .slick-track {
-      left: -24vw;
+      left: -25vw;
     }
     .slick-slide {
       width: 48vw;
       min-width: 48vw;
       img {
         padding: 0 1.4vw;
+      }
+    }
+    &.civilizations-slides-slider {
+      .slick-track {
+        left: auto;
       }
     }
   }

@@ -15,7 +15,6 @@ const settings = {
   cssEase: "linear",
   lazyLoad: 'progressive',
   variableWidth: true,
-  infinite: true,
   // doesn't work 🤷🏿‍♂️
   // initialSlide: 0,
   responsive: [
