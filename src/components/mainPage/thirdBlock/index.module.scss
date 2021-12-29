@@ -740,18 +740,25 @@
 }
 
 @media only screen and (min-width: 2000px) {
+  .main {
+    .decoration {
+      display: none;
+    }
+  }
+
   .civilizations {
     padding-top: 300px;
+    .civilizationsSubtitle {
+      font-size: 1.8rem;
+      line-height: 2.7rem;
+      max-width: 100%;
+    }
   }
+
 }
 
 @media only screen and (min-width: 3000px) {
   .civilizations {
     padding-top: 300px;
-  }
-  .main {
-    .decoration {
-      display: none;
-    }
   }
 }

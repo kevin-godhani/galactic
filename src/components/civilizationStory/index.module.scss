@@ -1012,4 +1012,13 @@
   .decoration {
     display: none;
   }
+
+  .description {
+    margin-bottom: 150px;
+    > span {
+      font-size: 1.8rem;
+      line-height: 2.7rem;
+      margin-bottom: 0;
+    }
+  }
 }

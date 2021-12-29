@@ -91,28 +91,24 @@
   }
 }
 
-@media only screen and (min-width: 2300px) {
+@media only screen and (min-width: 2000px) {
   .main {
     padding-top: 200px;
     > h1 {
-      // display: flex;
-      // align-items: center;
-      font-size: 45px;
-      line-height: 45px;
+      font-size: 5.56rem;
+      line-height: 1;
       margin-bottom: 30px;
-      // width: 910px;
+      max-width: 1440px;
       > span {
-        font-size: 45px;
-        line-height: 54px;
-        // margin-right: 13px;
-        // margin-bottom: 12px;
+        font-size: 5.56rem;
+        line-height: 1;
       }
     }
     > p {
-      width: 1000px;
+      width: 1660px;
       height: auto;
-      font-size: 14px;
-      line-height: 21px;
+      font-size: 1.8rem;
+      line-height: 2.7rem;
     }
   }
 }

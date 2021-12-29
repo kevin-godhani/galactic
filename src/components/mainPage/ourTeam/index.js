@@ -47,11 +47,6 @@ const ItemBlock = ({ title, description, image, links, isEven, idx }) => {
       </div>
       <p
         data-aos="fade-up"
-        style={
-          isDesktopWidth && (idx === 3 || idx === 4)
-            ? { marginTop: "124px" }
-            : {}
-        }
         className={`description ${styles.cardText}`}
       >
         {description}

@@ -21,6 +21,7 @@
 .cardText {
   max-width: 520px;
   white-space: pre-line;
+  margin-bottom: 0;
 }
 .cardImageWrap {
   position: absolute;
@@ -170,10 +171,31 @@
       margin-bottom: 150px;
     }
   }
-
+  
   .leftContainer,
   .rightContainer {
     justify-content: flex-start;
     margin-bottom: 60px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .teamSection {
+    .teamSectionSubtitle {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      max-width: 100%;
+    }
+  }
+
+  .leftContainer,
+  .rightContainer {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .cardText {
+    max-width: unset;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
   }
 }
