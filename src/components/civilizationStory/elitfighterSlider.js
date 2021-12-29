@@ -25,7 +25,7 @@ const settings = {
   cssEase: "linear",
   className: "elite-fighters",
   initialSlide: 1,
-  variableWidth: false,
+  variableWidth: true,
   responsive: [
     {
       breakpoint: 769,

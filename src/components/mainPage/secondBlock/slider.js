@@ -22,7 +22,7 @@ const settings = {
       breakpoint: 769,
       settings: {
         slidesToShow: 2,
-        variableWidth: false,
+        // variableWidth: false,
       },
     },
   ],
