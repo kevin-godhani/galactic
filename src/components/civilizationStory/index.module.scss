@@ -344,7 +344,7 @@
       > button {
         position: absolute;
         top: 2px;
-        transition: all 0.4 ease-in-out;
+        transition: all 0.4s ease-in-out;
         width: 78%;
         height: 46px;
         border-radius: 6px;
@@ -954,15 +954,36 @@
     > div {
       padding: 60px 30px;
       > span {
-        font-size: 0.6rem;
-        line-height: 1rem;
+        font-size: 0.6rem !important;
+        line-height: 1rem !important;
+      }
+    }
+    &.fightersDescription {
+      > div {
+        > span {
+          font-size: 0.9rem !important;
+          line-height: 1.1rem !important;
+        }
       }
     }
   }
+
+  .groupButtons {
+    > div {
+      > div {
+        width: 145px;
+        > button {
+          width: 120px;
+          top: -5px;
+        }
+      }
+    }
+  }
+  
   .groupButtonLeft {
     margin-right: 15px;
     > button {
-      left: 18px !important;
+      left: 23px !important;
     }
     > img {
       margin-left: -16px;
@@ -970,7 +991,7 @@
   }
   .groupButtonRight {
     > button {
-      right: 18px !important;
+      right: 23px !important;
     }
     > img {
       margin-left: 16px;

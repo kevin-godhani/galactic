@@ -116,7 +116,7 @@ const EliteFighters = ({ fighters }) => {
       <div className="container-width">
         <div
           data-aos="fade-up"
-          className={`${styles.contentDescription}`}
+          className={`${styles.contentDescription} ${styles.fightersDescription}`}
         >
           <section>
             <div className={styles.arrowsP}>{animatedArrows("purple")}</div>
