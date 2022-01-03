@@ -11,7 +11,13 @@ import "./index.scss";
 
 export const MainButton = ({to, title, isDouble, isPurple, small, textContainerClassName, longTitle}) => {
   return (
-    <Link to={to} className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''}`}>
+    <Link
+      to={to}
+      className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''}`}
+      onKeyPress={null}
+      role={'button'}
+      tabIndex={0}
+    >
       {isDouble && <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>}
       <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>
       <div className={`mainButtonContent ${textContainerClassName ? textContainerClassName : ''}`}>
@@ -28,7 +34,15 @@ export const MainButton = ({to, title, isDouble, isPurple, small, textContainerC
 
 export const MainButtonExternal = ({url, title, isDouble, isPurple, small}) => {
   return (
-    <a href={url} target='_blank' className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''}`} rel="nofollow noreferrer noopener">
+    <a
+      href={url}
+      className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''}`}
+      target='_blank'
+      rel="nofollow noreferrer noopener"
+      onKeyPress={null}
+      role={'button'}
+      tabIndex={0}
+    >
       {isDouble && <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>}
       <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>
       <div className={'mainButtonContent'}>
@@ -45,7 +59,14 @@ export const MainButtonExternal = ({url, title, isDouble, isPurple, small}) => {
 
 export const doubleStripeButton = (to, title, callback) => {
   return (
-    <Link to={to} onClick={() => callback && callback()} className={'mainButton'}>
+    <Link
+      to={to}
+      onClick={() => callback && callback()}
+      className={'mainButton'}
+      onKeyPress={null}
+      role={'button'}
+      tabIndex={0}
+    >
       <div className={'mainDoubleButtonStripe'}>
         <img src={stripeImg} alt="stripeImg" />
         <img src={stripeImg} alt="stripeImg" />
@@ -70,7 +91,13 @@ export const doubleStripeButton = (to, title, callback) => {
 
 export const ButtonWithoutLink = ({callback, title, isDouble, isPurple, small, textContainerClassName, longTitle}) => {
   return (
-    <div onClick={() => callback && callback()} className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''}`}>
+    <div
+      onClick={() => callback && callback()}
+      className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''}`}
+      onKeyPress={null}
+      role={'button'}
+      tabIndex={0}
+    >
       {isDouble && <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>}
       <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>
       <div className={`mainButtonContent ${textContainerClassName ? textContainerClassName : ''}`}>
@@ -87,12 +114,20 @@ export const ButtonWithoutLink = ({callback, title, isDouble, isPurple, small, t
 
 export const SocialButton = ({url, Icon, size}) => {
   return (
-    <a href={url} target='_blank' rel="nofollow noreferrer noopener" className={'sm-button'} style={{ width: size }}>
+    <a
+      href={url}
+      className={'sm-button'}
+      target='_blank'
+      style={{ width: size }}
+      rel="nofollow noreferrer noopener"
+      onKeyPress={null}
+      role={'button'}
+      tabIndex={0}
+    >
       <Icon/>
     </a>
   );
 };
-
 
 export const ButtonsBlock = ({
   onLeftButtonClick,
@@ -111,6 +146,9 @@ export const ButtonsBlock = ({
         className={`slide-button ${buttonStyle}`}
         onClick={onLeftButtonClick}
         style={ !limitMin ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, pointerEvents: 'none' }}
+        onKeyPress={null}
+        role={'button'}
+        tabIndex={0}
       >
         <div className={'slide-button-bg-wrap'}>
           <div className={'slide-button-bg'} style={{ background: !limitMin ? sliderButtonBgActive : sliderButtonBg }}></div>
@@ -124,6 +162,9 @@ export const ButtonsBlock = ({
         className={`slide-button ${buttonStyle}`}
         onClick={onRightButtonClick}
         style={ !limitMax ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, pointerEvents: 'none' }}
+        onKeyPress={null}
+        role={'button'}
+        tabIndex={0}
       >
         <div className={'slide-button-bg-wrap'}>
           <div className={'slide-button-bg'} style={{ background: !limitMax ? sliderButtonBgActive : sliderButtonBg }}></div>
@@ -153,6 +194,9 @@ export const SliderArrows = ({
         className={`slider-arrow prev ${arrowStyle ? arrowStyle : ''} ${leftArrowStyle ? leftArrowStyle : ''}`}
         onClick={onPrev}
         style={ !limitMin ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, pointerEvents: 'none' }}
+        onKeyPress={null}
+        role={'button'}
+        tabIndex={0}
       >
         <SliderArrow />
       </div>
@@ -160,6 +204,9 @@ export const SliderArrows = ({
         className={`slider-arrow next ${arrowStyle ? arrowStyle : ''} ${rightArrowStyle ? rightArrowStyle : ''}`}
         onClick={onNext}
         style={ !limitMax ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, pointerEvents: 'none' }}
+        onKeyPress={null}
+        role={'button'}
+        tabIndex={0}
       >
         <SliderArrow />
       </div>

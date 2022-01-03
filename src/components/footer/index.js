@@ -30,7 +30,15 @@ const Footer = ({ siteTitle }) => {
     <footer className={styles.footer}>
       <img src={border} alt="border" />
       <div className={styles.footerContainer}>
-        <img onClick={() => navigate("/")} className={styles.footerLogo} src={logo} alt="logo" />
+        <div
+          className={styles.footerLogo}
+          onClick={() => navigate('/')}
+          onKeyPress={null}
+          role={'button'}
+          tabIndex={0}
+        >
+          <img src={logo} alt="logo" />
+        </div>
         <div className={styles.footerSmBlock}>
           <MainButtonExternal
             url={discordLink}
@@ -50,8 +58,22 @@ const Footer = ({ siteTitle }) => {
           All rights reserved
         </span>
         <div className={styles.footerLinks}>
-          <span onClick={() => onLinkClick('/')}>Main Page</span>
-          <span onClick={() => onLinkClick('/civilizations')}>Civilisations</span>
+          <span
+            onClick={() => onLinkClick('/')}
+            onKeyPress={null}
+            role={'button'}
+            tabIndex={0}
+          >
+            Main Page
+          </span>
+          <span
+            onClick={() => onLinkClick('/civilisations')}
+            onKeyPress={null}
+            role={'button'}
+            tabIndex={0}
+          >
+            Civilisations
+          </span>
         </div>
       </div>
     </footer>

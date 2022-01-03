@@ -18,19 +18,31 @@
 .menu-icon {
   margin: 0;
   width: 93px;
+  outline: none;
+  img {
+    width: 100%;
+  }
 }
 
 .logo {
-    width: 295px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    cursor: pointer;
+  width: 295px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  outline: none;
+  img {
+    width: 100%;
+  }
 }
 
 .tabletLogo {
   display: none;
   width: 60px;
+  outline: none;
+  img {
+    width: 100%;
+  }
 }
 
 .buttonsBlock {

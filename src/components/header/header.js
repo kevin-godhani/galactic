@@ -71,25 +71,34 @@ const Header = () => {
       style={isHederFixed ? { position: "fixed" } : { position: "absolute" }}
     >
       <div className={styles.menu}>
-        <img
-          onClick={() => navigate("/")}
+        <div
           className={styles.tabletLogo}
-          src={tabletLogo}
-          alt="tabletLogo"
-        />
-        <img
-          onClick={isHederFixed ? handleCloseMenu : handleOpenMenu}
+          onClick={() => navigate('/')}
+          onKeyPress={null}
+          role={'button'}
+          tabIndex={0}
+        >
+          <img src={tabletLogo} alt="tabletLogo" />
+        </div>
+        <div
           className={styles.menuIcon}
-          src={isHederFixed ? menuOpened : menu}
-          alt="menu"
-        />
+          onClick={isHederFixed ? handleCloseMenu : handleOpenMenu}
+          onKeyPress={null}
+          role={'button'}
+          tabIndex={0}
+        >
+          <img src={isHederFixed ? menuOpened : menu} alt="menu" />
+        </div>
       </div>
-      <img
+      <div
         onClick={() => navigate("/")}
         className={styles.logo}
-        src={logo}
-        alt="logo"
-      />
+        onKeyPress={null}
+        role={'button'}
+        tabIndex={0}
+      >
+        <img src={logo} alt="logo" />
+      </div>
       <div className={styles.buttonsBlock}>
         <MainButtonExternal
           url={discordLink}

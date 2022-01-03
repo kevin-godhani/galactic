@@ -665,14 +665,14 @@ pre tt:after {
       cursor: url(../styles/img/cursors/cursor.png) 25 15, auto !important;
     }
   }
-  &.civilizations-slider {
+  &.civilisations-slider {
     .slick-slide {
       img {
         padding: 0;
       }
     }
   }
-  &.civilizations-slides-slider {
+  &.civilisations-slides-slider {
     .slick-slide {
       cursor: default;
       width: unset;
@@ -683,7 +683,7 @@ pre tt:after {
     }
   }
 }
-.civilizations-slider-wrap {
+.civilisations-slider-wrap {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   position: relative;
@@ -936,7 +936,7 @@ pre tt:after {
         padding: 0 1.4vw;
       }
     }
-    // &.civilizations-slides-slider {
+    // &.civilisations-slides-slider {
     //   .slick-track {
     //     left: auto;
     //   }

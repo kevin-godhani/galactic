@@ -9,12 +9,12 @@ import * as style from "../civilizationStory/index.module.scss";
 import useWindowSize from "../../utils/useWindowSize";
 import Context from "../../context";
 import SlickSlider from "../mainPage/secondBlock/slider";
-import CivilizationsContent from "./content";
-import { civilizationsStoryData } from "./dataMocks";
+import CivilisationsContent from "./content";
+import { civilisationsStoryData } from "./dataMocks";
 import { SliderArrows } from '../buttons';
 import gsap from 'gsap';
 
-const CivilizationsMain = () => {
+const CivilisationsMain = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const ws = useWindowSize();
@@ -41,7 +41,7 @@ const CivilizationsMain = () => {
   const handleRedirect = async (id) => {
     if (id - 1 === activeSlideIndex) {
       await showCurtain();
-      navigate(civilizationsStoryData[activeSlideIndex].link);
+      navigate(civilisationsStoryData[activeSlideIndex].link);
     }
   };
 
@@ -122,8 +122,8 @@ const CivilizationsMain = () => {
           sliderSettings={settings}
           beforeChange={onBeforeChange}
           afterChange={handleChangeStep}
-          containerClassName={"civilizations-slider-wrap"}
-          className={"civilizations-slider"}
+          containerClassName={"civilisations-slider-wrap"}
+          className={"civilisations-slider"}
           activeSlideIndex={activeSlideIndex}
           isClickable
         />
@@ -143,9 +143,9 @@ const CivilizationsMain = () => {
           limitMax={isMaxValue}
         />
       </div>
-      <CivilizationsContent data={pageData[activeSlideIndex]} />
+      <CivilisationsContent data={pageData[activeSlideIndex]} />
     </section>
   );
 };
 
-export default CivilizationsMain;
+export default CivilisationsMain;

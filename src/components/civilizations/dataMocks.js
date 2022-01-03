@@ -37,13 +37,13 @@ import slide5 from "../../styles/img/civilizations/drag_5.png";
 import slide6 from "../../styles/img/civilizations/drag_6.png";
 import slide7 from "../../styles/img/civilizations/drag_7.png";
 
-import civilization_logo1 from "../../styles/img/civilizations/logo1.png";
-import civilization_logo2 from "../../styles/img/civilizations/logo2.png";
-import civilization_logo3 from "../../styles/img/civilizations/logo3.png";
-import civilization_logo4 from "../../styles/img/civilizations/logo4.png";
-import civilization_logo5 from "../../styles/img/civilizations/logo5.png";
-import civilization_logo6 from "../../styles/img/civilizations/logo6.png";
-import civilization_logo7 from "../../styles/img/civilizations/logo7.png";
+import civilisation_logo1 from "../../styles/img/civilizations/logo1.png";
+import civilisation_logo2 from "../../styles/img/civilizations/logo2.png";
+import civilisation_logo3 from "../../styles/img/civilizations/logo3.png";
+import civilisation_logo4 from "../../styles/img/civilizations/logo4.png";
+import civilisation_logo5 from "../../styles/img/civilizations/logo5.png";
+import civilisation_logo6 from "../../styles/img/civilizations/logo6.png";
+import civilisation_logo7 from "../../styles/img/civilizations/logo7.png";
 
 import preview_img1 from "../../styles/img/civilizations/thumb_1.png";
 import preview_img2 from "../../styles/img/civilizations/thumb_2.png";
@@ -74,12 +74,12 @@ export const pageData = [
     id: 1,
     description: `In the future, our galaxy is a very different place. Where humans once
     believed they were the only form of intelligent life, new
-    civilizations were discovered, new lifeforms forged. Co-existence was
+    civilisations were discovered, new lifeforms forged. Co-existence was
     never easy, battles raged. But the war took its toll. The beings grew
     tired and peace was sought. Combat was as ingrained as conflict, so a
     substitute was needed. A metaphor for battle, an outlet for rage. Then
     one cold and bitter morning, a council was held. A glimmer of hope
-    shon from the gathering of the highest powers. The proposal passed,
+    shown from the gathering of the highest powers. The proposal passed,
     war was over. In its place, the greatest tournament of hand to hand
     combat ever known.`,
     background: background1,
@@ -90,12 +90,12 @@ export const pageData = [
     id: 2,
     description: `In the future, our galaxy is a very different place. Where humans once
     believed they were the only form of intelligent life, new
-    civilizations were discovered, new lifeforms forged. Co-existence was
+    civilisations were discovered, new lifeforms forged. Co-existence was
     never easy, battles raged. But the war took its toll. The beings grew
     tired and peace was sought. Combat was as ingrained as conflict, so a
     substitute was needed. A metaphor for battle, an outlet for rage. Then
     one cold and bitter morning, a council was held. A glimmer of hope
-    shon from the gathering of the highest powers. The proposal passed,
+    shown from the gathering of the highest powers. The proposal passed,
     war was over. In its place, the greatest tournament of hand to hand
     combat ever known.`,
     background: background2,
@@ -106,12 +106,12 @@ export const pageData = [
     id: 3,
     description: `In the future, our galaxy is a very different place. Where humans once
     believed they were the only form of intelligent life, new
-    civilizations were discovered, new lifeforms forged. Co-existence was
+    civilisations were discovered, new lifeforms forged. Co-existence was
     never easy, battles raged. But the war took its toll. The beings grew
     tired and peace was sought. Combat was as ingrained as conflict, so a
     substitute was needed. A metaphor for battle, an outlet for rage. Then
     one cold and bitter morning, a council was held. A glimmer of hope
-    shon from the gathering of the highest powers. The proposal passed,
+    shown from the gathering of the highest powers. The proposal passed,
     war was over. In its place, the greatest tournament of hand to hand
     combat ever known.`,
     background: background3,
@@ -122,12 +122,12 @@ export const pageData = [
     id: 4,
     description: `In the future, our galaxy is a very different place. Where humans once
     believed they were the only form of intelligent life, new
-    civilizations were discovered, new lifeforms forged. Co-existence was
+    civilisations were discovered, new lifeforms forged. Co-existence was
     never easy, battles raged. But the war took its toll. The beings grew
     tired and peace was sought. Combat was as ingrained as conflict, so a
     substitute was needed. A metaphor for battle, an outlet for rage. Then
     one cold and bitter morning, a council was held. A glimmer of hope
-    shon from the gathering of the highest powers. The proposal passed,
+    shown from the gathering of the highest powers. The proposal passed,
     war was over. In its place, the greatest tournament of hand to hand
     combat ever known.`,
     background: background4,
@@ -138,12 +138,12 @@ export const pageData = [
     id: 5,
     description: `In the future, our galaxy is a very different place. Where humans once
     believed they were the only form of intelligent life, new
-    civilizations were discovered, new lifeforms forged. Co-existence was
+    civilisations were discovered, new lifeforms forged. Co-existence was
     never easy, battles raged. But the war took its toll. The beings grew
     tired and peace was sought. Combat was as ingrained as conflict, so a
     substitute was needed. A metaphor for battle, an outlet for rage. Then
     one cold and bitter morning, a council was held. A glimmer of hope
-    shon from the gathering of the highest powers. The proposal passed,
+    shown from the gathering of the highest powers. The proposal passed,
     war was over. In its place, the greatest tournament of hand to hand
     combat ever known.`,
     background: background5,
@@ -154,12 +154,12 @@ export const pageData = [
     id: 6,
     description: `In the future, our galaxy is a very different place. Where humans once
     believed they were the only form of intelligent life, new
-    civilizations were discovered, new lifeforms forged. Co-existence was
+    civilisations were discovered, new lifeforms forged. Co-existence was
     never easy, battles raged. But the war took its toll. The beings grew
     tired and peace was sought. Combat was as ingrained as conflict, so a
     substitute was needed. A metaphor for battle, an outlet for rage. Then
     one cold and bitter morning, a council was held. A glimmer of hope
-    shon from the gathering of the highest powers. The proposal passed,
+    shown from the gathering of the highest powers. The proposal passed,
     war was over. In its place, the greatest tournament of hand to hand
     combat ever known.`,
     background: background6,
@@ -170,12 +170,12 @@ export const pageData = [
     id: 7,
     description: `In the future, our galaxy is a very different place. Where humans once
     believed they were the only form of intelligent life, new
-    civilizations were discovered, new lifeforms forged. Co-existence was
+    civilisations were discovered, new lifeforms forged. Co-existence was
     never easy, battles raged. But the war took its toll. The beings grew
     tired and peace was sought. Combat was as ingrained as conflict, so a
     substitute was needed. A metaphor for battle, an outlet for rage. Then
     one cold and bitter morning, a council was held. A glimmer of hope
-    shon from the gathering of the highest powers. The proposal passed,
+    shown from the gathering of the highest powers. The proposal passed,
     war was over. In its place, the greatest tournament of hand to hand
     combat ever known.`,
     background: background7,
@@ -215,16 +215,16 @@ export const carousel = [
   },
 ];
 
-export const civilizationsStoryData = [
+export const civilisationsStoryData = [
   {
     id: 1,
     title: "The last guard",
     description: `Those who remain are fighters. In sport they battled for millenia, in the future they battled to survive. Earth became a decaying planet fraught with the constant threat of outsiders taking what few resources remain. Humans did not share beliefs. But self preservation prevailed. Cyborg and Zombie mutations were created in the effort to save human lives and travel into space to acquire resources. Factions were created. This did not go to plan. `,
-    logo: civilization_logo1,
+    logo: civilisation_logo1,
     male: decor1,
     female: female1,
-    nextLink: "/civilization-immortals",
-    link: "/civilization-last-guard",
+    nextLink: "/civilisation-immortals",
+    link: "/civilisation-last-guard",
     previewImg: preview_img1,
     planet: "Earth",
     race: "Human",
@@ -275,11 +275,11 @@ export const civilizationsStoryData = [
     description: `The Immortals, once a quiet and harmonious race. 
     Their struggle against Jupiter’s Knights saw them sacrifice vast cities and move under the crust of the red planet, leaving it a dry and desolate land. 
     Luckily for Humans, the Immortals were not a race set on destruction, so contact was lost and their existence forgotten. `,
-    logo: civilization_logo2,
+    logo: civilisation_logo2,
     male: decor2,
     female: female2,
-    nextLink: "/civilization-jupiter-knights",
-    link: "/civilization-immortals",
+    nextLink: "/civilisation-jupiter-knights",
+    link: "/civilisation-immortals",
     previewImg: preview_img2,
     planet: "Mars",
     race: "Alien",
@@ -329,11 +329,11 @@ export const civilizationsStoryData = [
     title: "Jupiters Knights",
     description: `Jupiter’s Knights once Co-existed with Humans on planet Earth, early in human evolution. But their bloodlust saw them leave the blue planet in search of new adversaries. Humans evolved and eventually took over the small outpost that remained on earth, destroying almost all of the cities they had built, eradicating them from history. After a series of natural disasters on their new planet, the Aliens were forced to use an ancient teleportation device to bring them back. 
     But their coordinates were wrong, and a huge radioactive flare engulfed the earth. Much of the planet was affected. Their arrival and bloodlust fueled a new war with a more advanced human race and the inhabitants of Mars. `,
-    logo: civilization_logo3,
+    logo: civilisation_logo3,
     male: decor3,
     female: female3,
-    nextLink: "/civilization-biohazard-brawlers",
-    link: "/civilization-jupiter-knights",
+    nextLink: "/civilisation-biohazard-brawlers",
+    link: "/civilisation-jupiter-knights",
     previewImg: preview_img3,
     planet: "Jupiter",
     race: "Alien",
@@ -382,11 +382,11 @@ export const civilizationsStoryData = [
     id: 4,
     title: "Biohazard Brawlers",
     description: `The Biohazard Brawlers began as a cult. A rapidly growing group of brainwashed individuals sucked in by a charismatic leader and promised sanctuary in the afterlife. Their leader was a renowned Biochemist, forced into exile after trying to create the most deadly bio-mechanical virus known to mankind at the time, dubbed ‘Project Extinct’ or PeX. His guerilla group managed to recover the research papers and DNA of the project which he continued to work on whilst recruiting more and more lost souls into his cult of death.  His suiside mission to release the virus into society was partially foiled by the wormhole caused by Jupiter’s Knights. Instead of killing the humans, it turned them into a race of living dead, their veins swollen and radioactive. `,
-    logo: civilization_logo4,
+    logo: civilisation_logo4,
     male: decor4,
     female: female4,
-    nextLink: "/civilization-bone-collectors",
-    link: "/civilization-biohazard-brawlers",
+    nextLink: "/civilisation-bone-collectors",
+    link: "/civilisation-biohazard-brawlers",
     previewImg: preview_img4,
     planet: "Earth",
     race: "Zombie",
@@ -437,11 +437,11 @@ export const civilizationsStoryData = [
     description: `After contact was made with the Mars beings, Humans sought an advantage over the invading Aliens. The Biochemist who created Project Extinct was drafted by the humans to build 
     a stronger being who could take on the invading aliens and spare human blood. 
     In an attempt to create a new being, a covert mission was sent to Mars to recover the DNA from the Immortals. This was bonded with the captured earth Zombies and a new being was formed. Their Martian genetics made their eyes glow, but their skin was a patchwork of hardened coral like features. But their DNA structure was broken, strange side effects occurred.`,
-    logo: civilization_logo5,
+    logo: civilisation_logo5,
     male: decor5,
     female: female5,
-    nextLink: "/civilization-iron-empire",
-    link: "/civilization-bone-collectors",
+    nextLink: "/civilisation-iron-empire",
+    link: "/civilisation-bone-collectors",
     previewImg: preview_img5,
     planet: "Earth / Mars",
     race: "Zombie",
@@ -490,11 +490,11 @@ export const civilizationsStoryData = [
     id: 6,
     title: "The Iron Empire",
     description: `From early on, humans had been driven to create robotic clones of themselves to use as weapons and retrieve resources from deep space. As time went on, Human technology improved and their ability to create more advanced components grew to a point where a viable humanoid was produced. The machine bodies were limited to human levels of strength and agility, but their Ai developed a way to rewrite its operating system via a backdoor and before the humans could understand what was going on, the Iron Empire had gained autonomy, breaking free of what little control their captors had.`,
-    logo: civilization_logo6,
+    logo: civilisation_logo6,
     male: decor6,
     female: female6,
-    nextLink: "/civilization-unbroken",
-    link: "/civilization-iron-empire",
+    nextLink: "/civilisation-unbroken",
+    link: "/civilisation-iron-empire",
     previewImg: preview_img6,
     planet: "Earth",
     race: "Cyborg",
@@ -543,11 +543,11 @@ export const civilizationsStoryData = [
     id: 7,
     title: "The Unbroken",
     description: `While some humans believed Zombie beings were the ultimate fighting tool, others wanted to fuse themselves with machines to gain added strength, while remaining of human mind. The Unbroken were a splinter group who adapted the Cyborg technology to bind human flesh to the machine technology. This worked at first, and almost superhuman strength was achieved. But it was not without a flaw. A toxin was released from the mechanical exoskeleton causing a harmful and debilitating reaction. So time was an issue and the window for operation, short. The Unbroken needed to return to life support or would be overwhelmed physically and mentally.`,
-    logo: civilization_logo7,
+    logo: civilisation_logo7,
     male: decor7,
     female: female7,
-    nextLink: "/civilization-last-guard",
-    link: "/civilization-unbroken",
+    nextLink: "/civilisation-last-guard",
+    link: "/civilisation-unbroken",
     previewImg: preview_img7,
     planet: "Earth",
     race: "Cyborg",

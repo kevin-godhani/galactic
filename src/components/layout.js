@@ -20,9 +20,9 @@ const Layout = ({ children }) => {
     }
   `);
 
-  const curtainRef = React.useRef();
+  const curtainRef = React.useRef(null);
 
-  const showCurtain = () => {
+  const showCurtain = React.useCallback(() => {
     if (!curtainRef?.current) {
       return;
     }
@@ -30,9 +30,9 @@ const Layout = ({ children }) => {
     return gsap.to(curtainRef.current, { duration: 0.6, scaleY: 1, ease: 'circ.inOut', onStart: () => {
       gsap.set(curtainRef.current, { transformOrigin: '50% 100%', scaleY: 0 });
     } })
-  };
+  }, [curtainRef]);
 
-  const hideCurtain = () => {
+  const hideCurtain = React.useCallback(() => {
     if (!curtainRef?.current) {
       return;
     }
@@ -48,7 +48,7 @@ const Layout = ({ children }) => {
           gsap.set(curtainRef.current, { transformOrigin: '50% 0', scaleY: 1 });
         },
     })
-  };
+  }, [curtainRef]);
 
   React.useEffect(() => {
     if (curtainRef.current) {

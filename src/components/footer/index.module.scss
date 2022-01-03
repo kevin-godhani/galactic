@@ -26,6 +26,10 @@
     cursor: pointer;
     width: 247px;
     margin-bottom: 33px;
+    outline: none;
+    img {
+      width: 100%;
+    }
   }
   &-copy-rights {
     font-family: "Satoshi";
@@ -49,6 +53,7 @@
       color: #ffffff;
       text-decoration: none;
       transition: color 375ms ease;
+      outline: none;
       cursor: pointer;
       &:hover {
         color: #EFDAA9;

@@ -336,7 +336,7 @@ export const roadMap = [
         labelBig: true,
     },
     {
-        title: "Mint date: 13/01/2022",
+        title: "Mint date: 20/01/2022",
         description: "Come mint day we will be releasing 9999 fighters into the wild. Each one will be unique with billions of possible combinations. The mint will go live first to anyone who has managed to get a spot on the Whitelist. They will have half an hour before the mint is opened to the public.",
         label: '01',
     },
@@ -596,7 +596,7 @@ export const slides = [
     image: slide1,
     imageTablet: slide1Tablet,
     imageMobile: slide1Mobile,
-    link: 'civilization-last-guard',
+    link: 'civilisation-last-guard',
   },
   {
     id: 2,
@@ -605,7 +605,7 @@ export const slides = [
     image: slide2,
     imageTablet: slide2Tablet,
     imageMobile: slide2Mobile,
-    link: 'civilization-immortals',
+    link: 'civilisation-immortals',
   },
   {
     id: 3,
@@ -614,7 +614,7 @@ export const slides = [
     image: slide3,
     imageTablet: slide3Tablet,
     imageMobile: slide3Mobile,
-    link: 'civilization-jupiter-knights',
+    link: 'civilisation-jupiter-knights',
   },
   {
     id: 4,
@@ -623,7 +623,7 @@ export const slides = [
     image: slide4,
     imageTablet: slide4Tablet,
     imageMobile: slide4Mobile,
-    link: 'civilization-biohazard-brawlers',
+    link: 'civilisation-biohazard-brawlers',
   },
   {
     id: 5,
@@ -632,7 +632,7 @@ export const slides = [
     image: slide5,
     imageTablet: slide5Tablet,
     imageMobile: slide5Mobile,
-    link: 'civilization-bone-collectors',
+    link: 'civilisation-bone-collectors',
   },
   {
     id: 6,
@@ -641,7 +641,7 @@ export const slides = [
     image: slide6,
     imageTablet: slide6Tablet,
     imageMobile: slide6Mobile,
-    link: 'civilization-iron-empire',
+    link: 'civilisation-iron-empire',
   },
   {
     id: 7,
@@ -650,6 +650,6 @@ export const slides = [
     image: slide7,
     imageTablet: slide7Tablet,
     imageMobile: slide7Mobile,
-    link: 'civilization-unbroken',
+    link: 'civilisation-unbroken',
   },
 ];

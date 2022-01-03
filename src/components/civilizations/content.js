@@ -7,7 +7,7 @@ import * as styles from "../civilizationStory/index.module.scss";
 import { animatedArrows } from "../mainPage/thirdBlock";
 import useWindowSize from "../../utils/useWindowSize";
 
-const CivilizationsContent = ({ data }) => {
+const CivilisationsContent = ({ data }) => {
   const ws = useWindowSize();
   const isTabletWidth = ws.width < 1200 && ws.width > 680;
   const isMobileWidth = ws.width < 680;
@@ -54,4 +54,4 @@ const CivilizationsContent = ({ data }) => {
   );
 };
 
-export default CivilizationsContent;
+export default CivilisationsContent;

@@ -8,7 +8,7 @@ const CustomTimer = () => {
 
   const timer = useCallback(() => {
     const time =
-      Date.parse("January, 13, 2022, 19:00") - Date.parse(new Date());
+      Date.parse("January, 20, 2022, 19:00") - Date.parse(new Date());
     if (time < 0) {
       setMinutes(0);
       setDays(0);

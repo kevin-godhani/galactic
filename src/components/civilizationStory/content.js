@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect } from "react";
+import React, { useState, useRef } from "react";
 import border from "../../styles/img/civilizations/borders_civilization.png";
 import label from "../../styles/img/label.png";
 import decor from "../../styles/img/back_decoration.png";
@@ -16,7 +16,7 @@ import Modal from "../modal";
 import CloseIcon from "../mainPage/thirdBlock/closeIcon";
 import WatchButtonIcon2 from '../../styles/img/watch-button2.inline.svg';
 
-const CivilizationStoryContent = ({ data }) => {
+const CivilisationStoryContent = ({ data }) => {
   const videoRef = useRef(null);
   const animationRef = useRef(null);
   const [fightSkills, setFightSkills] = useState(1);
@@ -75,7 +75,7 @@ const CivilizationStoryContent = ({ data }) => {
         className={`${styles.CivilizationStoryContentContainer} container-width`}
       >
         <h2 data-aos="fade-up" className={`title ${styles.mainTitle}`}>
-          Civilization Story
+          Civilisation Story
         </h2>
         <div data-aos="fade-up" className={styles.contentDescription}>
           <section>
@@ -163,7 +163,9 @@ const CivilizationStoryContent = ({ data }) => {
                   autoPlay
                   src={`https://storage.googleapis.com/galactic_assets/Civilization%20Videos%20/${data.id}.mp4`}
                   poster={data.previewImg}
-                />
+                >
+                  <track kind="captions" default></track>
+                </video>
               </div>
             }
             isOpen={isModalOpen}
@@ -203,4 +205,4 @@ const CivilizationStoryContent = ({ data }) => {
   );
 };
 
-export default CivilizationStoryContent;
+export default CivilisationStoryContent;

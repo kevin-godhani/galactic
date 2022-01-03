@@ -43,15 +43,21 @@ const Menu = () => {
         onClick={() => handleCloseMenu('/')}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onKeyPress={null}
+        role={'button'}
+        tabIndex={0}
       >
         <span>01</span>
         <p>Main Page</p>
       </div>
       <div
         data-index={1}
-        onClick={() => handleCloseMenu('/civilizations')}
+        onClick={() => handleCloseMenu('/civilisations')}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onKeyPress={null}
+        role={'button'}
+        tabIndex={0}
       >
         <span>02</span>
         <p>civilisations</p>

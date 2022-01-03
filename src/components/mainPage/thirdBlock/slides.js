@@ -17,10 +17,10 @@ const sliderSettings = {
   lazyLoad: 'progressive',
   fade: true,
   draggable: false,
-  className: 'civilizations-slides-slider'
+  className: 'civilisations-slides-slider'
 };
 
-const CivilizationSlides = ({ slides }) => {
+const CivilisationSlides = ({ slides }) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const ws = useWindowSize();
   const sliderRef = useRef(null);
@@ -41,6 +41,8 @@ const CivilizationSlides = ({ slides }) => {
     await showCurtain();
     navigate(link);
   };
+
+  const slidesCount = activeSlideIndex + 1 < 10 ? `0${activeSlideIndex + 1}` : activeSlideIndex + 1;
 
   return (
     <div className={styles.civilizationSlides}>
@@ -72,7 +74,7 @@ const CivilizationSlides = ({ slides }) => {
       <div className={styles.slidesCounter}>
         <img src={slidesCounter} className={styles.slidesCounterImage} alt="background" />
           <span className={styles.slidesCounterText}>
-            <span className={styles.slidesCounterActive}>{activeSlideIndex + 1 < 10 ? `0${activeSlideIndex + 1}` : activeSlideIndex + 1}</span>
+            <span className={styles.slidesCounterActive}>{slidesCount}</span>
             <span className={styles.slidesCounterSlash}>/</span>
             <span className={styles.slidesCounterLength}>{slides.length < 10 ? `0${slides.length}` : slides.length}</span>
           </span>
@@ -88,4 +90,4 @@ const CivilizationSlides = ({ slides }) => {
   )
 };
 
-export default CivilizationSlides;
+export default CivilisationSlides;

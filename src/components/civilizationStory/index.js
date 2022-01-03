@@ -2,7 +2,7 @@ import React, { useState, useRef, useContext } from "react";
 import Ticker from "react-ticker";
 import * as styles from "./index.module.scss";
 import { ButtonWithoutLink } from "../buttons/index";
-import CivilizationStoryContent from "./content";
+import CivilisationStoryContent from "./content";
 import { ButtonsBlock } from '../buttons';
 import gsap from 'gsap';
 import { navigate } from "gatsby-link";
@@ -13,7 +13,7 @@ import border2 from "../../styles/img/icons/border2.png";
 import border_animationTablet from "../../styles/img/tablet_civilizations_boder.png";
 import border_animation from "../../styles/img/border_amination.png";
 
-const CivilizationsStory = ({ data, nextTitle }) => {
+const CivilisationsStory = ({ data, nextTitle }) => {
   const [isMale, setIsMale] = useState(true);
   const displacementMapRef = useRef(null);
   const { showCurtain } = useContext(Context);
@@ -139,7 +139,7 @@ const CivilizationsStory = ({ data, nextTitle }) => {
           </div>
         </div>
       </div>
-      <CivilizationStoryContent data={data} />
+      <CivilisationStoryContent data={data} />
       <div
         className={styles.mainHeader}
         style={{ marginBottom: "60px", background: `url(${next_back})` }}
@@ -165,4 +165,4 @@ const CivilizationsStory = ({ data, nextTitle }) => {
   );
 };
 
-export default CivilizationsStory;
+export default CivilisationsStory;

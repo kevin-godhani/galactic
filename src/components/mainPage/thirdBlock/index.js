@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
-import CivilizationSlides from "./slides";
-import preview from "../../../styles/img/origin-story-placeholder.png";
+import CivilisationSlides from "./slides";
+// import preview from "../../../styles/img/origin-story-placeholder.png";
 import arrowP from "../../../styles/img/icons/arrow_purple.svg";
 import arrowG from "../../../styles/img/icons/arrow_gold.svg";
 import border from "../../../styles/img/border1.svg";
@@ -13,8 +13,9 @@ import * as styles from "./index.module.scss";
 // import useWindowSize from "../../../utils/useWindowSize";
 import { slides } from "../../../constants";
 import Modal from "../../modal";
-import CloseIcon from "./closeIcon";
+// import CloseIcon from "./closeIcon";
 import WatchButtonIcon from '../../../styles/img/watch-icon.inline.svg';
+import YoutubeEmbed from '../../youtubeEmbed';
 
 export const animatedArrows = (color) => {
   return (
@@ -108,28 +109,13 @@ const ThirdBlock = () => {
             }
             children={
               <div className={styles.videoContentWrapper}>
-                <CloseIcon onClick={closeModal} />
-                <video
-                  // style={
-                  //   isFullScreen
-                  //     ? { WebkitMaskImage: "none" }
-                  //     : { display: "none" }
-                  // }
-                  ref={videoRef}
-                  autoPlay
-                  controls
-                  playsInline
-                  loop
-                  src="https://storage.googleapis.com/galactic_assets/GFLFinal.mp4"
-                  poster={preview}
-                ></video>
+                <YoutubeEmbed embedId="1I_vUwPf43k" title="Origin Story" />
               </div>
             }
             isOpen={isModalOpen}
             onClose={closeModal}
             onOpen={openModal}
           />
-
           <img
             src="https://storage.googleapis.com/galactic_assets/GFLFinal_DrewVDO.gif"
             alt="gif"
@@ -141,7 +127,7 @@ const ThirdBlock = () => {
       </div>
       <div className={`${styles.civilizations} container-width`}>
         <h2 data-aos="fade-up" className={`title ${styles.civilizationsTitle}`}>
-          Civilizations
+          Civilisations
         </h2>
         <p
           data-aos-delay="66"
@@ -150,10 +136,10 @@ const ThirdBlock = () => {
         >
           In the future, our galaxy is a very different place. Where humans once
           believed they were the only form of intelligent life, new
-          civilizations were discovered, new lifeforms forged. Co-existence was
+          civilisations were discovered, new lifeforms forged. Co-existence was
           never easy, battles raged.
         </p>
-        <CivilizationSlides slides={slides} />
+        <CivilisationSlides slides={slides} />
       </div>
     </section>
   );
