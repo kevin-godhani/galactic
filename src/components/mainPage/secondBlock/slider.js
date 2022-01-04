@@ -27,9 +27,9 @@ const settings = {
     },
   ],
 };
-const SlickSlider = ({ redirect, containerClassName, className, data, isClickable = false, afterChange, sliderSettings, activeSlideIndex, fadeIn }) => {
+const SlickSlider = ({ redirect, containerClassName, className, data, isClickable = false, sliderSettings, activeSlideIndex, fadeIn, handleMouseDown }) => {
   const s = {...settings, ...sliderSettings};
-  const props = {...s, className: className, afterChange: afterChange};
+  const props = {...s, className: className};
 
   const sliderRef = useRef(null);
 
@@ -47,7 +47,11 @@ const SlickSlider = ({ redirect, containerClassName, className, data, isClickabl
           <div
             className={styles.card}
             key={el.id}
+            onMouseDownCapture={handleMouseDown}
             onClick={() => isClickable && redirect(el.id)}
+            role={'button'}
+            onKeyPress={null}
+            tabIndex={0}
           >
             <img draggable="false" src={el.url} alt="decoration" />
           </div>

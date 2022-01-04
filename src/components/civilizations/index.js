@@ -7,6 +7,7 @@ import slidesCounter from "../../styles/img/slider-counter-bg.svg";
 import * as styles from "./index.module.scss";
 import * as style from "../civilizationStory/index.module.scss";
 import useWindowSize from "../../utils/useWindowSize";
+import useDragDetection from "../../utils/useDragDetection";
 import Context from "../../context";
 import SlickSlider from "../mainPage/secondBlock/slider";
 import CivilisationsContent from "./content";
@@ -15,19 +16,24 @@ import { SliderArrows } from '../buttons';
 import gsap from 'gsap';
 
 const CivilisationsMain = () => {
-  const [isAnimating, setIsAnimating] = useState(false);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const [sliding, setIsSliding] = useState(false);
   const ws = useWindowSize();
   const isTabletWidth = ws.width <= 1200 && ws.width >= 481;
   const isMobileWidth = ws.width <= 480;
   const displacementMapRef = useRef(null);
 
+  const {
+    handleMouseDown,
+    dragging,
+  } = useDragDetection();
+
   const isMinValue = activeSlideIndex === 0;
   const isMaxValue = activeSlideIndex === carousel?.length - 1;
 
-  const handleChangeStep = (step) => {
-    setIsAnimating(false);
+  const onAfterChange = (step) => {
     setActiveSlideIndex(step);
+    setIsSliding(false);
 
     gsap.to(displacementMapRef.current, { duration: 0.18, attr: { scale: 0 } });
   };
@@ -39,7 +45,7 @@ const CivilisationsMain = () => {
   const { showCurtain } = useContext(Context);
 
   const handleRedirect = async (id) => {
-    if (id - 1 === activeSlideIndex) {
+    if (id - 1 === activeSlideIndex && !dragging ) {
       await showCurtain();
       navigate(civilisationsStoryData[activeSlideIndex].link);
     }
@@ -51,25 +57,26 @@ const CivilisationsMain = () => {
       : pageData[activeSlideIndex]?.background;
 
   const onPrev = () => {
-    if (isMinValue || isAnimating) {
+    if (isMinValue || sliding) {
       return;
     }
 
-    setIsAnimating(true);
+    setIsSliding(true);
     setActiveSlideIndex(activeSlideIndex - 1);
   }
 
   const onNext = () => {
-    if (isMaxValue || isAnimating) {
+    if (isMaxValue || sliding) {
       return;
     }
 
-    setIsAnimating(true);
+    setIsSliding(true);
     setActiveSlideIndex(activeSlideIndex + 1);
   }
 
   const settings = {
     beforeChange: onBeforeChange,
+    afterChange: onAfterChange,
   };
 
   return (
@@ -117,11 +124,10 @@ const CivilisationsMain = () => {
 
       <div className={styles.sliderContainer}>
         <SlickSlider
+          handleMouseDown={handleMouseDown}
           redirect={handleRedirect}
           data={carousel}
           sliderSettings={settings}
-          beforeChange={onBeforeChange}
-          afterChange={handleChangeStep}
           containerClassName={"civilisations-slider-wrap"}
           className={"civilisations-slider"}
           activeSlideIndex={activeSlideIndex}

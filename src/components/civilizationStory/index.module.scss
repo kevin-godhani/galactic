@@ -441,6 +441,11 @@
   padding-left: 112px !important;
 }
 
+.tickerWrapNext {
+  margin-bottom: 60px;
+  background-image: url(../../styles/img/next_back.png);
+}
+
 @media only screen and (min-width: 1860px) {
   .slides {
     &-buttons {

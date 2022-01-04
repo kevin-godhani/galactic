@@ -8,7 +8,6 @@ import gsap from 'gsap';
 import { navigate } from "gatsby-link";
 import Context from "../../context";
 import border from "../../styles/img/border_line.png";
-import next_back from "../../styles/img/next_back.png";
 import border2 from "../../styles/img/icons/border2.png";
 import border_animationTablet from "../../styles/img/tablet_civilizations_boder.png";
 import border_animation from "../../styles/img/border_amination.png";
@@ -140,10 +139,7 @@ const CivilisationsStory = ({ data, nextTitle }) => {
         </div>
       </div>
       <CivilisationStoryContent data={data} />
-      <div
-        className={styles.mainHeader}
-        style={{ marginBottom: "60px", background: `url(${next_back})` }}
-      >
+      <div className={`${styles.mainHeader} ${styles.tickerWrapNext}`}>
         <Ticker direction="toLeft">
           {({ index }) => (
             <>

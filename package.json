@@ -48,7 +48,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy:firebase:staging": "firebase deploy --only hosting:web-stage --token 1//09nuvAq1XfvrKCgYIARAAGAkSNwF-L9IryTz8FrZNYIIY8xPSyw_dgAlB3c_1B6KY8DZ79DO-BfetdTz9us35lbf1P93aSb3TDQY"
+    "deploy:firebase:staging": "firebase deploy --only hosting:web-stage --token 1//0cBcnBRWmx638CgYIARAAGAwSNwF-L9IrFygaCqtIBxUtkoVXveyPl_NYpwzpqRcbu-9b3EpU6ZWOQ0INiK7gYVygyjp_Ej7q9es"
   },
   "repository": {
     "type": "git",
