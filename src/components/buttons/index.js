@@ -145,7 +145,7 @@ export const ButtonsBlock = ({
       <div
         className={`slide-button ${buttonStyle}`}
         onClick={onLeftButtonClick}
-        style={ !limitMin ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, pointerEvents: 'none' }}
+        style={ limitMin ? { cursor: 'default', pointerEvents: 'none' } : null}
         onKeyPress={null}
         role={'button'}
         tabIndex={0}
@@ -154,14 +154,14 @@ export const ButtonsBlock = ({
           <div className={'slide-button-bg'} style={{ background: !limitMin ? sliderButtonBgActive : sliderButtonBg }}></div>
         </div>
         <div className={'slide-button-border'}></div>
-        <span className={`slide-button-text ${textStyle}`} style={!limitMin ? { color: "#010103" } : { color: "#EFDAA9" }}>
+        <span className={`slide-button-text ${textStyle}`} style={{ color: !limitMin ? '#FFFFFF' : '#010103' }}>
           {leftButtonTitle}
         </span>
       </div>
       <div
         className={`slide-button ${buttonStyle}`}
         onClick={onRightButtonClick}
-        style={ !limitMax ? { opacity: 1, cursor: 'pointer' } : { opacity: 0.6, pointerEvents: 'none' }}
+        style={ limitMax ? { cursor: 'default', pointerEvents: 'none' } : null}
         onKeyPress={null}
         role={'button'}
         tabIndex={0}
@@ -170,7 +170,7 @@ export const ButtonsBlock = ({
           <div className={'slide-button-bg'} style={{ background: !limitMax ? sliderButtonBgActive : sliderButtonBg }}></div>
         </div>
         <div className={'slide-button-border'}></div>
-        <span className={`slide-button-text ${textStyle}`} style={!limitMax ? { color: "#010103" } : { color: "#EFDAA9" }}>
+        <span className={`slide-button-text ${textStyle}`} style={{ color: !limitMax ? '#FFFFFF' : '#010103' }}>
           {rightButtonTitle}
         </span>
       </div>
