@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import CivilisationSlides from "./slides";
-// import preview from "../../../styles/img/origin-story-placeholder.png";
 import arrowP from "../../../styles/img/icons/arrow_purple.svg";
 import arrowG from "../../../styles/img/icons/arrow_gold.svg";
 import border from "../../../styles/img/border1.svg";
@@ -8,15 +7,12 @@ import decoration from "../../../styles/img/back_decoration.png";
 import borderTablet from "../../../styles/img/border_tablet.png";
 import borderMobile from "../../../styles/img/border-mobile.png";
 import * as styles from "./index.module.scss";
-// import cursorPlay from "../../../styles/img/icons/watch_icon.png";
-// import playText from "../../../styles/img/icons/play_text.svg";
-// import useWindowSize from "../../../utils/useWindowSize";
 import { slides } from "../../../constants";
 import Modal from "../../modal";
-// import CloseIcon from "./closeIcon";
 import WatchButtonIcon from '../../../styles/img/watch-icon.inline.svg';
 import YoutubeEmbed from '../../youtubeEmbed';
 import ImageRenderer from '../../imageRenderer';
+import { useInView } from 'react-intersection-observer';
 
 export const animatedArrows = (color) => {
   return (
@@ -29,10 +25,12 @@ export const animatedArrows = (color) => {
 };
 
 const ThirdBlock = () => {
-  // const [isFullScreen, setIsFullScreen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const videoRef = useRef(null);
-  // const ws = useWindowSize();
+
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
 
   const closeModal = () => setIsModalOpen(false);
   const openModal = () => {
@@ -42,35 +40,8 @@ const ThirdBlock = () => {
     el.muted = false;
   };
 
-  // const toggleFullScreen = () => {
-  //   const el = videoRef.current;
-  //   if (!el) return;
-  //   el.muted = false;
-  //   el.style.display = "block";
-  //   if (el.requestFullscreen) {
-  //     el.requestFullscreen();
-  //   } else if (el.mozRequestFullScreen) {
-  //     el.mozRequestFullScreen();
-  //   } else if (el.webkitRequestFullscreen) {
-  //     el.webkitRequestFullscreen();
-  //   }
-  // };
-
-  // useLayoutEffect(() => {
-  //   const refEl = videoRef.current;
-  //   if (refEl) {
-  //     if (ws.width === refEl.clientWidth) {
-  //       setIsFullScreen(true);
-  //       refEl.currentTime = 0;
-  //     } else {
-  //       setIsFullScreen(false);
-  //       refEl.muted = true;
-  //     }
-  //   }
-  // });
-
   return (
-    <section className={styles.main}>
+    <section ref={ref} className={styles.main} style={{ visibility: inView ? 'visible' : 'hidden' }}>
       <div className={styles.decoration}>
         <ImageRenderer url={decoration} width={353} height={394} alt="decoration" />
       </div>

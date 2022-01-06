@@ -37,7 +37,7 @@ const Footer = ({ siteTitle }) => {
           role={'button'}
           tabIndex={0}
         >
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" width={247} height={54} />
         </div>
         <div className={styles.footerSmBlock}>
           <MainButtonExternal

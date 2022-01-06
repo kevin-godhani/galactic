@@ -5,6 +5,7 @@ import { SocialButton } from "../../buttons";
 import useWindowSize from "../../../utils/useWindowSize";
 import { advisors } from "../../../constants";
 import ImageRenderer from '../../imageRenderer';
+import { useInView } from 'react-intersection-observer';
 
 const ItemBlock = ({ title, description, image, links, isEven, idx }) => {
   const ws = useWindowSize();
@@ -60,9 +61,12 @@ const ItemBlock = ({ title, description, image, links, isEven, idx }) => {
 const Advisors = () => {
   const ws = useWindowSize();
   const isDesktopWidth = ws.width > 1200;
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
 
   return (
-    <section className={styles.advisorsSection}>
+    <section ref={ref} className={styles.advisorsSection} style={{ visibility: inView ? 'visible' : 'hidden' }}>
       <div className={`container-width ${styles.advisorsSectionContainer}`}>
         <h2
           data-aos="fade-up"

@@ -12,6 +12,7 @@ import bg2 from "../../styles/img/civilizations/elite-fighters/ef-bg2.png";
 import lockedBg1 from "../../styles/img/civilizations/elite-fighters/locked-bg1.png";
 import lockedBg2 from "../../styles/img/civilizations/elite-fighters/locked-bg2.png";
 import useWindowSize from "../../utils/useWindowSize";
+import ImageRenderer from "../imageRenderer";
 
 const settings = {
   dots: false,
@@ -58,15 +59,15 @@ const EliteFighters = ({ fighters }) => {
     const id = fighter.id;
     const index = fighters.findIndex((f) => f.id === id);
     sliderRef.current?.slickGoTo(index);
-  }, []);
+  }, [fighters, isTabletWidth, isMobileWidth]);
 
-  const onChange = (index) => {
+  const onChange = useCallback((index) => {
     setActiveFighter(fighters[index]);
-  };
+  }, [fighters]);
 
   const sliderSettings = useMemo(() => {
     return { ...settings, afterChange: onChange };
-  }, []);
+  }, [onChange]);
 
   if (!fighters) {
     return null;
@@ -85,27 +86,36 @@ const EliteFighters = ({ fighters }) => {
                 !fighter.active ? styles.cardLocked : ""
               }`}
               onClick={(_e) => fighter.active && onClickHandle(_e, fighter)}
+              role={'button'}
+              tabIndex={0}
+              onKeyPress={null}
             >
               {fighter.active ? (
-                <img
-                  src={backgrounds[+bgIndex]}
-                  className={`${styles.cardBg}`}
+                <ImageRenderer
+                  url={backgrounds[+bgIndex]}
+                  containerClassName={styles.cardBg}
+                  width={377}
+                  height={373}
                   alt={fighter.name}
                 />
               ) : (
-                <img
-                  src={lockedBackgrounds[+bgIndex]}
-                  className={`${styles.cardBg}`}
+                <ImageRenderer
+                  url={lockedBackgrounds[+bgIndex]}
+                  containerClassName={styles.cardBg}
+                  width={377}
+                  height={373}
                   alt={fighter.name}
                 />
               )}
-              <img
-                src={fighter.image}
-                className={`${styles.cardFighterImage} ${
+              <ImageRenderer
+                url={fighter.image}
+                containerClassName={`${styles.cardFighterImage} ${
                   fighter.id === activeFighter.id
                     ? styles.cardFighterImageActive
                     : ""
                 }`}
+                width={700}
+                height={700}
                 alt={fighter.name}
               />
               <h5 className={`${styles.cardTitle} ${styles.cardTitleText}`}>{fighter.name}</h5>

@@ -15,6 +15,8 @@ import useWindowSize from "../../utils/useWindowSize";
 import Modal from "../modal";
 import CloseIcon from "../mainPage/thirdBlock/closeIcon";
 import WatchButtonIcon2 from '../../styles/img/watch-button2.inline.svg';
+import ImageRenderer from '../imageRenderer';
+import { useInView } from 'react-intersection-observer';
 
 const CivilisationStoryContent = ({ data }) => {
   const videoRef = useRef(null);
@@ -23,6 +25,10 @@ const CivilisationStoryContent = ({ data }) => {
   // const [isFullScreen, setIsFullScreen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   // const ws = useWindowSize();
+
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
 
   const closeModal = () => setIsModalOpen(false);
   const openModal = () => {
@@ -69,8 +75,15 @@ const CivilisationStoryContent = ({ data }) => {
   // });
 
   return (
-    <div className={`${styles.CivilizationStoryContent}`}>
-      <img src={decor} className={styles.decoration} alt="decor" />
+    <div ref={ref} className={`${styles.CivilizationStoryContent}`} style={{ visibility: inView ? 'visible' : 'hidden' }}>
+      <div className={styles.decoration}>
+        <ImageRenderer
+          url={decor}
+          width={354}
+          height={394}
+          alt={'decor'}
+        />
+      </div>
       <div
         className={`${styles.CivilizationStoryContentContainer} container-width`}
       >

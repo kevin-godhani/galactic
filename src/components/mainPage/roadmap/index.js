@@ -9,6 +9,7 @@ import decoration from "../../../styles/img/decor.png";
 import { roadMap } from '../../../constants';
 import * as styles from "./index.module.scss";
 import ImageRenderer from '../../imageRenderer';
+import { useInView } from 'react-intersection-observer';
 
 const RoadMapItem = ({ data, isEven, idx }) => {
   const { title, description, label, labelBig } = data;
@@ -38,22 +39,28 @@ const RoadMapItem = ({ data, isEven, idx }) => {
   );
 };
 
-const Roadmap = () => (
-  <section className={`${styles.roadmapSection}`}>
-    <div className={styles.decoration}>
-      <ImageRenderer url={decoration} width={500} height={377} alt="decoration" />
-    </div>
-    <div className={`container-width ${styles.roadmapSectionContainer}`}>
-      <h2 data-aos="fade-up" className={`title ${styles.roadmapTitle}`}>
-        Roadmap
-      </h2>
-      {roadMap.map((el, i) => {
-        const isEven = i % 2 > 0;
-        return <RoadMapItem key={i} data={el} idx={i} isEven={isEven} />
-      }
-      )}
-    </div>
-  </section>
-);
+const Roadmap = () => {
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
+  return (
+    <section ref={ref} className={`${styles.roadmapSection}`} style={{ visibility: inView ? 'visible' : 'hidden' }}>
+      <div className={styles.decoration}>
+        <ImageRenderer url={decoration} width={500} height={377} alt="decoration" />
+      </div>
+      <div className={`container-width ${styles.roadmapSectionContainer}`}>
+        <h2 data-aos="fade-up" className={`title ${styles.roadmapTitle}`}>
+          Roadmap
+        </h2>
+        {roadMap.map((el, i) => {
+          const isEven = i % 2 > 0;
+          return <RoadMapItem key={i} data={el} idx={i} isEven={isEven} />
+        }
+        )}
+      </div>
+    </section>
+  );
+};
 
 export default Roadmap;

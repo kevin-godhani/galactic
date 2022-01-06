@@ -1,9 +1,7 @@
 import React, { useEffect } from "react"
-import { carousel } from "../constants"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
-import SlickSlider from "../components/mainPage/secondBlock/slider"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import FirstBlock from "../components/mainPage/firstBlock/index"
@@ -26,7 +24,6 @@ const IndexPage = () => {
       <Seo title="Home" />
       <FirstBlock />
       <SecondBlock />
-      <SlickSlider data={carousel} className={'fighters-slider'} activeSlideIndex={0} />
       <ThirdBlock />
       <Roadmap />
       <OurSponsors />

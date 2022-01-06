@@ -660,6 +660,9 @@ pre tt:after {
   &.elite-fighters {
     .slick-slide {
       opacity: 1;
+      img {
+        position: static;
+      }
     }
     .slick-center {
       cursor: url(../styles/img/cursors/cursor.png) 25 15, auto !important;

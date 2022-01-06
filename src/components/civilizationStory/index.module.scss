@@ -16,6 +16,7 @@
 
 .decoration {
   position: absolute;
+  width: 353px;
   top: 41%;
   right: 0;
   z-index: -1;
@@ -406,6 +407,7 @@
   // cursor: pointer;
   &-bg {
     margin-bottom: 15px;
+    padding-bottom: 0 !important;
     // width: 400px !important;
     // padding: 0 !important;
   }
@@ -421,6 +423,7 @@
   &-fighterImage {
     position: absolute;
     top: -0.43vw;
+    // padding-bottom: 0 !important;
     filter: grayscale(1);
     // width: 400px !important;
     // padding: 0 !important;

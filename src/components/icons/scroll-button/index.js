@@ -6,6 +6,8 @@ const ScrollButtonIcon = () => {
     const scrollBtnBgInnerRef = useRef(null);
 
     useEffect(() => {
+        const scrollBtnBgInner = scrollBtnBgInnerRef?.current;
+        const scrollBtnBgOuter = scrollBtnBgOuterRef?.current;
         if (scrollBtnBgOuterRef.current && scrollBtnBgInnerRef.current) {
             gsap.set([scrollBtnBgOuterRef.current, scrollBtnBgInnerRef.current], { transformOrigin: '50% 50%' });
 
@@ -14,12 +16,12 @@ const ScrollButtonIcon = () => {
         }
 
         return () => {
-            if (scrollBtnBgOuterRef.current && scrollBtnBgInnerRef.current) {
-                gsap.killTweensOf([scrollBtnBgOuterRef?.current, scrollBtnBgInnerRef?.current]);
-                gsap.set([scrollBtnBgOuterRef?.current, scrollBtnBgInnerRef?.current], { scale:1 });
+            if (scrollBtnBgInner && scrollBtnBgOuter) {
+                gsap.killTweensOf([scrollBtnBgOuter, scrollBtnBgInner]);
+                gsap.set([scrollBtnBgOuter, scrollBtnBgInner], { scale:1 });
             }
         }
-    }, [scrollBtnBgOuterRef, scrollBtnBgInnerRef]);
+    }, []);
 
     return (
         <svg className="scroll-button" width="111" height="156" viewBox="0 0 111 156" fill="none" xmlns="http://www.w3.org/2000/svg">

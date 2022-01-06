@@ -15,6 +15,11 @@ import { civilisationsStoryData } from "./dataMocks";
 import { SliderArrows } from '../buttons';
 import gsap from 'gsap';
 
+const slideSize = {
+  width: 420,
+  height: 258,
+};
+
 const CivilisationsMain = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [sliding, setIsSliding] = useState(false);
@@ -131,6 +136,7 @@ const CivilisationsMain = () => {
           containerClassName={"civilisations-slider-wrap"}
           className={"civilisations-slider"}
           activeSlideIndex={activeSlideIndex}
+          slideSize={slideSize}
           isClickable
         />
         <div className={styles.slidesCounter}>
