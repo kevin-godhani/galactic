@@ -30,7 +30,12 @@ function Seo({ title, description, image }) {
   // const defaultImage = image || site.siteMetadata?.image
 
   return (
-    <Helmet title={defaultTitle}>
+    <Helmet
+      title={defaultTitle}
+      htmlAttributes={{
+        lang: 'en',
+      }}
+    >
         {/* <!-- Primary Meta Tags --> */}
         <title>{'The Galactic Fight League'}</title>
         <meta name="title" content={'The Galactic Fight League'} />

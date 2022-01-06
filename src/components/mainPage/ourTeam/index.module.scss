@@ -30,11 +30,19 @@
   height: 303px;
 }
 .cardImage {
-  max-width: 100%;
-  max-height: 100%;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 .container {
   width: 100%;
@@ -47,26 +55,23 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  > div {
-    &:first-child {
-      position: relative;
-      height: 568px;
-      margin-right: 50px;
-      > div {
-        position: absolute;
-        bottom: 30px;
-      }
-    }
-  }
 }
 .cardContainer {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 481px;
+  height: 568px;
+  margin-right: 50px;
+  flex-shrink: 0;
 }
 .flipped {
   transform: scaleX(-1);
+}
+.cardContainerBg {
+  position: relative !important;
+  bottom: unset !important;
 }
 .socialButtonsWrap {
   position: absolute;
@@ -86,22 +91,9 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: row-reverse;
-  .cardText {
-    margin-right: 50px;
-  }
-  > span {
-    margin-right: 50px;
-  }
-  > div {
-    &:last-child {
-      position: relative;
-      height: 568px;
-      > div {
-        position: absolute;
-        bottom: 30px;
-        right: 185px;
-      }
-    }
+  .cardContainer {
+    margin-right: 0;
+    margin-left: 50px;
   }
 }
 
@@ -162,7 +154,41 @@
     max-width: 100%;
   }
 }
-
+@media only screen and (max-width: 480px) {
+  .teamSection {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .teamSectionContainer {
+      padding: 0 30px;
+      div:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .teamSectionTitle {
+      margin-bottom: 49px;
+    }
+    .teamSectionSubtitle {
+      margin-bottom: 50px;
+    }
+  }
+  .cardContainer {
+    margin-bottom: 25px;
+  }
+  .leftContainer,
+  .rightContainer {
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+  .cardImageWrap {
+    width: 44.44vw;
+    height: 52.17vw;
+    max-height: 216px;
+    max-width: 184px;
+  }
+  .socialButtonsWrap {
+    bottom: 20px;
+  }
+}
 @media only screen and (min-width: 1920px) {
   .teamSection {
     padding-top: 200px;
@@ -194,7 +220,7 @@
     width: 100%;
   }
   .cardText {
-    max-width: unset;
+    max-width: 62%;
     font-size: 1.6rem;
     line-height: 2.4rem;
   }

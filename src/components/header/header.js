@@ -16,7 +16,7 @@ import {
   discordLink,
 } from "../../constants";
 
-const Header = () => {
+const Header = ({ setMenuIsOpened }) => {
   const [y, setY] = useState(
     typeof window !== "undefined" ? window.scrollY : 0
   );
@@ -30,6 +30,7 @@ const Header = () => {
     document.body.classList.remove("scroll-lock");
     document.documentElement.classList.remove("scroll-lock");
     setIsHederFixed(false);
+    setMenuIsOpened(false);
   };
 
   const handleOpenMenu = () => {
@@ -37,6 +38,7 @@ const Header = () => {
     document.body.classList.add("scroll-lock");
     document.documentElement.classList.add("scroll-lock");
     setIsHederFixed(true);
+    setMenuIsOpened(true);
   };
 
   const handleNavigation = useCallback(
@@ -78,7 +80,7 @@ const Header = () => {
           role={'button'}
           tabIndex={0}
         >
-          <img src={tabletLogo} alt="tabletLogo" />
+          <img src={tabletLogo} alt="tabletLogo" width={57} height={50} />
         </div>
         <div
           className={styles.menuIcon}
@@ -87,7 +89,7 @@ const Header = () => {
           role={'button'}
           tabIndex={0}
         >
-          <img src={isHederFixed ? menuOpened : menu} alt="menu" />
+          <img src={isHederFixed ? menuOpened : menu} alt="menu" width={93} height={64} />
         </div>
       </div>
       <div
@@ -97,9 +99,9 @@ const Header = () => {
         role={'button'}
         tabIndex={0}
       >
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" width={300} height={65} />
       </div>
-      <div className={styles.buttonsBlock}>
+      <div className={styles.headerButtonsBlock}>
         <MainButtonExternal
           url={discordLink}
           title={"Join Discord"}
@@ -107,7 +109,7 @@ const Header = () => {
           isPurple={false}
           small={showSmallButton}
         />
-        <div className="sm-buttons">
+        <div className={`sm-buttons ${styles.headerSmButtons}`}>
           <SocialButton url={twitterLink} Icon={twitter} size={40} />
           <SocialButton url={instagramLink} Icon={instagram} size={40} />
         </div>

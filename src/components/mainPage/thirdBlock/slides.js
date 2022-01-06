@@ -7,6 +7,7 @@ import slidesCounter from "../../../styles/img/slides-counter.svg";
 import Slider from "react-slick";
 import { navigate } from "gatsby-link";
 import Context from "../../../context";
+import ImageRenderer from '../../imageRenderer';
 
 const sliderSettings = {
   dots: false,
@@ -54,9 +55,9 @@ const CivilisationSlides = ({ slides }) => {
         {slides.map(s => {
           return (
             <div key={s.id} className={styles.slide}>
-              {!isTabletWidth && !isMobileWidth && <img className={styles.slideImage} src={s.image} alt={s.title} />}
-              {isTabletWidth && <img className={styles.slideImage} src={s.imageTablet} alt={s.title} />}
-              {isMobileWidth && <img className={styles.slideImage} src={s.imageMobile} alt={s.title} />}
+              {!isTabletWidth && !isMobileWidth && <ImageRenderer containerClassName={styles.slideImage} url={s.image} width={1215} height={631} alt={s.title} />}
+              {isTabletWidth && <ImageRenderer containerClassName={styles.slideImage} url={s.imageTablet} width={704} height={1070} alt={s.title} />}
+              {isMobileWidth && <ImageRenderer containerClassName={styles.slideImage} url={s.imageMobile} width={353} height={681} alt={s.title} />}
               <div className={styles.slideContent}>
                 <img src={slideBorder} className={styles.slideBorder} alt="slide border" />
                 <h4 className={`title ${styles.slideTitle}`}>{s.title}</h4>

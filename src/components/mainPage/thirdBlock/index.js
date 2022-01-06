@@ -16,6 +16,7 @@ import Modal from "../../modal";
 // import CloseIcon from "./closeIcon";
 import WatchButtonIcon from '../../../styles/img/watch-icon.inline.svg';
 import YoutubeEmbed from '../../youtubeEmbed';
+import ImageRenderer from '../../imageRenderer';
 
 export const animatedArrows = (color) => {
   return (
@@ -70,7 +71,9 @@ const ThirdBlock = () => {
 
   return (
     <section className={styles.main}>
-      <img src={decoration} className={styles.decoration} alt="decoration" />
+      <div className={styles.decoration}>
+        <ImageRenderer url={decoration} width={353} height={394} alt="decoration" />
+      </div>
       <div className={`${styles.mainHeader} container-width`}>
         <h2 data-aos="fade-up" className="title">
           Origin Story
@@ -116,13 +119,13 @@ const ThirdBlock = () => {
             onClose={closeModal}
             onOpen={openModal}
           />
-          <img
-            src="https://storage.googleapis.com/galactic_assets/GFLFinal_DrewVDO.gif"
-            alt="gif"
+          <video
+            className={styles.videoPreview}
+            src="https://storage.googleapis.com/galactic_assets/gfl-hero.mp4"
+            muted
+            autoPlay
+            loop
           />
-          {/* <div onClick={handleSound} className={styles.soundIcon}>
-            <SoundIcon className={`sound-icon ${muted ? 'muted' : ''}`} />
-          </div> */}
         </div>
       </div>
       <div className={`${styles.civilizations} container-width`}>

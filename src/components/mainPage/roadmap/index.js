@@ -8,6 +8,7 @@ import cardBgMobile from "../../../styles/img/roadmap-card-bg-mobile.svg";
 import decoration from "../../../styles/img/decor.png";
 import { roadMap } from '../../../constants';
 import * as styles from "./index.module.scss";
+import ImageRenderer from '../../imageRenderer';
 
 const RoadMapItem = ({ data, isEven, idx }) => {
   const { title, description, label, labelBig } = data;
@@ -39,7 +40,9 @@ const RoadMapItem = ({ data, isEven, idx }) => {
 
 const Roadmap = () => (
   <section className={`${styles.roadmapSection}`}>
-    <img src={decoration} className={styles.decoration} alt="decoration" />
+    <div className={styles.decoration}>
+      <ImageRenderer url={decoration} width={500} height={377} alt="decoration" />
+    </div>
     <div className={`container-width ${styles.roadmapSectionContainer}`}>
       <h2 data-aos="fade-up" className={`title ${styles.roadmapTitle}`}>
         Roadmap

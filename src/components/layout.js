@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import Menu from "./header/menu";
@@ -20,9 +20,10 @@ const Layout = ({ children }) => {
     }
   `);
 
-  const curtainRef = React.useRef(null);
+  const curtainRef = useRef(null);
+  const [menuIsOpened, setMenuIsOpened] = useState(false);
 
-  const showCurtain = React.useCallback(() => {
+  const showCurtain = useCallback(() => {
     if (!curtainRef?.current) {
       return;
     }
@@ -32,7 +33,7 @@ const Layout = ({ children }) => {
     } })
   }, [curtainRef]);
 
-  const hideCurtain = React.useCallback(() => {
+  const hideCurtain = useCallback(() => {
     if (!curtainRef?.current) {
       return;
     }
@@ -50,21 +51,21 @@ const Layout = ({ children }) => {
     })
   }, [curtainRef]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (curtainRef.current) {
       gsap.set(curtainRef.current, { transformOrigin: '50% 100%', scaleY: 1 });
     }
   }, []);
 
   return (
-    <Context.Provider value={{ showCurtain, hideCurtain }}>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+    <Context.Provider value={{ showCurtain, hideCurtain, menuIsOpened }}>
+      <Header setMenuIsOpened={setMenuIsOpened} siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div>
         <Curtain ref={curtainRef} />
         <main>{children}</main>
         <Footer />
       </div>
-      <Menu />
+      <Menu menuIsOpened={menuIsOpened} />
     </Context.Provider>
   );
 };

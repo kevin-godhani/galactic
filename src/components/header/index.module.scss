@@ -45,7 +45,7 @@
   }
 }
 
-.buttonsBlock {
+.headerButtonsBlock {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,7 +77,7 @@
     bottom: 0;
     right: 32px;
   }
-  > div {
+  .menu-item {
     z-index: 9999;
     display: flex;
     align-items: flex-start;
@@ -134,6 +134,7 @@
 @media only screen and (max-width: 1200px) {
   .tabletLogo {
     display: block;
+    margin-right: 16px;
   }
   .logo {
     display: none;
@@ -141,9 +142,6 @@
   .menu {
     display: flex;
     align-items: center;
-    > img {
-      margin-right: 20px;
-    }
   }
 
   .menuWrapper {
@@ -173,9 +171,11 @@
   .tabletLogo {
     display: none;
   }
-  .buttonsBlock {
-    > div {
-      display: none;
+  .headerButtonsBlock {
+    .headerSmButtons {
+      position: absolute;
+      visibility: hidden;
+      pointer-events: none;
     }
   }
   .menuWrapper {
@@ -184,7 +184,7 @@
       width: 100%;
       right: 0;
     }
-    > div {
+    .menu-item {
       margin-left: 30px;
       > span {
         font-size: 26px;

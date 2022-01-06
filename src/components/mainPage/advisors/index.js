@@ -4,12 +4,12 @@ import * as styles from "./index.module.scss";
 import { SocialButton } from "../../buttons";
 import useWindowSize from "../../../utils/useWindowSize";
 import { advisors } from "../../../constants";
+import ImageRenderer from '../../imageRenderer';
 
 const ItemBlock = ({ title, description, image, links, isEven, idx }) => {
   const ws = useWindowSize();
   const isTabletWidth = ws.width <= 1200 && ws.width >= 481;
   const isMobileWidth = ws.width <= 480;
-  const isDesktopWidth = ws.width > 1200;
 
   return (
     <div
@@ -18,12 +18,14 @@ const ItemBlock = ({ title, description, image, links, isEven, idx }) => {
       className={`${isEven ? styles.rightContainer : styles.leftContainer}`}
     >
       <div className={styles.cardContainer}>
-        <img
-          src={leftBack}
-          className={`${styles.cardContainerBg} ${
+        <ImageRenderer
+          url={leftBack}
+          containerClassName={`${styles.cardContainerBg} ${
             isEven ? styles.flipped : ""
           }`}
-          alt="back"
+          alt="teammate card background"
+          width={481}
+          height={568}
         />
         <h5
           className={`title4 ${styles.cardHeader}`}
@@ -35,7 +37,7 @@ const ItemBlock = ({ title, description, image, links, isEven, idx }) => {
           {title}
         </h5>
         <div className={styles.cardImageWrap}>
-          <img src={image} className={styles.cardImage} alt={title} />
+          <ImageRenderer url={image} containerClassName={styles.cardImage} alt={title} />
         </div>
         <div className={styles.socialButtonsWrap}>
           {links.length > 0 && links.map((link, i) => {
@@ -58,6 +60,7 @@ const ItemBlock = ({ title, description, image, links, isEven, idx }) => {
 const Advisors = () => {
   const ws = useWindowSize();
   const isDesktopWidth = ws.width > 1200;
+
   return (
     <section className={styles.advisorsSection}>
       <div className={`container-width ${styles.advisorsSectionContainer}`}>

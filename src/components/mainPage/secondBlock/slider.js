@@ -1,8 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import * as styles from "./index.module.scss";
+import ImageRenderer from '../../imageRenderer';
+import { useIntersection } from '../../../utils/io';
 
 const settings = {
   dots: false,
@@ -32,6 +34,12 @@ const SlickSlider = ({ redirect, containerClassName, className, data, isClickabl
   const props = {...s, className: className};
 
   const sliderRef = useRef(null);
+  const sliderWrapRef = useRef(null);
+  const [isOnScreen, setIsOnScreen] = useState(false);
+
+  useIntersection(sliderWrapRef, () => {
+    setIsOnScreen(true);
+  });
 
   useEffect(() => {
     if (activeSlideIndex === undefined || !sliderRef?.current) {
@@ -41,22 +49,24 @@ const SlickSlider = ({ redirect, containerClassName, className, data, isClickabl
   }, [activeSlideIndex]);
 
   return (
-    <div data-aos={fadeIn ? "fade-up" : null} className={`${styles.sliderWrapper} ${containerClassName}`}>
-      <Slider ref={sliderRef} {...props}>
-        {data.map((el) => (
-          <div
-            className={styles.card}
-            key={el.id}
-            onMouseDownCapture={handleMouseDown}
-            onClick={() => isClickable && redirect(el.id)}
-            role={'button'}
-            onKeyPress={null}
-            tabIndex={0}
-          >
-            <img draggable="false" src={el.url} alt="decoration" />
-          </div>
-        ))}
-      </Slider>
+    <div ref={sliderWrapRef} data-aos={fadeIn ? "fade-up" : null} className={`${styles.sliderWrapper} ${containerClassName}`}>
+      {isOnScreen &&
+        <Slider ref={sliderRef} {...props}>
+          {data.map((el) => (
+            <div
+              className={styles.card}
+              key={el.id}
+              onMouseDownCapture={handleMouseDown}
+              onClick={() => isClickable && redirect(el.id)}
+              role={'button'}
+              onKeyPress={null}
+              tabIndex={0}
+            >
+              <ImageRenderer url={el.url} width={375} height={371} alt="fighter" />
+            </div>
+          ))}
+        </Slider>
+      }
     </div>
   );
 };

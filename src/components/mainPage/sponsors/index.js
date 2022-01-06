@@ -17,7 +17,7 @@ const OurSponsors = () => {
     return (
       <>
         {partners.map((item, index)=> (
-          <img key={index} src={item} className={styles.sponsorImage} alt="sponsor" />
+          <img key={index} src={item} className={styles.sponsorImage} width={142} height={90} alt="sponsor" />
         ))}
       </>
     );

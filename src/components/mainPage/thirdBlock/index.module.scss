@@ -18,6 +18,7 @@
   }
   .decoration {
     position: absolute;
+    width: 353px;
     z-index: -1;
     right: 0;
     top: 29%;
@@ -154,13 +155,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  > img:first-child {
-    position: absolute;
-    z-index: 1;
-    pointer-events: none;
-    margin-bottom: 3px;
-  }
-  > img {
+  .videoPreview {
     width: 134% !important;
     height: auto;
     object-fit: cover;

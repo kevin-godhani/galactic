@@ -8,11 +8,12 @@ import { twitter, instagram, twitterLink, instagramLink } from "../../constants"
 import { SocialButton } from '../buttons';
 import Context from "../../context";
 import { navigate } from "gatsby";
+import ImageRenderer from "../imageRenderer";
 
 const bgs = [bg1, bg2];
 const fighters = [bgFighter1, bgFighter2];
 
-const Menu = () => {
+const Menu = ({ menuIsOpened }) => {
   const [activeMenuItemIndex, setActiveMenuItemIndex] = useState(0);
   const { showCurtain } = useContext(Context);
 
@@ -37,9 +38,10 @@ const Menu = () => {
 
   return (
     <div id="mobile-menu" className={styles.menuWrapper}>
-      <img src={bgs[activeMenuItemIndex]} className={styles.menuBg} alt="decor" />
+      {menuIsOpened && <ImageRenderer url={bgs[activeMenuItemIndex]} containerClassName={styles.menuBg} width={1440} height={840} alt="menu background" />}
       <div
         data-index={0}
+        className={styles.menuItem}
         onClick={() => handleCloseMenu('/')}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -52,6 +54,7 @@ const Menu = () => {
       </div>
       <div
         data-index={1}
+        className={styles.menuItem}
         onClick={() => handleCloseMenu('/civilisations')}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -62,8 +65,11 @@ const Menu = () => {
         <span>02</span>
         <p>civilisations</p>
       </div>
-      <img src={fighters[activeMenuItemIndex]} className={styles.decoration} alt="decor" />
-
+      {menuIsOpened && (
+        <div className={styles.decoration}>
+          <ImageRenderer url={fighters[activeMenuItemIndex]} width={1024} height={1024} alt="menu fighter" />
+        </div>
+      )}
       <div className="sm-buttons mobile-only menu">
         <SocialButton url={twitterLink} Icon={twitter} />
         <SocialButton url={instagramLink} Icon={instagram} />
