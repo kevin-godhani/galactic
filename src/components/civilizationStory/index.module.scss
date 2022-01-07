@@ -39,6 +39,7 @@
     border-radius: 20px;
   }
   > svg {
+    width: 40px;
     float: right;
     margin-bottom: 20px;
     cursor: pointer;
@@ -586,6 +587,12 @@
 
   .videoBlock {
     margin-bottom: 161px;
+  }
+
+  .videoContentWrapper {
+    > svg {
+      width: 32px;
+    }
   }
 
   .description {

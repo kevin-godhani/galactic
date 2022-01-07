@@ -8,6 +8,8 @@ import Curtain from "./curtain";
 import Context from "../context";
 import gsap from "gsap";
 import "./layout.scss";
+import ExitIntent from '../utils/ExitIntent';
+import ExitIntentModal from "./exitIntentModal";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,6 +24,7 @@ const Layout = ({ children }) => {
 
   const curtainRef = useRef(null);
   const [menuIsOpened, setMenuIsOpened] = useState(false);
+  const [showModal, setShowModal] = useState(false)
 
   const showCurtain = useCallback(() => {
     if (!curtainRef?.current) {
@@ -57,8 +60,27 @@ const Layout = ({ children }) => {
     }
   }, []);
 
+  useEffect(() => {
+    const touchDeviceQuery = '(any-pointer: coarse) and (min-width: 320px) and (min-height: 560px) and (hover: none) and (max-width: 1367px)';
+    const isTouchDevice = window.matchMedia(touchDeviceQuery).matches;
+
+    const removeExitIntent = ExitIntent({
+      threshold: 30,
+      eventThrottle: 100,
+      onExitIntent: () => {
+        if (!isTouchDevice) {
+          setShowModal(true);
+        }
+      },
+    });
+    return () => {
+      removeExitIntent();
+    }
+  });
+
   return (
     <Context.Provider value={{ showCurtain, hideCurtain, menuIsOpened }}>
+      <ExitIntentModal showModal={showModal} />
       <Header setMenuIsOpened={setMenuIsOpened} siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div>
         <Curtain ref={curtainRef} />

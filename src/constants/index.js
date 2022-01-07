@@ -425,7 +425,7 @@ export const faqData = [
     {
       id: 8,
       title: "When does the project’s mint open?",
-      description: "13th January 2022.",
+      description: "20th January 2022.",
     },
     {
       id: 9,

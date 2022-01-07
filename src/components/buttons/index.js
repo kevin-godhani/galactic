@@ -89,11 +89,11 @@ export const doubleStripeButton = (to, title, callback) => {
 };
 
 
-export const ButtonWithoutLink = ({callback, title, isDouble, isPurple, small, textContainerClassName, longTitle}) => {
+export const ButtonWithoutLink = ({callback, title, isDouble, isPurple, small, textContainerClassName, containerClassName, longTitle}) => {
   return (
     <div
       onClick={() => callback && callback()}
-      className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''}`}
+      className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''} ${containerClassName ? containerClassName : ''}`}
       onKeyPress={null}
       role={'button'}
       tabIndex={0}
