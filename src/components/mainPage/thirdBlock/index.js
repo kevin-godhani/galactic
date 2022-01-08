@@ -92,7 +92,7 @@ const ThirdBlock = () => {
           />
           <video
             className={styles.videoPreview}
-            src="https://storage.googleapis.com/galactic_assets/gfl-hero.mp4"
+            src="https://storage.googleapis.com/galactic_assets/gfl-story-preview.mp4"
             muted
             autoPlay
             loop
