@@ -39,9 +39,6 @@
     > h1 {
       max-width: 600px;
     }
-    > p {
-      margin-bottom: 0;
-    }
   }
 }
 @media only screen and (max-width: 480px) {
@@ -62,6 +59,7 @@
       width: 100%;
       padding: 0 32px;
       height: auto;
+      margin-bottom: 50px;
     }
   }
 }
