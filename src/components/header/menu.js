@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import * as styles from "./index.module.scss";
 import bg1 from "../../styles/img/menu-bg1.png";
 import bg2 from "../../styles/img/menu-bg2.png";
@@ -35,6 +35,15 @@ const Menu = ({ menuIsOpened }) => {
   const handleMouseLeave = (e) => {
     setActiveMenuItemIndex(0);
   }
+
+  useEffect(() => {
+    if (menuIsOpened) {
+      const bg2Image = new Image();
+      const fighter2Image = new Image();
+      bg2Image.src = bg2;
+      fighter2Image.src = bgFighter2;
+    }
+  }, [menuIsOpened]);
 
   return (
     <div id="mobile-menu" className={styles.menuWrapper}>
