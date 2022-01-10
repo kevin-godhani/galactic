@@ -3,25 +3,27 @@
   padding-top: 98px;
   padding-bottom: 196px;
   background-color: #010103;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  > h1 {
-    margin-bottom: 22px;
-    max-width: 710px;
-    text-align: center;
-    > span {
-      position: relative;
-      top: -6px;
-      color: #EFDAA9;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > h1 {
+      margin-bottom: 22px;
+      max-width: 710px;
+      text-align: center;
+      > span {
+        position: relative;
+        top: -6px;
+        color: #EFDAA9;
+      }
     }
-  }
-  > p {
-    width: 840px;
-    max-width: 90%;
-    text-align: center;
-    margin-bottom: 60px;
+    > p {
+      width: 840px;
+      max-width: 90%;
+      text-align: center;
+      margin-bottom: 60px;
+    }
   }
 }
 .card {
@@ -45,21 +47,23 @@
   .main {
     padding-top: 106px;
     padding-bottom: 50px;
-    > h1 {
-      width: 100%;
-      margin-bottom: 18px;
-      max-width: 100%;
-      padding: 0 32px;
-      > span {
-        top: -3px;
+    .container {
+      > h1 {
+        width: 100%;
+        margin-bottom: 18px;
+        max-width: 100%;
+        padding: 0 32px;
+        > span {
+          top: -3px;
+        }
       }
-    }
-    > p {
-      max-width: 100%;
-      width: 100%;
-      padding: 0 32px;
-      height: auto;
-      margin-bottom: 50px;
+      > p {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 32px;
+        height: auto;
+        margin-bottom: 50px;
+      }
     }
   }
 }
@@ -73,21 +77,23 @@
 
 @media only screen and (min-width: 2000px) {
   .main {
-    > h1 {
-      font-size: 5.56rem;
-      line-height: 1;
-      margin-bottom: 30px;
-      max-width: 1440px;
-      > span {
+    .container {
+      > h1 {
         font-size: 5.56rem;
         line-height: 1;
+        margin-bottom: 30px;
+        max-width: 1440px;
+        > span {
+          font-size: 5.56rem;
+          line-height: 1;
+        }
       }
-    }
-    > p {
-      width: 1660px;
-      height: auto;
-      font-size: 1.8rem;
-      line-height: 2.7rem;
+      > p {
+        width: 1660px;
+        height: auto;
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+      }
     }
   }
 }
