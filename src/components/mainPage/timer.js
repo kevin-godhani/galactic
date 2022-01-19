@@ -37,14 +37,15 @@ const CustomTimer = () => {
   return (
     <div className={styles.timerWrapper}>
       <h5 className={styles.timer}>
-        <span>{day}</span>
+        {/* <span>{day}</span>
         <span>D:</span>
         <span>{hour}</span>
         <span>H:</span>
         <span>{minute}</span>
-        <span>M</span>
+        <span>M</span> */}
+        Mint
       </h5>
-      <p>-Until Mint-</p>
+      <p>-Coming Soon-</p>
     </div>
   );
 };
