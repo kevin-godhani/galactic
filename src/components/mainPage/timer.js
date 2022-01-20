@@ -8,7 +8,7 @@ const CustomTimer = () => {
 
   const timer = useCallback(() => {
     const time =
-      Date.parse("January, 20, 2022, 19:00") - Date.parse(new Date());
+      Date.parse("January, 29, 2022, 19:00") - Date.parse(new Date());
     if (time < 0) {
       setMinutes(0);
       setDays(0);
@@ -37,15 +37,14 @@ const CustomTimer = () => {
   return (
     <div className={styles.timerWrapper}>
       <h5 className={styles.timer}>
-        {/* <span>{day}</span>
+        <span>{day}</span>
         <span>D:</span>
         <span>{hour}</span>
         <span>H:</span>
         <span>{minute}</span>
-        <span>M</span> */}
-        Mint
+        <span>M</span>
       </h5>
-      <p>-Coming Soon-</p>
+      <p>-Until Mint-</p>
     </div>
   );
 };

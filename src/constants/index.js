@@ -336,7 +336,7 @@ export const roadMap = [
         labelBig: true,
     },
     {
-        title: "Mint date: Coming soon",
+        title: "Mint date: 29/01/2022",
         description: "Come mint day we will be releasing 9999 fighters into the wild. Each one will be unique with billions of possible combinations. The mint will go live first to anyone who has managed to get a spot on the Whitelist. They will have half an hour before the mint is opened to the public.",
         label: '01',
     },
@@ -425,7 +425,7 @@ export const faqData = [
     {
       id: 8,
       title: "When does the project’s mint open?",
-      description: "Coming soon.",
+      description: "29th January 2022.",
     },
     {
       id: 9,
