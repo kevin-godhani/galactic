@@ -337,7 +337,7 @@ export const roadMap = [
     },
     {
         title: "Mint date: 29/01/2022",
-        description: "Come mint day we will be releasing 9999 fighters into the wild. Each one will be unique with billions of possible combinations. The mint will go live first to anyone who has managed to get a spot on the Whitelist. They will have half an hour before the mint is opened to the public.",
+        description: "Come mint day we will be releasing 9999 fighters into the wild. Each one will be unique with billions of possible combinations. The mint will go live first to anyone who has managed to get a spot on the Whitelist. For more details on this please be sure to join our Discord and follow our social channels.",
         label: '01',
     },
     {
