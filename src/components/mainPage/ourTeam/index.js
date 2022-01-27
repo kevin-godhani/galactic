@@ -16,7 +16,7 @@ const ItemBlock = ({ title, description, image, links, isEven, idx }) => {
     <div
       key={title}
       data-aos={isEven ? "flip-left" : "flip-right"}
-      className={`${isEven ? styles.rightContainer : styles.leftContainer}`}
+      className={`${styles.teammateItem} ${isEven ? styles.rightContainer : styles.leftContainer}`}
     >
       <div className={styles.cardContainer}>
         <ImageRenderer
@@ -88,7 +88,7 @@ const Team = () => {
           year.
         </p>
         {team.map((t, i) => {
-          const isEven = i % 2 > 0 && isDesktopWidth;
+          const isEven = i % 2 === 0 && isDesktopWidth;
           return (
             <ItemBlock
               key={i}

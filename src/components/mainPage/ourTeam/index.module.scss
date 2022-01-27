@@ -13,6 +13,15 @@
     max-width: 1130px;
   }
 }
+.teammate-item {
+  &:first-of-type {
+    .cardHeader {
+      font-size: 24px;
+      line-height: 36px;
+      max-width: 80%;
+    }
+  }
+}
 .cardHeader {
   position: absolute;
   top: 30px;
@@ -113,6 +122,14 @@
       max-width: 100%;
     }
   }
+  .teammate-item {
+    &:first-of-type {
+      .cardHeader {
+        font-size: 32px;
+        max-width: 55%;
+      }
+    }
+  }
   .cardContainer {
     width: 100%;
     height: auto !important;
@@ -153,7 +170,36 @@
   .rightContainer {
     max-width: 100%;
   }
+
+  .teammate-item {
+    &:first-of-type {
+      .cardHeader {
+        max-width: 45%;
+      }
+    }
+  }
 }
+
+@media only screen and (max-width: 767px) {
+  .teammate-item {
+    &:first-of-type {
+      .cardHeader {
+        max-width: 75%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .teammate-item {
+    &:first-of-type {
+      .cardHeader {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .teamSection {
     padding-top: 50px;
@@ -169,6 +215,15 @@
     }
     .teamSectionSubtitle {
       margin-bottom: 50px;
+    }
+  }
+  .teammate-item {
+    &:first-of-type {
+      .cardHeader {
+        font-size: 18px;
+        line-height: 26px;
+        max-width: 90%;
+      }
     }
   }
   .cardContainer {
