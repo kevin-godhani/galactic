@@ -15,6 +15,14 @@
       padding-left: 65px;
     }
   }
+  &.doubleLong {
+    .mainButtonContent {
+      width: 304px;
+      padding-left: 16px;
+      justify-content: center;
+      padding-right: 0;
+    }
+  }
   &.small {
     height: 33px;
     min-width: 198px;
@@ -122,7 +130,7 @@
       display: none;
     }
     &.purple {
-      .button-bg-path.purple {
+      .button-bg-path.default.purple {
         display: block;
       }
       .button-bg-path.default {

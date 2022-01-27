@@ -6,11 +6,34 @@
   min-height: 100vh;
   max-height: 100vh;
   overflow: hidden;
-  &-video {
+  &-bg {
+    position: absolute;
     min-width: 100%;
     min-height: 100vh;
     object-fit: cover;
+    pointer-events: none;
   }
+  &-title {
+    position: absolute;
+    bottom: 206px;
+    font-family: 'single-fighter', serif;
+    font-size: 72px;
+    text-transform: uppercase;
+    background: linear-gradient(79.28deg, #EFDDA9 24.27%, #F0A8A8 94.78%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: normal;
+  }
+}
+
+.buttons-block {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 950px;
+  bottom: 80px;
 }
 
 @media only screen and (max-width: 768px) {

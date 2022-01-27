@@ -5,6 +5,7 @@ import button_rectangle_icon from "../../styles/img/button_rectangle.png";
 import button_rectangle_hover_icon from "../../styles/img/button_rectangle_hover.png";
 import ButtonBg from "../../styles/img/button-bg.inline.svg";
 import ButtonBgDouble from "../../styles/img/button-bg-double.inline.svg";
+import ButtonBgDoubleDouble from "../../styles/img/button-bg-double-double.inline.svg";
 import { sliderButtonBg, sliderButtonBgActive } from "../../constants";
 import SliderArrow from "../icons/slider-arrow";
 import "./index.scss";
@@ -32,11 +33,11 @@ export const MainButton = ({to, title, isDouble, isPurple, small, textContainerC
   );
 };
 
-export const MainButtonExternal = ({url, title, isDouble, isPurple, small}) => {
+export const MainButtonExternal = ({url, title, isDouble, isPurple, small, buttonClassName}) => {
   return (
     <a
       href={url}
-      className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''}`}
+      className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''} ${buttonClassName ? buttonClassName : ''}`}
       target='_blank'
       rel="nofollow noreferrer noopener"
       onKeyPress={null}
@@ -89,23 +90,21 @@ export const doubleStripeButton = (to, title, callback) => {
 };
 
 
-export const ButtonWithoutLink = ({callback, title, isDouble, isPurple, small, textContainerClassName, containerClassName, longTitle}) => {
+export const ButtonWithoutLink = ({callback, title, isDouble, isPurple, small, textContainerClassName, containerClassName, longTitle, isDoubleLong}) => {
   return (
     <div
       onClick={() => callback && callback()}
-      className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''} ${containerClassName ? containerClassName : ''}`}
+      className={`mainButton ${small ? 'small' : ''} ${isDouble ? 'doubleStripe' : ''} ${isDoubleLong ? 'doubleLong' : ''} ${containerClassName ? containerClassName : ''}`}
       onKeyPress={null}
       role={'button'}
       tabIndex={0}
     >
-      {isDouble && <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>}
+      {isDouble || isDoubleLong && <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>}
       <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>
       <div className={`mainButtonContent ${textContainerClassName ? textContainerClassName : ''}`}>
-        {longTitle ? (
-          <ButtonBgDouble className={`button-bg ${isPurple ? 'purple' : ''}`} />
-        ) : (
-          <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />
-        )}
+        {longTitle && <ButtonBgDouble className={`button-bg ${isPurple ? 'purple' : ''}`} />}
+        {isDoubleLong  && <ButtonBgDoubleDouble className={`button-bg ${isPurple ? 'purple' : ''}`} />}
+        {!isDoubleLong && !longTitle && <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />}
         <span>{title}</span>
       </div>
     </div>

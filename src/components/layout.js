@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
 
   const curtainRef = useRef(null);
   const [menuIsOpened, setMenuIsOpened] = useState(false);
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
 
   const showCurtain = useCallback(() => {
     if (!curtainRef?.current) {
