@@ -22,12 +22,11 @@ const MintFighterModal = ({ showModal, changeModalStateCb }) => {
             <div className={styles.mintFighterModalContent}>
                 <div className={styles.mintFighterModalContentBg}></div>
                 <h3 className={`title2 ${styles.mintFighterModalTitle}`}>Mint A Fighter</h3>
-                <p className={`description ${styles.mintFighterModalText}`}>Welcome to the Galactic Fight League. <br />
-                    The mint/NFT sale will start on 29th January 2022</p>
-                <p className={`description ${styles.mintFighterModalText}`}>Presale begins at: 1700hrs UTC. <br />
-                    Public sale begins at: 2100 hrs UTC</p>
-                <p className={`description ${styles.mintFighterModalText}`}>If this is your first NTF investment, please read our guide on the process below. These transactions will be carried out on the Solana network and each will cost a small amount of Sol. Please ensure you have a Solana wallet like Phantom - phantom.app set up with enough Sol to make the purchase and cover any fees.</p>
-                <p className={`description ${styles.mintFighterModalText}`}>How to set up and fund a wallet to purchase a fighter.</p>
+                <p className={`description ${styles.mintFighterModalText}`}>Welcome to the Galactic Fight League.</p>
+                <p className={`description ${styles.mintFighterModalText}`}>The mint/NFT sale will start on 29th January 2022</p>
+                <p className={`description ${styles.mintFighterModalText}`}>Presale begins at: 1700hrs UTC.</p>
+                <p className={`description ${styles.mintFighterModalText}`}>Public sale begins at: 2100 hrs UTC</p>
+                <p className={`description ${styles.mintFighterModalText}`}>If this is your first \n NTF investment, please read our guide on the process below.</p>
                 <p className={`description ${styles.mintFighterModalText}`}>Thank You!</p>
                 <MainButtonExternal
                     url={walletSetupGuideUrl}

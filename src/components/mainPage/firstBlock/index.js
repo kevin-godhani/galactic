@@ -31,6 +31,7 @@ const FirstBlock = () => {
 
   const isTabletWidth = ws.width <= 1200 && ws.width >= 768;
   const isMobileWidth = ws.width <= 767;
+  const showSmallButton = ws.width <= 1200;
 
   const bgSrc = useMemo(() => {
     if (isTabletWidth) {
@@ -77,10 +78,24 @@ const FirstBlock = () => {
     <section id={id} ref={ref} className={styles.heroSection} style={{ visibility: inView ? 'visible' : 'hidden' }}>
       <img ref={bg1Ref} src={bgSrc} className={styles.heroSectionBg} alt="Demetrious Johnson" />
       <img ref={bg2Ref} src={bg2Src} className={`${styles.heroSectionBg} ${styles.heroSectionBgBattleMode}`} alt="Demetrious Johnson Battle Mode" />
+      <span className={styles.heroSectionLabel}>Featuring</span>
       <h1 className={styles.heroSectionTitle}>Demetrious Johnson</h1>
       <div className={styles.buttonsBlock}>
-        <ButtonWithoutLink containerClassName={'hero-section-left-button'} callback={openModal} title={'Get a Fighter NFT'} isDoubleLong small={isMobileWidth || isTabletWidth} />
-        <ButtonWithoutLink containerClassName={'hero-section-right-button'} callback={() => setBattleMode(!battleMode)} title={battleMode ? 'Deactivate Battle Mode' : 'Activate Battle Mode'} isPurple isDoubleLong small={isMobileWidth || isTabletWidth} />
+        <ButtonWithoutLink
+          containerClassName={'hero-section-left-button'}
+          callback={openModal}
+          title={'Get a Fighter NFT'}
+          small={showSmallButton}
+          isDoubleLong
+        />
+        <ButtonWithoutLink
+          containerClassName={'hero-section-right-button'}
+          callback={() => setBattleMode(!battleMode)}
+          title={battleMode ? 'Deactivate Battle Mode' : 'Activate Battle Mode'}
+          small={showSmallButton}
+          isDoubleLong
+          isPurple
+        />
       </div>
       <Link
         to="section-2"
