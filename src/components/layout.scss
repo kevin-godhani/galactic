@@ -851,7 +851,7 @@ pre tt:after {
 .scroll-button {
   &-link {
     position: absolute;
-    bottom: 32px;
+    bottom: -8px;
     cursor: pointer;
     &:hover {
       .scroll-button-arrow {
@@ -933,6 +933,12 @@ pre tt:after {
       margin-bottom: 52px;
     }
   }
+
+  .scroll-button {
+    &-link {
+      bottom: 25px;
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -952,6 +958,18 @@ pre tt:after {
     //     left: auto;
     //   }
     // }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .scroll-button {
+    width: 65px;
+    &-link {
+      bottom: 80px;
+    }
+    &-text {
+      display: none;
+    }
   }
 }
 

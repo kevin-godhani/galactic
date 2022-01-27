@@ -2,10 +2,15 @@ import React from "react";
 import * as styles from "./index.module.scss";
 import { MainButtonExternal } from "../buttons";
 import { walletSetupGuideUrl } from '../../constants';
+import useWindowSize from '../../utils/useWindowSize';
 
 import modalCloseButtonIcon from '../../styles/img/modal-close-button.png';
 
 const MintFighterModal = ({ showModal, changeModalStateCb }) => {
+    const ws = useWindowSize();
+
+    const isMobileWidth = ws.width <= 767;
+
     const close = () => {
         document.body.classList.remove("scroll-lock");
         document.documentElement.classList.remove("scroll-lock");
@@ -28,6 +33,7 @@ const MintFighterModal = ({ showModal, changeModalStateCb }) => {
                     url={walletSetupGuideUrl}
                     title={"Wallet Setup Guide"}
                     buttonClassName={styles.mintFighterModalButton}
+                    small={isMobileWidth}
                     isDouble
                 />
                 <div className={styles.mintFighterModalClose} onClick={close} role={'button'} tabIndex={0} onKeyPress={null}>

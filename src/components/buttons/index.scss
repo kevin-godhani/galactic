@@ -24,6 +24,13 @@
     }
   }
   &.small {
+    &.doubleLong {
+      .mainButtonContent {
+        min-width: 216px;
+        width: unset;
+        padding-left: 16px;
+      }
+    }
     height: 33px;
     min-width: 198px;
     .mainButtonStripe {

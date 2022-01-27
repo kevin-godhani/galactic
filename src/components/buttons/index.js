@@ -102,8 +102,8 @@ export const ButtonWithoutLink = ({callback, title, isDouble, isPurple, small, t
       {isDouble || isDoubleLong && <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>}
       <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>
       <div className={`mainButtonContent ${textContainerClassName ? textContainerClassName : ''}`}>
-        {longTitle && <ButtonBgDouble className={`button-bg ${isPurple ? 'purple' : ''}`} />}
-        {isDoubleLong  && <ButtonBgDoubleDouble className={`button-bg ${isPurple ? 'purple' : ''}`} />}
+        {/* {longTitle || (isDoubleLong && small) && <ButtonBgDouble className={`button-bg ${isPurple ? 'purple' : ''}`} />} */}
+        {isDoubleLong && <ButtonBgDoubleDouble className={`button-bg ${isPurple ? 'purple' : ''}`} />}
         {!isDoubleLong && !longTitle && <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />}
         <span>{title}</span>
       </div>
