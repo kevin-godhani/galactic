@@ -41,7 +41,7 @@ const FirstBlock = () => {
     }
 
     return heroBg1;
-  }, [ws, isTabletWidth, isMobileWidth]);
+  }, [isTabletWidth, isMobileWidth]);
 
   const bg2Src = useMemo(() => {
     if (isTabletWidth) {
@@ -52,7 +52,7 @@ const FirstBlock = () => {
     }
 
     return heroBg2;
-  }, [ws, isTabletWidth, isMobileWidth]);
+  }, [isTabletWidth, isMobileWidth]);
 
   useEffect(() => {
     if (!bg1Ref?.current || !bg2Ref?.current) {
