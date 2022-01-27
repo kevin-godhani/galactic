@@ -123,6 +123,37 @@
       }
     }
   }
+  &.hero-section-left-button {
+    .button-bg-path {
+      &.purple {
+        display: block !important;
+        opacity: 0;
+      }
+    }
+    &:hover {
+      .mainButtonStripe {
+        &:after {
+          opacity: 0;
+        }
+        &:before {
+          opacity: 1;
+        }
+      }
+      .button-bg-path {
+        &.hover {
+          opacity: 0;
+        }
+        &.purple {
+          opacity: 1;
+        }
+      }
+      .mainButtonContent {
+        > span {
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
   .button-bg {
     position: absolute;
     z-index: -1;

@@ -41,7 +41,7 @@ const FirstBlock = () => {
     }
 
     return heroBg1;
-  }, [ws]);
+  }, [ws, isTabletWidth, isMobileWidth]);
 
   const bg2Src = useMemo(() => {
     if (isTabletWidth) {
@@ -52,7 +52,7 @@ const FirstBlock = () => {
     }
 
     return heroBg2;
-  }, [ws]);
+  }, [ws, isTabletWidth, isMobileWidth]);
 
   useEffect(() => {
     if (!bg1Ref?.current || !bg2Ref?.current) {
@@ -79,8 +79,8 @@ const FirstBlock = () => {
       <img ref={bg2Ref} src={bg2Src} className={`${styles.heroSectionBg} ${styles.heroSectionBgBattleMode}`} alt="Demetrious Johnson Battle Mode" />
       <h1 className={styles.heroSectionTitle}>Demetrious Johnson</h1>
       <div className={styles.buttonsBlock}>
-        <ButtonWithoutLink callback={openModal} title={'Get a Fighter NFT'} isDoubleLong small={isMobileWidth || isTabletWidth} />
-        <ButtonWithoutLink callback={() => setBattleMode(!battleMode)} title={battleMode ? 'Deactivate Battle Mode' : 'Activate Battle Mode'} isPurple isDoubleLong small={isMobileWidth || isTabletWidth} />
+        <ButtonWithoutLink containerClassName={'hero-section-left-button'} callback={openModal} title={'Get a Fighter NFT'} isDoubleLong small={isMobileWidth || isTabletWidth} />
+        <ButtonWithoutLink containerClassName={'hero-section-right-button'} callback={() => setBattleMode(!battleMode)} title={battleMode ? 'Deactivate Battle Mode' : 'Activate Battle Mode'} isPurple isDoubleLong small={isMobileWidth || isTabletWidth} />
       </div>
       <Link
         to="section-2"

@@ -965,7 +965,8 @@ pre tt:after {
   .scroll-button {
     width: 65px;
     &-link {
-      bottom: 80px;
+      position: relative;
+      bottom: 20px;
     }
     &-text {
       display: none;
