@@ -26,7 +26,7 @@ const MintFighterModal = ({ showModal, changeModalStateCb }) => {
                 <p className={`description ${styles.mintFighterModalText}`}>The mint/NFT sale will start on 29th January 2022</p>
                 <p className={`description ${styles.mintFighterModalText}`}>Presale begins at: 1700hrs UTC.</p>
                 <p className={`description ${styles.mintFighterModalText}`}>Public sale begins at: 2100 hrs UTC</p>
-                <p className={`description ${styles.mintFighterModalText}`}>If this is your first \n NTF investment, please read our guide on the process below.</p>
+                <p className={`description ${styles.mintFighterModalText}`}>If this is your first NFT investment, please read our guide on the process below.</p>
                 <p className={`description ${styles.mintFighterModalText}`}>Thank You!</p>
                 <MainButtonExternal
                     url={walletSetupGuideUrl}
