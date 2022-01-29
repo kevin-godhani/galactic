@@ -1,7 +1,7 @@
 import React from "react";
 import * as styles from "./index.module.scss";
 import { MainButtonExternal } from "../buttons";
-import { walletSetupGuideUrl } from '../../constants';
+import { mainAFighterUrl } from '../../constants';
 import useWindowSize from '../../utils/useWindowSize';
 
 import modalCloseButtonIcon from '../../styles/img/modal-close-button.png';
@@ -23,14 +23,14 @@ const MintFighterModal = ({ showModal, changeModalStateCb }) => {
                 <div className={styles.mintFighterModalContentBg}></div>
                 <h3 className={`title2 ${styles.mintFighterModalTitle}`}>Mint A Fighter</h3>
                 <p className={`description ${styles.mintFighterModalText}`}>Welcome to the Galactic Fight League.</p>
-                <p className={`description ${styles.mintFighterModalText}`}>The mint/NFT sale will start on 29th January 2022</p>
+                <p className={`description ${styles.mintFighterModalText}`}>The mint/NFT sale will start 29th January 2022 on Magic Eden launchpad</p>
                 <p className={`description ${styles.mintFighterModalText}`}>Presale begins at: 1700hrs UTC.</p>
                 <p className={`description ${styles.mintFighterModalText}`}>Public sale begins at: 2100 hrs UTC</p>
-                <p className={`description ${styles.mintFighterModalText}`}>If this is your first NFT investment, please read our guide on the process below.</p>
+                <p className={`description ${styles.mintFighterModalText}`}>Please follow the link below to take you to the mint address.</p>
                 <p className={`description ${styles.mintFighterModalText}`}>Thank You!</p>
                 <MainButtonExternal
-                    url={walletSetupGuideUrl}
-                    title={"Wallet Setup Guide"}
+                    url={mainAFighterUrl}
+                    title={"Mint A Fighter"}
                     buttonClassName={styles.mintFighterModalButton}
                     small={isMobileWidth}
                     isDouble

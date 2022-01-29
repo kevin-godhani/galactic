@@ -87,6 +87,7 @@ export const twitterLink = 'https://twitter.com/GalacticFL';
 export const discordLink = 'https://discord.com/invite/galacticfl';
 
 export const walletSetupGuideUrl = 'https://galacticfightleague.medium.com/d16d175c9051';
+export const mainAFighterUrl = 'https://magiceden.io/launchpad/galactic_fight_league';
 
 export const sliderButtonBg = 'linear-gradient(360deg, #EFDDA9 0%, #F0B9A9 50%, #EFDDA9 100%)';
 export const sliderButtonBgActive = 'linear-gradient(0deg, #000000 0%, #1E135C 50%, #1E135C 100%), linear-gradient(180deg, rgba(26, 12, 54, 0) -50%, rgba(26, 12, 54, 0) 0%, #1A0C36 50%)';
@@ -418,6 +419,12 @@ export const roadMap = [
 
 export const faqData = [
     {
+      id: 13,
+      title: "Mint Information",
+      description: `Pre sale will start January 29, 2022 at 17.00 UTC with a price of 1 SOL.
+      Public sale will start January 29, 2022 at 21.00 UTC with a price of 1.75 SOL.`,
+    },
+    {
       id: 1,
       title: "What is the total supply?",
       description: "9,999 randomly generated fighters will be available to mint.",
@@ -425,7 +432,7 @@ export const faqData = [
     {
       id: 2,
       title: "How much will each cost per mint?",
-      description: "Mint price is to be confirmed, depending on the current price of Solana at launch.",
+      description: "Each whitelisted mint will cost 1 SOL. Each public mint will cost 1.75 SOL.",
     },
     {
       id: 3,
@@ -440,7 +447,7 @@ export const faqData = [
     {
       id: 5,
       title: "Is there a limit to how many I can mint?",
-      description: "There will be no mint limit.",
+      description: "Whitelist mints will be limited to 2 per wallet. Public mints will be limited to 10 per wallet.",
     },
     {
       id: 6,
@@ -450,7 +457,7 @@ export const faqData = [
     {
       id: 7,
       title: "Will there be a secondary market?",
-      description: "Yes, secondary markets are actively being confirmed. Initially we have confirmations with Magic Eden and Solsea.",
+      description: "Yes a secondary market has been confirmed with Magic Eden",
     },
     {
       id: 8,
