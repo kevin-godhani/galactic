@@ -438,6 +438,7 @@ export const faqData = [
       id: 3,
       title: "Where can I mint a GFL fighter?",
       description: "https://magiceden.io/launchpad/galactic_fight_league",
+      link: true,
     },
     {
       id: 4,

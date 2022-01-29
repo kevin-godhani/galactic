@@ -107,7 +107,7 @@ const FirstBlock = () => {
       >
         <ScrollButtonIcon />
       </Link>
-      <CustomTimer />
+      {/* <CustomTimer /> */}
       <MintFighterModal showModal={showModal} changeModalStateCb={changeModalStateCb} />
     </section>
   );

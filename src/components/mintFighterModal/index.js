@@ -24,8 +24,8 @@ const MintFighterModal = ({ showModal, changeModalStateCb }) => {
                 <h3 className={`title2 ${styles.mintFighterModalTitle}`}>Mint A Fighter</h3>
                 <p className={`description ${styles.mintFighterModalText}`}>Welcome to the Galactic Fight League.</p>
                 <p className={`description ${styles.mintFighterModalText}`}>The mint/NFT sale will start 29th January 2022 on Magic Eden launchpad</p>
-                <p className={`description ${styles.mintFighterModalText}`}>Presale begins at: 1700hrs UTC.</p>
-                <p className={`description ${styles.mintFighterModalText}`}>Public sale begins at: 2100 hrs UTC</p>
+                <p className={`description ${styles.mintFighterModalText}`}>Presale begins at: 17.00 hrs UTC</p>
+                <p className={`description ${styles.mintFighterModalText}`}>Public sale begins at: 21.00 hrs UTC</p>
                 <p className={`description ${styles.mintFighterModalText}`}>Please follow the link below to take you to the mint address.</p>
                 <p className={`description ${styles.mintFighterModalText}`}>Thank You!</p>
                 <MainButtonExternal

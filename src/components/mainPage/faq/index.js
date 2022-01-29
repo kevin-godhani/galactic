@@ -44,7 +44,11 @@ const AccordionComponent = ({ data }) => {
       </div>
       <span>{data.title}</span>
       {isOpen && <img src={isMobileWidth ? borderMobile : border} alt="border" />}
-      {isOpen && <p className="description">{data.description}</p>}
+
+      {data.link ?
+        isOpen && <a href={data.description} target={'_blank'} className="description">{data.description}</a>
+      :
+        isOpen && <p className="description">{data.description}</p>}
     </div>
   );
 };
