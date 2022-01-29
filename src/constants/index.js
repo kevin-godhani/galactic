@@ -437,7 +437,7 @@ export const faqData = [
     {
       id: 3,
       title: "Where can I mint a GFL fighter?",
-      description: "You can find the mint access on our website on the day of our minting.",
+      description: "https://magiceden.io/launchpad/galactic_fight_league",
     },
     {
       id: 4,
