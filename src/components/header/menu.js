@@ -47,7 +47,7 @@ const Menu = ({ menuIsOpened }) => {
 
   return (
     <div id="mobile-menu" className={styles.menuWrapper}>
-      {menuIsOpened && <ImageRenderer url={bgs[activeMenuItemIndex]} containerClassName={styles.menuBg} width={1440} height={840} alt="menu background" />}
+      {menuIsOpened && <ImageRenderer url={bgs[activeMenuItemIndex]} containerClassName={styles.menuBg} alt="menu background" />}
       <div
         data-index={0}
         className={styles.menuItem}
