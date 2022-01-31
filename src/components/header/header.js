@@ -39,6 +39,10 @@ const Header = ({ setMenuIsOpened }) => {
     document.documentElement.classList.add("scroll-lock");
     setIsHederFixed(true);
     setMenuIsOpened(true);
+
+    // document.body.ontouchmove = event => {
+    //   event.preventDefault();
+    // };
   };
 
   const handleNavigation = useCallback(

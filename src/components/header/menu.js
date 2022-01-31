@@ -22,6 +22,10 @@ const Menu = ({ menuIsOpened }) => {
     document.body.classList.remove("scroll-lock");
     document.documentElement.classList.remove("scroll-lock");
 
+    // document.body.ontouchmove = event => {
+    //   return true;
+    // };
+
     if (typeof window !== "undefined" && window.location.pathname !== route) {
       await showCurtain();
       navigate(route);
