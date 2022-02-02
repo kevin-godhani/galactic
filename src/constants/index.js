@@ -81,13 +81,29 @@ import slide5Mobile from '../styles/img/slide5-mobile.png';
 import slide6Mobile from '../styles/img/slide6-mobile.png';
 import slide7Mobile from '../styles/img/slide7-mobile.png';
 
+import magicEden from '../styles/img/magic-eden.svg';
+import solSea from '../styles/img/solsea.svg';
+
 
 export const instagramLink = 'https://www.instagram.com/galacticfightleague/';
 export const twitterLink = 'https://twitter.com/GalacticFL';
 export const discordLink = 'https://discord.com/invite/galacticfl';
 
-export const walletSetupGuideUrl = 'https://galacticfightleague.medium.com/d16d175c9051';
-export const mainAFighterUrl = 'https://magiceden.io/launchpad/galactic_fight_league';
+// export const walletSetupGuideUrl = 'https://galacticfightleague.medium.com/d16d175c9051';
+// export const mainAFighterUrl = 'https://magiceden.io/launchpad/galactic_fight_league';
+
+export const marketplaces = [
+    {
+        name: 'Magic Eden',
+        url: 'https://magiceden.io/marketplace/galactic_fight_league',
+        icon: magicEden,
+    },
+    {
+        name: 'Solsea',
+        url: 'https://solsea.io/collection/61f5572fe8aebe1cf059c463',
+        icon: solSea,
+    },
+];
 
 export const sliderButtonBg = 'linear-gradient(360deg, #EFDDA9 0%, #F0B9A9 50%, #EFDDA9 100%)';
 export const sliderButtonBgActive = 'linear-gradient(0deg, #000000 0%, #1E135C 50%, #1E135C 100%), linear-gradient(180deg, rgba(26, 12, 54, 0) -50%, rgba(26, 12, 54, 0) 0%, #1A0C36 50%)';
@@ -368,7 +384,7 @@ export const roadMap = [
     },
     {
         title: "Mint date: 29/01/2022",
-        description: "Come mint day we will be releasing 9999 fighters into the wild. Each one will be unique with billions of possible combinations. The mint will go live first to anyone who has managed to get a spot on the Whitelist. For more details on this please be sure to join our Discord and follow our social channels.",
+        description: "Come mint day we will be releasing 4000 fighters into the wild. Each one will be unique with billions of possible combinations. The mint will go live first to anyone who has managed to get a spot on the Whitelist. For more details on this please be sure to join our Discord and follow our social channels.",
         label: '01',
     },
     {
@@ -427,7 +443,7 @@ export const faqData = [
     {
       id: 1,
       title: "What is the total supply?",
-      description: "9,999 randomly generated fighters will be available to mint.",
+      description: "4,000 randomly generated fighters will be available to mint.",
     },
     {
       id: 2,

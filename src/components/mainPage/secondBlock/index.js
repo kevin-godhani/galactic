@@ -19,10 +19,10 @@ const SecondBlock = () => {
       <div className={styles.container}
       >
         <h2 data-aos="fade-up" className="title2">
-          <span>9,999</span>&nbsp;Unique fighters from across the galaxy
+          <span>4,000</span>&nbsp;Unique fighters from across the galaxy
         </h2>
         <p data-aos="fade-up" className="description">
-          The Galactic Fight League will be immortalized as a series of 9,999 randomly generated NFT collectables and will soon be available for you to mint. Each fighter will adorn a unique set of characteristics, some rarer than others and wear their own style of fightwear.
+          The Galactic Fight League will be immortalized as a series of 4,000 randomly generated NFT collectables and will soon be available for you to mint. Each fighter will adorn a unique set of characteristics, some rarer than others and wear their own style of fightwear.
         </p>
       </div>
       <SlickSlider data={carousel} className={'fighters-slider'} activeSlideIndex={0} slideSize={slideSize} />

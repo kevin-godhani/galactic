@@ -58,7 +58,7 @@ function Seo({ title, description, image }) {
 
 Seo.defaultProps = {
   title: 'The Galactic Fight League',
-  description: 'Welcome to the Galactic Fight League. 9999, mixed martial arts inspired NFTs from some of the most creative minds in the crypto-sphere - arriving on the Solana network in January 2022.  Ladies and gentlemen, welcome to the Galactic Fight League.',
+  description: 'Welcome to the Galactic Fight League. 4000, mixed martial arts inspired NFTs from some of the most creative minds in the crypto-sphere - arriving on the Solana network in January 2022.  Ladies and gentlemen, welcome to the Galactic Fight League.',
   image: null,
 }
 

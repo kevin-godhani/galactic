@@ -33,7 +33,7 @@ export const MainButton = ({to, title, isDouble, isPurple, small, textContainerC
   );
 };
 
-export const MainButtonExternal = ({url, title, isDouble, isPurple, small, buttonClassName}) => {
+export const MainButtonExternal = ({url, title, isDouble, isPurple, small, buttonClassName, longTitle}) => {
   return (
     <a
       href={url}
@@ -47,7 +47,7 @@ export const MainButtonExternal = ({url, title, isDouble, isPurple, small, butto
       {isDouble && <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>}
       <div className={`mainButtonStripe ${isPurple ? 'purple' : ''}`}></div>
       <div className={'mainButtonContent'}>
-        {isDouble ? (
+        {longTitle ? (
           <ButtonBgDouble className={`button-bg ${isPurple ? 'purple' : ''}`} />
         ) : (
           <ButtonBg className={`button-bg ${isPurple ? 'purple' : ''}`} />

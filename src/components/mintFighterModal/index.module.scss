@@ -17,7 +17,7 @@
         padding: 94px 80px 68px;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         width: 1000px;
         max-width: 100%;
         border-radius: 15px;
@@ -52,7 +52,7 @@
     }
     &-title {
         color: #EFDAA9;
-        margin-bottom: 22px;
+        margin-bottom: 56px;
         letter-spacing: normal;
     }
     &-text {
@@ -83,6 +83,25 @@
     }
 }
 
+.marketplaces {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.marketplace-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-image {
+        height: 90px;
+        margin-bottom: 12px;
+    }
+    &-title {
+        margin-bottom: 32px;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .mint-fighter-modal {
         &-content {
@@ -95,6 +114,16 @@
         }
         &-text {
             max-width: 80%;
+        }
+    }
+
+    .marketplaces {
+        width: 560px;
+    }
+    
+    .marketplace-item {
+        &-image {
+            height: 127px;
         }
     }
 }
@@ -143,12 +172,34 @@
             top: 16px;
             right: 16px;
         }
-        
+    }
+
+    .marketplaces {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .marketplace-item {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+        &-image {
+            height: 70px;
+            margin-bottom: 8px;
+        }
+        &-title {
+            margin-bottom: 20px;
+        }
     }
 }
 
 @media only screen and (max-width: 385px) {
     .mint-fighter-modal {
+        &-title {
+            margin-bottom: 32px;
+        }
         &-button {
             max-width: 265px;
             left: -14px;
