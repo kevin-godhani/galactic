@@ -3,13 +3,15 @@ import * as styles from "./index.module.scss";
 import { MainButtonExternal } from "../buttons";
 import { marketplaces } from '../../constants';
 import ImageRenderer from '../imageRenderer';
+import useWindowSize from '../../utils/useWindowSize';
 
 import modalCloseButtonIcon from '../../styles/img/modal-close-button.png';
 
 const MintFighterModal = ({ showModal, changeModalStateCb }) => {
-    // const ws = useWindowSize();
+    const ws = useWindowSize();
 
-    // const isMobileWidth = ws.width <= 767;
+    const fullHDWidth = 1920;
+    const isBigScreen = ws.width >= fullHDWidth;
 
     const close = () => {
         document.body.classList.remove("scroll-lock");
@@ -37,7 +39,7 @@ const MintFighterModal = ({ showModal, changeModalStateCb }) => {
                                 <MainButtonExternal
                                     url={m.url}
                                     title={`Buy on ${m.name}`}
-                                    small={true}
+                                    small={!isBigScreen}
                                     longTitle={i === 0}
                                     isDouble
                                 />

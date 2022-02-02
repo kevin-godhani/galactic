@@ -216,7 +216,7 @@
         &-title {
             font-size: 80px;
             line-height: 80px;
-            margin: 0 auto 60px;
+            margin: 0 auto 100px;
         }
         &-text {
             &:not(:last-of-type) {
@@ -228,6 +228,20 @@
         }
         &-button {
             margin: 64px auto 0;
+        }
+    }
+
+    .marketplaces {
+        width: 900px;
+    }
+    
+    .marketplace-item {
+        &-image {
+            height: 212px;
+            margin-bottom: 24px;
+        }
+        &-title {
+            margin-bottom: 56px;
         }
     }
 }
